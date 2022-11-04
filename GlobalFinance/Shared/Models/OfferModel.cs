@@ -9,7 +9,7 @@ namespace GlobalFinance.Shared.Models
         [Required]
         public string OfferTitle { get; set; } = string.Empty;
         [Required]
-        public DateOnly OfferExpiry { get; set; }
+        public string OfferExpiry { get; set; } = string.Empty;
         [Required]
         public int CarId { get; set; }
     }

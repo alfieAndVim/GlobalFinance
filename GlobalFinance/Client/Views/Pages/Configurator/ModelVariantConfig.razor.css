@@ -7,7 +7,7 @@ h3 {
 
 .outer-div {
     display: grid;
-    grid-template-columns: minmax(10rem, 1fr) 300px;
+    grid-template-columns: repeat(2 minmax(10rem, 1fr));
     grid-template-rows: 1fr 10rem;
     grid-auto-rows: auto;
     grid-gap: 20px 20px;

@@ -1,7 +1,9 @@
 ﻿@inject NavigationManager NavigationManager
 
 <div class="outer-div" @onclick="GoToPage">
-    <div class="image">Sample Image</div>
+    <div class="image">
+        <img src="@imgSrc"/>
+    </div>
     <div class="details">
         <h3>@CarMakeName</h3>
         <h3>@CarModelName</h3>
@@ -21,6 +23,8 @@
     public string CarModelName { get; set; }
     [Parameter, EditorRequired]
     public int CarStartingPrice { get; set; }
+    [Parameter, EditorRequired]
+    public string imgSrc { get; set; }
 
     private void GoToPage(){
         NavigationManager.NavigateTo($"/cars/{CarId}/modelvariant");

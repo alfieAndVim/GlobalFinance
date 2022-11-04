@@ -5,18 +5,28 @@
 <h3>Showing @_carsCount results</h3>
 
 <div class="car-grid">
-    
-    @foreach (var car in _cars){
-        <CarOptionComponent CarId="@car.CarId" CarMakeName="@car.CarMakeName" CarModelName="@car.CarModelName" CarStartingPrice="@car.CarStartingPrice"></CarOptionComponent>
+    @if(_cars is not null){
+        @foreach (var car in _cars){
+        <CarOptionComponent CarId="@car.CarId" CarMakeName="@car.CarMakeName" CarModelName="@car.CarModelName" CarStartingPrice="@car.CarStartingPrice" imgSrc="@GetCarImageSrc(car.CarId)"></CarOptionComponent>
     }
+    }
+    
 </div>
 
 @code {
-    private IEnumerable<CarModel>? _cars;
+    private List<CarModel>? _cars;
     private int _carsCount;
 
     protected override async Task OnInitializedAsync(){
-        _cars = await httpClient.GetFromJsonAsync<List<CarModel>>("Cars/list");
-        _carsCount = _cars.Count();
+        var carsResult = await httpClient.GetFromJsonAsync<List<CarModel>>("Cars/list");
+        if(carsResult is not null){
+            _cars = carsResult;
+            _carsCount = _cars.Count();
+        }
+
+    }
+
+    private string GetCarImageSrc(int id){
+        return $"Images/Car-images/{id}.jpg";
     }
 }

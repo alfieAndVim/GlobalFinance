@@ -11,6 +11,11 @@ h4 {
     margin: 0px 4px;
 }
 
+img {
+    width: 100%;
+    padding-top: 20px;
+}
+
 #price {
     font-size: 18px;
     font-weight: bold;
@@ -22,8 +27,7 @@ h4 {
     flex: 0 0 33%;
     border: 4px solid lightgrey;
     border-radius: 20px;
-    min-width: 300px;
-    width: fit-content;
+    width: 300px;
     transition: border 0.5s;
 }
 
@@ -34,9 +38,9 @@ h4 {
 
 .image {
     margin: 0 auto;
-    width: 200px;
+    width: 90%;
     height: 200px;
-    background-color: lightgrey;
+    background-color: white;
 }
 
 .details {
