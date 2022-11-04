@@ -1,0 +1,12 @@
+.page {
+    background-color: white;
+}
+
+.top-row {
+    background-color: white;
+    overflow: hidden;
+    min-height: 80px;
+    align-items: center;
+    display: flex;
+    
+}

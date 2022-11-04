@@ -1,0 +1,19 @@
+﻿.top-nav {
+    white-space: nowrap;
+    
+}
+
+.top-nav-home {
+    display: inline-block;
+    float: left
+}
+
+.top-nav-btns {
+    display: inline-block;
+}
+
+.top-nav-login {
+    display: inline-block;
+    float: right;
+}
+

@@ -1,0 +1,33 @@
+﻿.outer-div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+}
+
+.inner-div {
+    height: auto;
+    display: inline-block;
+}
+
+.nav-btns {
+    display: flex;
+    height: contain;
+    position: relative;
+    top: 20%;
+    bottom: 50%;
+}
+
+#car-image {
+    height: 100%;
+    width: 50%
+}
+
+h1 {
+    font-weight: 700;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}

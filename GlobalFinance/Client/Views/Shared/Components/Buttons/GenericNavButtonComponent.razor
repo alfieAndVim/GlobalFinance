@@ -1,0 +1,20 @@
+﻿@inject NavigationManager NavigationManager
+@using System.Diagnostics
+
+<a id=@id @onclick="goToPage">@Title</a>
+
+@code {
+    [Parameter]
+    public String id { get; set; }
+
+    [Parameter]
+    public String NavigateToLocation { get; set; }
+
+    [Parameter]
+    public String Title { get; set; }
+
+
+    private void goToPage(){
+        NavigationManager.NavigateTo(NavigateToLocation);
+    }
+}

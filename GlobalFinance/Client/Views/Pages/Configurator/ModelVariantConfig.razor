@@ -1,0 +1,32 @@
+﻿@page "/cars/{CarId:int}/modelvariant"
+@using GlobalFinance.Client.Views.Shared.Components.Configurator
+@using GlobalFinance.Shared.Models
+@inject HttpClient httpClient
+
+<h3>Configurator</h3>
+
+<div class="outer-div">
+    <div class="image"></div>
+    <div class="selection-page">
+        <ConfiguratorSelectionComponent Title="Select Model Variant"></ConfiguratorSelectionComponent>
+    </div>
+    <div class="information" >
+        <div class="car-details">
+            <h3>@_car.CarMakeName</h3>
+            <h3>@_car.CarModelName</h3>
+        </div>
+    </div>
+
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public int CarId { get; set; }
+
+    private CarModel _car;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _car = await httpClient.GetFromJsonAsync<CarModel>($"Cars/{CarId}");
+    }
+}
