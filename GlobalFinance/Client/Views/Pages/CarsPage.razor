@@ -1,0 +1,22 @@
+﻿@page "/cars"
+@using GlobalFinance.Client.Views.Shared.Components
+@using GlobalFinance.Shared.Models
+@inject HttpClient httpClient
+<h3>Showing @_carsCount results</h3>
+
+<div class="car-grid">
+    
+    @foreach (var car in _cars){
+        <CarOptionComponent CarId="@car.CarId" CarMakeName="@car.CarMakeName" CarModelName="@car.CarModelName" CarStartingPrice="@car.CarStartingPrice"></CarOptionComponent>
+    }
+</div>
+
+@code {
+    private IEnumerable<CarModel>? _cars;
+    private int _carsCount;
+
+    protected override async Task OnInitializedAsync(){
+        _cars = await httpClient.GetFromJsonAsync<List<CarModel>>("Cars/list");
+        _carsCount = _cars.Count();
+    }
+}

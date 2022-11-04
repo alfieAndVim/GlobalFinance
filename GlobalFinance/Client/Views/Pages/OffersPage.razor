@@ -1,0 +1,31 @@
+﻿@page "/offers"
+@using GlobalFinance.Shared.Models
+@inject HttpClient httpClient
+<h3>OffersPage</h3>
+
+<table>
+    <tr>
+        <th>Offer Id</th>
+        <th>Offer Title</th>
+        <th>Offer Expiry</th>
+        <th>Car Id</th>
+    </tr>
+    @foreach (var offer in _offers)
+    {
+        <tr>
+            <th>@offer.OfferId</th>
+            <th>@offer.OfferTitle</th>
+            <th>@offer.OfferExpiry</th>
+            <th>@offer.CarId</th>
+        </tr>
+    }
+</table>
+
+@code {
+    private IEnumerable<OfferModel>? _offers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _offers = await httpClient.GetFromJsonAsync<List<OfferModel>>("Offers/list");
+    }
+}

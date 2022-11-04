@@ -1,0 +1,28 @@
+﻿@page "/"
+@using GlobalFinance.Client.Views.Shared.Components.Buttons
+
+<div class="outer-div">
+
+    <div class="inner-div" id="car-image">
+        <img src="Images/home-page-car.jpg" />
+    </div>
+
+    <div class="inner-div">
+        <h1>Welcome to</h1>
+        <h1>Car Financing</h1>
+        
+        <div class="nav-btns">
+            <GenericNavButtonComponent id="login" Title="View Inventory" NavigateToLocation="/cars"></GenericNavButtonComponent>
+            <GenericNavButtonComponent id="offers" Title="View Offers" NavigateToLocation="/offers"></GenericNavButtonComponent>
+        </div>
+    </div>
+
+
+    
+</div>
+
+
+
+@code {
+
+}

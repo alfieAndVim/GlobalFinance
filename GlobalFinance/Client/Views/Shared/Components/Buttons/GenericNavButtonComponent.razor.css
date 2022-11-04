@@ -1,0 +1,53 @@
+﻿a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 20px;
+    margin: 10px 5px;
+    transition: background-color 0.5s;
+}
+
+.active {
+    background-color: pink;
+}
+
+#login {
+    color: white;
+    background-color: blue;
+}
+
+#offers {
+    border: 2px solid blue;
+    transition: border 0.2s;
+}
+
+#offers:hover {
+    border: 2px solid lightgrey;
+    background-color: white;
+}
+
+
+#main-logo {
+    color: black;
+    transition: none;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 5px 16px;
+}
+
+#main-logo:hover {
+    background-color: white;
+}
+
+a:hover {
+    background-color: lightgrey;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
