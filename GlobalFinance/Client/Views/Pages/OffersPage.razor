@@ -1,9 +1,10 @@
 ﻿@page "/offers"
+@using GlobalFinance.Client.ServicesInterfaces
 @using GlobalFinance.Shared.Models
-@inject HttpClient httpClient
+@inject IOfferService OfferService
 <h3>OffersPage</h3>
 
-@if(_offers is not null){
+@if(OfferService.Offers is not null){
     <table>
         <tr>
             <th>Offer Id</th>
@@ -11,11 +12,11 @@
             <th>Offer Expiry</th>
             <th>Car Id</th>
         </tr>
-        @foreach (var offer in _offers)
+        @foreach (var offer in OfferService.Offers)
         {
             <tr>
                 <th>@offer.OfferId</th>
-                <th>@offer.OfferTitle</th>
+                <th>@offer.OfferPrice</th>
                 <th>@offer.OfferExpiry</th>
                 <th>@offer.CarId</th>
             </tr>
@@ -29,9 +30,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var offersResult = await httpClient.GetFromJsonAsync<List<OfferModel>>("Offers/list");
-        if(offersResult is not null){
-            _offers = offersResult;
-        }
+        await OfferService.GetOffers();
+        
     }
 }

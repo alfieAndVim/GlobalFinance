@@ -5,9 +5,14 @@ h3 {
     margin: 4px;
 }
 
+img {
+    width: 100%;
+    max-width: 800px;
+}
+
 .outer-div {
     display: grid;
-    grid-template-columns: repeat(2 minmax(10rem, 1fr));
+    grid-template-columns: minmax(10rem, 1fr) 40%;
     grid-template-rows: 1fr 10rem;
     grid-auto-rows: auto;
     grid-gap: 20px 20px;
@@ -15,9 +20,9 @@ h3 {
 
 .image {
     grid-area: 1 / 1 / 2 / 2;
-    background-color: lightgrey;
     width: auto;
     height: 300px;
+    margin-left: 10px;
 }
 
 .selection-page {
@@ -37,8 +42,35 @@ h3 {
     height: 100%;
     box-shadow: 0px 0px 20px;
     padding: 10px;
+    margin-left: 10px;
 }
 
 .car-details {
     display: inline-flex;
+}
+
+@media screen and (max-width: 800px){
+    .outer-div {
+        grid-template-columns: 100%;
+    }
+
+    .image {
+        grid-area: initial;
+        margin: 20px;
+    }
+
+    .selection-page {
+        grid-area: initial;
+        width: auto;
+        margin: 20px;
+
+    }
+
+    .information {
+        grid-area: initial;
+        padding: 0px;
+        margin-left: 0px;
+        width: auto;
+        margin: 20px;
+    }
 }

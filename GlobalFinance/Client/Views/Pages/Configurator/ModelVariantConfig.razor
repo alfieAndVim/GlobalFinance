@@ -1,13 +1,16 @@
 ﻿@page "/cars/{CarId:int}/modelvariant"
-@using GlobalFinance.Client.Views.Shared.Components.Configurator
+@using GlobalFinance.Client.ServicesInterfaces
+@using GlobalFinance.Client.Views.Components.Configurator
 @using GlobalFinance.Shared.Models
-@inject HttpClient httpClient
+@inject ICarService CarService
 
 <h3>Configurator</h3>
 
 @if(_car is not null){
     <div class="outer-div">
-        <div class="image"></div>
+        <div class="image">
+            <img src="@_imgSrc"/>
+        </div>
         <div class="selection-page">
             <ConfiguratorSelectionComponent Title="Select Model Variant"></ConfiguratorSelectionComponent>
         </div>
@@ -28,11 +31,16 @@
 
     private CarModel? _car;
 
+    private string _imgSrc;
+
     protected override async Task OnInitializedAsync()
     {
-        var carResult = await httpClient.GetFromJsonAsync<CarModel>($"Cars/{CarId}");
+        var carResult = await CarService.GetSingleCar(CarId);
         if(carResult is not null){
             _car = carResult;
+            _imgSrc = $"Images/Car-images/{CarId}.jpg";
         }
     }
+
+    
 }
