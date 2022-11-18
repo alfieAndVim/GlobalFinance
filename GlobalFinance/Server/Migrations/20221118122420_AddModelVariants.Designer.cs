@@ -2,6 +2,7 @@
 using GlobalFinance.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GlobalFinance.Server.Migrations
 {
     [DbContext(typeof(PublicDataContext))]
-    partial class PublicDataContextModelSnapshot : ModelSnapshot
+    [Migration("20221118122420_AddModelVariants")]
+    partial class AddModelVariants
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.0");
@@ -172,7 +175,7 @@ namespace GlobalFinance.Server.Migrations
                     b.Property<int>("CarId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("ModelVariantName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -190,287 +193,287 @@ namespace GlobalFinance.Server.Migrations
                         {
                             ModelVariantId = 1,
                             CarId = 1,
-                            Name = "Design",
+                            ModelVariantName = "Design",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 2,
                             CarId = 1,
-                            Name = "GS Line",
+                            ModelVariantName = "GS Line",
                             PriceIncrease = 2000
                         },
                         new
                         {
                             ModelVariantId = 3,
                             CarId = 1,
-                            Name = "Ultimate",
+                            ModelVariantName = "Ultimate",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 4,
                             CarId = 2,
-                            Name = "Design",
+                            ModelVariantName = "Design",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 5,
                             CarId = 2,
-                            Name = "GS Line",
+                            ModelVariantName = "GS Line",
                             PriceIncrease = 3000
                         },
                         new
                         {
                             ModelVariantId = 6,
                             CarId = 2,
-                            Name = "Ultimate",
+                            ModelVariantName = "Ultimate",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 7,
                             CarId = 3,
-                            Name = "Design",
+                            ModelVariantName = "Design",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 8,
                             CarId = 3,
-                            Name = "GS Line",
+                            ModelVariantName = "GS Line",
                             PriceIncrease = 3000
                         },
                         new
                         {
                             ModelVariantId = 9,
                             CarId = 3,
-                            Name = "Ultimate",
+                            ModelVariantName = "Ultimate",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 10,
                             CarId = 4,
-                            Name = "Design",
+                            ModelVariantName = "Design",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 11,
                             CarId = 4,
-                            Name = "GS Line",
+                            ModelVariantName = "GS Line",
                             PriceIncrease = 3000
                         },
                         new
                         {
                             ModelVariantId = 12,
                             CarId = 4,
-                            Name = "Ultimate",
+                            ModelVariantName = "Ultimate",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 13,
                             CarId = 5,
-                            Name = "Sport",
+                            ModelVariantName = "Sport",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 14,
                             CarId = 5,
-                            Name = "M Sport",
+                            ModelVariantName = "M Sport",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 15,
                             CarId = 6,
-                            Name = "Sport",
+                            ModelVariantName = "Sport",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 16,
                             CarId = 6,
-                            Name = "M Sport",
+                            ModelVariantName = "M Sport",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 17,
                             CarId = 7,
-                            Name = "Sport",
+                            ModelVariantName = "Sport",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 18,
                             CarId = 7,
-                            Name = "M Sport",
+                            ModelVariantName = "M Sport",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 19,
                             CarId = 8,
-                            Name = "Sport",
+                            ModelVariantName = "Sport",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 20,
                             CarId = 8,
-                            Name = "M Sport",
+                            ModelVariantName = "M Sport",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 21,
                             CarId = 9,
-                            Name = "Technik",
+                            ModelVariantName = "Technik",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 22,
                             CarId = 9,
-                            Name = "Sport",
+                            ModelVariantName = "Sport",
                             PriceIncrease = 4000
                         },
                         new
                         {
                             ModelVariantId = 23,
                             CarId = 9,
-                            Name = "S Line",
+                            ModelVariantName = "S Line",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 24,
                             CarId = 10,
-                            Name = "Technik",
+                            ModelVariantName = "Technik",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 25,
                             CarId = 10,
-                            Name = "Sport",
+                            ModelVariantName = "Sport",
                             PriceIncrease = 4000
                         },
                         new
                         {
                             ModelVariantId = 26,
                             CarId = 10,
-                            Name = "S Line",
+                            ModelVariantName = "S Line",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 27,
                             CarId = 11,
-                            Name = "Technik",
+                            ModelVariantName = "Technik",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 28,
                             CarId = 11,
-                            Name = "Sport",
+                            ModelVariantName = "Sport",
                             PriceIncrease = 4000
                         },
                         new
                         {
                             ModelVariantId = 29,
                             CarId = 11,
-                            Name = "S Line",
+                            ModelVariantName = "S Line",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 30,
                             CarId = 12,
-                            Name = "Technik",
+                            ModelVariantName = "Technik",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 31,
                             CarId = 12,
-                            Name = "Sport",
+                            ModelVariantName = "Sport",
                             PriceIncrease = 4000
                         },
                         new
                         {
                             ModelVariantId = 32,
                             CarId = 12,
-                            Name = "S Line",
+                            ModelVariantName = "S Line",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 33,
                             CarId = 13,
-                            Name = "Technik",
+                            ModelVariantName = "Technik",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 34,
                             CarId = 13,
-                            Name = "Sport",
+                            ModelVariantName = "Sport",
                             PriceIncrease = 4000
                         },
                         new
                         {
                             ModelVariantId = 35,
                             CarId = 13,
-                            Name = "S Line",
+                            ModelVariantName = "S Line",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 36,
                             CarId = 14,
-                            Name = "Technik",
+                            ModelVariantName = "Technik",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 37,
                             CarId = 14,
-                            Name = "Sport",
+                            ModelVariantName = "Sport",
                             PriceIncrease = 4000
                         },
                         new
                         {
                             ModelVariantId = 38,
                             CarId = 14,
-                            Name = "S Line",
+                            ModelVariantName = "S Line",
                             PriceIncrease = 6000
                         },
                         new
                         {
                             ModelVariantId = 39,
                             CarId = 15,
-                            Name = "Technik",
+                            ModelVariantName = "Technik",
                             PriceIncrease = 0
                         },
                         new
                         {
                             ModelVariantId = 40,
                             CarId = 15,
-                            Name = "Sport",
+                            ModelVariantName = "Sport",
                             PriceIncrease = 4000
                         },
                         new
                         {
                             ModelVariantId = 41,
                             CarId = 15,
-                            Name = "S Line",
+                            ModelVariantName = "S Line",
                             PriceIncrease = 6000
                         });
                 });

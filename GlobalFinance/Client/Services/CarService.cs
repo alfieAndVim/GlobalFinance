@@ -14,6 +14,7 @@ namespace GlobalFinance.Client.Services
         }
 
         public List<CarModel> Cars { get; set; } = new List<CarModel>();
+        public List<ModelVariantModel> ModelVariants { get; set; } = new List<ModelVariantModel>();
 
         public async Task GetCars()
         {
@@ -22,17 +23,26 @@ namespace GlobalFinance.Client.Services
             {
                 Cars = result;
             }
-            
+
         }
 
         public async Task<CarModel> GetSingleCar(int id)
         {
-            var result = await httpClient.GetFromJsonAsync<CarModel>($"Cars/{id}");
+            var result = await httpClient.GetFromJsonAsync<CarModel>($"cars/{id}");
             if (result != null)
             {
                 return result;
             }
             throw new Exception("Car could not be found");
+        }
+
+        public async Task GetModels(int id)
+        {
+            var result = await httpClient.GetFromJsonAsync<List<ModelVariantModel>>($"cars/variants{id}");
+            if (result != null)
+            {
+                ModelVariants = result;
+            }
         }
     }
 }

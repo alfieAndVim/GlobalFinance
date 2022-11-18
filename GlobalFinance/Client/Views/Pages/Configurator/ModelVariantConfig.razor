@@ -6,23 +6,7 @@
 
 <h3>Configurator</h3>
 
-@if(_car is not null){
-    <div class="outer-div">
-        <div class="image">
-            <img src="@_imgSrc"/>
-        </div>
-        <div class="selection-page">
-            <ConfiguratorSelectionComponent Title="Select Model Variant"></ConfiguratorSelectionComponent>
-        </div>
-        <div class="information">
-            <div class="car-details">
-                <h3>@_car.CarMakeName</h3>
-                <h3>@_car.CarModelName</h3>
-            </div>
-        </div>
-
-    </div>
-}
+<ConfiguratorDisplayComponent _car="@_car" _carImgSrc="@_imgSrc" _action="Choose Model Variant" _options="@_options"></ConfiguratorDisplayComponent>
 
 
 @code {
@@ -33,12 +17,16 @@
 
     private string _imgSrc;
 
+    private List<ModelVariantModel> _options;
+
     protected override async Task OnInitializedAsync()
     {
+        await CarService.GetModels(CarId);
         var carResult = await CarService.GetSingleCar(CarId);
         if(carResult is not null){
             _car = carResult;
             _imgSrc = $"Images/Car-images/{CarId}.jpg";
+            _options = CarService.ModelVariants;
         }
     }
 

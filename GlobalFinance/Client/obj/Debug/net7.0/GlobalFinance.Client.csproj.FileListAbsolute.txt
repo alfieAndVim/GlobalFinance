@@ -840,3 +840,4 @@
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/refint/GlobalFinance.Client.dll
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/GlobalFinance.Client.pdb
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/ref/GlobalFinance.Client.dll
+/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Components/Configurator/ConfiguratorDisplayComponent.razor.rz.scp.css

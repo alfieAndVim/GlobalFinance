@@ -20,10 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/Views/Components/Configurator/ConfiguratorSelectionComponent.razor]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcG9uZW50cy9Db25maWd1cmF0b3IvQ29uZmlndXJhdG9yU2VsZWN0aW9uQ29tcG9uZW50LnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/Views/Pages/AuthPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQXV0aFBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -43,6 +39,10 @@ build_metadata.AdditionalFiles.CssScope =
 [/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/Views/Components/CarOptionComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcG9uZW50cy9DYXJPcHRpb25Db21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-lqvpom6inh
+
+[/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/Views/Components/Configurator/ConfiguratorDisplayComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcG9uZW50cy9Db25maWd1cmF0b3IvQ29uZmlndXJhdG9yRGlzcGxheUNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-czez28hexb
 
 [/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/Views/Pages/CarsPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQ2Fyc1BhZ2UucmF6b3I=

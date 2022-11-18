@@ -1,0 +1,39 @@
+﻿
+@if(_car is not null)
+{
+        <div class="outer-div">
+            <div class="image">
+                <img src="@_carImgSrc"/>
+            </div>
+            <div class="selection-page">
+                <h3>@_action</h3>
+                <div class="selection-options">
+
+                </div>
+            </div>
+            <div class="information">
+                <div class="car-details">
+                    <h3>@_car.CarMakeName</h3>
+                    <h3>@_car.CarModelName</h3>
+                    @foreach(var option in _options)
+                    {
+                        <h1>@option.Name</h1>
+                    }
+                </div>
+            </div>
+        </div>
+}
+
+
+@code {
+    [Parameter, EditorRequired]
+    public CarModel _car { get; set; }
+    [Parameter, EditorRequired]
+    public string _carImgSrc { get; set; }
+    [Parameter, EditorRequired]
+    public string _action { get; set; }
+    [Parameter, EditorRequired]
+    public List<ModelVariantModel> _options { get; set; }
+
+}
+

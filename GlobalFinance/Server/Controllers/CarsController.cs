@@ -33,6 +33,13 @@ namespace GlobalFinance.Server.Controllers
             }
             return NotFound();
         }
+
+        [HttpGet("variants{id}")]
+        public async Task<ActionResult<List<ModelVariantModel>>> ListVariants(int id)
+        {
+            var _variants = await publicDataContext.ModelVariants.Where(v => v.CarId == id).ToListAsync();
+            return Ok(_variants);
+        }
         
 
     }

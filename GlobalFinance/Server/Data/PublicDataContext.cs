@@ -19,9 +19,13 @@ namespace GlobalFinance.Server.Data
 
             modelBuilder.Entity<OfferModel>().HasData(
                 JsonSerializer.Deserialize<List<OfferModel>>(document: JsonDocument.Parse(File.ReadAllText(Path.Combine("Data", "Offers.json")))));
+
+            modelBuilder.Entity<ModelVariantModel>().HasData(
+                JsonSerializer.Deserialize<List<ModelVariantModel>>(document: JsonDocument.Parse(File.ReadAllText(Path.Combine("Data", "ModelVariants.json")))));
         }
 
         public DbSet<CarModel>? Cars { get; set; }
         public DbSet<OfferModel>? Offers { get; set; }
+        public DbSet<ModelVariantModel>? ModelVariants { get; set; }
     }
 }
