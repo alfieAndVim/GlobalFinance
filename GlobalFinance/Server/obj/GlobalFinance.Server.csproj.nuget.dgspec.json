@@ -1,0 +1,234 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/GlobalFinance.Server.csproj": {}
+  },
+  "projects": {
+    "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj",
+        "projectName": "GlobalFinance.Client",
+        "projectPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj",
+        "packagesPath": "/Users/alfiedew/.nuget/packages/",
+        "outputPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alfiedew/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj": {
+                "projectPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/GlobalFinance.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/GlobalFinance.Server.csproj",
+        "projectName": "GlobalFinance.Server",
+        "projectPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/GlobalFinance.Server.csproj",
+        "packagesPath": "/Users/alfiedew/.nuget/packages/",
+        "outputPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alfiedew/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj": {
+                "projectPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj"
+              },
+              "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj": {
+                "projectPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj",
+        "projectName": "GlobalFinance.Shared",
+        "projectPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj",
+        "packagesPath": "/Users/alfiedew/.nuget/packages/",
+        "outputPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alfiedew/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

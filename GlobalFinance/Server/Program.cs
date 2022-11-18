@@ -1,4 +1,4 @@
-using GlobalFinance.Server.Data;
+﻿using GlobalFinance.Server.Data;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 
@@ -37,3 +37,4 @@ app.MapControllers();
 app.MapFallbackToFile("index.html");
 
 app.Run();
+

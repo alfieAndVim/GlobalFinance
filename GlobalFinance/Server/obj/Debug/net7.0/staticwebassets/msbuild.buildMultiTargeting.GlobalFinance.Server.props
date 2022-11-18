@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/GlobalFinance.Server.props" />
+</Project>

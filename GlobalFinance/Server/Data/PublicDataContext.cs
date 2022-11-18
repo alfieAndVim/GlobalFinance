@@ -11,32 +11,14 @@ namespace GlobalFinance.Server.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            var parentDir = System.IO.Directory.GetCurrentDirectory();
+            System.Diagnostics.Debug.WriteLine(parentDir);
+
             modelBuilder.Entity<CarModel>().HasData(
-                JsonSerializer.Deserialize<List<CarModel>>(document: JsonDocument.Parse(File.ReadAllText("Data\\Cars.json"))));
+                JsonSerializer.Deserialize<List<CarModel>>(document: JsonDocument.Parse(File.ReadAllText(Path.Combine("Data", "Cars.json")))));
 
             modelBuilder.Entity<OfferModel>().HasData(
-                JsonSerializer.Deserialize<List<OfferModel>>(document: JsonDocument.Parse(File.ReadAllText("Data\\Offers.json"))));
-
-            //modelBuilder.Entity<CarModel>().HasData(
-            //    new CarModel
-            //    {
-            //        CarId = 1,
-            //        CarMakeName = "Vauxhall",
-            //        CarModelName = "Corsa",
-            //        CarStartingPrice = 300,
-            //        CarOutrightStartingPrice = 12000
-            //    }
-            //    );
-
-            //modelBuilder.Entity<OfferModel>().HasData(
-            //    new OfferModel
-            //    {
-            //        OfferId = 1,
-            //        OfferPrice = 250,
-            //        OfferExpiry = "22/12/2002",
-            //        CarId = 1
-            //    }
-            //);
+                JsonSerializer.Deserialize<List<OfferModel>>(document: JsonDocument.Parse(File.ReadAllText(Path.Combine("Data", "Offers.json")))));
         }
 
         public DbSet<CarModel>? Cars { get; set; }

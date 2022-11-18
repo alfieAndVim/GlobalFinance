@@ -1,0 +1,44 @@
+[
+  {
+    "OfferId": 1,
+    "OfferPrice": 300,
+    "OfferExpiry": "2/12/2002",
+    "CarId": 1
+  },
+  {
+    "OfferId": 2,
+    "OfferPrice": 340,
+    "OfferExpiry": "2/12/2002",
+    "CarId": 2
+  },
+  {
+    "OfferId": 3,
+    "OfferPrice": 350,
+    "OfferExpiry": "2/12/2002",
+    "CarId": 3
+  },
+  {
+    "OfferId": 4,
+    "OfferPrice": 290,
+    "OfferExpiry": "2/12/2002",
+    "CarId": 4
+  },
+  {
+    "OfferId": 5,
+    "OfferPrice": 300,
+    "OfferExpiry": "2/12/2002",
+    "CarId": 5
+  },
+  {
+    "OfferId": 6,
+    "OfferPrice": 360,
+    "OfferExpiry": "2/12/2002",
+    "CarId": 6
+  },
+  {
+    "OfferId": 7,
+    "OfferPrice": 390,
+    "OfferExpiry": "2/12/2002",
+    "CarId": 7
+  }
+]

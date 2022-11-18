@@ -1,0 +1,19 @@
+.top-nav[b-ma7pnd7n50] {
+    white-space: nowrap;
+    
+}
+
+.top-nav-home[b-ma7pnd7n50] {
+    display: inline-block;
+    float: left
+}
+
+.top-nav-btns[b-ma7pnd7n50] {
+    display: inline-block;
+}
+
+.top-nav-login[b-ma7pnd7n50] {
+    display: inline-block;
+    float: right;
+}
+

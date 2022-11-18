@@ -1,6 +1,8 @@
-﻿using GlobalFinance.Shared.Models;
+﻿using GlobalFinance.Server.Data;
+using GlobalFinance.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.EntityFrameworkCore;
 
 namespace GlobalFinance.Server.Controllers
 {
@@ -8,33 +10,28 @@ namespace GlobalFinance.Server.Controllers
     [Route("[Controller]")]
     public class OffersController : ControllerBase
     {
-        private List<OfferModel> _offers = new() {
-            
-                new() {OfferId=0, OfferPrice=300, OfferExpiry="2022, 12, 2", CarId=0},
-                new() {OfferId=1, OfferPrice=340, OfferExpiry="2022, 12, 2", CarId=1},
-                new() {OfferId = 2, OfferPrice = 350, OfferExpiry = "2022, 12, 2", CarId = 2 },
-                new() {OfferId = 3, OfferPrice = 290, OfferExpiry = "2022, 12, 2", CarId = 3 },
-                new() {OfferId = 4, OfferPrice = 300, OfferExpiry = "2022, 12, 2", CarId = 4 },
-                new() {OfferId = 5, OfferPrice = 360, OfferExpiry = "2022, 12, 2", CarId = 5 },
-                new() {OfferId = 6, OfferPrice = 390, OfferExpiry = "2022, 12, 2", CarId = 6 },
-                new() {OfferId = 7, OfferPrice = 400, OfferExpiry = "2022, 12, 2", CarId = 7 },
-                new() {OfferId = 8, OfferPrice = 200, OfferExpiry = "2022, 12, 2", CarId = 8 },
-                new() {OfferId = 9, OfferPrice = 300, OfferExpiry = "2022, 12, 2", CarId = 9 },
-            };
+        private readonly PublicDataContext publicDataContext;
+
+        public OffersController(PublicDataContext publicDataContext)
+        {
+            this.publicDataContext = publicDataContext;
+        }
+        
 
         [HttpGet("list")]
-        public ActionResult List()
+        public async Task<ActionResult<List<OfferModel>>> List()
         {
+            var _offers = await publicDataContext.Offers.ToListAsync();
             return Ok(_offers);
         }
 
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public async Task<ActionResult<OfferModel>> Get(int id)
         {
-            var offer = _offers.Find(c => c.OfferId == id);
-            if (offer is not null)
+            var _offer = await publicDataContext.Offers.FirstOrDefaultAsync(o => o.OfferId == id);
+            if (_offer is not null)
             {
-                return Ok(offer);
+                return Ok(_offer);
             }
             return NotFound();
         }
