@@ -8,17 +8,19 @@
             <div class="selection-page">
                 <h3>@_action</h3>
                 <div class="selection-options">
-
+                    @foreach (var option in _options)
+                    {
+                        <div class="@(selectedOption == option ? "option-button-active" : "option-button")" @onclick="() => SetSelectedOption(option)">
+                            <h3 id="option-name">@option.OptionName</h3>
+                        </div>
+                    }
                 </div>
             </div>
             <div class="information">
                 <div class="car-details">
                     <h3>@_car.CarMakeName</h3>
                     <h3>@_car.CarModelName</h3>
-                    @foreach(var option in _options)
-                    {
-                        <h1>@option.Name</h1>
-                    }
+                    
                 </div>
             </div>
         </div>
@@ -33,7 +35,18 @@
     [Parameter, EditorRequired]
     public string _action { get; set; }
     [Parameter, EditorRequired]
-    public List<ModelVariantModel> _options { get; set; }
+    public List<ConfiguratorOptionModel> _options { get; set; }
+
+    private ConfiguratorOptionModel selectedOption;
+
+
+
+    void SetSelectedOption(ConfiguratorOptionModel option)
+    {
+        selectedOption = option;
+        StateHasChanged();
+
+    }
 
 }
 

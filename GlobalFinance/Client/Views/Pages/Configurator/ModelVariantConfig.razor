@@ -10,25 +10,34 @@
 
 
 @code {
-    [Parameter, EditorRequired]
-    public int CarId { get; set; }
+            [Parameter, EditorRequired]
+            public int CarId { get; set; }
 
     private CarModel? _car;
 
-    private string _imgSrc;
+        private string _imgSrc;
 
-    private List<ModelVariantModel> _options;
+        private List<ModelVariantModel> _modelVariants;
 
-    protected override async Task OnInitializedAsync()
-    {
-        await CarService.GetModels(CarId);
-        var carResult = await CarService.GetSingleCar(CarId);
-        if(carResult is not null){
-            _car = carResult;
-            _imgSrc = $"Images/Car-images/{CarId}.jpg";
-            _options = CarService.ModelVariants;
+        private List<ConfiguratorOptionModel> _options;
+
+        protected override async Task OnInitializedAsync()
+        {
+            await CarService.GetModels(CarId);
+            var carResult = await CarService.GetSingleCar(CarId);
+            if (carResult is not null)
+            {
+                _car = carResult;
+                _imgSrc = $"Images/Car-images/{CarId}.jpg";
+                _modelVariants = CarService.ModelVariants;
+                _options = _modelVariants.Select(x => new ConfiguratorOptionModel()
+                {
+                    OptionId = x.CarId,
+                    OptionName = x.Name,
+                    OptionPriceIncrease = x.PriceIncrease
+                }).ToList();
+            }
         }
-    }
 
-    
-}
+
+    }

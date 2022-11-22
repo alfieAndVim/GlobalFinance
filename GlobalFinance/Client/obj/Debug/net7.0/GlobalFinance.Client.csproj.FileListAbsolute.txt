@@ -826,6 +826,7 @@
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/staticwebassets.build.json
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/staticwebassets.development.json
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Components/CarOptionComponent.razor.rz.scp.css
+/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Components/Configurator/ConfiguratorDisplayComponent.razor.rz.scp.css
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Pages/CarsPage.razor.rz.scp.css
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Pages/Configurator/ModelVariantConfig.razor.rz.scp.css
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Pages/HomePage.razor.rz.scp.css
@@ -840,4 +841,3 @@
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/refint/GlobalFinance.Client.dll
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/GlobalFinance.Client.pdb
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/ref/GlobalFinance.Client.dll
-/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Components/Configurator/ConfiguratorDisplayComponent.razor.rz.scp.css
