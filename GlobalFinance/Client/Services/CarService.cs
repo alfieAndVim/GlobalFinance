@@ -15,6 +15,7 @@ namespace GlobalFinance.Client.Services
 
         public List<CarModel> Cars { get; set; } = new List<CarModel>();
         public List<ModelVariantModel> ModelVariants { get; set; } = new List<ModelVariantModel>();
+        public List<PaintModel> Paints { get; set; } = new List<PaintModel>();
 
         public async Task GetCars()
         {
@@ -44,5 +45,16 @@ namespace GlobalFinance.Client.Services
                 ModelVariants = result;
             }
         }
+
+        public async Task GetPaints(int id)
+        {
+            var result = await httpClient.GetFromJsonAsync<List<PaintModel>>($"cars/paints{id}");
+            if (result != null)
+            {
+                Paints = result;
+            }
+        }
+
+
     }
 }

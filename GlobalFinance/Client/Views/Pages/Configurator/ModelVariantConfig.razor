@@ -3,41 +3,53 @@
 @using GlobalFinance.Client.Views.Components.Configurator
 @using GlobalFinance.Shared.Models
 @inject ICarService CarService
+@inject IConfiguratorService ConfiguratorService
+@inject NavigationManager NavigationManager
 
 <h3>Configurator</h3>
 
-<ConfiguratorDisplayComponent _car="@_car" _carImgSrc="@_imgSrc" _action="Choose Model Variant" _options="@_options"></ConfiguratorDisplayComponent>
+<ConfiguratorDisplayComponent _car="@_car" _carImgSrc="@_imgSrc" _action="Choose Model Variant" _options="@_options" @bind-OptionId="_modelVariantId" OptionIdSet="GivenModelVariantOption"></ConfiguratorDisplayComponent>
 
 
 @code {
-            [Parameter, EditorRequired]
-            public int CarId { get; set; }
+    [Parameter, EditorRequired]
+    public int CarId { get; set; }
 
     private CarModel? _car;
 
-        private string _imgSrc;
+    private string _imgSrc;
 
-        private List<ModelVariantModel> _modelVariants;
+    private List<ModelVariantModel> _modelVariants;
 
-        private List<ConfiguratorOptionModel> _options;
+    private List<ConfiguratorOptionModel> _options;
 
-        protected override async Task OnInitializedAsync()
+    private int _modelVariantId;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        await CarService.GetModels(CarId);
+        var carResult = await CarService.GetSingleCar(CarId);
+        if (carResult is not null)
         {
-            await CarService.GetModels(CarId);
-            var carResult = await CarService.GetSingleCar(CarId);
-            if (carResult is not null)
+            _car = carResult;
+            _imgSrc = $"Images/Car-images/{CarId}.jpg";
+            _modelVariants = CarService.ModelVariants;
+            _options = ConfiguratorService.ConvertModelVariantToOption(_modelVariants);
+            var prevConfig = ConfiguratorService.Configuration;
+            if(prevConfig.ModelVariantId != null)
             {
-                _car = carResult;
-                _imgSrc = $"Images/Car-images/{CarId}.jpg";
-                _modelVariants = CarService.ModelVariants;
-                _options = _modelVariants.Select(x => new ConfiguratorOptionModel()
-                {
-                    OptionId = x.CarId,
-                    OptionName = x.Name,
-                    OptionPriceIncrease = x.PriceIncrease
-                }).ToList();
+                _modelVariantId = prevConfig.ModelVariantId ?? 0;
             }
+            ConfiguratorService.Configuration.CarId = CarId;
         }
+    }
+
+    private void GivenModelVariantOption()
+    {
+        ConfiguratorService.Configuration.ModelVariantId = _modelVariantId;
+        NavigationManager.NavigateTo($"/cars/{CarId}/paintcolour");
+    }
 
 
     }

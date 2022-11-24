@@ -1,0 +1,57 @@
+﻿@page "/cars/{CarId:int}/paintcolour"
+@using GlobalFinance.Client.ServicesInterfaces
+@using GlobalFinance.Client.Views.Components.Configurator
+@using GlobalFinance.Shared.Models
+@inject ICarService CarService
+@inject IConfiguratorService ConfiguratorService
+@inject NavigationManager NavigationManager
+
+<h3>Configurator</h3>
+
+<ConfiguratorDisplayComponent _car="@_car" _carImgSrc="@_imgSrc" _action="Choose Paint Colour" _options="@_options" @bind-OptionId="_paintId" OptionIdSet="GivenPaintColorOption" _returnRoute="@_returnRoute"></ConfiguratorDisplayComponent>
+
+
+@code {
+    [Parameter, EditorRequired]
+    public int CarId { get; set; }
+
+    private CarModel? _car;
+
+    private string _imgSrc;
+
+    private List<PaintModel> _paintColours;
+
+    private List<ConfiguratorOptionModel> _options;
+
+    private int _paintId;
+    private string _returnRoute;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CarService.GetPaints(CarId);
+        var carResult = await CarService.GetSingleCar(CarId);
+        if (carResult is not null)
+        {
+            _car = carResult;
+            _imgSrc = $"Images/Car-images/{CarId}.jpg";
+            _paintColours = CarService.Paints;
+            _options = ConfiguratorService.ConvertPaintToOption(_paintColours);
+            var prevConfig = ConfiguratorService.Configuration;
+            if (prevConfig.PaintId != null)
+            {
+                _paintId = prevConfig.PaintId ?? 0;
+            }
+        }
+        _returnRoute = $"/cars/{CarId}/modelvariant";
+    }
+
+    private void GivenPaintColorOption()
+    {
+        ConfiguratorService.Configuration.PaintId = _paintId;
+
+    }
+
+
+}
+
+

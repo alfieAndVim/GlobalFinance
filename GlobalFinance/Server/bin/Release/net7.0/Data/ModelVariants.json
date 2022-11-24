@@ -1,0 +1,253 @@
+﻿[
+  {
+    "ModelVariantId": 1,
+    "Name": "Design",
+    "PriceIncrease": 0,
+    "CarId": 1
+  },
+  {
+    "ModelVariantId": 2,
+    "Name": "GS Line",
+    "PriceIncrease": 2000,
+    "CarId": 1
+  },
+  {
+    "ModelVariantId": 3,
+    "Name": "Ultimate",
+    "PriceIncrease": 6000,
+    "CarId": 1
+  },
+  {
+    "ModelVariantId": 4,
+    "Name": "Design",
+    "PriceIncrease": 0,
+    "CarId": 2
+  },
+  {
+    "ModelVariantId": 5,
+    "Name": "GS Line",
+    "PriceIncrease": 3000,
+    "CarId": 2
+  },
+  {
+    "ModelVariantId": 6,
+    "Name": "Ultimate",
+    "PriceIncrease": 6000,
+    "CarId": 2
+  },
+  {
+    "ModelVariantId": 7,
+    "Name": "Design",
+    "PriceIncrease": 0,
+    "CarId": 3
+  },
+  {
+    "ModelVariantId": 8,
+    "Name": "GS Line",
+    "PriceIncrease": 3000,
+    "CarId": 3
+  },
+  {
+    "ModelVariantId": 9,
+    "Name": "Ultimate",
+    "PriceIncrease": 6000,
+    "CarId": 3
+  },
+  {
+    "ModelVariantId": 10,
+    "Name": "Design",
+    "PriceIncrease": 0,
+    "CarId": 4
+  },
+  {
+    "ModelVariantId": 11,
+    "Name": "GS Line",
+    "PriceIncrease": 3000,
+    "CarId": 4
+  },
+  {
+    "ModelVariantId": 12,
+    "Name": "Ultimate",
+    "PriceIncrease": 6000,
+    "CarId": 4
+  },
+  {
+    "ModelVariantId": 13,
+    "Name": "Sport",
+    "PriceIncrease": 0,
+    "CarId": 5
+  },
+  {
+    "ModelVariantId": 14,
+    "Name": "M Sport",
+    "PriceIncrease": 6000,
+    "CarId": 5
+  },
+  {
+
+    "ModelVariantId": 15,
+    "Name": "Sport",
+    "PriceIncrease": 0,
+    "CarId": 6
+  },
+  {
+    "ModelVariantId": 16,
+    "Name": "M Sport",
+    "PriceIncrease": 6000,
+    "CarId": 6
+  },
+  {
+
+    "ModelVariantId": 17,
+    "Name": "Sport",
+    "PriceIncrease": 0,
+    "CarId": 7
+  },
+  {
+    "ModelVariantId": 18,
+    "Name": "M Sport",
+    "PriceIncrease": 6000,
+    "CarId": 7
+  },
+  {
+
+    "ModelVariantId": 19,
+    "Name": "Sport",
+    "PriceIncrease": 0,
+    "CarId": 8
+  },
+  {
+    "ModelVariantId": 20,
+    "Name": "M Sport",
+    "PriceIncrease": 6000,
+    "CarId": 8
+  },
+  {
+    "ModelVariantId": 21,
+    "Name": "Technik",
+    "PriceIncrease": 0,
+    "CarId": 9
+  },
+  {
+    "ModelVariantId": 22,
+    "Name": "Sport",
+    "PriceIncrease": 4000,
+    "CarId": 9
+  },
+  {
+    "ModelVariantId": 23,
+    "Name": "S Line",
+    "PriceIncrease": 6000,
+    "CarId": 9
+  },
+  {
+    "ModelVariantId": 24,
+    "Name": "Technik",
+    "PriceIncrease": 0,
+    "CarId": 10
+  },
+  {
+    "ModelVariantId": 25,
+    "Name": "Sport",
+    "PriceIncrease": 4000,
+    "CarId": 10
+  },
+  {
+    "ModelVariantId": 26,
+    "Name": "S Line",
+    "PriceIncrease": 6000,
+    "CarId": 10
+  },
+  {
+    "ModelVariantId": 27,
+    "Name": "Technik",
+    "PriceIncrease": 0,
+    "CarId": 11
+  },
+  {
+    "ModelVariantId": 28,
+    "Name": "Sport",
+    "PriceIncrease": 4000,
+    "CarId": 11
+  },
+  {
+    "ModelVariantId": 29,
+    "Name": "S Line",
+    "PriceIncrease": 6000,
+    "CarId": 11
+  },
+  {
+    "ModelVariantId": 30,
+    "Name": "Technik",
+    "PriceIncrease": 0,
+    "CarId": 12
+  },
+  {
+    "ModelVariantId": 31,
+    "Name": "Sport",
+    "PriceIncrease": 4000,
+    "CarId": 12
+  },
+  {
+    "ModelVariantId": 32,
+    "Name": "S Line",
+    "PriceIncrease": 6000,
+    "CarId": 12
+  },
+  {
+    "ModelVariantId": 33,
+    "Name": "Technik",
+    "PriceIncrease": 0,
+    "CarId": 13
+  },
+  {
+    "ModelVariantId": 34,
+    "Name": "Sport",
+    "PriceIncrease": 4000,
+    "CarId": 13
+  },
+  {
+    "ModelVariantId": 35,
+    "Name": "S Line",
+    "PriceIncrease": 6000,
+    "CarId": 13
+  },
+  {
+    "ModelVariantId": 36,
+    "Name": "Technik",
+    "PriceIncrease": 0,
+    "CarId": 14
+  },
+  {
+    "ModelVariantId": 37,
+    "Name": "Sport",
+    "PriceIncrease": 4000,
+    "CarId": 14
+  },
+  {
+    "ModelVariantId": 38,
+    "Name": "S Line",
+    "PriceIncrease": 6000,
+    "CarId": 14
+  },
+  {
+    "ModelVariantId": 39,
+    "Name": "Technik",
+    "PriceIncrease": 0,
+    "CarId": 15
+  },
+  {
+    "ModelVariantId": 40,
+    "Name": "Sport",
+    "PriceIncrease": 4000,
+    "CarId": 15
+  },
+  {
+    "ModelVariantId": 41,
+    "Name": "S Line",
+    "PriceIncrease": 6000,
+    "CarId": 15
+  }
+]
+
+

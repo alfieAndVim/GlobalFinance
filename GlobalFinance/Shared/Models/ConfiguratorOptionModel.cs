@@ -1,5 +1,5 @@
 ﻿using System;
-namespace GlobalFinance.Shared
+namespace GlobalFinance.Shared.Models
 {
 	public class ConfiguratorOptionModel
 	{

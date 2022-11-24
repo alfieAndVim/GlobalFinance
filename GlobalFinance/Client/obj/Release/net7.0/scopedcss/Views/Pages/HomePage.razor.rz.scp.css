@@ -1,0 +1,33 @@
+.outer-div[b-aaqd9d26q7] {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+}
+
+.inner-div[b-aaqd9d26q7] {
+    height: auto;
+    display: inline-block;
+}
+
+.nav-btns[b-aaqd9d26q7] {
+    display: flex;
+    height: contain;
+    position: relative;
+    top: 20%;
+    bottom: 50%;
+}
+
+#car-image[b-aaqd9d26q7] {
+    height: 100%;
+    width: 50%
+}
+
+h1[b-aaqd9d26q7] {
+    font-weight: 700;
+}
+
+img[b-aaqd9d26q7] {
+    height: 100%;
+    width: 100%;
+}

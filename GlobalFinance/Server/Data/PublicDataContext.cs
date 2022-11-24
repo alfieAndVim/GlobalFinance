@@ -22,10 +22,14 @@ namespace GlobalFinance.Server.Data
 
             modelBuilder.Entity<ModelVariantModel>().HasData(
                 JsonSerializer.Deserialize<List<ModelVariantModel>>(document: JsonDocument.Parse(File.ReadAllText(Path.Combine("Data", "ModelVariants.json")))));
+
+            modelBuilder.Entity<PaintModel>().HasData(
+                JsonSerializer.Deserialize<List<PaintModel>>(document: JsonDocument.Parse(File.ReadAllText(Path.Combine("Data", "PaintColours.json")))));
         }
 
         public DbSet<CarModel>? Cars { get; set; }
         public DbSet<OfferModel>? Offers { get; set; }
         public DbSet<ModelVariantModel>? ModelVariants { get; set; }
+        public DbSet<PaintModel>? PaintColours { get; set; }
     }
 }

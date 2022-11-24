@@ -4,6 +4,7 @@
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/bin/Debug/net7.0/Data/Cars.json
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/bin/Debug/net7.0/Data/ModelVariants.json
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/bin/Debug/net7.0/Data/Offers.json
+/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/bin/Debug/net7.0/Data/PaintColours.json
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/bin/Debug/net7.0/BlazorDebugProxy/BrowserDebugHost.dll
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/bin/Debug/net7.0/BlazorDebugProxy/BrowserDebugHost.runtimeconfig.json
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/bin/Debug/net7.0/BlazorDebugProxy/BrowserDebugProxy.dll

@@ -549,6 +549,346 @@ namespace GlobalFinance.Server.Migrations
                         });
                 });
 
+            modelBuilder.Entity("GlobalFinance.Shared.Models.PaintModel", b =>
+                {
+                    b.Property<int>("PaintId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("PriceIncrease")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("PaintId");
+
+                    b.HasIndex("CarId");
+
+                    b.ToTable("PaintColours");
+
+                    b.HasData(
+                        new
+                        {
+                            PaintId = 1,
+                            CarId = 1,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 2,
+                            CarId = 1,
+                            Name = "Crystal Silver",
+                            PriceIncrease = 600
+                        },
+                        new
+                        {
+                            PaintId = 3,
+                            CarId = 1,
+                            Name = "Crimson Red",
+                            PriceIncrease = 700
+                        },
+                        new
+                        {
+                            PaintId = 4,
+                            CarId = 2,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 5,
+                            CarId = 2,
+                            Name = "Crystal Silver",
+                            PriceIncrease = 600
+                        },
+                        new
+                        {
+                            PaintId = 6,
+                            CarId = 2,
+                            Name = "Cobalt Blue",
+                            PriceIncrease = 600
+                        },
+                        new
+                        {
+                            PaintId = 7,
+                            CarId = 3,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 8,
+                            CarId = 3,
+                            Name = "Voltaic Blue",
+                            PriceIncrease = 600
+                        },
+                        new
+                        {
+                            PaintId = 9,
+                            CarId = 3,
+                            Name = "Iconic Green",
+                            PriceIncrease = 700
+                        },
+                        new
+                        {
+                            PaintId = 10,
+                            CarId = 4,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 11,
+                            CarId = 4,
+                            Name = "Contrast Grey",
+                            PriceIncrease = 600
+                        },
+                        new
+                        {
+                            PaintId = 12,
+                            CarId = 4,
+                            Name = "Cobalt Blue",
+                            PriceIncrease = 700
+                        },
+                        new
+                        {
+                            PaintId = 13,
+                            CarId = 5,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 14,
+                            CarId = 5,
+                            Name = "Melbourne Red Metallic",
+                            PriceIncrease = 695
+                        },
+                        new
+                        {
+                            PaintId = 15,
+                            CarId = 5,
+                            Name = "Black Sapphire Metallic",
+                            PriceIncrease = 695
+                        },
+                        new
+                        {
+                            PaintId = 16,
+                            CarId = 6,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 17,
+                            CarId = 6,
+                            Name = "Sunset Orange",
+                            PriceIncrease = 695
+                        },
+                        new
+                        {
+                            PaintId = 18,
+                            CarId = 6,
+                            Name = "Black Sapphire Metallic",
+                            PriceIncrease = 695
+                        },
+                        new
+                        {
+                            PaintId = 19,
+                            CarId = 7,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 20,
+                            CarId = 7,
+                            Name = "Mineral White Metallic",
+                            PriceIncrease = 900
+                        },
+                        new
+                        {
+                            PaintId = 21,
+                            CarId = 7,
+                            Name = "Black Sapphire Metallic",
+                            PriceIncrease = 900
+                        },
+                        new
+                        {
+                            PaintId = 22,
+                            CarId = 8,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 23,
+                            CarId = 8,
+                            Name = "Black Sapphire Metallic",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 24,
+                            CarId = 8,
+                            Name = "Oxide Grey",
+                            PriceIncrease = 1100
+                        },
+                        new
+                        {
+                            PaintId = 25,
+                            CarId = 9,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 26,
+                            CarId = 9,
+                            Name = "Python Yellow",
+                            PriceIncrease = 575
+                        },
+                        new
+                        {
+                            PaintId = 27,
+                            CarId = 9,
+                            Name = "Mythos Black",
+                            PriceIncrease = 575
+                        },
+                        new
+                        {
+                            PaintId = 28,
+                            CarId = 10,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 29,
+                            CarId = 10,
+                            Name = "Forest Silver",
+                            PriceIncrease = 575
+                        },
+                        new
+                        {
+                            PaintId = 30,
+                            CarId = 10,
+                            Name = "Mythos Black",
+                            PriceIncrease = 575
+                        },
+                        new
+                        {
+                            PaintId = 31,
+                            CarId = 11,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 32,
+                            CarId = 11,
+                            Name = "Forest Silver",
+                            PriceIncrease = 675
+                        },
+                        new
+                        {
+                            PaintId = 33,
+                            CarId = 11,
+                            Name = "Navarra Blue",
+                            PriceIncrease = 675
+                        },
+                        new
+                        {
+                            PaintId = 34,
+                            CarId = 12,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 35,
+                            CarId = 12,
+                            Name = "Glacier White",
+                            PriceIncrease = 675
+                        },
+                        new
+                        {
+                            PaintId = 36,
+                            CarId = 12,
+                            Name = "Tango Red",
+                            PriceIncrease = 675
+                        },
+                        new
+                        {
+                            PaintId = 37,
+                            CarId = 13,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 38,
+                            CarId = 13,
+                            Name = "Forest Silver",
+                            PriceIncrease = 685
+                        },
+                        new
+                        {
+                            PaintId = 39,
+                            CarId = 13,
+                            Name = "Tango red",
+                            PriceIncrease = 685
+                        },
+                        new
+                        {
+                            PaintId = 40,
+                            CarId = 14,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 41,
+                            CarId = 14,
+                            Name = "Forest Grey",
+                            PriceIncrease = 685
+                        },
+                        new
+                        {
+                            PaintId = 42,
+                            CarId = 14,
+                            Name = "Tango Red",
+                            PriceIncrease = 685
+                        },
+                        new
+                        {
+                            PaintId = 43,
+                            CarId = 15,
+                            Name = "Solid White",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 44,
+                            CarId = 15,
+                            Name = "Firmament Blue",
+                            PriceIncrease = 0
+                        },
+                        new
+                        {
+                            PaintId = 45,
+                            CarId = 15,
+                            Name = "Mythos Black",
+                            PriceIncrease = 0
+                        });
+                });
+
             modelBuilder.Entity("GlobalFinance.Shared.Models.ModelVariantModel", b =>
                 {
                     b.HasOne("GlobalFinance.Shared.Models.CarModel", "Car")
@@ -561,6 +901,17 @@ namespace GlobalFinance.Server.Migrations
                 });
 
             modelBuilder.Entity("GlobalFinance.Shared.Models.OfferModel", b =>
+                {
+                    b.HasOne("GlobalFinance.Shared.Models.CarModel", "Car")
+                        .WithMany()
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Car");
+                });
+
+            modelBuilder.Entity("GlobalFinance.Shared.Models.PaintModel", b =>
                 {
                     b.HasOne("GlobalFinance.Shared.Models.CarModel", "Car")
                         .WithMany()

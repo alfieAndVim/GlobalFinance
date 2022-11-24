@@ -40,6 +40,13 @@ namespace GlobalFinance.Server.Controllers
             var _variants = await publicDataContext.ModelVariants.Where(v => v.CarId == id).ToListAsync();
             return Ok(_variants);
         }
+
+        [HttpGet("paints{id}")]
+        public async Task<ActionResult<List<PaintModel>>> ListPaints(int id)
+        {
+            var _paints = await publicDataContext.PaintColours.Where(p => p.CarId == id).ToListAsync();
+            return Ok(_paints);
+        }
         
 
     }

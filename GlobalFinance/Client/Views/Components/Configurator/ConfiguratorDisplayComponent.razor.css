@@ -12,8 +12,8 @@ img {
 
 .option-button {
     width: 80%;
-    height: 10%;
-    min-height: 100px;
+    height: auto;
+    min-height: 50px;
     background-color: white;
     box-shadow: 0px 0px 8px;
     border: 4px solid lightgrey;
@@ -22,12 +22,13 @@ img {
     margin: 0 auto;
     margin-top: 1em;
     display: flex;
+    padding: 10px;
 }
 
 .option-button-active {
     width: 80%;
-    height: 10%;
-    min-height: 100px;
+    height: auto;
+    min-height: 50px;
     background-color: white;
     box-shadow: 0px 0px 8px;
     border: 4px solid blue;
@@ -36,6 +37,38 @@ img {
     margin: 0 auto;
     margin-top: 1em;
     display: flex;
+    padding: 10px;
+}
+
+.option-select {
+    width: 30%;
+    height: 10%;
+    min-height: 60px;
+    background-color: blue;
+    box-shadow: 0px 0px 8px;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-right: 10%;
+    margin-top: 10%;
+    display: flex;
+    cursor: pointer;
+}
+
+.return {
+    width: 30%;
+    height: 10%;
+    min-height: 60px;
+    background-color: grey;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-top: 10%;
+    display: flex;
+    cursor: pointer;
+}
+
+.actions {
+    display: inline-flex;
+    width: 100%;
 }
 
 .outer-div {
@@ -65,7 +98,6 @@ img {
 .selection-options {
     height: 100%;
     width: 100%;
-    justify-content: ;
 }
 
 .information {
@@ -87,8 +119,10 @@ img {
     margin: 0 auto;
 }
 
-#option-button-active {
-    border: 2px solid blue;
+#option-action {
+    color: white;
+    margin: auto auto;
+    font-size: small;
 }
 
 .option-button:hover {
@@ -112,14 +146,12 @@ img {
         width: auto;
         margin: 20px;
         grid-area: 2 / 1 / 3 / 2;
-        border: 2px solid blue;
         display: flex;
         flex-direction: column;
     }
 
     .selection-options {
         height: auto;
-        border: 2px solid red;
     }
 
     .information {
@@ -128,5 +160,9 @@ img {
         width: auto;
         margin: 20px;
         grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .option-select {
+        margin-top: 2%;
     }
 }

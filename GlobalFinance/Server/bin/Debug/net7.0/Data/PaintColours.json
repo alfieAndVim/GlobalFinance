@@ -1,0 +1,279 @@
+﻿[
+  {
+    "PaintId": 1,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 1
+  },
+  {
+    "PaintId": 2,
+    "Name": "Crystal Silver",
+    "PriceIncrease": 600,
+    "CarId": 1
+  },
+  {
+    "PaintId": 3,
+    "Name": "Crimson Red",
+    "PriceIncrease": 700,
+    "CarId": 1
+  },
+  {
+    "PaintId": 4,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 2
+  },
+  {
+    "PaintId": 5,
+    "Name": "Crystal Silver",
+    "PriceIncrease": 600,
+    "CarId": 2
+  },
+  {
+    "PaintId": 6,
+    "Name": "Cobalt Blue",
+    "PriceIncrease": 600,
+    "CarId": 2
+  },
+  {
+    "PaintId": 7,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 3
+  },
+  {
+    "PaintId": 8,
+    "Name": "Voltaic Blue",
+    "PriceIncrease": 600,
+    "CarId": 3
+  },
+  {
+    "PaintId": 9,
+    "Name": "Iconic Green",
+    "PriceIncrease": 700,
+    "CarId": 3
+  },
+  {
+    "PaintId": 10,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 4
+  },
+  {
+    "PaintId": 11,
+    "Name": "Contrast Grey",
+    "PriceIncrease": 600,
+    "CarId": 4
+  },
+  {
+    "PaintId": 12,
+    "Name": "Cobalt Blue",
+    "PriceIncrease": 700,
+    "CarId": 4
+  },
+  {
+    "PaintId": 13,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 5
+  },
+  {
+    "PaintId": 14,
+    "Name": "Melbourne Red Metallic",
+    "PriceIncrease": 695,
+    "CarId": 5
+  },
+  {
+    "PaintId": 15,
+    "Name": "Black Sapphire Metallic",
+    "PriceIncrease": 695,
+    "CarId": 5
+  },
+  {
+
+    "PaintId": 16,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 6
+  },
+  {
+    "PaintId": 17,
+    "Name": "Sunset Orange",
+    "PriceIncrease": 695,
+    "CarId": 6
+  },
+  {
+    "PaintId": 18,
+    "Name": "Black Sapphire Metallic",
+    "PriceIncrease": 695,
+    "CarId": 6
+  },
+  {
+
+    "PaintId": 19,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 7
+  },
+  {
+    "PaintId": 20,
+    "Name": "Mineral White Metallic",
+    "PriceIncrease": 900,
+    "CarId": 7
+  },
+  {
+    "PaintId": 21,
+    "Name": "Black Sapphire Metallic",
+    "PriceIncrease": 900,
+    "CarId": 7
+  },
+  {
+
+    "PaintId": 22,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 8
+  },
+  {
+    "PaintId": 23,
+    "Name": "Black Sapphire Metallic",
+    "PriceIncrease": 0,
+    "CarId": 8
+  },
+  {
+    "PaintId": 24,
+    "Name": "Oxide Grey",
+    "PriceIncrease": 1100,
+    "CarId": 8
+  },
+  {
+    "PaintId": 25,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 9
+  },
+  {
+    "PaintId": 26,
+    "Name": "Python Yellow",
+    "PriceIncrease": 575,
+    "CarId": 9
+  },
+  {
+    "PaintId": 27,
+    "Name": "Mythos Black",
+    "PriceIncrease": 575,
+    "CarId": 9
+  },
+  {
+    "PaintId": 28,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 10
+  },
+  {
+    "PaintId": 29,
+    "Name": "Forest Silver",
+    "PriceIncrease": 575,
+    "CarId": 10
+  },
+  {
+    "PaintId": 30,
+    "Name": "Mythos Black",
+    "PriceIncrease": 575,
+    "CarId": 10
+  },
+  {
+    "PaintId": 31,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 11
+  },
+  {
+    "PaintId": 32,
+    "Name": "Forest Silver",
+    "PriceIncrease": 675,
+    "CarId": 11
+  },
+  {
+    "PaintId": 33,
+    "Name": "Navarra Blue",
+    "PriceIncrease": 675,
+    "CarId": 11
+  },
+  {
+    "PaintId": 34,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 12
+  },
+  {
+    "PaintId": 35,
+    "Name": "Glacier White",
+    "PriceIncrease": 675,
+    "CarId": 12
+  },
+  {
+    "PaintId": 36,
+    "Name": "Tango Red",
+    "PriceIncrease": 675,
+    "CarId": 12
+  },
+  {
+    "PaintId": 37,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 13
+  },
+  {
+    "PaintId": 38,
+    "Name": "Forest Silver",
+    "PriceIncrease": 685,
+    "CarId": 13
+  },
+  {
+    "PaintId": 39,
+    "Name": "Tango red",
+    "PriceIncrease": 685,
+    "CarId": 13
+  },
+  {
+    "PaintId": 40,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 14
+  },
+  {
+    "PaintId": 41,
+    "Name": "Forest Grey",
+    "PriceIncrease": 685,
+    "CarId": 14
+  },
+  {
+    "PaintId": 42,
+    "Name": "Tango Red",
+    "PriceIncrease": 685,
+    "CarId": 14
+  },
+  {
+    "PaintId": 43,
+    "Name": "Solid White",
+    "PriceIncrease": 0,
+    "CarId": 15
+  },
+  {
+    "PaintId": 44,
+    "Name": "Firmament Blue",
+    "PriceIncrease": 0,
+    "CarId": 15
+  },
+  {
+    "PaintId": 45,
+    "Name": "Mythos Black",
+    "PriceIncrease": 0,
+    "CarId": 15
+  }
+]
+
+
+
+

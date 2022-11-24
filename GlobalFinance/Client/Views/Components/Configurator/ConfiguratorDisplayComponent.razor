@@ -1,4 +1,6 @@
 ﻿
+@inject NavigationManager NavigationManager
+
 @if(_car is not null)
 {
         <div class="outer-div">
@@ -10,10 +12,27 @@
                 <div class="selection-options">
                     @foreach (var option in _options)
                     {
-                        <div class="@(selectedOption == option ? "option-button-active" : "option-button")" @onclick="() => SetSelectedOption(option)">
+                        <div class="@((selectedOption == option) | (option.OptionId == OptionId) ? "option-button-active" : "option-button")" @onclick="() => SetSelectedOption(option)">
                             <h3 id="option-name">@option.OptionName</h3>
+                            <h4 id="option-price">@option.OptionPriceIncrease</h4>
                         </div>
                     }
+                <div class="actions">
+                    @if (_returnRoute != null)
+                    {
+                        <div class="return" @onclick="GoBack">
+                            <h3 id="option-action">Go Back</h3>
+                        </div>
+                    }
+                    @if ((selectedOption != null) | OptionId != 0)
+                    {
+                        <div class="option-select" @onclick="OnOptionIdChanged">
+                            <h3 id="option-action">Next</h3>
+                        </div>
+                    }
+                </div>
+                    
+
                 </div>
             </div>
             <div class="information">
@@ -36,6 +55,14 @@
     public string _action { get; set; }
     [Parameter, EditorRequired]
     public List<ConfiguratorOptionModel> _options { get; set; }
+    [Parameter]
+    public int OptionId { get; set; }
+    [Parameter]
+    public EventCallback<int> OptionIdChanged { get; set; }
+    [Parameter]
+    public EventCallback OptionIdSet { get; set; }
+    [Parameter]
+    public string _returnRoute { get; set; }
 
     private ConfiguratorOptionModel selectedOption;
 
@@ -43,10 +70,26 @@
 
     void SetSelectedOption(ConfiguratorOptionModel option)
     {
+        OptionId = 0;
         selectedOption = option;
         StateHasChanged();
 
     }
 
-}
+    protected void OnOptionIdChanged()
+    {
+        if (OptionId <= 0)
+        {
+            OptionId = selectedOption.OptionId;
+        }
+        OptionIdChanged.InvokeAsync(OptionId);
+        OptionIdSet.InvokeAsync();
+    }
+
+    private void GoBack()
+    {
+        NavigationManager.NavigateTo(_returnRoute);
+    }
+
+    }
 
