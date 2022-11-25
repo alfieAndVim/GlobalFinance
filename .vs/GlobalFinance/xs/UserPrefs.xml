@@ -1,15 +1,14 @@
 ﻿<Properties StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Client/Services/ConfiguratorService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Client/wwwroot/css/app.css">
     <Files>
       <File FileName="GlobalFinance/Client/Properties/launchSettings.json" />
-      <File FileName="GlobalFinance/Client/Program.cs" Line="18" Column="1" />
+      <File FileName="GlobalFinance/Client/Program.cs" />
       <File FileName="GlobalFinance/Server/Program.cs" />
       <File FileName="GlobalFinance/Client/_Imports.razor" />
       <File FileName="GlobalFinance/Client/App.razor" />
@@ -18,32 +17,33 @@
       <File FileName="GlobalFinance/Client/Views/Shared/Components/TitleComponent.razor" />
       <File FileName="GlobalFinance/Client/Views/Shared/Components/Buttons/GenericNavButtonComponent.razor" />
       <File FileName="GlobalFinance/Client/Views/Shared/Components/Buttons/LoginButtonComponent.razor" />
-      <File FileName="GlobalFinance/Server/Controllers/CarsController.cs" Line="48" Column="32" />
-      <File FileName="GlobalFinance/Server/Data/PublicDataContext.cs" Line="31" Column="51" />
+      <File FileName="GlobalFinance/Server/Controllers/CarsController.cs" />
+      <File FileName="GlobalFinance/Server/Data/PublicDataContext.cs" />
       <File FileName="GlobalFinance/Client/Services/CarService.cs" Line="7" Column="23" />
       <File FileName="GlobalFinance/Client/Views/Pages/CarsPage.razor" />
       <File FileName="GlobalFinance/Shared/Models/CarModel.cs" />
       <File FileName="GlobalFinance/Shared/Models/OfferModel.cs" />
-      <File FileName="GlobalFinance/Server/Data/Cars.json" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Server/Data/Cars.json" />
       <File FileName="GlobalFinance/Server/Data/Offers.json" />
       <File FileName="GlobalFinance/Client/Views/Components/CarOptionComponent.razor" Line="1" Column="1" />
-      <File FileName="GlobalFinance/Client/Views/Components/Configurator/ConfiguratorDisplayComponent.razor" Line="67" Column="35" />
-      <File FileName="GlobalFinance/Server/Data/ModelVariants.json" Line="26" Column="4" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Configurator/ModelVariantConfig.razor" Line="20" Column="15" />
+      <File FileName="GlobalFinance/Client/Views/Components/Configurator/ConfiguratorDisplayComponent.razor" Line="34" Column="21" />
+      <File FileName="GlobalFinance/Server/Data/ModelVariants.json" />
+      <File FileName="GlobalFinance/Client/Views/Pages/Configurator/ModelVariantConfig.razor" Line="1" Column="8" />
       <File FileName="GlobalFinance/Client/Views/Pages/CarsPage.razor.css" />
       <File FileName="GlobalFinance/Client/ServicesInterfaces/IOfferService.cs" />
-      <File FileName="GlobalFinance/Client/Services/OfferService.cs" Line="1" Column="1" />
-      <File FileName="GlobalFinance/Shared/Models/ModelVariantModel.cs" Line="8" Column="3" />
-      <File FileName="GlobalFinance/Client/Views/Components/Configurator/ConfiguratorDisplayComponent.razor.css" />
+      <File FileName="GlobalFinance/Client/Services/OfferService.cs" />
+      <File FileName="GlobalFinance/Shared/Models/ModelVariantModel.cs" />
+      <File FileName="GlobalFinance/Client/Views/Components/Configurator/ConfiguratorDisplayComponent.razor.css" Line="125" Column="21" />
       <File FileName="GlobalFinance/Client/Views/Components/CarOptionComponent.razor.css" />
-      <File FileName="GlobalFinance/Shared/Models/ConfiguratorOptionModel.cs" Line="2" Column="38" />
-      <File FileName="GlobalFinance/Shared/Models/ConfigurationModel.cs" Line="14" Column="1" />
-      <File FileName="GlobalFinance/Client/Services/ConfiguratorService.cs" Line="31" Column="25" />
-      <File FileName="GlobalFinance/Client/ServicesInterfaces/IConfiguratorService.cs" Line="3" Column="50" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Configurator/PaintColourConfig.razor" Line="36" Column="46" />
-      <File FileName="GlobalFinance/Shared/Models/PaintModel.cs" Line="9" Column="27" />
-      <File FileName="GlobalFinance/Server/Data/PaintColours.json" Line="29" Column="26" />
-      <File FileName="GlobalFinance/Client/Services/ICarService.cs" Line="3" Column="50" />
+      <File FileName="GlobalFinance/Shared/Models/ConfiguratorOptionModel.cs" />
+      <File FileName="GlobalFinance/Shared/Models/ConfigurationModel.cs" />
+      <File FileName="GlobalFinance/Client/Services/ConfiguratorService.cs" Line="8" Column="29" />
+      <File FileName="GlobalFinance/Client/Views/Pages/Configurator/PaintColourConfig.razor" Line="39" Column="64" />
+      <File FileName="GlobalFinance/Shared/Models/PaintModel.cs" />
+      <File FileName="GlobalFinance/Server/Data/PaintColours.json" />
+      <File FileName="GlobalFinance/Client/Services/IConfiguratorService.cs" Line="3" Column="50" />
+      <File FileName="GlobalFinance/Client/ServicesInterfaces/ICarService.cs" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Client/wwwroot/css/app.css" Line="15" Column="21" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -51,9 +51,7 @@
           <Node name="GlobalFinance" expanded="True">
             <Node name="GlobalFinance.Client" expanded="True">
               <Node name="Properties" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="ConfiguratorService.cs" selected="True" />
-              </Node>
+              <Node name="Services" expanded="True" />
               <Node name="ServicesInterfaces" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Components" expanded="True">
@@ -63,9 +61,7 @@
                   <Node name="CarOptionComponent.razor" expanded="True" />
                 </Node>
                 <Node name="Pages" expanded="True">
-                  <Node name="Configurator" expanded="True">
-                    <Node name="ModelVariantConfig.razor" expanded="True" />
-                  </Node>
+                  <Node name="Configurator" expanded="True" />
                   <Node name="CarsPage.razor" expanded="True" />
                 </Node>
                 <Node name="Shared" expanded="True">
@@ -74,6 +70,9 @@
                   </Node>
                   <Node name="Pages" expanded="True" />
                 </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
               </Node>
             </Node>
             <Node name="GlobalFinance.Server" expanded="True">
@@ -88,4 +87,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
 </Properties>

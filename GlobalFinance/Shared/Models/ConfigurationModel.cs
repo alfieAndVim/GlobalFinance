@@ -7,6 +7,8 @@ namespace GlobalFinance.Shared.Models
 		public int? CarId { get; set; }
 		public int? ModelVariantId { get; set; }
 		public int? PaintId { get; set; }
+		public int? Price { get; set; }
+		public Stack<ConfiguratorOptionModel>? Options { get; set; }
 
 	}
 }

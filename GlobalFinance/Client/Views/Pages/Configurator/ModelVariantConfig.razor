@@ -8,7 +8,7 @@
 
 <h3>Configurator</h3>
 
-<ConfiguratorDisplayComponent _car="@_car" _carImgSrc="@_imgSrc" _action="Choose Model Variant" _options="@_options" @bind-OptionId="_modelVariantId" OptionIdSet="GivenModelVariantOption"></ConfiguratorDisplayComponent>
+<ConfiguratorDisplayComponent _car="@_car" _carImgSrc="@_imgSrc" _action="Choose Model Variant" _options="@_options" @bind-OptionId="_modelVariantId" @bind-ConfigOptions="_configOptions" OptionIdSet="GivenModelVariantOption" _forwardRoute="@_forwardRoute"></ConfiguratorDisplayComponent>
 
 
 @code {
@@ -24,6 +24,9 @@
     private List<ConfiguratorOptionModel> _options;
 
     private int _modelVariantId;
+    private string _forwardRoute;
+
+    private Stack<ConfiguratorOptionModel> _configOptions;
 
     protected override async Task OnInitializedAsync()
     {
@@ -41,14 +44,23 @@
             {
                 _modelVariantId = prevConfig.ModelVariantId ?? 0;
             }
-            ConfiguratorService.Configuration.CarId = CarId;
+            if(prevConfig.Options != null)
+            {
+                _configOptions = prevConfig.Options;
+            } else
+        {
+                _configOptions = new Stack<ConfiguratorOptionModel>();
         }
+            ConfiguratorService.Configuration.CarId = CarId;
+            ConfiguratorService.Configuration.Price = _car.CarOutrightStartingPrice;
+        }
+        _forwardRoute = $"/cars/{CarId}/paintcolour";
     }
 
     private void GivenModelVariantOption()
     {
         ConfiguratorService.Configuration.ModelVariantId = _modelVariantId;
-        NavigationManager.NavigateTo($"/cars/{CarId}/paintcolour");
+        ConfiguratorService.Configuration.Options = _configOptions;
     }
 
 

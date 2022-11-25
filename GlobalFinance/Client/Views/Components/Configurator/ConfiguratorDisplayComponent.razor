@@ -26,7 +26,7 @@
                     }
                     @if ((selectedOption != null) | OptionId != 0)
                     {
-                        <div class="option-select" @onclick="OnOptionIdChanged">
+                        <div class="option-select" @onclick="GoForward">
                             <h3 id="option-action">Next</h3>
                         </div>
                     }
@@ -39,7 +39,17 @@
                 <div class="car-details">
                     <h3>@_car.CarMakeName</h3>
                     <h3>@_car.CarModelName</h3>
-                    
+                </div>
+                <div class="car-price">
+                    <h3>Base Price: £@_car.CarOutrightStartingPrice</h3>
+                    @if (ConfigOptions != null)
+                    {
+                        @foreach (var option in ConfigOptions)
+                        {
+                            <h4>@option.OptionName</h4>
+                        }
+                    }
+
                 </div>
             </div>
         </div>
@@ -58,11 +68,17 @@
     [Parameter]
     public int OptionId { get; set; }
     [Parameter]
+    public Stack<ConfiguratorOptionModel> ConfigOptions { get; set; }
+    [Parameter]
     public EventCallback<int> OptionIdChanged { get; set; }
+    [Parameter]
+    public EventCallback<Stack<ConfiguratorOptionModel>> ConfigOptionsChanged { get; set; }
     [Parameter]
     public EventCallback OptionIdSet { get; set; }
     [Parameter]
     public string _returnRoute { get; set; }
+    [Parameter]
+    public string _forwardRoute { get; set; }
 
     private ConfiguratorOptionModel selectedOption;
 
@@ -70,20 +86,24 @@
 
     void SetSelectedOption(ConfiguratorOptionModel option)
     {
-        OptionId = 0;
         selectedOption = option;
+        if (OptionId > 0)
+        {
+            ConfigOptions.Pop();
+        }
+        ConfigOptions.Push(option);
         StateHasChanged();
+
+        OptionId = selectedOption.OptionId;
+        OptionIdChanged.InvokeAsync(OptionId);
+        ConfigOptionsChanged.InvokeAsync(ConfigOptions);
+        OptionIdSet.InvokeAsync();
 
     }
 
-    protected void OnOptionIdChanged()
+    private void GoForward()
     {
-        if (OptionId <= 0)
-        {
-            OptionId = selectedOption.OptionId;
-        }
-        OptionIdChanged.InvokeAsync(OptionId);
-        OptionIdSet.InvokeAsync();
+        NavigationManager.NavigateTo(_forwardRoute);
     }
 
     private void GoBack()
