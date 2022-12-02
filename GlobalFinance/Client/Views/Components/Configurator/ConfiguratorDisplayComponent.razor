@@ -42,13 +42,7 @@
                 </div>
                 <div class="car-price">
                     <h3>Base Price: £@_car.CarOutrightStartingPrice</h3>
-                    @if (ConfigOptions != null)
-                    {
-                        @foreach (var option in ConfigOptions)
-                        {
-                            <h4>@option.OptionName</h4>
-                        }
-                    }
+                    <h3>Option Price: £@OptionPrice</h3>
 
                 </div>
             </div>
@@ -66,9 +60,13 @@
     [Parameter, EditorRequired]
     public List<ConfiguratorOptionModel> _options { get; set; }
     [Parameter]
+    public int OptionPrice { get; set; }
+    [Parameter]
     public int OptionId { get; set; }
     [Parameter]
     public Stack<ConfiguratorOptionModel> ConfigOptions { get; set; }
+    [Parameter]
+    public EventCallback<int> OptionPriceChanged { get; set; }
     [Parameter]
     public EventCallback<int> OptionIdChanged { get; set; }
     [Parameter]
@@ -92,11 +90,20 @@
             ConfigOptions.Pop();
         }
         ConfigOptions.Push(option);
+
+        var tempOptionPrice = 0;
+        foreach (var tempOption in ConfigOptions)
+        {
+            tempOptionPrice += tempOption.OptionPriceIncrease;
+        }
+        OptionPrice = tempOptionPrice;
+
         StateHasChanged();
 
         OptionId = selectedOption.OptionId;
         OptionIdChanged.InvokeAsync(OptionId);
         ConfigOptionsChanged.InvokeAsync(ConfigOptions);
+        OptionPriceChanged.InvokeAsync(OptionPrice);
         OptionIdSet.InvokeAsync();
 
     }

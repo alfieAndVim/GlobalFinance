@@ -1,4 +1,6 @@
-﻿@inject NavigationManager NavigationManager
+﻿@using GlobalFinance.Client.ServicesInterfaces
+@inject IConfiguratorService ConfiguratorService  
+@inject NavigationManager NavigationManager
 
 <div class="outer-div" @onclick="GoToPage">
     <div class="image">
@@ -27,6 +29,7 @@
     public string imgSrc { get; set; }
 
     private void GoToPage(){
+        ConfiguratorService.Configuration = new ConfigurationModel();
         NavigationManager.NavigateTo($"/cars/{CarId}/modelvariant");
     }
 }
