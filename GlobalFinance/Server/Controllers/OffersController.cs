@@ -1,37 +1,37 @@
-﻿using GlobalFinance.Shared.Models;
+﻿using GlobalFinance.Server.Data;
+using GlobalFinance.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.EntityFrameworkCore;
 
 namespace GlobalFinance.Server.Controllers
 {
+    [ApiController]
+    [Route("[Controller]")]
     public class OffersController : ControllerBase
     {
-        private List<OfferModel> _offers = new() {
-            
-                new() {OfferId=0, OfferTitle="£300pm", OfferExpiry=DateOnly.FromDateTime(new DateTime(2022, 12, 2)), CarId=0},
-                new() {OfferId=1, OfferTitle="£340pm", OfferExpiry=DateOnly.FromDateTime(new DateTime(2022, 12, 2)), CarId=1},
-                new() { OfferId = 2, OfferTitle = "£350pm", OfferExpiry = DateOnly.FromDateTime(new DateTime(2022, 12, 2)), CarId = 2 },
-                new() { OfferId = 3, OfferTitle = "£290pm", OfferExpiry = DateOnly.FromDateTime(new DateTime(2022, 12, 2)), CarId = 3 },
-                new() { OfferId = 4, OfferTitle = "£300pm", OfferExpiry = DateOnly.FromDateTime(new DateTime(2022, 12, 2)), CarId = 4 },
-                new() { OfferId = 5, OfferTitle = "£360pm", OfferExpiry = DateOnly.FromDateTime(new DateTime(2022, 12, 2)), CarId = 5 },
-                new() { OfferId = 6, OfferTitle = "£390pm", OfferExpiry = DateOnly.FromDateTime(new DateTime(2022, 12, 2)), CarId = 6 },
-                new() { OfferId = 7, OfferTitle = "£400pm", OfferExpiry = DateOnly.FromDateTime(new DateTime(2022, 12, 2)), CarId = 7 },
-                new() { OfferId = 8, OfferTitle = "£200pm", OfferExpiry = DateOnly.FromDateTime(new DateTime(2022, 12, 2)), CarId = 8 },
-                new() { OfferId = 9, OfferTitle = "£300pm", OfferExpiry = DateOnly.FromDateTime(new DateTime(2022, 12, 2)), CarId = 9 },
-            };
+        private readonly PublicDataContext publicDataContext;
+
+        public OffersController(PublicDataContext publicDataContext)
+        {
+            this.publicDataContext = publicDataContext;
+        }
+        
 
         [HttpGet("list")]
-        public ActionResult List()
+        public async Task<ActionResult<List<OfferModel>>> List()
         {
+            var _offers = await publicDataContext.Offers.ToListAsync();
             return Ok(_offers);
         }
 
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public async Task<ActionResult<OfferModel>> Get(int id)
         {
-            var car = _offers.Find(c => c.OfferId == id);
-            if (car is not null)
+            var _offer = await publicDataContext.Offers.FirstOrDefaultAsync(o => o.OfferId == id);
+            if (_offer is not null)
             {
-                return Ok(car);
+                return Ok(_offer);
             }
             return NotFound();
         }

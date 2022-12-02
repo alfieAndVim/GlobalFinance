@@ -1,22 +1,31 @@
 ﻿@page "/cars"
-@using GlobalFinance.Client.Views.Shared.Components
+@using GlobalFinance.Client.ServicesInterfaces
+@using GlobalFinance.Client.Views.Components
 @using GlobalFinance.Shared.Models
-@inject HttpClient httpClient
+@inject ICarService CarService
 <h3>Showing @_carsCount results</h3>
 
 <div class="car-grid">
-    
-    @foreach (var car in _cars){
-        <CarOptionComponent CarId="@car.CarId" CarMakeName="@car.CarMakeName" CarModelName="@car.CarModelName" CarStartingPrice="@car.CarStartingPrice"></CarOptionComponent>
+    @if(CarService.Cars is not null){
+        @foreach (var car in CarService.Cars){
+        <CarOptionComponent CarId="@car.CarId" CarMakeName="@car.CarMakeName" CarModelName="@car.CarModelName" CarStartingPrice="@car.CarStartingPrice" imgSrc="@GetCarImageSrc(car.CarId)"></CarOptionComponent>
+        
     }
+    }
+    
 </div>
 
 @code {
-    private IEnumerable<CarModel>? _cars;
+    private List<CarModel>? _cars;
     private int _carsCount;
 
     protected override async Task OnInitializedAsync(){
-        _cars = await httpClient.GetFromJsonAsync<List<CarModel>>("Cars/list");
-        _carsCount = _cars.Count();
+        await CarService.GetCars();
+        _carsCount = CarService.Cars.Count();
+
+    }
+
+    private string GetCarImageSrc(int id){
+        return $"Images/Car-images/{id}.jpg";
     }
 }

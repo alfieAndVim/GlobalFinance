@@ -1,0 +1,122 @@
+﻿
+@inject NavigationManager NavigationManager
+
+@if(_car is not null)
+{
+        <div class="outer-div">
+            <div class="image">
+                <img src="@_carImgSrc"/>
+            </div>
+            <div class="selection-page">
+                <h3>@_action</h3>
+                <div class="selection-options">
+                    @foreach (var option in _options)
+                    {
+                        <div class="@((selectedOption == option) | (option.OptionId == OptionId) ? "option-button-active" : "option-button")" @onclick="() => SetSelectedOption(option)">
+                            <h3 id="option-name">@option.OptionName</h3>
+                            <h4 id="option-price">@option.OptionPriceIncrease</h4>
+                        </div>
+                    }
+                <div class="actions">
+                    @if (_returnRoute != null)
+                    {
+                        <div class="return" @onclick="GoBack">
+                            <h3 id="option-action">Go Back</h3>
+                        </div>
+                    }
+                    @if ((selectedOption != null) | OptionId != 0)
+                    {
+                        <div class="option-select" @onclick="GoForward">
+                            <h3 id="option-action">Next</h3>
+                        </div>
+                    }
+                </div>
+                    
+
+                </div>
+            </div>
+            <div class="information">
+                <div class="car-details">
+                    <h3>@_car.CarMakeName</h3>
+                    <h3>@_car.CarModelName</h3>
+                </div>
+                <div class="car-price">
+                    <h3>Base Price: £@_car.CarOutrightStartingPrice</h3>
+                    <h3>Option Price: £@OptionPrice</h3>
+
+                </div>
+            </div>
+        </div>
+}
+
+
+@code {
+    [Parameter, EditorRequired]
+    public CarModel _car { get; set; }
+    [Parameter, EditorRequired]
+    public string _carImgSrc { get; set; }
+    [Parameter, EditorRequired]
+    public string _action { get; set; }
+    [Parameter, EditorRequired]
+    public List<ConfiguratorOptionModel> _options { get; set; }
+    [Parameter]
+    public int OptionPrice { get; set; }
+    [Parameter]
+    public int OptionId { get; set; }
+    [Parameter]
+    public Stack<ConfiguratorOptionModel> ConfigOptions { get; set; }
+    [Parameter]
+    public EventCallback<int> OptionPriceChanged { get; set; }
+    [Parameter]
+    public EventCallback<int> OptionIdChanged { get; set; }
+    [Parameter]
+    public EventCallback<Stack<ConfiguratorOptionModel>> ConfigOptionsChanged { get; set; }
+    [Parameter]
+    public EventCallback OptionIdSet { get; set; }
+    [Parameter]
+    public string _returnRoute { get; set; }
+    [Parameter]
+    public string _forwardRoute { get; set; }
+
+    private ConfiguratorOptionModel selectedOption;
+
+
+
+    void SetSelectedOption(ConfiguratorOptionModel option)
+    {
+        selectedOption = option;
+        if (OptionId > 0)
+        {
+            ConfigOptions.Pop();
+        }
+        ConfigOptions.Push(option);
+
+        var tempOptionPrice = 0;
+        foreach (var tempOption in ConfigOptions)
+        {
+            tempOptionPrice += tempOption.OptionPriceIncrease;
+        }
+        OptionPrice = tempOptionPrice;
+
+        StateHasChanged();
+
+        OptionId = selectedOption.OptionId;
+        OptionIdChanged.InvokeAsync(OptionId);
+        ConfigOptionsChanged.InvokeAsync(ConfigOptions);
+        OptionPriceChanged.InvokeAsync(OptionPrice);
+        OptionIdSet.InvokeAsync();
+
+    }
+
+    private void GoForward()
+    {
+        NavigationManager.NavigateTo(_forwardRoute);
+    }
+
+    private void GoBack()
+    {
+        NavigationManager.NavigateTo(_returnRoute);
+    }
+
+    }
+

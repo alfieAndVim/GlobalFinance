@@ -1,31 +1,36 @@
 ﻿@page "/offers"
+@using GlobalFinance.Client.ServicesInterfaces
 @using GlobalFinance.Shared.Models
-@inject HttpClient httpClient
+@inject IOfferService OfferService
 <h3>OffersPage</h3>
 
-<table>
-    <tr>
-        <th>Offer Id</th>
-        <th>Offer Title</th>
-        <th>Offer Expiry</th>
-        <th>Car Id</th>
-    </tr>
-    @foreach (var offer in _offers)
-    {
+@if(OfferService.Offers is not null){
+    <table>
         <tr>
-            <th>@offer.OfferId</th>
-            <th>@offer.OfferTitle</th>
-            <th>@offer.OfferExpiry</th>
-            <th>@offer.CarId</th>
+            <th>Offer Id</th>
+            <th>Offer Title</th>
+            <th>Offer Expiry</th>
+            <th>Car Id</th>
         </tr>
-    }
-</table>
+        @foreach (var offer in OfferService.Offers)
+        {
+            <tr>
+                <th>@offer.OfferId</th>
+                <th>@offer.OfferPrice</th>
+                <th>@offer.OfferExpiry</th>
+                <th>@offer.CarId</th>
+            </tr>
+        }
+    </table>
+}
+
 
 @code {
-    private IEnumerable<OfferModel>? _offers;
+    private List<OfferModel>? _offers;
 
     protected override async Task OnInitializedAsync()
     {
-        _offers = await httpClient.GetFromJsonAsync<List<OfferModel>>("Offers/list");
+        await OfferService.GetOffers();
+        
     }
 }

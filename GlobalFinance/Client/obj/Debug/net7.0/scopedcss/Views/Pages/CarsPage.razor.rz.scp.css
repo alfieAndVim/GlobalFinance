@@ -1,0 +1,10 @@
+body[b-7ifbbbe3h0] {
+}
+
+.car-grid[b-7ifbbbe3h0] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    margin: 30px;
+    grid-gap: 10px;
+    justify-items: center;
+}

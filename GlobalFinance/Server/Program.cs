@@ -1,4 +1,6 @@
+﻿using GlobalFinance.Server.Data;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<PublicDataContext>(options => options.UseSqlite("Filename=publicdata.db"));
 
 var app = builder.Build();
 
@@ -34,3 +37,4 @@ app.MapControllers();
 app.MapFallbackToFile("index.html");
 
 app.Run();
+
