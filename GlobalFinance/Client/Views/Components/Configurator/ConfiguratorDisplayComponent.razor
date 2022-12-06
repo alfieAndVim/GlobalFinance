@@ -84,26 +84,31 @@
 
     void SetSelectedOption(ConfiguratorOptionModel option)
     {
-        selectedOption = option;
-        if (OptionId > 0)
-        {
-            ConfigOptions.Pop();
-        }
-        ConfigOptions.Push(option);
 
-        var tempOptionPrice = 0;
-        foreach (var tempOption in ConfigOptions)
+        selectedOption = option;
+        if (ConfigOptions is not null)
         {
-            tempOptionPrice += tempOption.OptionPriceIncrease;
+            if (OptionId > 0)
+            {
+                ConfigOptions.Pop();
+            }
+            ConfigOptions.Push(option);
+
+            var tempOptionPrice = 0;
+            foreach (var tempOption in ConfigOptions)
+            {
+                tempOptionPrice += tempOption.OptionPriceIncrease;
+            }
+            OptionPrice = tempOptionPrice;
+            ConfigOptionsChanged.InvokeAsync(ConfigOptions);
+            OptionPriceChanged.InvokeAsync(OptionPrice);
         }
-        OptionPrice = tempOptionPrice;
 
         StateHasChanged();
 
         OptionId = selectedOption.OptionId;
         OptionIdChanged.InvokeAsync(OptionId);
-        ConfigOptionsChanged.InvokeAsync(ConfigOptions);
-        OptionPriceChanged.InvokeAsync(OptionPrice);
+
         OptionIdSet.InvokeAsync();
 
     }

@@ -40,6 +40,23 @@ namespace GlobalFinance.Client.Services
                 OptionPriceIncrease = x.PriceIncrease
             }).ToList();
         }
+
+        public ConfigurationModel GetOrSetConfiguration(CarModel carResult)
+        {
+            if (Configuration == new ConfigurationModel())
+            {
+                Configuration = new ConfigurationModel()
+                {
+                    ConfigurationId = 0,
+                    CarId = carResult.CarId,
+                    ModelVariantId = 0,
+                    PaintId = 0,
+                    Options = new Stack<ConfiguratorOptionModel>(),
+                    Price = carResult.CarOutrightStartingPrice
+                };
+            }
+            return Configuration;
+        }
     }
 }
 

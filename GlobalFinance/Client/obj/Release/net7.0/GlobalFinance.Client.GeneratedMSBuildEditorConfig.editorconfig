@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQ29uZmlndXJhdG9yL1BhaW50Q29sb3VyQ29uZmlnLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/Views/Pages/Configurator/PaymentConfig.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQ29uZmlndXJhdG9yL1BheW1lbnRDb25maWcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/Views/Pages/OffersPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvT2ZmZXJzUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
