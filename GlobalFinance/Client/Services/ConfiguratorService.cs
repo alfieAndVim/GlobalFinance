@@ -43,7 +43,7 @@ namespace GlobalFinance.Client.Services
 
         public ConfigurationModel GetOrSetConfiguration(CarModel carResult)
         {
-            if (Configuration == new ConfigurationModel())
+            if (Configuration.CarId is null)
             {
                 Configuration = new ConfigurationModel()
                 {
@@ -56,6 +56,13 @@ namespace GlobalFinance.Client.Services
                 };
             }
             return Configuration;
+        }
+
+        public double GetFinanceAmount(int totalMonths = 36, int initialPayment = 0, int interestRate = 4)
+        {
+            var _totalPrice = Configuration.Price.HasValue ? (double)Configuration.Price : 0.0;
+            return Math.Round(((_totalPrice - initialPayment) / totalMonths) * (1 + (interestRate / 100)), 2);
+
         }
     }
 }

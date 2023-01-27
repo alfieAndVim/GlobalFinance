@@ -40,6 +40,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvT2ZmZXJzUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/Views/Pages/Payment/FinancePayment.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvUGF5bWVudC9GaW5hbmNlUGF5bWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/Views/Pages/Payment/Payment.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvUGF5bWVudC9QYXltZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/Views/Pages/Payment/PaymentPageHandler.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvUGF5bWVudC9QYXltZW50UGFnZUhhbmRsZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/Views/Shared/Components/Buttons/LoginButtonComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvQnV0dG9ucy9Mb2dpbkJ1dHRvbkNvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

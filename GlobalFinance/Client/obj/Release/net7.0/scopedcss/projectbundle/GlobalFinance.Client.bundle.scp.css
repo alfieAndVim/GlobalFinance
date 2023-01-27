@@ -64,7 +64,6 @@ h3[b-czez28hexb] {
 img[b-czez28hexb] {
     width: 100%;
     max-width: 800px;
-    max-height: 100%;
     object-fit: cover;
 }
 
@@ -142,6 +141,8 @@ img[b-czez28hexb] {
     grid-area: 1 / 1 / 2 / 2;
     width: auto;
     height: 300px;
+    max-height: 100%;
+    margin-top: 5%;
     margin-left: 10px;
     align-content: center;
     align-items: center;
