@@ -4,9 +4,9 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance.UnitTests/ConfiguratorServiceUnitTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Client/Properties/launchSettings.json">
     <Files>
-      <File FileName="GlobalFinance/Client/Properties/launchSettings.json" />
+      <File FileName="GlobalFinance/Client/Properties/launchSettings.json" Line="10" Column="16" />
       <File FileName="GlobalFinance/Client/Program.cs" />
       <File FileName="GlobalFinance/Server/Program.cs" />
       <File FileName="GlobalFinance/Client/_Imports.razor" />
@@ -18,7 +18,7 @@
       <File FileName="GlobalFinance/Client/Views/Shared/Components/Buttons/LoginButtonComponent.razor" />
       <File FileName="GlobalFinance/Server/Controllers/CarsController.cs" />
       <File FileName="GlobalFinance/Server/Data/PublicDataContext.cs" />
-      <File FileName="GlobalFinance/Client/Services/CarService.cs" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Client/Services/CarService.cs" />
       <File FileName="GlobalFinance/Client/Views/Pages/CarsPage.razor" />
       <File FileName="GlobalFinance/Shared/Models/OfferModel.cs" />
       <File FileName="GlobalFinance/Server/Data/Cars.json" />
@@ -35,7 +35,7 @@
       <File FileName="GlobalFinance/Client/Views/Components/CarOptionComponent.razor.css" />
       <File FileName="GlobalFinance/Shared/Models/ConfiguratorOptionModel.cs" />
       <File FileName="GlobalFinance/Shared/Models/ConfigurationModel.cs" />
-      <File FileName="GlobalFinance/Client/Services/ConfiguratorService.cs" Line="67" Column="6" />
+      <File FileName="GlobalFinance/Client/Services/ConfiguratorService.cs" />
       <File FileName="GlobalFinance/Client/Views/Pages/Configurator/PaintColourConfig.razor" />
       <File FileName="GlobalFinance/Shared/Models/PaintModel.cs" />
       <File FileName="GlobalFinance/Server/Data/PaintColours.json" />
@@ -48,28 +48,17 @@
       <File FileName="GlobalFinance/Client/Views/Pages/OffersPage.razor" />
       <File FileName="GlobalFinance/Server/Controllers/OffersController.cs" />
       <File FileName="GlobalFinance/Client/Views/Pages/Payment/PaymentPageHandler.razor" />
-      <File FileName="GlobalFinance.Tests/Usings.cs" Line="2" Column="28" />
-      <File FileName="GlobalFinance.IntegrationTests/UnitTest1.cs" Line="1" Column="1" />
-      <File FileName="GlobalFinance.UnitTests/ConfiguratorServiceUnit.cs" Line="23" Column="42" />
+      <File FileName="GlobalFinance.IntegrationTests/UnitTest1.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="GlobalFinance" expanded="True">
-            <Node name="GlobalFinance.Client" expanded="True">
-              <Node name="Services" expanded="True" />
-            </Node>
-            <Node name="GlobalFinance.UnitTests" expanded="True">
-              <Node name="ConfiguratorServiceUnitTest.cs" selected="True" />
-            </Node>
-          </Node>
+          <Node name="GlobalFinance" expanded="True" />
         </State>
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="GlobalFinance" expanded="True">
-            <Node name="GlobalFinance.UnitTests" expanded="True" />
-          </Node>
+          <Node name="GlobalFinance" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
