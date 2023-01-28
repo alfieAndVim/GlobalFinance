@@ -54,6 +54,7 @@ img[b-lqvpom6inh] {
 }
 /* /Views/Components/Configurator/ConfiguratorDisplayComponent.razor.rz.scp.css */
 body[b-czez28hexb] {
+    margin-top: 10px;
 }
 
 h3[b-czez28hexb] {
@@ -63,11 +64,12 @@ h3[b-czez28hexb] {
 img[b-czez28hexb] {
     width: 100%;
     max-width: 800px;
+    object-fit: cover;
 }
 
 .option-button[b-czez28hexb] {
     width: 80%;
-    height: 10%;
+    height: auto;
     min-height: 50px;
     background-color: white;
     box-shadow: 0px 0px 8px;
@@ -77,11 +79,12 @@ img[b-czez28hexb] {
     margin: 0 auto;
     margin-top: 1em;
     display: flex;
+    padding: 10px;
 }
 
 .option-button-active[b-czez28hexb] {
     width: 80%;
-    height: 10%;
+    height: auto;
     min-height: 50px;
     background-color: white;
     box-shadow: 0px 0px 8px;
@@ -91,19 +94,38 @@ img[b-czez28hexb] {
     margin: 0 auto;
     margin-top: 1em;
     display: flex;
+    padding: 10px;
 }
 
 .option-select[b-czez28hexb] {
-    width: 50%;
+    width: 30%;
     height: 10%;
     min-height: 60px;
     background-color: blue;
     box-shadow: 0px 0px 8px;
     border-radius: 20px;
-    margin-left: 40%;
-    margin-top: 20%;
+    margin: 0 auto;
+    margin-right: 10%;
+    margin-top: 10%;
     display: flex;
     cursor: pointer;
+}
+
+.return[b-czez28hexb] {
+    width: 30%;
+    height: 10%;
+    min-height: 60px;
+    background-color: grey;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-top: 10%;
+    display: flex;
+    cursor: pointer;
+}
+
+.actions[b-czez28hexb] {
+    display: inline-flex;
+    width: 100%;
 }
 
 .outer-div[b-czez28hexb] {
@@ -115,10 +137,15 @@ img[b-czez28hexb] {
 }
 
 .image[b-czez28hexb] {
+    display: flex;
     grid-area: 1 / 1 / 2 / 2;
     width: auto;
     height: 300px;
+    max-height: 100%;
+    margin-top: 5%;
     margin-left: 10px;
+    align-content: center;
+    align-items: center;
 }
 
 .selection-page[b-czez28hexb] {
@@ -133,7 +160,6 @@ img[b-czez28hexb] {
 .selection-options[b-czez28hexb] {
     height: 100%;
     width: 100%;
-    justify-content: ;
 }
 
 .information[b-czez28hexb] {
@@ -155,9 +181,10 @@ img[b-czez28hexb] {
     margin: 0 auto;
 }
 
-#option-next[b-czez28hexb] {
+#option-action[b-czez28hexb] {
     color: white;
     margin: auto auto;
+    font-size: small;
 }
 
 .option-button:hover[b-czez28hexb] {

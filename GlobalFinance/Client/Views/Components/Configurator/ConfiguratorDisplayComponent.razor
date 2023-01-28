@@ -43,7 +43,7 @@
                 <div class="car-price">
                     <h3>Base Price: £@_car.CarOutrightStartingPrice</h3>
                     <h3>Option Price: £@OptionPrice</h3>
-
+                    <h3>Total Price: £@TotalPrice</h3>
                 </div>
             </div>
         </div>
@@ -60,11 +60,15 @@
     [Parameter, EditorRequired]
     public List<ConfiguratorOptionModel> _options { get; set; }
     [Parameter]
+    public int TotalPrice { get; set; }
+    [Parameter]
     public int OptionPrice { get; set; }
     [Parameter]
     public int OptionId { get; set; }
     [Parameter]
     public Stack<ConfiguratorOptionModel> ConfigOptions { get; set; }
+    [Parameter]
+    public EventCallback<int> TotalPriceChanged { get; set; }
     [Parameter]
     public EventCallback<int> OptionPriceChanged { get; set; }
     [Parameter]
@@ -74,6 +78,8 @@
     [Parameter]
     public EventCallback OptionIdSet { get; set; }
     [Parameter]
+    public EventCallback OptionalForwardRoute { get; set; }
+    [Parameter]
     public string _returnRoute { get; set; }
     [Parameter]
     public string _forwardRoute { get; set; }
@@ -81,36 +87,49 @@
     private ConfiguratorOptionModel selectedOption;
 
 
-
     void SetSelectedOption(ConfiguratorOptionModel option)
     {
-        selectedOption = option;
-        if (OptionId > 0)
-        {
-            ConfigOptions.Pop();
-        }
-        ConfigOptions.Push(option);
 
-        var tempOptionPrice = 0;
-        foreach (var tempOption in ConfigOptions)
+        selectedOption = option;
+        if (ConfigOptions is not null)
         {
-            tempOptionPrice += tempOption.OptionPriceIncrease;
+            if (OptionId > 0)
+            {
+                ConfigOptions.Pop();
+            }
+            ConfigOptions.Push(option);
+
+            var tempOptionPrice = 0;
+            foreach (var tempOption in ConfigOptions)
+            {
+                tempOptionPrice += tempOption.OptionPriceIncrease;
+            }
+            OptionPrice = tempOptionPrice;
+            TotalPrice = _car.CarOutrightStartingPrice + tempOptionPrice;
+            ConfigOptionsChanged.InvokeAsync(ConfigOptions);
+            OptionPriceChanged.InvokeAsync(OptionPrice);
+            TotalPriceChanged.InvokeAsync(TotalPrice);
         }
-        OptionPrice = tempOptionPrice;
 
         StateHasChanged();
 
         OptionId = selectedOption.OptionId;
         OptionIdChanged.InvokeAsync(OptionId);
-        ConfigOptionsChanged.InvokeAsync(ConfigOptions);
-        OptionPriceChanged.InvokeAsync(OptionPrice);
+
         OptionIdSet.InvokeAsync();
 
     }
 
     private void GoForward()
     {
-        NavigationManager.NavigateTo(_forwardRoute);
+        if(_forwardRoute is not null)
+        {
+            NavigationManager.NavigateTo(_forwardRoute);
+        } else
+    {
+            OptionalForwardRoute.InvokeAsync();
+    }
+
     }
 
     private void GoBack()

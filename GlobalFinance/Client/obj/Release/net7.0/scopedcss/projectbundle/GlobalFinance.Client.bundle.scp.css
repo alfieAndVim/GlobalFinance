@@ -54,6 +54,7 @@ img[b-lqvpom6inh] {
 }
 /* /Views/Components/Configurator/ConfiguratorDisplayComponent.razor.rz.scp.css */
 body[b-czez28hexb] {
+    margin-top: 10px;
 }
 
 h3[b-czez28hexb] {
@@ -63,6 +64,7 @@ h3[b-czez28hexb] {
 img[b-czez28hexb] {
     width: 100%;
     max-width: 800px;
+    object-fit: cover;
 }
 
 .option-button[b-czez28hexb] {
@@ -135,10 +137,15 @@ img[b-czez28hexb] {
 }
 
 .image[b-czez28hexb] {
+    display: flex;
     grid-area: 1 / 1 / 2 / 2;
     width: auto;
     height: 300px;
+    max-height: 100%;
+    margin-top: 5%;
     margin-left: 10px;
+    align-content: center;
+    align-items: center;
 }
 
 .selection-page[b-czez28hexb] {

@@ -1,0 +1,107 @@
+[
+  {
+    "CarId": 1,
+    "CarMakeName": "Vauxhall",
+    "CarModelName": "Corsa",
+    "CarStartingPrice": 400,
+    "CarOutrightStartingPrice": 16995
+  },
+  {
+    "CarId": 2,
+    "CarMakeName": "Vauxhall",
+    "CarModelName": "Astra",
+    "CarStartingPrice": 450,
+    "CarOutrightStartingPrice": 16995
+  },
+  {
+    "CarId": 3,
+    "CarMakeName": "Vauxhall",
+    "CarModelName": "Mokka",
+    "CarStartingPrice": 450,
+    "CarOutrightStartingPrice": 21000
+  },
+  {
+    "CarId": 4,
+    "CarMakeName": "Vauxhall",
+    "CarModelName": "Grandland",
+    "CarStartingPrice": 460,
+    "CarOutrightStartingPrice": 26000
+  },
+  {
+    "CarId": 5,
+    "CarMakeName": "BMW",
+    "CarModelName": "3-Series",
+    "CarStartingPrice": 480,
+    "CarOutrightStartingPrice": 32000
+  },
+  {
+    "CarId": 6,
+    "CarMakeName": "BMW",
+    "CarModelName": "4-Series",
+    "CarStartingPrice": 490,
+    "CarOutrightStartingPrice": 40000
+  },
+  {
+    "CarId": 7,
+    "CarMakeName": "BMW",
+    "CarModelName": "5-Series",
+    "CarStartingPrice": 495,
+    "CarOutrightStartingPrice": 42000
+  },
+  {
+    "CarId": 8,
+    "CarMakeName": "BMW",
+    "CarModelName": "7-Series",
+    "CarStartingPrice": 750,
+    "CarOutrightStartingPrice": 105000
+  },
+  {
+    "CarId": 9,
+    "CarMakeName": "Audi",
+    "CarModelName": "A1",
+    "CarStartingPrice": 300,
+    "CarOutrightStartingPrice": 19000
+  },
+  {
+    "CarId": 10,
+    "CarMakeName": "Audi",
+    "CarModelName": "A3",
+    "CarStartingPrice": 350,
+    "CarOutrightStartingPrice": 26000
+  },
+  {
+    "CarId": 11,
+    "CarMakeName": "Audi",
+    "CarModelName": "A4",
+    "CarStartingPrice": 400,
+    "CarOutrightStartingPrice": 33000
+  },
+  {
+    "CarId": 12,
+    "CarMakeName": "Audi",
+    "CarModelName": "A5",
+    "CarStartingPrice": 420,
+    "CarOutrightStartingPrice": 39000
+  },
+  {
+    "CarId": 13,
+    "CarMakeName": "Audi",
+    "CarModelName": "A6",
+    "CarStartingPrice": 480,
+    "CarOutrightStartingPrice": 42000
+  },
+  {
+    "CarId": 14,
+    "CarMakeName": "Audi",
+    "CarModelName": "A7",
+    "CarStartingPrice": 540,
+    "CarOutrightStartingPrice": 51000
+  },
+  {
+    "CarId": 15,
+    "CarMakeName": "Audi",
+    "CarModelName": "A8",
+    "CarStartingPrice": 730,
+    "CarOutrightStartingPrice": 74000
+  }
+]

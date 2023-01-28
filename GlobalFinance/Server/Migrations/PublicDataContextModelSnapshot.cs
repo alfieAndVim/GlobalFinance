@@ -549,6 +549,20 @@ namespace GlobalFinance.Server.Migrations
                         });
                 });
 
+            modelBuilder.Entity("GlobalFinance.Shared.Models.OrderModel", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ConfigurationId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("OrderId");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("GlobalFinance.Shared.Models.PaintModel", b =>
                 {
                     b.Property<int>("PaintId")
