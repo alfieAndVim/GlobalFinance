@@ -9,13 +9,13 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GlobalFinance.Server
 build_property.RootNamespace = GlobalFinance.Server
-build_property.ProjectDir = /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/
+build_property.ProjectDir = /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server
+build_property.MSBuildProjectDirectory = /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Server/Pages/Error.cshtml]
+[/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

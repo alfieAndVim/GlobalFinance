@@ -12,9 +12,18 @@
         <h1>Global Financing</h1>
         
         <div class="nav-btns">
-            <GenericNavButtonComponent id="login" Title="View Inventory" NavigateToLocation="/cars"></GenericNavButtonComponent>
-            <GenericNavButtonComponent id="offers" Title="View Offers" NavigateToLocation="/offers"></GenericNavButtonComponent>
+            <GenericNavButtonComponent id="login" Title="New Order" NavigateToLocation="/cars"></GenericNavButtonComponent>
+            <GenericNavButtonComponent id="offers" Title="View Inventory" NavigateToLocation="/offers"></GenericNavButtonComponent>
         </div>
+
+        <AuthorizeView>
+            
+            <Authorized>
+                <span>You are authorized as @context.User.Identity.Name</span>
+            </Authorized>
+        </AuthorizeView>
+
+        
     </div>
 
 

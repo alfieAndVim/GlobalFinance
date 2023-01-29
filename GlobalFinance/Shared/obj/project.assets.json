@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj",
+      "projectUniqueName": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj",
       "projectName": "GlobalFinance.Shared",
-      "projectPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj",
+      "projectPath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj",
       "packagesPath": "/Users/alfiedew/.nuget/packages/",
-      "outputPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/obj/",
+      "outputPath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Shared/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/alfiedew/.nuget/NuGet/NuGet.Config"

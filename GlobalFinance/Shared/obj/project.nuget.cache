@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FD9tS5ceBxoCMJwUSgd4ZiRhOzLReNBCaMPLwdB9AHArRGsK8OTRYUksrkpQVVbj8yLq+yJIaywCY3NFo9lbsQ==",
+  "dgSpecHash": "iJ72Y6/upjpngvp+NODWK+HJAqfa5lxF2yaP1YEUgA+b5SXlTgY+kJj7dGM7+X/T3pCsTClE3/Hj7I5pWPLJYQ==",
   "success": true,
-  "projectFilePath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj",
+  "projectFilePath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -20,12 +20,16 @@
     <None Remove="Microsoft.AspNetCore.Components.WebAssembly" />
     <None Remove="Microsoft.AspNetCore.Components.WebAssembly.DevServer" />
     <None Remove="Views\Pages\Payment\" />
+    <None Remove="Microsoft.AspNetCore.Components.Authorization" />
+    <None Remove="Providers\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="7.0.2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Pages\Payment\" />
+    <Folder Include="Providers\" />
   </ItemGroup>
 </Project>

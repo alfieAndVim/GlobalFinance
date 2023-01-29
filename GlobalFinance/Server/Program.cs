@@ -1,4 +1,5 @@
-﻿using GlobalFinance.Server.Data;
+﻿global using GlobalFinance.Shared.Models;
+using GlobalFinance.Server.Data;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 

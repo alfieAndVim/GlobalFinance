@@ -1,14 +1,10 @@
 ﻿<Properties StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https" GitUserInfo="UsingGIT">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Client/Properties/launchSettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Server/Controllers/AuthController.cs">
     <Files>
-      <File FileName="GlobalFinance/Client/Properties/launchSettings.json" Line="10" Column="16" />
-      <File FileName="GlobalFinance/Client/Program.cs" />
-      <File FileName="GlobalFinance/Server/Program.cs" />
+      <File FileName="GlobalFinance/Client/Properties/launchSettings.json" />
+      <File FileName="GlobalFinance/Client/Program.cs" Line="2" Column="49" />
+      <File FileName="GlobalFinance/Server/Program.cs" Line="1" Column="42" />
       <File FileName="GlobalFinance/Client/_Imports.razor" />
       <File FileName="GlobalFinance/Client/App.razor" />
       <File FileName="GlobalFinance/Client/Views/Shared/Pages/MainLayout.razor" />
@@ -47,22 +43,53 @@
       <File FileName="GlobalFinance/Shared/Models/OrderModel.cs" />
       <File FileName="GlobalFinance/Client/Views/Pages/OffersPage.razor" />
       <File FileName="GlobalFinance/Server/Controllers/OffersController.cs" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Payment/PaymentPageHandler.razor" />
+      <File FileName="GlobalFinance/Client/Views/Pages/Payment/PaymentPageHandler.razor" Line="4" Column="1" />
       <File FileName="GlobalFinance.IntegrationTests/UnitTest1.cs" />
+      <File FileName="GlobalFinance/Client/Views/Pages/HomePage.razor" Line="27" Column="11" />
+      <File FileName="GlobalFinance/Client/Providers/CustomAuthStateProvider.cs" Line="13" Column="40" />
+      <File FileName="GlobalFinance/Shared/Models/User.cs" Line="7" Column="59" />
+      <File FileName="GlobalFinance/Shared/Models/UserDto.cs" Line="10" Column="2" />
+      <File FileName="GlobalFinance/Server/Controllers/AuthController.cs" Line="54" Column="1" />
+      <File FileName="GlobalFinance/Server/appsettings.json" Line="3" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="GlobalFinance" expanded="True" />
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="GlobalFinance" expanded="True" selected="True" />
+          <Node name="GlobalFinance" expanded="True">
+            <Node name="GlobalFinance.Client" expanded="True">
+              <Node name="Properties" expanded="True" />
+              <Node name="Providers" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="ServicesInterfaces" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Components" expanded="True" />
+                <Node name="Pages" expanded="True">
+                  <Node name="Configurator" expanded="True" />
+                  <Node name="Payment" expanded="True" />
+                </Node>
+                <Node name="Shared" expanded="True">
+                  <Node name="Components" expanded="True">
+                    <Node name="Buttons" expanded="True" />
+                  </Node>
+                  <Node name="Pages" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="GlobalFinance.Server" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="GlobalFinance.Shared" expanded="True">
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
