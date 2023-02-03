@@ -6,12 +6,24 @@ namespace GlobalFinance.Client.Providers
 {
     public class CustomAuthStateProvider : AuthenticationStateProvider
     {
+        private readonly ILocalStorageService localStorage;
+
+        public CustomAuthStateProvider(ILocalStorageService localStorage)
+        {
+            this.localStorage = localStorage;
+        }
+
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
         {
-            string token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE2NzQ5NDM5MTAsImV4cCI6MTcwNjQ3OTkxMCwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSIsIkdpdmVuTmFtZSI6IkpvaG4iLCJTdXJuYW1lIjoiRG9lIiwiRW1haWwiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiUm9sZSI6WyJNYW5hZ2VyIiwiUHJvamVjdCBBZG1pbmlzdHJhdG9yIl0sImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJKb2huIERvZSJ9.Ed0vwzS2u4qaTemWce2AcWugRempSWlGK7dkjxsrcQzhBn_noNNh3OpakGpDsM0wmPZTWEAt4ohvKLmaAjzJJA";
+            string token = await localStorage.GetItemAsStringAsync("token");
 
-            var identity = new ClaimsIdentity(ParseClaimsFromJwt(token), "jwt");
-            //var identity = new ClaimsIdentity();
+            var identity = new ClaimsIdentity();
+
+            if (!string.IsNullOrEmpty(token))
+            {
+                identity = new ClaimsIdentity(ParseClaimsFromJwt(token), "jwt");
+
+            }
 
             var user = new ClaimsPrincipal(identity);
             var state = new AuthenticationState(user);
