@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2CTfy8Z3by3gOTtYWprprWKedNibDfuV5f3PR840z+yUF8gS8HEsbdUUe42HuIt1pKqNoBNJgThP+uKuLX6jvA==",
+  "dgSpecHash": "jkj0RVeiW/KYpmMbSfBnAgtun0OwnuihnEAEG9hvwtG7vzYP0ogHZKBEi8SWjQ40pXK2Z/2Qp7I08KcYnl1u9g==",
   "success": true,
   "projectFilePath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj",
   "expectedPackageFiles": [
+    "/Users/alfiedew/.nuget/packages/blazored.localstorage/4.3.0/blazored.localstorage.4.3.0.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.authorization/7.0.2/microsoft.aspnetcore.authorization.7.0.2.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components/7.0.2/microsoft.aspnetcore.components.7.0.2.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components.analyzers/7.0.2/microsoft.aspnetcore.components.analyzers.7.0.2.nupkg.sha512",

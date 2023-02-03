@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FxUe1PSxmMKtmcMychhjwYHPnsA75unP88mPzXusdxA=",
+  "Hash": "6jFStrT4GHkAmIw+R1VAKMZgmExSOUGF/zead6agZnI=",
   "Source": "GlobalFinance.Server",
   "BasePath": "_content/GlobalFinance.Server",
   "Mode": "Default",
@@ -61,6 +61,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components.webassembly/7.0.0/build/net7.0/blazor.webassembly.js"
+    },
+    {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Blazored.LocalStorage.dll",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Project",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazored.localstorage/4.3.0/lib/net7.0/Blazored.LocalStorage.dll"
     },
     {
       "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/dotnet.7.0.2.v0yugsc0sn.js",
@@ -5960,6 +5977,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.IO.Compression.dll"
+    },
+    {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/safGaCZd.gz",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Project",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Blazored.LocalStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Blazored.LocalStorage.dll"
     },
     {
       "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/SBWravI8.gz",

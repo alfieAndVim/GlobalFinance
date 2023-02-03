@@ -104,6 +104,8 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/GlobalFinance.Server.runtimeconfig.json
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/GlobalFinance.Server.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/GlobalFinance.Server.pdb
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/BCrypt.Net-Next.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Blazored.LocalStorage.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Humanizer.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.AspNetCore.Authorization.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.AspNetCore.Components.dll
@@ -118,12 +120,17 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.EntityFrameworkCore.Sqlite.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.IdentityModel.Tokens.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.JSInterop.WebAssembly.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Mono.TextTemplating.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/SQLitePCLRaw.batteries_v2.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/SQLitePCLRaw.core.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/SQLitePCLRaw.provider.e_sqlite3.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/System.CodeDom.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/System.IdentityModel.Tokens.Jwt.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/runtimes/alpine-arm/native/libe_sqlite3.so
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/runtimes/alpine-arm64/native/libe_sqlite3.so
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/runtimes/alpine-x64/native/libe_sqlite3.so

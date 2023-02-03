@@ -842,6 +842,7 @@
 /Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/ref/GlobalFinance.Client.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/blazor.boot.json
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/blazor.webassembly.js
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Blazored.LocalStorage.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/dotnet.7.0.2.v0yugsc0sn.js
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/dotnet.timezones.blat
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/dotnet.wasm
@@ -1189,6 +1190,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Xml.XPath.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Collections.Immutable.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.IO.Compression.dll.gz
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Blazored.LocalStorage.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.IO.IsolatedStorage.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Net.HttpListener.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.ComponentModel.TypeConverter.dll.gz
@@ -1252,6 +1254,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/GlobalFinance.Client.staticwebassets.runtime.json
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/GlobalFinance.Client.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/GlobalFinance.Client.pdb
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Blazored.LocalStorage.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Microsoft.AspNetCore.Authorization.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Microsoft.AspNetCore.Components.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Microsoft.AspNetCore.Components.Authorization.dll
@@ -1459,6 +1462,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/GlobalFinance.Client.AssemblyInfo.cs
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/GlobalFinance.Client.csproj.CoreCompileInputs.cache
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/GlobalFinance.Client.MvcApplicationPartsAssemblyInfo.cache
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/safGaCZd.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/NEx88kUL.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/WlppiFez.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/q8mp7voh.gz

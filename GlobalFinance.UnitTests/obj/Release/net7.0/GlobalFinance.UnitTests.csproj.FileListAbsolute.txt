@@ -184,6 +184,8 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/GlobalFinance.UnitTests.runtimeconfig.json
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/GlobalFinance.UnitTests.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/GlobalFinance.UnitTests.pdb
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/BCrypt.Net-Next.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Blazored.LocalStorage.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.AspNetCore.Authorization.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.AspNetCore.Components.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.AspNetCore.Components.Authorization.dll
@@ -197,6 +199,10 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.EntityFrameworkCore.Sqlite.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.IdentityModel.Tokens.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.JSInterop.WebAssembly.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.TestPlatform.CoreUtilities.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.TestPlatform.PlatformAbstractions.dll
@@ -212,6 +218,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/SQLitePCLRaw.batteries_v2.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/SQLitePCLRaw.core.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/SQLitePCLRaw.provider.e_sqlite3.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/System.IdentityModel.Tokens.Jwt.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/de/Microsoft.TestPlatform.CoreUtilities.resources.dll

@@ -13,9 +13,9 @@ using System.IdentityModel.Tokens.Jwt;
 
 namespace GlobalFinance.Server.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[Controller]")]
     [ApiController]
-    public class AuthController : Controller
+    public class AuthController : ControllerBase
     {
         private readonly IConfiguration _configuration;
 
@@ -38,8 +38,10 @@ namespace GlobalFinance.Server.Controllers
         }
 
         [HttpPost("login")]
-        public ActionResult<User> Login(UserDto request)
+        public ActionResult<string> Login(UserDto request)
+
         {
+
             if(user.Username != request.Username)
             {
                 return BadRequest("User not found.");
@@ -50,19 +52,19 @@ namespace GlobalFinance.Server.Controllers
                 return BadRequest("Wrong password");
             }
 
-            string token = CreateToken(user);
+            string token = CreateToken(request);
 
             return Ok(token);
         }
 
-        private string CreateToken(User user)
+        private string CreateToken(UserDto user)
         {
             List<Claim> claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, user.Username)
             };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("AppSettings:Token").Value));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(s: _configuration.GetSection("AppSettings:Token")!.Value ?? ""));
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 

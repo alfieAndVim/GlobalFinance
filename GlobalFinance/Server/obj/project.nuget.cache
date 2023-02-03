@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "uQKsGdBwZ8Yzlmu98XNrWn26O/14BMK1RiNEeX+9bnHVk9Ycfyd3G9WOqLXijae6J0fpYjvZMZChgazXc6SGfQ==",
+  "dgSpecHash": "YXBgs2HMn5cTzlk3aWwU+T/uNvLLmd+0UbcDmwCir3kkiQIP0NUuhHF08hYIDs8GnfgILIQYaO0jR4D2mjIIPg==",
   "success": true,
   "projectFilePath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/GlobalFinance.Server.csproj",
   "expectedPackageFiles": [
     "/Users/alfiedew/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
+    "/Users/alfiedew/.nuget/packages/blazored.localstorage/4.3.0/blazored.localstorage.4.3.0.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.authorization/7.0.2/microsoft.aspnetcore.authorization.7.0.2.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components/7.0.2/microsoft.aspnetcore.components.7.0.2.nupkg.sha512",

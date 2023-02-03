@@ -7,6 +7,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "Blazored.LocalStorage.dll": "sha256-eXVgTw72kEn74FZgDQbLtvAmXbiZDSj5gzUnxVmwowQ=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-z4GZC8zBP0+3qTsoIBdCEOvwWaWDTpt8U1vr1aLEkI4=",
       "Microsoft.AspNetCore.Components.dll": "sha256-2+8AH28qnJdxAcSZ0HYdiGuZzHwXNI1gFtZz71zMhDc=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-s8GRS+pSGrHjRTvM2gxPqnJCH0gWau+eVkUxlNkRUmk=",
@@ -199,15 +200,15 @@
       "mscorlib.dll": "sha256-T52Qf1cS\/UysEoWOoE2ptEJEXfGpanQX5KNLyDiLv1E=",
       "netstandard.dll": "sha256-p32h5P3QmHJ\/FGoeE6m7f5g\/8ng2PSPGZktHyMadvIs=",
       "System.Private.CoreLib.dll": "sha256-6MwQcyKbqBsoZYOcD9fQJ4iKcn1qMmWRWVEkU2LLCb0=",
-      "GlobalFinance.Shared.dll": "sha256-VGpf4MNfJsnYvQj4YijvLjwaWCMXlE4Lpngo3GiJb2A=",
-      "GlobalFinance.Client.dll": "sha256-z1TVG1i7wCxx8oakmyaIdspJjHsEp3BKOtjxvSgpfmY="
+      "GlobalFinance.Shared.dll": "sha256-Ev3Qq9GM2kZXbxqBHm+19V+D3jDeKA09GQxmNxjssjU=",
+      "GlobalFinance.Client.dll": "sha256-abVwDTbWnGt4w8GGfgcrhQSgSAS+8gRzEX1Yo\/IvRYQ="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "GlobalFinance.Shared.pdb": "sha256-8KGA\/AFQaQaisC2CETxFfv4f2tf+ZRc8NYWX2x0v8DQ=",
-      "GlobalFinance.Client.pdb": "sha256-IM0rkH1bhIDRZoy\/kDYzcZ9l9dG4isZ90TBLWCpwSzY="
+      "GlobalFinance.Shared.pdb": "sha256-UgBKPfzHXd7zUizG31LYVPkwbZuM\/O39zzNCh7iSZfQ=",
+      "GlobalFinance.Client.pdb": "sha256-59E7+iS3NSlIYhDPcEw8s+LI8rRYtP4FgW2+CD8cmd4="
     },
     "runtime": {
       "dotnet.7.0.2.v0yugsc0sn.js": "sha256-4mh03qTse0uNR+dQ6ydExm4jJXph0RE8zGNCtF0jiNA=",
