@@ -30,6 +30,9 @@ namespace GlobalFinance.Client.Providers
 
             NotifyAuthenticationStateChanged(Task.FromResult(state));
 
+            
+            
+
             return state;
         }
 

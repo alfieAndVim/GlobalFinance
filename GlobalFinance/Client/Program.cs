@@ -1,12 +1,13 @@
 ﻿global using Microsoft.AspNetCore.Components.Authorization;
 global using Microsoft.AspNetCore.Authorization;
 global using Blazored.LocalStorage;
+global using GlobalFinance.Client;
+global using GlobalFinance.Client.ServicesInterfaces;
+global using GlobalFinance.Client.Providers;
+global using GlobalFinance.Client.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using GlobalFinance.Client;
-using GlobalFinance.Client.Services;
-using GlobalFinance.Client.ServicesInterfaces;
-using GlobalFinance.Client.Providers;
+
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -16,6 +17,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddScoped<ICarService, CarService>();
 builder.Services.AddScoped<IOfferService, OfferService>();
 builder.Services.AddScoped<IConfiguratorService, ConfiguratorService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
 builder.Services.AddAuthorizationCore();
 builder.Services.AddBlazoredLocalStorage();

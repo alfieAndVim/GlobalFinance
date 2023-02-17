@@ -228,6 +228,24 @@ img[b-czez28hexb] {
         margin-top: 2%;
     }
 }
+/* /Views/Pages/Authentication/Login.razor.rz.scp.css */
+.login-form[b-8ggl0ruzd5] {
+
+    background-color: blue;
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+    color: blue;
+    border: 2px solid blue;
+    border-radius: 20px;
+    
+}
+
+.login-form-section[b-8ggl0ruzd5] {
+
+    display: inline-block;
+    width: 100%;
+}
 /* /Views/Pages/CarsPage.razor.rz.scp.css */
 body[b-7ifbbbe3h0] {
 }

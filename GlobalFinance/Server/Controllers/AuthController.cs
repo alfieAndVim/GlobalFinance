@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using GlobalFinance.Server.Data;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -18,50 +20,62 @@ namespace GlobalFinance.Server.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IConfiguration _configuration;
+        private readonly AppDataContext appDataContext;
 
         public static User user { get; set; } = new User();
 
-        public AuthController(IConfiguration configuration)
+        public AuthController(IConfiguration configuration, AppDataContext appDataContext)
         {
             _configuration = configuration;
+            this.appDataContext = appDataContext;
         }
 
         [HttpPost("register")]
-        public ActionResult<User> Register(UserDto request)
+        public async Task<ActionResult<User>> Register(UserDto request)
         {
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
+            User? existingAccount = await appDataContext.Users.FirstOrDefaultAsync(U => U.Email == request.Email);
+            bool hasExistingAccount = existingAccount == null ? false : true;
 
-            user.Username = request.Username;
-            user.PasswordHash = passwordHash;
+            if (!hasExistingAccount)
+            {
+                User user = new User { Email = request.Email, PasswordHash = passwordHash };
+                appDataContext.Add(user);
+                appDataContext.SaveChanges();
 
-            return Ok(user);
+                return Ok(user);
+            } else
+            {
+                return BadRequest("USER-ALREADY-EXISTS");
+            }
         }
 
         [HttpPost("login")]
-        public ActionResult<string> Login(UserDto request)
+        public async Task<ActionResult<string>> Login(UserDto request)
 
         {
+            User? account = await appDataContext.Users.FirstOrDefaultAsync(U => U.Email == request.Email);
 
-            if(user.Username != request.Username)
+            if (account == null)
             {
-                return BadRequest("User not found.");
-            }
+                return BadRequest("INVALID-CREDENTIALS");
 
-            if(!BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
+            } else if (!BCrypt.Net.BCrypt.Verify(request.Password, account.PasswordHash))
             {
-                return BadRequest("Wrong password");
+                return BadRequest("INVALID-CREDENTIALS");
+
+            } else
+            {
+                string token = CreateToken(request);
+                return Ok(token);
             }
-
-            string token = CreateToken(request);
-
-            return Ok(token);
         }
 
         private string CreateToken(UserDto user)
         {
             List<Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.Username)
+                new Claim(ClaimTypes.Name, user.Email)
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(s: _configuration.GetSection("AppSettings:Token")!.Value ?? ""));

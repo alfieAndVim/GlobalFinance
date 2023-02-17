@@ -2,19 +2,16 @@
 using GlobalFinance.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
 namespace GlobalFinance.Server.Migrations
 {
-    [DbContext(typeof(PublicDataContext))]
-    [Migration("20230126212319_OrderUpdate")]
-    partial class OrderUpdate
+    [DbContext(typeof(AppDataContext))]
+    partial class AppDataContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.0");
@@ -904,6 +901,25 @@ namespace GlobalFinance.Server.Migrations
                             Name = "Mythos Black",
                             PriceIncrease = 0
                         });
+                });
+
+            modelBuilder.Entity("GlobalFinance.Shared.Models.User", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("GlobalFinance.Shared.Models.ModelVariantModel", b =>

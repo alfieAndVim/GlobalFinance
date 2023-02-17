@@ -1,0 +1,48 @@
+﻿@page "/register"
+@inject HttpClient Http
+@inject IAuthService AuthService
+
+<h3>Register</h3>
+
+<EditForm Model="registerUser" OnSubmit="HandleRegistration">
+    <label for="username">Email</label>
+    <InputText @bind-Value="registerUser.email", type="email"></InputText>
+    <label for="password">Password</label>
+    <InputText @bind-Value="registerUser.password" type="password"></InputText>
+    <label for="passwordValidation">Confirm Password</label>
+    <InputText @bind-Value="registerUser.passwordValidation" type="password"></InputText>
+    <button type="submit" class="btn-primary">Login</button>
+
+</EditForm>
+
+@code {
+
+    private class RegisterUser
+    {
+        public string email { get; set; } = string.Empty;
+        public string password { get; set; } = string.Empty;
+        public string passwordValidation { get; set; } = string.Empty;
+    }
+
+    RegisterUser registerUser = new RegisterUser();
+    UserDto user = new UserDto();
+
+    async Task HandleRegistration()
+{
+        if (registerUser.password == registerUser.passwordValidation)
+    {
+            user.Email = registerUser.email;
+            user.Password = registerUser.password;
+            int result = await AuthService.RegisterUser(user);
+            if (result == 0)
+        {
+                await AuthService.RegisterUser(user);
+
+        }
+    } else
+    {
+            Console.WriteLine("Passwords do not match");
+    }
+}
+}
+

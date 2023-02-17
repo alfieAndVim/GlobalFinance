@@ -10,7 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<PublicDataContext>(options => options.UseSqlite("Filename=publicdata.db"));
+builder.Services.AddDbContext<AppDataContext>(options => options.UseSqlite("Filename=appdata.db"));
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 var app = builder.Build();
 

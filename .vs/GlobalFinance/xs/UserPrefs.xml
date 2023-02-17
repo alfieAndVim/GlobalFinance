@@ -1,18 +1,17 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https">
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Client/Providers/CustomAuthStateProvider.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Client/Views/Pages/Authentication/Register.razor">
     <Files>
       <File FileName="GlobalFinance/Client/Properties/launchSettings.json" />
-      <File FileName="GlobalFinance/Client/Program.cs" />
-      <File FileName="GlobalFinance/Server/Program.cs" />
+      <File FileName="GlobalFinance/Client/Program.cs" Line="21" Column="44" />
+      <File FileName="GlobalFinance/Server/Program.cs" Line="13" Column="99" />
       <File FileName="GlobalFinance/Client/_Imports.razor" />
-      <File FileName="GlobalFinance/Client/App.razor" />
+      <File FileName="GlobalFinance/Client/App.razor" Line="1" Column="1" />
       <File FileName="GlobalFinance/Client/Views/Shared/Pages/MainLayout.razor" />
       <File FileName="GlobalFinance/Client/Views/Shared/Components/NavBarComponent.razor" />
       <File FileName="GlobalFinance/Client/Views/Shared/Components/TitleComponent.razor" />
@@ -21,7 +20,7 @@
       <File FileName="GlobalFinance/Server/Controllers/CarsController.cs" />
       <File FileName="GlobalFinance/Server/Data/PublicDataContext.cs" />
       <File FileName="GlobalFinance/Client/Services/CarService.cs" />
-      <File FileName="GlobalFinance/Client/Views/Pages/CarsPage.razor" />
+      <File FileName="GlobalFinance/Client/Views/Pages/CarsPage.razor" Line="1" Column="1" />
       <File FileName="GlobalFinance/Shared/Models/OfferModel.cs" />
       <File FileName="GlobalFinance/Server/Data/Cars.json" />
       <File FileName="GlobalFinance/Server/Data/Offers.json" />
@@ -51,12 +50,15 @@
       <File FileName="GlobalFinance/Server/Controllers/OffersController.cs" />
       <File FileName="GlobalFinance/Client/Views/Pages/Payment/PaymentPageHandler.razor" />
       <File FileName="GlobalFinance.IntegrationTests/UnitTest1.cs" />
-      <File FileName="GlobalFinance/Client/Views/Pages/HomePage.razor" />
-      <File FileName="GlobalFinance/Client/Providers/CustomAuthStateProvider.cs" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/Pages/HomePage.razor" Line="17" Column="15" />
+      <File FileName="GlobalFinance/Client/Providers/CustomAuthStateProvider.cs" Line="26" Column="14" />
       <File FileName="GlobalFinance/Shared/Models/User.cs" />
       <File FileName="GlobalFinance/Shared/Models/UserDto.cs" />
-      <File FileName="GlobalFinance/Server/Controllers/AuthController.cs" Line="69" Column="46" />
-      <File FileName="GlobalFinance/Server/appsettings.json" />
+      <File FileName="GlobalFinance/Server/Controllers/AuthController.cs" />
+      <File FileName="GlobalFinance/Server/appsettings.json" Line="3" Column="22" />
+      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/Login.razor" Line="8" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/Pages/AuthPage.razor" />
+      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/Register.razor" Line="22" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -64,14 +66,15 @@
           <Node name="GlobalFinance" expanded="True">
             <Node name="GlobalFinance.Client" expanded="True">
               <Node name="Properties" expanded="True" />
-              <Node name="Providers" expanded="True">
-                <Node name="CustomAuthStateProvider.cs" selected="True" />
-              </Node>
+              <Node name="Providers" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="ServicesInterfaces" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Components" expanded="True" />
                 <Node name="Pages" expanded="True">
+                  <Node name="Authentication" expanded="True">
+                    <Node name="Register.razor" selected="True" />
+                  </Node>
                   <Node name="Configurator" expanded="True" />
                   <Node name="Payment" expanded="True" />
                 </Node>
@@ -94,4 +97,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
 </Properties>

@@ -5,9 +5,9 @@ using System.Text.Json.Serialization;
 
 namespace GlobalFinance.Server.Data
 {
-    public class PublicDataContext : DbContext
+    public class AppDataContext : DbContext
     {
-        public PublicDataContext(DbContextOptions<PublicDataContext> options) : base(options) {}
+        public AppDataContext(DbContextOptions<AppDataContext> options) : base(options) {}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,6 +27,7 @@ namespace GlobalFinance.Server.Data
                 JsonSerializer.Deserialize<List<PaintModel>>(document: JsonDocument.Parse(File.ReadAllText(Path.Combine("Data", "PaintColours.json")))));
 
             modelBuilder.Entity<OrderModel>();
+            modelBuilder.Entity<User>();
         }
 
         public DbSet<CarModel>? Cars { get; set; }
@@ -34,5 +35,6 @@ namespace GlobalFinance.Server.Data
         public DbSet<ModelVariantModel>? ModelVariants { get; set; }
         public DbSet<PaintModel>? PaintColours { get; set; }
         public DbSet<OrderModel>? Orders { get; set; }
+        public DbSet<User>? Users { get; set; }
     }
 }

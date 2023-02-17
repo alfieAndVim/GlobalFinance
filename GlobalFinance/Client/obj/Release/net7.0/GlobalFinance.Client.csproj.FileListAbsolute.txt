@@ -1677,6 +1677,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/staticwebassets.development.json
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Components/CarOptionComponent.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Components/Configurator/ConfiguratorDisplayComponent.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Pages/Authentication/Login.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Pages/CarsPage.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Pages/HomePage.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Shared/Components/Buttons/GenericNavButtonComponent.razor.rz.scp.css

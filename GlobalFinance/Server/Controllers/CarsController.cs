@@ -9,24 +9,24 @@ namespace GlobalFinance.Server.Controllers
     [Route("[Controller]")]
     public class CarsController : ControllerBase
     {
-        private readonly PublicDataContext publicDataContext;
+        private readonly AppDataContext appDataContext;
 
-        public CarsController(PublicDataContext publicDataContext)
+        public CarsController(AppDataContext appDataContext)
         {
-            this.publicDataContext = publicDataContext;
+            this.appDataContext = appDataContext;
         }
 
         [HttpGet("list")]
         public async Task<ActionResult<List<CarModel>>> List()
         {
-            var _cars = await publicDataContext.Cars.ToListAsync();
+            var _cars = await appDataContext.Cars.ToListAsync();
             return Ok(_cars);
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<CarModel>> Get(int id)
         {
-            var _car = await publicDataContext.Cars.FirstOrDefaultAsync(c => c.CarId == id);
+            var _car = await appDataContext.Cars.FirstOrDefaultAsync(c => c.CarId == id);
             if(_car is not null)
             {
                 return Ok(_car);
@@ -37,14 +37,14 @@ namespace GlobalFinance.Server.Controllers
         [HttpGet("variants{id}")]
         public async Task<ActionResult<List<ModelVariantModel>>> ListVariants(int id)
         {
-            var _variants = await publicDataContext.ModelVariants.Where(v => v.CarId == id).ToListAsync();
+            var _variants = await appDataContext.ModelVariants.Where(v => v.CarId == id).ToListAsync();
             return Ok(_variants);
         }
 
         [HttpGet("paints{id}")]
         public async Task<ActionResult<List<PaintModel>>> ListPaints(int id)
         {
-            var _paints = await publicDataContext.PaintColours.Where(p => p.CarId == id).ToListAsync();
+            var _paints = await appDataContext.PaintColours.Where(p => p.CarId == id).ToListAsync();
             return Ok(_paints);
         }
         

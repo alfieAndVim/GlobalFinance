@@ -1,9 +1,15 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace GlobalFinance.Shared.Models
 {
 	public class User
 	{
-		public string Username { get; set; } = string.Empty;
+		[Required, Key]
+		public int UserId { get; set; }
+		[Required]
+		public string Email { get; set; } = string.Empty;
+		[Required]
 		public string PasswordHash { get; set; } = string.Empty;
 	}
 }

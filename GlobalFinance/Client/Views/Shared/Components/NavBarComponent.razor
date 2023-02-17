@@ -14,7 +14,15 @@
         <GenericNavButtonComponent Title="Offers" NavigateToLocation="/offers"></GenericNavButtonComponent>
     </div>
     <div class="top-nav-login">
-        <GenericNavButtonComponent id="login" Title="Login" NavigateToLocation="/login"></GenericNavButtonComponent>
+        <AuthorizeView>
+            <NotAuthorized>
+                <GenericNavButtonComponent id="login" Title="Login" NavigateToLocation="/login"></GenericNavButtonComponent>
+            </NotAuthorized>
+            <Authorized>
+                <GenericNavButtonComponent id="login" Title="Log Out" NavigateToLocation="/logout"></GenericNavButtonComponent>
+            </Authorized>
+        </AuthorizeView>
+        
         
     </div>
 </div>
