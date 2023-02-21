@@ -28,6 +28,7 @@ namespace GlobalFinance.Server.Data
 
             modelBuilder.Entity<OrderModel>();
             modelBuilder.Entity<User>();
+            modelBuilder.Entity<Customer>();
         }
 
         public DbSet<CarModel>? Cars { get; set; }
@@ -36,5 +37,6 @@ namespace GlobalFinance.Server.Data
         public DbSet<PaintModel>? PaintColours { get; set; }
         public DbSet<OrderModel>? Orders { get; set; }
         public DbSet<User>? Users { get; set; }
+        public DbSet<Customer>? Customers { get; set; }
     }
 }

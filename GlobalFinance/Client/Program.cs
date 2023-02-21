@@ -18,6 +18,7 @@ builder.Services.AddScoped<ICarService, CarService>();
 builder.Services.AddScoped<IOfferService, OfferService>();
 builder.Services.AddScoped<IConfiguratorService, ConfiguratorService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
 builder.Services.AddAuthorizationCore();
 builder.Services.AddBlazoredLocalStorage();

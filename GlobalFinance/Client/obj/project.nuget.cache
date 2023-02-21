@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jkj0RVeiW/KYpmMbSfBnAgtun0OwnuihnEAEG9hvwtG7vzYP0ogHZKBEi8SWjQ40pXK2Z/2Qp7I08KcYnl1u9g==",
+  "dgSpecHash": "CyNMZWbFcRn2JiUAq5Zy0lIMAM35vI2Bdu+54FSZxTy6eDmItUGk/BSYXFsJ90HDwPUMz1h7hu1T9zXSmcIVyA==",
   "success": true,
   "projectFilePath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj",
   "expectedPackageFiles": [
@@ -32,7 +32,8 @@
     "/Users/alfiedew/.nuget/packages/microsoft.jsinterop.webassembly/7.0.0/microsoft.jsinterop.webassembly.7.0.0.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/system.io.pipelines/7.0.0/system.io.pipelines.7.0.0.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/Users/alfiedew/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
+    "/Users/alfiedew/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
+    "/Users/alfiedew/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/7.0.3/microsoft.netcore.app.runtime.mono.browser-wasm.7.0.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,17 +1,80 @@
 ﻿.login-form {
 
-    background-color: blue;
+    background-color: white;
     margin: 0 auto;
     width: 30%;
+    min-width: 500px;
     text-align: center;
-    color: blue;
-    border: 2px solid blue;
+    color: white;
     border-radius: 20px;
-    
+    height: 30vh;
+    padding: 20px;
+    min-height: 300px;
+    box-shadow: 0px 0px 50px grey;
+}
+
+.login-form-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.login-form-label {
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+}
+
+::deep .login-form-input {
+    display: block;
+    width: 80%;
+    background-color: #d9d9d9;
+    margin: 0 auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    height: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .login-form-section {
-
     display: block;
     width: 100%;
+    height: 25%;
+}
+
+.login-form-button {
+    color: white;
+    width: 30%;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+}
+
+.login-form-sub-button {
+    position: relative;
+    left: 20%;
+    background-color:white;
+    border: none;
+    text-decoration: underline;
+    color: black;
+}
+
+.login-form-error-message {
+    width: 100%;
+    margin: 0 auto;
+    color: red;
+}
+
+.login-form-button:hover {
+    width: 35%;
+}
+
+::deep *:focus {
+    outline: none;
+    outline-width: 0;
 }

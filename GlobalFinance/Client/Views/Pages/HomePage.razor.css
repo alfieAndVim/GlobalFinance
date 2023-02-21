@@ -10,6 +10,7 @@
     display: inline-block;
 }
 
+
 .nav-btns {
     display: flex;
     height: contain;
@@ -25,6 +26,7 @@
 
 h1 {
     font-weight: 700;
+    font-size: 8vh;
 }
 
 img {

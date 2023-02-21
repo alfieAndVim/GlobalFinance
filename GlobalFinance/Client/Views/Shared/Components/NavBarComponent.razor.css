@@ -1,4 +1,8 @@
-﻿.top-nav {
+﻿* {
+    background-color: white;
+}
+
+.top-nav {
     white-space: nowrap;
     
 }

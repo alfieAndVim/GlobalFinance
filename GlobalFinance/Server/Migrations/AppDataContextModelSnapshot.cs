@@ -163,6 +163,45 @@ namespace GlobalFinance.Server.Migrations
                         });
                 });
 
+            modelBuilder.Entity("GlobalFinance.Shared.Models.Customer", b =>
+                {
+                    b.Property<int>("CustomerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("AddressFirstLine")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("AddressPostcode")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("AddressSecondLine")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("AddressThirdLine")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ContactNumber")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CustomerId");
+
+                    b.ToTable("Customers");
+                });
+
             modelBuilder.Entity("GlobalFinance.Shared.Models.ModelVariantModel", b =>
                 {
                     b.Property<int>("ModelVariantId")
@@ -909,15 +948,20 @@ namespace GlobalFinance.Server.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.HasKey("UserId");
+
+                    b.HasIndex("CustomerId");
 
                     b.ToTable("Users");
                 });
@@ -953,6 +997,17 @@ namespace GlobalFinance.Server.Migrations
                         .IsRequired();
 
                     b.Navigation("Car");
+                });
+
+            modelBuilder.Entity("GlobalFinance.Shared.Models.User", b =>
+                {
+                    b.HasOne("GlobalFinance.Shared.Models.Customer", "customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("customer");
                 });
 #pragma warning restore 612, 618
         }

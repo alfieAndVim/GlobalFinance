@@ -1,29 +1,33 @@
 ﻿@page "/login"
 @inject IAuthService AuthService
-
+@inject NavigationManager NavigationManager 
 
 <h3>Login</h3>
 
 <div class="login-form">
-    <EditForm Model="user" OnSubmit="HandleLogin">
+    <EditForm style="height: inherit; min-height:inherit;" Model="user" OnSubmit="HandleLogin">
         <div class="login-form-inner">
             <div class="login-form-section">
-                <label for="email">Email</label>
-                <InputText @bind-Value="user.Email" type="email"></InputText>
+                <label class="login-form-label" for="email">Email</label>
+                <InputText class="login-form-input" @bind-Value="user.Email" type="email"></InputText>
+
             </div>
             <div class="login-form-section">
-                <label for="password">Password</label>
-                <InputText @bind-Value="user.Password" type="password"></InputText>
+                <label class="login-form-label" for="password">Password</label>
+                <InputText class="login-form-input" @bind-Value="user.Password" type="password"></InputText>
+                <button class="login-form-sub-button" @onclick="GoToResetPassword">Forgotten Password</button>
             </div>
 
-            <button type="submit" class="btn-primary">Login</button>
-            
-            
+            <div class="login-form-section">
+                <button type="submit" class="login-form-button">Login</button>
+                <div class="login-form-error-message">
+                    @errorMessage
+                </div>
+            </div>
         </div>
-        
+
     </EditForm>
 </div>
-
 <AuthorizeView >
     <Authorized>
         You are authorised
@@ -33,12 +37,21 @@
 @code {
     UserDto user = new UserDto();
 
-
+    string errorMessage = string.Empty;
 
     async Task HandleLogin()
     {
         int result = await AuthService.LoginUser(user);
-        Console.WriteLine(result);
+
+        if (result == 1)
+        {
+            errorMessage = "Invalid Credentials";
+        }
     }
+
+    private void GoToResetPassword()
+{
+        NavigationManager.NavigateTo("/forgot");
+}
 }
 

@@ -14,15 +14,12 @@ namespace GlobalFinance.Shared.Models
 		[Required]
 		public string AddressFirstLine { get; set; }
 		public string AddressSecondLine { get; set; }
-		public object AddressThirdLine { get; set; }
+		public string AddressThirdLine { get; set; }
 		[Required]
 		public string AddressPostcode { get; set; }
 		[Required]
-		public int ContactNumber { get; set; }
-		[Required]
-		public int UserId { get; set; }
-
-		public User? User { get; set; }
+		[DataType(DataType.PhoneNumber, ErrorMessage = "The contact number must be a valid phone number")]
+		public string ContactNumber { get; set; }
 	}
 }
 

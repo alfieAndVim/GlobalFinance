@@ -228,6 +228,332 @@ img[b-czez28hexb] {
         margin-top: 2%;
     }
 }
+/* /Views/Pages/Authentication/ForgotPassword.razor.rz.scp.css */
+.forgot-form[b-ugp46tvjku] {
+    background-color: white;
+    margin: 0 auto;
+    width: 30%;
+    min-width: 500px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    height: 20vh;
+    padding: 20px;
+    min-height: 200px;
+    box-shadow: 0px 0px 50px grey;
+}
+
+.forgot-form-inner[b-ugp46tvjku] {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.forgot-form-label[b-ugp46tvjku] {
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+}
+
+[b-ugp46tvjku] .forgot-form-input {
+    display: block;
+    width: 80%;
+    background-color: #d9d9d9;
+    margin: 0 auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    height: 30%;
+    min-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.forgot-form-section[b-ugp46tvjku] {
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+
+.forgot-form-button[b-ugp46tvjku] {
+    color: white;
+    width: 35%;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+}
+
+.forgot-form-error-message[b-ugp46tvjku] {
+    width: 100%;
+    margin: 0 auto;
+    color: red;
+}
+
+.forgot-form-button:hover[b-ugp46tvjku] {
+    width: 40%;
+}
+
+[b-ugp46tvjku] *:focus {
+    outline: none;
+    outline-width: 0;
+}
+/* /Views/Pages/Authentication/Login.razor.rz.scp.css */
+.login-form[b-8ggl0ruzd5] {
+
+    background-color: white;
+    margin: 0 auto;
+    width: 30%;
+    min-width: 500px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    height: 30vh;
+    padding: 20px;
+    min-height: 300px;
+    box-shadow: 0px 0px 50px grey;
+}
+
+.login-form-inner[b-8ggl0ruzd5] {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.login-form-label[b-8ggl0ruzd5] {
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+}
+
+[b-8ggl0ruzd5] .login-form-input {
+    display: block;
+    width: 80%;
+    background-color: #d9d9d9;
+    margin: 0 auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    height: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.login-form-section[b-8ggl0ruzd5] {
+    display: block;
+    width: 100%;
+    height: 25%;
+}
+
+.login-form-button[b-8ggl0ruzd5] {
+    color: white;
+    width: 30%;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+}
+
+.login-form-sub-button[b-8ggl0ruzd5] {
+    position: relative;
+    left: 20%;
+    background-color:white;
+    border: none;
+    text-decoration: underline;
+    color: black;
+}
+
+.login-form-error-message[b-8ggl0ruzd5] {
+    width: 100%;
+    margin: 0 auto;
+    color: red;
+}
+
+.login-form-button:hover[b-8ggl0ruzd5] {
+    width: 35%;
+}
+
+[b-8ggl0ruzd5] *:focus {
+    outline: none;
+    outline-width: 0;
+}
+/* /Views/Pages/Authentication/Register.razor.rz.scp.css */
+.register-form[b-2x67hwbbf9] {
+    background-color: white;
+    margin: 0 auto;
+    width: 30%;
+    min-width: 500px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    height: 30vh;
+    padding: 20px;
+    min-height: 350px;
+    box-shadow: 0px 0px 50px grey;
+}
+
+.register-form-inner[b-2x67hwbbf9] {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.register-form-label[b-2x67hwbbf9] {
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+}
+
+[b-2x67hwbbf9] .register-form-input {
+    display: block;
+    width: 80%;
+    background-color: #d9d9d9;
+    margin: 0 auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    height: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.register-form-section[b-2x67hwbbf9] {
+    display: block;
+    width: 100%;
+    height: 30%;
+}
+
+.register-form-button[b-2x67hwbbf9] {
+    color: white;
+    width: 30%;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+}
+
+.register-form-sub-button[b-2x67hwbbf9] {
+    background-color: white;
+    border: none;
+    text-decoration: underline;
+    color: black;
+}
+
+.register-form-error-message[b-2x67hwbbf9] {
+    width: 100%;
+    margin: 0 auto;
+    color: red;
+}
+
+.register-form-button:hover[b-2x67hwbbf9] {
+    width: 35%;
+}
+
+[b-2x67hwbbf9] *:focus {
+    outline: none;
+    outline-width: 0;
+}
+/* /Views/Pages/Authentication/RegisterCustomer.razor.rz.scp.css */
+.customer-form[b-asbmaaci4s] {
+    background-color: white;
+    margin: 0 auto;
+    width: 30%;
+    min-width: 500px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    height: 30vh;
+    padding: 20px;
+    min-height: 600px;
+    box-shadow: 0px 0px 50px grey;
+}
+
+.customer-form-inner[b-asbmaaci4s] {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 30px;
+}
+
+.customer-form-label[b-asbmaaci4s] {
+    width: 100%;
+    color: black;
+    text-align: start;
+    padding-left: 20px;
+}
+
+[b-asbmaaci4s] .customer-form-input {
+    display: block;
+    width: 80%;
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    height: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.customer-form-section[b-asbmaaci4s] {
+    display: block;
+    width: 100%;
+    height: 10%;
+}
+
+.customer-form-button[b-asbmaaci4s] {
+    color: white;
+    width: 30%;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+}
+
+.customer-form-sub-button[b-asbmaaci4s] {
+    position: absolute;
+    right: 40%;
+    background-color: white;
+    border: none;
+    text-decoration: underline;
+    color: black;
+}
+
+.customer-form-error-message[b-asbmaaci4s] {
+    width: 100%;
+    margin: 0 auto;
+    color: red;
+}
+
+#name[b-asbmaaci4s] {
+    display: inline-flex;
+
+}
+
+
+
+#postcode[b-asbmaaci4s] {
+    width: 40%;
+}
+
+#contact-number[b-asbmaaci4s] {
+    width: 60%;
+}
+
+.customer-form-button:hover[b-asbmaaci4s] {
+    width: 35%;
+}
+
+[b-asbmaaci4s] *:focus {
+    outline: none;
+    outline-width: 0;
+}
 /* /Views/Pages/CarsPage.razor.rz.scp.css */
 body[b-7ifbbbe3h0] {
 }
@@ -252,6 +578,7 @@ body[b-7ifbbbe3h0] {
     display: inline-block;
 }
 
+
 .nav-btns[b-aaqd9d26q7] {
     display: flex;
     height: contain;
@@ -267,6 +594,7 @@ body[b-7ifbbbe3h0] {
 
 h1[b-aaqd9d26q7] {
     font-weight: 700;
+    font-size: 8vh;
 }
 
 img[b-aaqd9d26q7] {
@@ -328,6 +656,10 @@ a:hover[b-aagy7j7nvx] {
 
 
 /* /Views/Shared/Components/NavBarComponent.razor.rz.scp.css */
+*[b-ma7pnd7n50] {
+    background-color: white;
+}
+
 .top-nav[b-ma7pnd7n50] {
     white-space: nowrap;
     
@@ -369,3 +701,10 @@ a:hover[b-aagy7j7nvx] {
     display: flex;
     
 }
+
+
+/*
+    Main Colours
+    Light Blue - 1E91D6
+    Darker Blue - 0072BB
+*/

@@ -22,8 +22,6 @@ namespace GlobalFinance.Server.Controllers
         private readonly IConfiguration _configuration;
         private readonly AppDataContext appDataContext;
 
-        public static User user { get; set; } = new User();
-
         public AuthController(IConfiguration configuration, AppDataContext appDataContext)
         {
             _configuration = configuration;
@@ -39,7 +37,7 @@ namespace GlobalFinance.Server.Controllers
 
             if (!hasExistingAccount)
             {
-                User user = new User { Email = request.Email, PasswordHash = passwordHash };
+                User user = new User { Email = request.Email, PasswordHash = passwordHash, CustomerId = request.CustomerId };
                 appDataContext.Add(user);
                 appDataContext.SaveChanges();
 

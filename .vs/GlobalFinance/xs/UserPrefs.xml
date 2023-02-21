@@ -1,64 +1,20 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https">
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Client/Views/Pages/Authentication/Register.razor">
     <Files>
-      <File FileName="GlobalFinance/Client/Properties/launchSettings.json" />
-      <File FileName="GlobalFinance/Client/Program.cs" Line="21" Column="44" />
-      <File FileName="GlobalFinance/Server/Program.cs" Line="13" Column="99" />
-      <File FileName="GlobalFinance/Client/_Imports.razor" />
-      <File FileName="GlobalFinance/Client/App.razor" Line="1" Column="1" />
-      <File FileName="GlobalFinance/Client/Views/Shared/Pages/MainLayout.razor" />
-      <File FileName="GlobalFinance/Client/Views/Shared/Components/NavBarComponent.razor" />
-      <File FileName="GlobalFinance/Client/Views/Shared/Components/TitleComponent.razor" />
-      <File FileName="GlobalFinance/Client/Views/Shared/Components/Buttons/GenericNavButtonComponent.razor" />
-      <File FileName="GlobalFinance/Client/Views/Shared/Components/Buttons/LoginButtonComponent.razor" />
-      <File FileName="GlobalFinance/Server/Controllers/CarsController.cs" />
-      <File FileName="GlobalFinance/Server/Data/PublicDataContext.cs" />
-      <File FileName="GlobalFinance/Client/Services/CarService.cs" />
-      <File FileName="GlobalFinance/Client/Views/Pages/CarsPage.razor" Line="1" Column="1" />
-      <File FileName="GlobalFinance/Shared/Models/OfferModel.cs" />
-      <File FileName="GlobalFinance/Server/Data/Cars.json" />
-      <File FileName="GlobalFinance/Server/Data/Offers.json" />
-      <File FileName="GlobalFinance/Client/Views/Components/CarOptionComponent.razor" />
-      <File FileName="GlobalFinance/Client/Views/Components/Configurator/ConfiguratorDisplayComponent.razor" />
-      <File FileName="GlobalFinance/Server/Data/ModelVariants.json" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Configurator/ModelVariantConfig.razor" />
-      <File FileName="GlobalFinance/Client/Views/Pages/CarsPage.razor.css" />
-      <File FileName="GlobalFinance/Client/ServicesInterfaces/IOfferService.cs" />
-      <File FileName="GlobalFinance/Client/Services/OfferService.cs" />
-      <File FileName="GlobalFinance/Shared/Models/ModelVariantModel.cs" />
-      <File FileName="GlobalFinance/Client/Views/Components/Configurator/ConfiguratorDisplayComponent.razor.css" />
-      <File FileName="GlobalFinance/Client/Views/Components/CarOptionComponent.razor.css" />
-      <File FileName="GlobalFinance/Shared/Models/ConfiguratorOptionModel.cs" />
-      <File FileName="GlobalFinance/Shared/Models/ConfigurationModel.cs" />
-      <File FileName="GlobalFinance/Client/Services/ConfiguratorService.cs" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Configurator/PaintColourConfig.razor" />
-      <File FileName="GlobalFinance/Shared/Models/PaintModel.cs" />
-      <File FileName="GlobalFinance/Server/Data/PaintColours.json" />
-      <File FileName="GlobalFinance/Client/ServicesInterfaces/ICarService.cs" />
-      <File FileName="GlobalFinance/Client/wwwroot/css/app.css" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Configurator/PaymentConfig.razor" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Payment/FinancePayment.razor" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Payment/Payment.razor" />
-      <File FileName="GlobalFinance/Shared/Models/OrderModel.cs" />
-      <File FileName="GlobalFinance/Client/Views/Pages/OffersPage.razor" />
-      <File FileName="GlobalFinance/Server/Controllers/OffersController.cs" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Payment/PaymentPageHandler.razor" />
-      <File FileName="GlobalFinance.IntegrationTests/UnitTest1.cs" />
-      <File FileName="GlobalFinance/Client/Views/Pages/HomePage.razor" Line="17" Column="15" />
-      <File FileName="GlobalFinance/Client/Providers/CustomAuthStateProvider.cs" Line="26" Column="14" />
-      <File FileName="GlobalFinance/Shared/Models/User.cs" />
-      <File FileName="GlobalFinance/Shared/Models/UserDto.cs" />
       <File FileName="GlobalFinance/Server/Controllers/AuthController.cs" />
-      <File FileName="GlobalFinance/Server/appsettings.json" Line="3" Column="22" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/Login.razor" Line="8" Column="1" />
-      <File FileName="GlobalFinance/Client/Views/Pages/AuthPage.razor" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/Register.razor" Line="22" Column="1" />
+      <File FileName="GlobalFinance/Client/Services/AuthService.cs" />
+      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/Login.razor" />
+      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/Register.razor" Line="16" Column="19" />
+      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/Login.razor.css" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/Components/CarOptionComponent.razor.css" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/Register.razor.css" Line="73" Column="15" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -70,13 +26,21 @@
               <Node name="Services" expanded="True" />
               <Node name="ServicesInterfaces" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Components" expanded="True" />
+                <Node name="Components" expanded="True">
+                  <Node name="Configurator" expanded="True">
+                    <Node name="ConfiguratorDisplayComponent.razor" expanded="True" />
+                  </Node>
+                  <Node name="CarOptionComponent.razor" expanded="True" />
+                </Node>
                 <Node name="Pages" expanded="True">
                   <Node name="Authentication" expanded="True">
-                    <Node name="Register.razor" selected="True" />
+                    <Node name="Login.razor" expanded="True" />
+                    <Node name="Register.razor" expanded="True" />
                   </Node>
                   <Node name="Configurator" expanded="True" />
                   <Node name="Payment" expanded="True" />
+                  <Node name="CarsPage.razor" expanded="True" />
+                  <Node name="HomePage.razor" expanded="True" />
                 </Node>
                 <Node name="Shared" expanded="True">
                   <Node name="Components" expanded="True">
@@ -88,6 +52,7 @@
             </Node>
             <Node name="GlobalFinance.Server" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
             </Node>
             <Node name="GlobalFinance.Shared" expanded="True">
               <Node name="Models" expanded="True" />
@@ -97,5 +62,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
 </Properties>
