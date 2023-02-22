@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GlobalFinance.Shared.Models
 {
-	public class Customer
+	public class CustomerModel
 	{
 		[Required, Key]
 		public int CustomerId { get; set; }

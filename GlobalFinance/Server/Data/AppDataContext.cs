@@ -27,8 +27,13 @@ namespace GlobalFinance.Server.Data
                 JsonSerializer.Deserialize<List<PaintModel>>(document: JsonDocument.Parse(File.ReadAllText(Path.Combine("Data", "PaintColours.json")))));
 
             modelBuilder.Entity<OrderModel>();
-            modelBuilder.Entity<User>();
-            modelBuilder.Entity<Customer>();
+            modelBuilder.Entity<UserModel>();
+            modelBuilder.Entity<CustomerModel>();
+            modelBuilder.Entity<InventoryModel>().HasData(
+
+                new InventoryModel { InventoryId = 1, InventoryPrice = 12000, InventoryMileage = 12000, CarId = 1 },
+                new InventoryModel { InventoryId = 2, InventoryPrice = 12000, InventoryMileage = 12000, CarId = 1 }
+                );
         }
 
         public DbSet<CarModel>? Cars { get; set; }
@@ -36,7 +41,8 @@ namespace GlobalFinance.Server.Data
         public DbSet<ModelVariantModel>? ModelVariants { get; set; }
         public DbSet<PaintModel>? PaintColours { get; set; }
         public DbSet<OrderModel>? Orders { get; set; }
-        public DbSet<User>? Users { get; set; }
-        public DbSet<Customer>? Customers { get; set; }
+        public DbSet<UserModel>? Users { get; set; }
+        public DbSet<CustomerModel>? Customers { get; set; }
+        public DbSet<InventoryModel> Inventory { get; set; }
     }
 }

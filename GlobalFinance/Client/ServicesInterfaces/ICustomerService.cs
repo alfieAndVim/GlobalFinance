@@ -4,8 +4,8 @@ namespace GlobalFinance.Client.ServicesInterfaces
 {
     public interface ICustomerService
     {
-        Customer customer { get; set; }
+        CustomerModel customer { get; set; }
 
-        Task<int> AddCustomer(Customer customer);
+        Task<int> AddCustomer(CustomerModel customer);
     }
 }

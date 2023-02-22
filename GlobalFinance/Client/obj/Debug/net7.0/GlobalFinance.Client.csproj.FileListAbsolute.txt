@@ -1694,3 +1694,5 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/build-gz/UndIreLh.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Pages/Authentication/ForgotPassword.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Pages/Authentication/RegisterCustomer.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Components/InventoryOptionComponent.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Pages/InventoryPage.razor.rz.scp.css

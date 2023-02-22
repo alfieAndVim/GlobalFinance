@@ -29,15 +29,15 @@ namespace GlobalFinance.Server.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<ActionResult<User>> Register(UserDto request)
+        public async Task<ActionResult<UserModel>> Register(UserDto request)
         {
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
-            User? existingAccount = await appDataContext.Users.FirstOrDefaultAsync(U => U.Email == request.Email);
+            UserModel? existingAccount = await appDataContext.Users.FirstOrDefaultAsync(U => U.Email == request.Email);
             bool hasExistingAccount = existingAccount == null ? false : true;
 
             if (!hasExistingAccount)
             {
-                User user = new User { Email = request.Email, PasswordHash = passwordHash, CustomerId = request.CustomerId };
+                UserModel user = new UserModel { Email = request.Email, PasswordHash = passwordHash, CustomerId = request.CustomerId };
                 appDataContext.Add(user);
                 appDataContext.SaveChanges();
 
@@ -52,7 +52,7 @@ namespace GlobalFinance.Server.Controllers
         public async Task<ActionResult<string>> Login(UserDto request)
 
         {
-            User? account = await appDataContext.Users.FirstOrDefaultAsync(U => U.Email == request.Email);
+            UserModel? account = await appDataContext.Users.FirstOrDefaultAsync(U => U.Email == request.Email);
 
             if (account == null)
             {

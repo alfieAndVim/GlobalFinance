@@ -1,0 +1,54 @@
+﻿@page "/inventory"
+
+@using GlobalFinance.Client.Views.Components
+
+@inject IInventoryService InventoryService
+@inject ICarService CarService
+
+<h3>Showing @_inventoryCount results</h3>
+
+<div class="car-grid">
+    @if (_inventory is not null)
+        {
+            @foreach (int value in Enumerable.Range(0, _inventoryCount))
+                    {
+                        
+                        <InventoryOptionComponent InventoryId="@_inventory.ElementAt(value).InventoryId" CarMakeName="@_cars.ElementAt(value).CarMakeName" CarModelName="@_cars.ElementAt(value).CarModelName" InventoryMileage="@_inventory.ElementAt(value).InventoryMileage" InventoryPrice="@_inventory.ElementAt(value).InventoryPrice" imgSrc="@GetCarImageSrc(_inventory.ElementAt(value).CarId)"></InventoryOptionComponent>
+                    }
+                }
+</div>
+
+@code {
+
+    private List<InventoryModel>? _inventory;
+    private List<CarModel> _cars = new List<CarModel>();
+    private int _inventoryCount;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await InventoryService.GetInventory();
+        _inventory = InventoryService.Inventory;
+        _inventory.ForEach(async I => _cars.Add(await GetCar(I.CarId)));
+        _inventoryCount = _inventory.Count();
+
+        foreach (var i in _inventory)
+        {
+            _cars.Add(await GetCar(i.CarId));
+        }
+    }
+
+    private async Task<CarModel> GetCar(int id)
+    {
+        var car = await CarService.GetSingleCar(id);
+        if (car != null)
+        {
+            return car;
+        }
+        throw new Exception("Car could not be found");
+    }
+
+    private string GetCarImageSrc(int id) {
+        return $"Images/Car-images/{id}.jpg";
+    }
+
+    }

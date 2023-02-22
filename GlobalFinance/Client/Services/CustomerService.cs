@@ -7,14 +7,14 @@ namespace GlobalFinance.Client.Services
     {
         private readonly HttpClient httpClient;
 
-        public Customer customer { get; set; } = new Customer();
+        public CustomerModel customer { get; set; } = new CustomerModel();
 
         public CustomerService(HttpClient httpClient)
         {
             this.httpClient = httpClient;
         }
 
-        public async Task<int> AddCustomer(Customer customer)
+        public async Task<int> AddCustomer(CustomerModel customer)
         {
             var result = await httpClient.PostAsJsonAsync("customer/post_information", customer);
 

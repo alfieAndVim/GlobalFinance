@@ -22,7 +22,7 @@ namespace GlobalFinance.Server.Controllers
         }
 
         [HttpPost("post_information")]
-        public ActionResult<int> PostInformation(Customer customer)
+        public ActionResult<int> PostInformation(CustomerModel customer)
         {
             appDataContext.Add(customer);
             appDataContext.SaveChanges();

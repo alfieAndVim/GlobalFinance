@@ -1,20 +1,19 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Client/Views/Pages/Authentication/Register.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Client/Views/Pages/InventoryPage.razor">
     <Files>
-      <File FileName="GlobalFinance/Server/Controllers/AuthController.cs" />
-      <File FileName="GlobalFinance/Client/Services/AuthService.cs" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/Login.razor" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/Register.razor" Line="16" Column="19" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/Login.razor.css" NotebookId="1" />
-      <File FileName="GlobalFinance/Client/Views/Components/CarOptionComponent.razor.css" NotebookId="1" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/Register.razor.css" Line="73" Column="15" NotebookId="1" />
+      <File FileName="GlobalFinance/Server/Controllers/InventoryController.cs" Line="42" Column="14" />
+      <File FileName="GlobalFinance/Server/Controllers/CustomerController.cs" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Server/Data/AppDataContext.cs" Line="42" Column="61" />
+      <File FileName="GlobalFinance/Server/Controllers/CarsController.cs" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/Pages/CarsPage.razor" Line="23" Column="55" />
+      <File FileName="GlobalFinance/Client/Views/Pages/InventoryPage.razor" Line="14" Column="46" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,23 +30,36 @@
                     <Node name="ConfiguratorDisplayComponent.razor" expanded="True" />
                   </Node>
                   <Node name="CarOptionComponent.razor" expanded="True" />
+                  <Node name="InventoryOptionComponent.razor" expanded="True" />
                 </Node>
                 <Node name="Pages" expanded="True">
                   <Node name="Authentication" expanded="True">
+                    <Node name="ForgotPassword.razor" expanded="True" />
                     <Node name="Login.razor" expanded="True" />
                     <Node name="Register.razor" expanded="True" />
+                    <Node name="RegisterCustomer.razor" expanded="True" />
                   </Node>
                   <Node name="Configurator" expanded="True" />
                   <Node name="Payment" expanded="True" />
                   <Node name="CarsPage.razor" expanded="True" />
                   <Node name="HomePage.razor" expanded="True" />
+                  <Node name="InventoryPage.razor" selected="True" />
                 </Node>
                 <Node name="Shared" expanded="True">
                   <Node name="Components" expanded="True">
-                    <Node name="Buttons" expanded="True" />
+                    <Node name="Buttons" expanded="True">
+                      <Node name="GenericNavButtonComponent.razor" expanded="True" />
+                    </Node>
+                    <Node name="NavBarComponent.razor" expanded="True" />
                   </Node>
-                  <Node name="Pages" expanded="True" />
+                  <Node name="Pages" expanded="True">
+                    <Node name="MainLayout.razor" expanded="True" />
+                  </Node>
                 </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="Images" expanded="True" />
               </Node>
             </Node>
             <Node name="GlobalFinance.Server" expanded="True">

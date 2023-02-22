@@ -41,7 +41,7 @@
 @code {
 
     [Parameter]
-    public Customer customer { get; set; }
+    public CustomerModel customer { get; set; }
 
     private class RegisterUser
     {
@@ -52,7 +52,7 @@
 
     RegisterUser registerUser = new RegisterUser();
     UserDto user = new UserDto();
-    Customer existingCustomer = new Customer();
+    CustomerModel existingCustomer = new CustomerModel();
 
     string errorMessage = string.Empty;
 

@@ -72,6 +72,10 @@ build_metadata.AdditionalFiles.CssScope = b-lqvpom6inh
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcG9uZW50cy9Db25maWd1cmF0b3IvQ29uZmlndXJhdG9yRGlzcGxheUNvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-czez28hexb
 
+[/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Components/InventoryOptionComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcG9uZW50cy9JbnZlbnRvcnlPcHRpb25Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-vqt43ztrjf
+
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/Authentication/ForgotPassword.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQXV0aGVudGljYXRpb24vRm9yZ290UGFzc3dvcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ugp46tvjku
@@ -95,6 +99,10 @@ build_metadata.AdditionalFiles.CssScope = b-7ifbbbe3h0
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/HomePage.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvSG9tZVBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-aaqd9d26q7
+
+[/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/InventoryPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvSW52ZW50b3J5UGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-e3aalrj1b6
 
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Shared/Components/Buttons/GenericNavButtonComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvQnV0dG9ucy9HZW5lcmljTmF2QnV0dG9uQ29tcG9uZW50LnJhem9y
