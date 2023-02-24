@@ -12,8 +12,12 @@ namespace GlobalFinance.Shared.Models
 		public int InventoryPrice { get; set; }
 		[Required]
 		public int CarId { get; set; }
+		[Required]
+        public int ModelVariantId { get; set; }
+		[Required]
+		public int PaintId { get; set; }
 
-		public CarModel? Car { get; set; }
+        public CarModel? Car { get; set; }
 	}
 }
 

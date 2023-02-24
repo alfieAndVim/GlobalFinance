@@ -1,19 +1,21 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Client/Views/Pages/InventoryPage.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Client/Views/Components/Configurator/ConfiguratorDisplayComponent.razor">
     <Files>
-      <File FileName="GlobalFinance/Server/Controllers/InventoryController.cs" Line="42" Column="14" />
-      <File FileName="GlobalFinance/Server/Controllers/CustomerController.cs" Line="1" Column="1" />
-      <File FileName="GlobalFinance/Server/Data/AppDataContext.cs" Line="42" Column="61" />
-      <File FileName="GlobalFinance/Server/Controllers/CarsController.cs" Line="1" Column="1" />
-      <File FileName="GlobalFinance/Client/Views/Pages/CarsPage.razor" Line="23" Column="55" />
-      <File FileName="GlobalFinance/Client/Views/Pages/InventoryPage.razor" Line="14" Column="46" NotebookId="1" />
+      <File FileName="GlobalFinance/Server/Controllers/InventoryController.cs" />
+      <File FileName="GlobalFinance/Server/Controllers/CustomerController.cs" />
+      <File FileName="GlobalFinance/Server/Data/AppDataContext.cs" Line="35" Column="53" />
+      <File FileName="GlobalFinance/Server/Controllers/CarsController.cs" />
+      <File FileName="GlobalFinance/Client/Views/Pages/CarsPage.razor" Line="6" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/Pages/InventoryPage.razor" Line="13" Column="71" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/Components/InventoryOptionComponent.razor" Line="35" Column="67" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/Shared/Components/NavBarComponent.razor" Line="15" Column="11" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/Components/InventoryOptionComponent.razor.css" Line="1" Column="1" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/Pages/InventoryPage.razor.css" Line="11" Column="1" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/Pages/CarsPage.razor.css" Line="6" Column="48" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/Pages/HomePage.razor" Line="31" Column="1" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/Pages/CarOverview.razor" Line="3" Column="1" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/Components/Configurator/ConfiguratorDisplayComponent.razor" Line="31" Column="31" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -43,7 +45,7 @@
                   <Node name="Payment" expanded="True" />
                   <Node name="CarsPage.razor" expanded="True" />
                   <Node name="HomePage.razor" expanded="True" />
-                  <Node name="InventoryPage.razor" selected="True" />
+                  <Node name="InventoryPage.razor" expanded="True" />
                 </Node>
                 <Node name="Shared" expanded="True">
                   <Node name="Components" expanded="True">
@@ -74,4 +76,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
 </Properties>

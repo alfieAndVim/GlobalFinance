@@ -41,11 +41,25 @@ namespace GlobalFinance.Server.Controllers
             return Ok(_variants);
         }
 
+        [HttpGet("single_variant{id}")]
+        public async Task<ActionResult<ModelVariantModel>> GetVariant(int id)
+        {
+            var _variant = await appDataContext.ModelVariants.FirstOrDefaultAsync(v => v.ModelVariantId == id);
+            return Ok(_variant);
+        }
+
         [HttpGet("paints{id}")]
         public async Task<ActionResult<List<PaintModel>>> ListPaints(int id)
         {
             var _paints = await appDataContext.PaintColours.Where(p => p.CarId == id).ToListAsync();
             return Ok(_paints);
+        }
+
+        [HttpGet("single_paint{id}")]
+        public async Task<ActionResult<PaintModel>> GetPaint(int id)
+        {
+            var _paint = await appDataContext.PaintColours.FirstOrDefaultAsync(p => p.PaintId == id);
+            return Ok(_paint);
         }
         
 

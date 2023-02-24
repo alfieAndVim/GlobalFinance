@@ -2,7 +2,6 @@
     height: 100%;
     width: 100%;
     display: flex;
-    
 }
 
 .inner-div {
@@ -21,12 +20,14 @@
 
 #car-image {
     height: 100%;
-    width: 50%
+    width: 50%;
+    margin-top: 20px;
 }
 
 h1 {
     font-weight: 700;
     font-size: 8vh;
+    margin-top: 10px;
 }
 
 img {

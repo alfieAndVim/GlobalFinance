@@ -27,6 +27,8 @@
     private string _returnRoute;
     private string _forwardRoute;
 
+    private int _tempOptionsPrice;
+
     private Stack<ConfiguratorOptionModel> _configOptions;
 
     private ConfigurationModel Configuration;
@@ -54,22 +56,28 @@
             {
                 _optionsPrice = 0;
             }
+            _tempOptionsPrice = _optionsPrice;
             _totalPrice = Configuration.Price ?? 0;
             _returnRoute = $"/cars/{CarId}/modelvariant";
-            _forwardRoute = $"/cars/{CarId}/payment";
+            _forwardRoute = "/overview/1/0";
+            //_forwardRoute = $"/cars/{CarId}/payment";
         }
     }
 
     private void GivenPaintColorOption()
     {
+
+
         ConfiguratorService.Configuration.PaintId = _paintId;
+        //var _tempConfigPrice = 0;
+        //ConfiguratorService.Configuration.Options.ToList().ForEach(x => _tempConfigPrice += x.OptionPriceIncrease);
+        //ConfiguratorService.Configuration.Price -= _tempConfigPrice;
+        //ConfiguratorService.Configuration.Options = _configOptions;
+        ConfiguratorService.Configuration.Price -= _tempOptionsPrice;
         var _tempConfigPrice = 0;
         ConfiguratorService.Configuration.Options.ToList().ForEach(x => _tempConfigPrice += x.OptionPriceIncrease);
-        ConfiguratorService.Configuration.Price -= _tempConfigPrice;
-        ConfiguratorService.Configuration.Options = _configOptions;
-        _tempConfigPrice = 0;
-        ConfiguratorService.Configuration.Options.ToList().ForEach(x => _tempConfigPrice += x.OptionPriceIncrease);
         ConfiguratorService.Configuration.Price += _tempConfigPrice;
+
     }
 
 

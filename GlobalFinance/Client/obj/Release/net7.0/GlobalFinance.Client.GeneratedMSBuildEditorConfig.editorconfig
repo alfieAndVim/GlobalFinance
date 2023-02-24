@@ -36,10 +36,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQ29uZmlndXJhdG9yL1BhaW50Q29sb3VyQ29uZmlnLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/Configurator/PaymentConfig.razor]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQ29uZmlndXJhdG9yL1BheW1lbnRDb25maWcucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/OffersPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvT2ZmZXJzUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -91,6 +87,10 @@ build_metadata.AdditionalFiles.CssScope = b-2x67hwbbf9
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/Authentication/RegisterCustomer.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQXV0aGVudGljYXRpb24vUmVnaXN0ZXJDdXN0b21lci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-asbmaaci4s
+
+[/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/CarOverview.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQ2FyT3ZlcnZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ux5j8qwzzo
 
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/CarsPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQ2Fyc1BhZ2UucmF6b3I=

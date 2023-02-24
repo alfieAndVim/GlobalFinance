@@ -35,12 +35,16 @@ namespace GlobalFinance.Server.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<InventoryModel>> Get(int id)
         {
-            var inventoryItem = await appDataContext.Inventory.FirstOrDefaultAsync(I => I.InventoryId == id);
+            var inventoryItem = await appDataContext.Inventory.FirstOrDefaultAsync(I => I.InventoryId == 1);
             if (inventoryItem != null)
             {
                 return Ok(inventoryItem);
             }
-            return NotFound();
+            else
+            {
+                return NotFound();
+            }
+            
         }
     }
 }
