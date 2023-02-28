@@ -1,0 +1,97 @@
+﻿@page "/register"
+@inject HttpClient Http
+@inject IAuthService AuthService
+@inject ICustomerService CustomerService
+@inject NavigationManager NavigationManager 
+
+<h3>Register an account @existingCustomer.FirstName</h3>
+
+<div class="register-form">
+    <EditForm style="height: inherit; min-height:inherit;" Model="registerUser" OnSubmit="HandleRegistration">
+        <div class="register-form-inner">
+            <div class="register-form-section">
+                <label class="register-form-label" for="email">Email</label>
+                <InputText class="register-form-input" @bind-Value="registerUser.email" type="email"></InputText>
+
+            </div>
+            <div class="register-form-section">
+                <label class="register-form-label" for="password">Password</label>
+                <InputText class="register-form-input" @bind-Value="registerUser.password" type="password"></InputText>
+
+            </div>
+
+            <div class="register-form-section">
+                <label class="register-form-label" for="password">Confirm Password</label>
+                <InputText class="register-form-input" @bind-Value="registerUser.passwordValidation" type="password"></InputText>
+
+            </div>
+
+            <div class="register-form-section">
+                <button type="submit" class="register-form-button">Register</button>
+                <div class="register-form-error-message">
+                    @errorMessage
+                </div>
+            </div>
+        </div>
+
+    </EditForm>
+    <button class="register-form-sub-button" @onclick="GoToLogin">Already have an account?</button>
+</div>
+
+@code {
+
+    [Parameter]
+    public CustomerModel customer { get; set; }
+
+    private class RegisterUser
+    {
+        public string email { get; set; } = string.Empty;
+        public string password { get; set; } = string.Empty;
+        public string passwordValidation { get; set; } = string.Empty;
+    }
+
+    RegisterUser registerUser = new RegisterUser();
+    UserDto user = new UserDto();
+    CustomerModel existingCustomer = new CustomerModel();
+
+    string errorMessage = string.Empty;
+
+
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        existingCustomer = CustomerService.customer;
+
+    }
+
+    async Task HandleRegistration()
+    {
+
+        if (registerUser.password == registerUser.passwordValidation)
+        {
+            user.Email = registerUser.email;
+            user.Password = registerUser.password;
+            user.CustomerId = existingCustomer.CustomerId;
+
+            Console.WriteLine(user.Email);
+            Console.WriteLine(user.Password);
+
+            int result = await AuthService.RegisterUser(user);
+            if (result == 1)
+            {
+                errorMessage = "User already exists";
+            } 
+
+        } else
+        {
+            errorMessage = "Passwords do not match";
+        }
+    }
+
+    private void GoToLogin()
+    {
+        NavigationManager.NavigateTo("/login");
+    }
+}
+

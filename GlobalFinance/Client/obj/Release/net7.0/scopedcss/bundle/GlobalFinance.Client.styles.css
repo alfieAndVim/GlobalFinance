@@ -30,12 +30,14 @@ img[b-lqvpom6inh] {
     border-radius: 20px;
     width: 300px;
     transition: border 0.5s;
+    box-shadow: 0px 0px 10px grey;
 }
 
-.outer-div:hover[b-lqvpom6inh] {
-    border: 4px solid blue;
-    cursor: pointer;
-}
+    .outer-div:hover[b-lqvpom6inh] {
+        border: 4px solid blue;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px blue;
+    }
 
 .image[b-lqvpom6inh] {
     margin: 0 auto;
@@ -228,6 +230,506 @@ img[b-czez28hexb] {
         margin-top: 2%;
     }
 }
+/* /Views/Components/InventoryOptionComponent.razor.rz.scp.css */
+body[b-vqt43ztrjf] {
+}
+
+h3[b-vqt43ztrjf] {
+    font-size: 14px;
+    margin: 0px 2px;
+}
+
+h4[b-vqt43ztrjf] {
+    font-size: 15px;
+    margin: 0px 4px;
+}
+
+img[b-vqt43ztrjf] {
+    width: 100%;
+    padding-top: 20px;
+}
+
+#price[b-vqt43ztrjf] {
+    font-size: 18px;
+    font-weight: bold;
+    color: blue;
+    opacity: 0.7;
+}
+
+.outer-div[b-vqt43ztrjf] {
+    flex: 0 0 33%;
+    border: 4px solid lightgrey;
+    border-radius: 20px;
+    width: 300px;
+    transition: border 0.5s;
+    box-shadow: 0px 0px 10px grey;
+}
+
+    .outer-div:hover[b-vqt43ztrjf] {
+        border: 4px solid blue;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px blue;
+    }
+
+.image[b-vqt43ztrjf] {
+    margin: 0 auto;
+    width: 90%;
+    height: 200px;
+    background-color: white;
+}
+
+.details[b-vqt43ztrjf] {
+    display: inline-flex;
+    clear: both;
+}
+
+.details-pricing[b-vqt43ztrjf] {
+    display: flex;
+}
+/* /Views/Pages/Authentication/ForgotPassword.razor.rz.scp.css */
+.forgot-form[b-ugp46tvjku] {
+    background-color: white;
+    margin: 0 auto;
+    width: 30%;
+    min-width: 500px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    height: 20vh;
+    padding: 20px;
+    min-height: 200px;
+    box-shadow: 0px 0px 50px grey;
+}
+
+.forgot-form-inner[b-ugp46tvjku] {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.forgot-form-label[b-ugp46tvjku] {
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+}
+
+[b-ugp46tvjku] .forgot-form-input {
+    display: block;
+    width: 80%;
+    background-color: #d9d9d9;
+    margin: 0 auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    height: 30%;
+    min-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.forgot-form-section[b-ugp46tvjku] {
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+
+.forgot-form-button[b-ugp46tvjku] {
+    color: white;
+    width: 35%;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+}
+
+.forgot-form-error-message[b-ugp46tvjku] {
+    width: 100%;
+    margin: 0 auto;
+    color: red;
+}
+
+.forgot-form-button:hover[b-ugp46tvjku] {
+    width: 40%;
+}
+
+[b-ugp46tvjku] *:focus {
+    outline: none;
+    outline-width: 0;
+}
+/* /Views/Pages/Authentication/Login.razor.rz.scp.css */
+.login-form[b-8ggl0ruzd5] {
+
+    background-color: white;
+    margin: 0 auto;
+    width: 30%;
+    min-width: 500px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    height: 30vh;
+    padding: 20px;
+    min-height: 300px;
+    box-shadow: 0px 0px 50px grey;
+}
+
+.login-form-inner[b-8ggl0ruzd5] {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.login-form-label[b-8ggl0ruzd5] {
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+}
+
+[b-8ggl0ruzd5] .login-form-input {
+    display: block;
+    width: 80%;
+    background-color: #d9d9d9;
+    margin: 0 auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    height: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.login-form-section[b-8ggl0ruzd5] {
+    display: block;
+    width: 100%;
+    height: 25%;
+}
+
+.login-form-button[b-8ggl0ruzd5] {
+    color: white;
+    width: 30%;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+}
+
+.login-form-sub-button[b-8ggl0ruzd5] {
+    position: relative;
+    left: 20%;
+    background-color:white;
+    border: none;
+    text-decoration: underline;
+    color: black;
+}
+
+.login-form-error-message[b-8ggl0ruzd5] {
+    width: 100%;
+    margin: 0 auto;
+    color: red;
+}
+
+.login-form-button:hover[b-8ggl0ruzd5] {
+    width: 35%;
+}
+
+[b-8ggl0ruzd5] *:focus {
+    outline: none;
+    outline-width: 0;
+}
+/* /Views/Pages/Authentication/Register.razor.rz.scp.css */
+.register-form[b-2x67hwbbf9] {
+    background-color: white;
+    margin: 0 auto;
+    width: 30%;
+    min-width: 500px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    height: 30vh;
+    padding: 20px;
+    min-height: 350px;
+    box-shadow: 0px 0px 50px grey;
+}
+
+.register-form-inner[b-2x67hwbbf9] {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.register-form-label[b-2x67hwbbf9] {
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+}
+
+[b-2x67hwbbf9] .register-form-input {
+    display: block;
+    width: 80%;
+    background-color: #d9d9d9;
+    margin: 0 auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    height: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.register-form-section[b-2x67hwbbf9] {
+    display: block;
+    width: 100%;
+    height: 30%;
+}
+
+.register-form-button[b-2x67hwbbf9] {
+    color: white;
+    width: 30%;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+}
+
+.register-form-sub-button[b-2x67hwbbf9] {
+    background-color: white;
+    border: none;
+    text-decoration: underline;
+    color: black;
+}
+
+.register-form-error-message[b-2x67hwbbf9] {
+    width: 100%;
+    margin: 0 auto;
+    color: red;
+}
+
+.register-form-button:hover[b-2x67hwbbf9] {
+    width: 35%;
+}
+
+[b-2x67hwbbf9] *:focus {
+    outline: none;
+    outline-width: 0;
+}
+/* /Views/Pages/Authentication/RegisterCustomer.razor.rz.scp.css */
+.customer-form[b-asbmaaci4s] {
+    background-color: white;
+    margin: 0 auto;
+    width: 30%;
+    min-width: 500px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    height: 30vh;
+    padding: 20px;
+    min-height: 600px;
+    box-shadow: 0px 0px 50px grey;
+}
+
+.customer-form-inner[b-asbmaaci4s] {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 30px;
+}
+
+.customer-form-label[b-asbmaaci4s] {
+    width: 100%;
+    color: black;
+    text-align: start;
+    padding-left: 20px;
+}
+
+[b-asbmaaci4s] .customer-form-input {
+    display: block;
+    width: 80%;
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    height: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.customer-form-section[b-asbmaaci4s] {
+    display: block;
+    width: 100%;
+    height: 10%;
+}
+
+.customer-form-button[b-asbmaaci4s] {
+    color: white;
+    width: 30%;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+}
+
+.customer-form-sub-button[b-asbmaaci4s] {
+    position: absolute;
+    right: 40%;
+    background-color: white;
+    border: none;
+    text-decoration: underline;
+    color: black;
+}
+
+.customer-form-error-message[b-asbmaaci4s] {
+    width: 100%;
+    margin: 0 auto;
+    color: red;
+}
+
+#name[b-asbmaaci4s] {
+    display: inline-flex;
+
+}
+
+
+
+
+
+.customer-form-button:hover[b-asbmaaci4s] {
+    width: 35%;
+}
+
+[b-asbmaaci4s] *:focus {
+    outline: none;
+    outline-width: 0;
+}
+/* /Views/Pages/CarOverview.razor.rz.scp.css */
+body[b-ux5j8qwzzo] {
+}
+
+.outer-div[b-ux5j8qwzzo] {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 1fr 15rem 10rem;
+    grid-auto-rows: auto;
+    grid-gap: 20px 20px;
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 100px;
+}
+
+.header[b-ux5j8qwzzo] {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+}
+
+.image[b-ux5j8qwzzo] {
+    display: flex;
+    grid-area: 2 / 1 / 3 / 2;
+    width: auto;
+    height: 300px;
+    max-height: 100%;
+    margin-top: 5%;
+    margin-left: 10px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+img[b-ux5j8qwzzo] {
+    height: 100%;
+
+}
+
+.information[b-ux5j8qwzzo] {
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.car-name[b-ux5j8qwzzo] {
+    height: 50%;
+}
+
+.car-details[b-ux5j8qwzzo] {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    height: 50%;
+    
+}
+
+.car-sub-details[b-ux5j8qwzzo] {
+    display: inline-block;
+    align-content: space-evenly;
+    height: 70%;
+    padding: 20px;
+}
+
+.seperator[b-ux5j8qwzzo] {
+    height: 70%;
+    width: 2px;
+    background: black;
+}
+
+.payment-decision[b-ux5j8qwzzo] {
+    grid-area: 4 / 1 / 5 / 2;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 20px;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.finance[b-ux5j8qwzzo] {
+    background-color: #ededed;
+    border-radius: 20px;
+    width: 48%;
+    height: 100%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.payment[b-ux5j8qwzzo] {
+    background-color: #ededed;
+    border-radius: 20px;
+    width: 48%;
+    height: 100%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.payment-selection-button[b-ux5j8qwzzo] {
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    width: 30%;
+    min-width: 200px;
+    border: none;
+    padding: 5px;
+}
 /* /Views/Pages/CarsPage.razor.rz.scp.css */
 body[b-7ifbbbe3h0] {
 }
@@ -239,18 +741,38 @@ body[b-7ifbbbe3h0] {
     grid-gap: 10px;
     justify-items: center;
 }
+/* /Views/Pages/DealershipsPage.razor.rz.scp.css */
+html[b-k2i8k3dkdw], body[b-k2i8k3dkdw] {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.map iframe[b-k2i8k3dkdw] {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.map[b-k2i8k3dkdw] {
+    height: 70vh;
+    width: 70%;
+    margin: 0 auto;
+}
+
+
 /* /Views/Pages/HomePage.razor.rz.scp.css */
 .outer-div[b-aaqd9d26q7] {
     height: 100%;
     width: 100%;
     display: flex;
-    
 }
 
 .inner-div[b-aaqd9d26q7] {
     height: auto;
     display: inline-block;
 }
+
 
 .nav-btns[b-aaqd9d26q7] {
     display: flex;
@@ -262,16 +784,30 @@ body[b-7ifbbbe3h0] {
 
 #car-image[b-aaqd9d26q7] {
     height: 100%;
-    width: 50%
+    width: 50%;
+    margin-top: 20px;
 }
 
 h1[b-aaqd9d26q7] {
     font-weight: 700;
+    font-size: 8vh;
+    margin-top: 10px;
 }
 
 img[b-aaqd9d26q7] {
     height: 100%;
     width: 100%;
+}
+/* /Views/Pages/InventoryPage.razor.rz.scp.css */
+body[b-e3aalrj1b6] {
+}
+
+.car-grid[b-e3aalrj1b6] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    margin: 30px;
+    grid-gap: 10px;
+    justify-items: center;
 }
 /* /Views/Shared/Components/Buttons/GenericNavButtonComponent.razor.rz.scp.css */
 a[b-aagy7j7nvx] {
@@ -328,9 +864,17 @@ a:hover[b-aagy7j7nvx] {
 
 
 /* /Views/Shared/Components/NavBarComponent.razor.rz.scp.css */
+*[b-ma7pnd7n50] {
+    background-color: white;
+}
+
 .top-nav[b-ma7pnd7n50] {
     white-space: nowrap;
-    
+    box-shadow: 0px 10px 10px lightgrey;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
 }
 
 .top-nav-home[b-ma7pnd7n50] {
@@ -357,6 +901,10 @@ a:hover[b-aagy7j7nvx] {
    font-size: 30px;
 }
 /* /Views/Shared/Pages/MainLayout.razor.rz.scp.css */
+.main-body[b-v6welsjzr3] {
+    margin-top: 8%;
+}
+
 .page[b-v6welsjzr3] {
     background-color: white;
 }
@@ -369,3 +917,10 @@ a:hover[b-aagy7j7nvx] {
     display: flex;
     
 }
+
+
+/*
+    Main Colours
+    Light Blue - 1E91D6
+    Darker Blue - 0072BB
+*/

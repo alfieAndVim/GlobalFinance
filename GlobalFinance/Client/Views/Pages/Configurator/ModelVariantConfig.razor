@@ -10,8 +10,8 @@
 
 
 @code {
-    [Parameter, EditorRequired]
-    public int CarId { get; set; }
+        [Parameter, EditorRequired]
+        public int CarId { get; set; }
 
     private CarModel? _car;
 
@@ -71,7 +71,7 @@
         _tempConfigPrice = 0;
         ConfiguratorService.Configuration.Options.ToList().ForEach(x => _tempConfigPrice += x.OptionPriceIncrease);
         ConfiguratorService.Configuration.Price += _tempConfigPrice;
-
+        
     }
 
 

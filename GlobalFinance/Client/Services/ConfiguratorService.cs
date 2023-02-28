@@ -10,6 +10,7 @@ namespace GlobalFinance.Client.Services
         private readonly HttpClient httpClient;
 
         public ConfigurationModel Configuration { get; set; } = new ConfigurationModel();
+        public SavedConfigurationModel SavedConfiguration { get; set; } = new SavedConfigurationModel();
 
         public ConfiguratorService(HttpClient httpClient)
         {
@@ -58,7 +59,7 @@ namespace GlobalFinance.Client.Services
             return Configuration;
         }
 
-        public double GetFinanceAmount(int totalMonths = 36, int initialPayment = 0, int interestRate = 4)
+        public double GetFinanceAmount(int totalMonths = 48, int initialPayment = 4000, int interestRate = 4)
         {
             var _totalPrice = Configuration.Price.HasValue ? (double)Configuration.Price : 0.0;
             return Math.Round(((_totalPrice - initialPayment) / totalMonths) * (1 + (interestRate / 100)), 2);

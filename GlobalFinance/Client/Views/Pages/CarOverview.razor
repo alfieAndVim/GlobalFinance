@@ -1,0 +1,174 @@
+﻿@page "/overview/{typeOverview:int}/{id:int}"
+@inject ICarService CarService
+@inject IInventoryService InventoryService
+@inject IConfiguratorService ConfiguratorService
+@inject NavigationManager NavigationManager 
+
+<div class="outer-div">
+    <div class="header">
+        @if (typeOverview == 0)
+            {
+                <h3>Inventory</h3>
+            }
+            else if (typeOverview == 1)
+            {
+    <h3>Your Configuration</h3>  
+            }
+    </div>
+    <div class="image">
+        <img src="@CarImageSrc"/>
+    </div>
+    <div class="information">
+        <div class="car-name">
+            <h2>@Car.CarMakeName</h2>
+            <h2>@Car.CarModelName</h2>
+        </div>
+        <div class="car-details">
+            <div class="car-sub-details">
+                <h5>Price:</h5>
+                <h6>£@CarPrice</h6>
+                <br />
+            </div>
+            <div class="seperator"></div>
+            <div class="car-sub-details">
+                <h5>Model Variant:</h5>
+                <h6>@CarModelVariant</h6>
+                <br />
+            </div>
+            <div class="seperator"></div>
+            <div class="car-sub-details">
+                <h5>Paint:</h5>
+                <h6>@CarPaint</h6>
+                <br />
+            </div>
+
+            @if (CarMileage != null)
+            {
+                <div class="seperator"></div>
+                <div class="car-sub-details">
+                    <h5>Mileage:</h5>
+                    <h6>@CarMileage</h6>
+                    <br />
+                </div>
+
+            }
+        </div>
+    </div>
+    <div class="payment-decision">
+        <div class="finance">
+            <h3>Finance</h3>
+            <h2>£@CarFinancePrice</h2>
+            <button class="payment-selection-button">Explore</button>
+        </div>
+        <br />
+        <div class="payment">
+            <h3>Full Payment</h3>
+            <h2>£@CarPrice</h2>
+            <button class="payment-selection-button" @onclick="ShowDealerships">Find Dealerships</button>
+        </div>
+    </div>
+</div>
+
+
+@code {
+
+    [Parameter, EditorRequired]
+    public int typeOverview { get; set; }
+    [Parameter, EditorRequired]
+    public int id { get; set; }
+
+    private ConfigurationModel Configuration = new ConfigurationModel();
+    private InventoryModel Inventory = new InventoryModel();
+    private CarModel Car = new CarModel();
+    private string CarImageSrc = string.Empty;
+    private int CarPrice;
+    private double CarFinancePrice;
+    private string CarModelVariant = string.Empty;
+    private int CarModelVariantId;
+    private string CarPaint = string.Empty;
+    private int CarPaintId;
+    private int? CarMileage;
+
+    private int totalMonths = 36;
+    private double initialPayment;
+    private int interestRate = 9;
+
+
+    protected override async Task OnParametersSetAsync()
+    {
+
+        if (typeOverview == 0)
+        {
+            Inventory = await InventoryService.GetSingleInventoryItem(id);
+            Console.WriteLine(Inventory.CarId);
+
+            var carResult = await CarService.GetSingleCar(Inventory.CarId);
+            if (carResult != null)
+            {
+                Car = carResult;
+            }
+            CarPrice = Inventory.InventoryPrice;
+            CarModelVariant = await GetModel(Inventory.ModelVariantId);
+            CarModelVariantId = Inventory.ModelVariantId;
+            CarPaint = await GetPaint(Inventory.PaintId);
+            CarPaintId = Inventory.PaintId;
+
+            CarMileage = Inventory.InventoryMileage;
+        }
+        else if (typeOverview == 1)
+        {
+
+            Configuration = ConfiguratorService.Configuration;
+            if (Configuration.CarId != null)
+            {
+                var carResult = await CarService.GetSingleCar(Configuration.CarId.Value);
+                if (carResult != null)
+                {
+                    Car = carResult;
+                }
+            }
+            CarPrice = Configuration.Price.Value;
+            CarModelVariant = await GetModel(Configuration.ModelVariantId.Value);
+            CarModelVariantId = Configuration.ModelVariantId.Value;
+            CarPaint = await GetPaint(Configuration.PaintId.Value);
+            CarPaintId = Configuration.PaintId.Value;
+            CarFinancePrice = ConfiguratorService.GetFinanceAmount();
+        }
+        CarImageSrc = $"Images/Car-images/{Car.CarId}.jpg";
+        initialPayment = CarPrice * 0.1;
+        CarFinancePrice = CarService.GetFinancePrice(Convert.ToDouble(CarPrice), totalMonths, initialPayment, interestRate);
+    }
+
+    private async Task<string> GetPaint(int id)
+    {
+        PaintModel paintResult = await CarService.GetPaint(id);
+        if (paintResult != null)
+        {
+            return paintResult.Name;
+        }
+        throw new Exception("Could not get paint");
+    }
+
+    private async Task<string> GetModel(int id)
+    {
+        ModelVariantModel modelResult = await CarService.GetModel(id);
+        if (modelResult != null)
+        {
+            return modelResult.Name;
+        }
+        throw new Exception("Could not get model");
+    }
+
+    private void ShowDealerships()
+    {
+        NavigationManager.NavigateTo("/dealerships");
+    }
+
+    private void ShowFinance()
+    {
+        ConfiguratorService.SavedConfiguration = new SavedConfigurationModel { ModelVariantId = CarModelVariantId, PaintId = CarPaintId, CarId = Car.CarId};
+        NavigationManager.NavigateTo("/");
+    }
+
+    }
+

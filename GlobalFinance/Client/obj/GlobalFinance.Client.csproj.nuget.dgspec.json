@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj": {}
+    "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj": {}
   },
   "projects": {
-    "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj": {
+    "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj",
+        "projectUniqueName": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj",
         "projectName": "GlobalFinance.Client",
-        "projectPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj",
+        "projectPath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj",
         "packagesPath": "/Users/alfiedew/.nuget/packages/",
-        "outputPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/obj/",
+        "outputPath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/alfiedew/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj": {
-                "projectPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj"
+              "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj": {
+                "projectPath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj"
               }
             }
           }
@@ -42,6 +42,18 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "BlazorGoogleMaps": {
+              "target": "Package",
+              "version": "[2.5.5, )"
+            },
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -62,12 +74,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[7.0.3, 7.0.3]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -76,14 +94,14 @@
         }
       }
     },
-    "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj": {
+    "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj",
+        "projectUniqueName": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj",
         "projectName": "GlobalFinance.Shared",
-        "projectPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj",
+        "projectPath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Shared/GlobalFinance.Shared.csproj",
         "packagesPath": "/Users/alfiedew/.nuget/packages/",
-        "outputPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Shared/obj/",
+        "outputPath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/alfiedew/.nuget/NuGet/NuGet.Config"
@@ -125,7 +143,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
         }
       }
     }

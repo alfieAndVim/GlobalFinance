@@ -2,13 +2,13 @@
     height: 100%;
     width: 100%;
     display: flex;
-    
 }
 
 .inner-div[b-aaqd9d26q7] {
     height: auto;
     display: inline-block;
 }
+
 
 .nav-btns[b-aaqd9d26q7] {
     display: flex;
@@ -20,11 +20,14 @@
 
 #car-image[b-aaqd9d26q7] {
     height: 100%;
-    width: 50%
+    width: 50%;
+    margin-top: 20px;
 }
 
 h1[b-aaqd9d26q7] {
     font-weight: 700;
+    font-size: 8vh;
+    margin-top: 10px;
 }
 
 img[b-aaqd9d26q7] {

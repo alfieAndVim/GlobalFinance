@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WzariBkaEMNl8TgTjcmlOgh2sUoZCxsBWx5yZSnPcRK7yyCqfwTrsq52N/ac0dDIRPMtNkN9kUh7QP2lfO4MlQ==",
+  "dgSpecHash": "FxM3T4LfdaNQbPXT4hUjOFYlTt+afCznK/i08Ldl2W07FlHDw2S61Vq2WSAQECfA+fWw+yl/qO3x90QbtzvJZQ==",
   "success": true,
-  "projectFilePath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance.IntegrationTests/GlobalFinance.IntegrationTests.csproj",
+  "projectFilePath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.IntegrationTests/GlobalFinance.IntegrationTests.csproj",
   "expectedPackageFiles": [
     "/Users/alfiedew/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.codecoverage/17.3.2/microsoft.codecoverage.17.3.2.nupkg.sha512",

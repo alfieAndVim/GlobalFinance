@@ -1,17 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "p3LxzThY0oraztP1vPiBGqGJspVJjIySRrgmr2W0n0ozclQWms0jZ4GmwbOx/YG7Hb1HbpCPPqZjwd2ZlF3dng==",
+  "dgSpecHash": "0uFC14s/bZTycVJXKl1wE83DrCS+f3u50q7DuxaBnyLyEKsyObucrxsm8zK37DzMfJk6Kj+SWX+uZE7MnM9hrg==",
   "success": true,
-  "projectFilePath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj",
+  "projectFilePath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/GlobalFinance.Client.csproj",
   "expectedPackageFiles": [
-    "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.authorization/7.0.0/microsoft.aspnetcore.authorization.7.0.0.nupkg.sha512",
-    "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components/7.0.0/microsoft.aspnetcore.components.7.0.0.nupkg.sha512",
-    "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components.analyzers/7.0.0/microsoft.aspnetcore.components.analyzers.7.0.0.nupkg.sha512",
+    "/Users/alfiedew/.nuget/packages/blazored.localstorage/4.3.0/blazored.localstorage.4.3.0.nupkg.sha512",
+    "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/blazorgooglemaps.2.5.5.nupkg.sha512",
+    "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.authorization/7.0.2/microsoft.aspnetcore.authorization.7.0.2.nupkg.sha512",
+    "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components/7.0.2/microsoft.aspnetcore.components.7.0.2.nupkg.sha512",
+    "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components.analyzers/7.0.2/microsoft.aspnetcore.components.analyzers.7.0.2.nupkg.sha512",
+    "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components.authorization/7.0.2/microsoft.aspnetcore.components.authorization.7.0.2.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components.forms/7.0.0/microsoft.aspnetcore.components.forms.7.0.0.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components.web/7.0.0/microsoft.aspnetcore.components.web.7.0.0.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components.webassembly/7.0.0/microsoft.aspnetcore.components.webassembly.7.0.0.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components.webassembly.devserver/7.0.0/microsoft.aspnetcore.components.webassembly.devserver.7.0.0.nupkg.sha512",
-    "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.metadata/7.0.0/microsoft.aspnetcore.metadata.7.0.0.nupkg.sha512",
+    "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.metadata/7.0.2/microsoft.aspnetcore.metadata.7.0.2.nupkg.sha512",
+    "/Users/alfiedew/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.extensions.configuration/7.0.0/microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.extensions.configuration.binder/7.0.0/microsoft.extensions.configuration.binder.7.0.0.nupkg.sha512",
@@ -28,9 +32,12 @@
     "/Users/alfiedew/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.jsinterop/7.0.0/microsoft.jsinterop.7.0.0.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/microsoft.jsinterop.webassembly/7.0.0/microsoft.jsinterop.webassembly.7.0.0.nupkg.sha512",
+    "/Users/alfiedew/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/alfiedew/.nuget/packages/oneof/3.0.223/oneof.3.0.223.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/system.io.pipelines/7.0.0/system.io.pipelines.7.0.0.nupkg.sha512",
     "/Users/alfiedew/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/Users/alfiedew/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
+    "/Users/alfiedew/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
+    "/Users/alfiedew/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/7.0.3/microsoft.netcore.app.runtime.mono.browser-wasm.7.0.3.nupkg.sha512"
   ],
   "logs": []
 }

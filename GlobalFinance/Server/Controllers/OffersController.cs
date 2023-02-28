@@ -10,25 +10,25 @@ namespace GlobalFinance.Server.Controllers
     [Route("[Controller]")]
     public class OffersController : ControllerBase
     {
-        private readonly PublicDataContext publicDataContext;
+        private readonly AppDataContext appDataContext;
 
-        public OffersController(PublicDataContext publicDataContext)
+        public OffersController(AppDataContext appDataContext)
         {
-            this.publicDataContext = publicDataContext;
+            this.appDataContext = appDataContext;
         }
         
 
         [HttpGet("list")]
         public async Task<ActionResult<List<OfferModel>>> List()
         {
-            var _offers = await publicDataContext.Offers.ToListAsync();
+            var _offers = await appDataContext.Offers.ToListAsync();
             return Ok(_offers);
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<OfferModel>> Get(int id)
         {
-            var _offer = await publicDataContext.Offers.FirstOrDefaultAsync(o => o.OfferId == id);
+            var _offer = await appDataContext.Offers.FirstOrDefaultAsync(o => o.OfferId == id);
             if (_offer is not null)
             {
                 return Ok(_offer);

@@ -11,10 +11,18 @@
     <div class="top-nav-btns">
         <GenericNavButtonComponent Title="Home" NavigateToLocation="/"></GenericNavButtonComponent>
         <GenericNavButtonComponent Title="Cars" NavigateToLocation="/cars"></GenericNavButtonComponent>
-        <GenericNavButtonComponent Title="Offers" NavigateToLocation="/offers"></GenericNavButtonComponent>
+        <GenericNavButtonComponent Title="Inventory" NavigateToLocation="/inventory"></GenericNavButtonComponent>
     </div>
     <div class="top-nav-login">
-        <GenericNavButtonComponent id="login" Title="Login" NavigateToLocation="/auth"></GenericNavButtonComponent>
+        <AuthorizeView>
+            <NotAuthorized>
+                <GenericNavButtonComponent id="login" Title="Login" NavigateToLocation="/login"></GenericNavButtonComponent>
+            </NotAuthorized>
+            <Authorized>
+                <GenericNavButtonComponent id="login" Title="Log Out" NavigateToLocation="/logout"></GenericNavButtonComponent>
+            </Authorized>
+        </AuthorizeView>
+        
         
     </div>
 </div>

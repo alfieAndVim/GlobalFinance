@@ -1,0 +1,37 @@
+﻿@using GlobalFinance.Client.ServicesInterfaces
+@inject NavigationManager NavigationManager
+
+<div class="outer-div" @onclick="GoToPage">
+    <div class="image">
+        <img src="@imgSrc" />
+    </div>
+    <div class="details">
+        <h3>@CarMakeName</h3>
+        <h3>@CarModelName</h3>
+    </div>
+    <div class="details-pricing">
+        <h4 id="price">£@InventoryPrice</h4>
+    </div>
+    <div>
+        <h4>@InventoryMileage Miles</h4>
+    </div>
+</div>
+@code {
+    [Parameter, EditorRequired]
+    public int InventoryId { get; set; }
+    [Parameter, EditorRequired]
+    public string CarMakeName { get; set; }
+    [Parameter, EditorRequired]
+    public string CarModelName { get; set; }
+    [Parameter, EditorRequired]
+    public int InventoryPrice { get; set; }
+    [Parameter, EditorRequired]
+    public int InventoryMileage { get; set; }
+    [Parameter, EditorRequired]
+    public string imgSrc { get; set; }
+
+    private void GoToPage()
+    {
+        NavigationManager.NavigateTo($"/overview/0/{InventoryId}");
+    }
+}

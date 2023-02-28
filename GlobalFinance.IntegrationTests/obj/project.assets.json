@@ -6777,11 +6777,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance.IntegrationTests/GlobalFinance.IntegrationTests.csproj",
+      "projectUniqueName": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.IntegrationTests/GlobalFinance.IntegrationTests.csproj",
       "projectName": "GlobalFinance.IntegrationTests",
-      "projectPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance.IntegrationTests/GlobalFinance.IntegrationTests.csproj",
+      "projectPath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.IntegrationTests/GlobalFinance.IntegrationTests.csproj",
       "packagesPath": "/Users/alfiedew/.nuget/packages/",
-      "outputPath": "/Users/alfiedew/Projects/CCSEProject/GlobalFinance/GlobalFinance.IntegrationTests/obj/",
+      "outputPath": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.IntegrationTests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/alfiedew/.nuget/NuGet/NuGet.Config"
@@ -6841,7 +6841,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
       }
     }
   }

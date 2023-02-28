@@ -11,6 +11,7 @@
         <CarOptionComponent CarId="@car.CarId" CarMakeName="@car.CarMakeName" CarModelName="@car.CarModelName" CarStartingPrice="@car.CarStartingPrice" imgSrc="@GetCarImageSrc(car.CarId)"></CarOptionComponent>
         
     }
+            
     }
     
 </div>
@@ -28,4 +29,5 @@
     private string GetCarImageSrc(int id){
         return $"Images/Car-images/{id}.jpg";
     }
+    
 }

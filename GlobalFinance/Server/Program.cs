@@ -1,6 +1,8 @@
-﻿using GlobalFinance.Server.Data;
+﻿global using GlobalFinance.Shared.Models;
+using GlobalFinance.Server.Data;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<PublicDataContext>(options => options.UseSqlite("Filename=publicdata.db"));
+builder.Services.AddDbContext<AppDataContext>(options => options.UseSqlite("Filename=appdata.db"));
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 var app = builder.Build();
 
@@ -35,6 +38,13 @@ app.UseRouting();
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
+
+app.UseCors(cors => cors
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true)
+    .AllowCredentials()
+);
 
 app.Run();
 
