@@ -508,3 +508,6 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Debug/net7.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Debug/net7.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/obj/Debug/net7.0/GlobalFinance.Server.MvcApplicationPartsAssemblyInfo.cs
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Debug/net7.0/GoogleMapsComponents.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Debug/net7.0/OneOf.dll

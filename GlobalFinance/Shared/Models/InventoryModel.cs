@@ -17,7 +17,9 @@ namespace GlobalFinance.Shared.Models
 		[Required]
 		public int PaintId { get; set; }
 
-        public CarModel? Car { get; set; }
+		public CarModel? Car { get; set; }
+        public PaintModel? Paint { get; set; }
+        public ModelVariantModel? ModelVariant { get; set; }
 	}
 }
 

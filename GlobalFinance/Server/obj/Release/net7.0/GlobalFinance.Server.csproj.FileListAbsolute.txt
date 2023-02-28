@@ -508,3 +508,6 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/obj/Release/net7.0/GlobalFinance.Server.pdb
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/obj/Release/net7.0/GlobalFinance.Server.genruntimeconfig.cache
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/obj/Release/net7.0/ref/GlobalFinance.Server.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/GoogleMapsComponents.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Newtonsoft.Json.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/OneOf.dll

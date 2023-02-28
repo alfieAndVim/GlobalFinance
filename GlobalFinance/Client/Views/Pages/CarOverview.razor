@@ -2,6 +2,7 @@
 @inject ICarService CarService
 @inject IInventoryService InventoryService
 @inject IConfiguratorService ConfiguratorService
+@inject NavigationManager NavigationManager 
 
 <div class="outer-div">
     <div class="header">
@@ -23,21 +24,33 @@
             <h2>@Car.CarModelName</h2>
         </div>
         <div class="car-details">
+            <div class="car-sub-details">
+                <h5>Price:</h5>
+                <h6>£@CarPrice</h6>
+                <br />
+            </div>
+            <div class="seperator"></div>
+            <div class="car-sub-details">
+                <h5>Model Variant:</h5>
+                <h6>@CarModelVariant</h6>
+                <br />
+            </div>
+            <div class="seperator"></div>
+            <div class="car-sub-details">
+                <h5>Paint:</h5>
+                <h6>@CarPaint</h6>
+                <br />
+            </div>
 
-            <h5>Price:</h5>
-            <h6>£@CarPrice</h6>
-            <br />
-            <h5>Model Variant:</h5>
-            <h6>@CarModelVariant</h6>
-            <br />
-            <h5>Paint:</h5>
-            <h6>@CarPaint</h6>
-            <br />
             @if (CarMileage != null)
             {
-                <h5>Mileage:</h5>
-                <h6>@CarMileage</h6>
-                <br />
+                <div class="seperator"></div>
+                <div class="car-sub-details">
+                    <h5>Mileage:</h5>
+                    <h6>@CarMileage</h6>
+                    <br />
+                </div>
+
             }
         </div>
     </div>
@@ -45,11 +58,13 @@
         <div class="finance">
             <h3>Finance</h3>
             <h2>£@CarFinancePrice</h2>
+            <button class="payment-selection-button">Explore</button>
         </div>
         <br />
         <div class="payment">
             <h3>Full Payment</h3>
             <h2>£@CarPrice</h2>
+            <button class="payment-selection-button" @onclick="ShowDealerships">Find Dealerships</button>
         </div>
     </div>
 </div>
@@ -69,7 +84,9 @@
     private int CarPrice;
     private double CarFinancePrice;
     private string CarModelVariant = string.Empty;
+    private int CarModelVariantId;
     private string CarPaint = string.Empty;
+    private int CarPaintId;
     private int? CarMileage;
 
     private int totalMonths = 36;
@@ -92,7 +109,10 @@
             }
             CarPrice = Inventory.InventoryPrice;
             CarModelVariant = await GetModel(Inventory.ModelVariantId);
+            CarModelVariantId = Inventory.ModelVariantId;
             CarPaint = await GetPaint(Inventory.PaintId);
+            CarPaintId = Inventory.PaintId;
+
             CarMileage = Inventory.InventoryMileage;
         }
         else if (typeOverview == 1)
@@ -109,13 +129,15 @@
             }
             CarPrice = Configuration.Price.Value;
             CarModelVariant = await GetModel(Configuration.ModelVariantId.Value);
+            CarModelVariantId = Configuration.ModelVariantId.Value;
             CarPaint = await GetPaint(Configuration.PaintId.Value);
+            CarPaintId = Configuration.PaintId.Value;
             CarFinancePrice = ConfiguratorService.GetFinanceAmount();
         }
         CarImageSrc = $"Images/Car-images/{Car.CarId}.jpg";
         initialPayment = CarPrice * 0.1;
         CarFinancePrice = CarService.GetFinancePrice(Convert.ToDouble(CarPrice), totalMonths, initialPayment, interestRate);
-     }
+    }
 
     private async Task<string> GetPaint(int id)
     {
@@ -135,6 +157,17 @@
             return modelResult.Name;
         }
         throw new Exception("Could not get model");
+    }
+
+    private void ShowDealerships()
+    {
+        NavigationManager.NavigateTo("/dealerships");
+    }
+
+    private void ShowFinance()
+    {
+        ConfiguratorService.SavedConfiguration = new SavedConfigurationModel { ModelVariantId = CarModelVariantId, PaintId = CarPaintId, CarId = Car.CarId};
+        NavigationManager.NavigateTo("/");
     }
 
     }

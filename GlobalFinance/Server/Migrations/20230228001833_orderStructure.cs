@@ -7,7 +7,7 @@
 namespace GlobalFinance.Server.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class orderStructure : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -45,19 +45,6 @@ namespace GlobalFinance.Server.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Customers", x => x.CustomerId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Orders",
-                columns: table => new
-                {
-                    OrderId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    ConfigurationId = table.Column<int>(type: "INTEGER", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Orders", x => x.OrderId);
                 });
 
             migrationBuilder.CreateTable(
@@ -141,6 +128,130 @@ namespace GlobalFinance.Server.Migrations
                         column: x => x.CustomerId,
                         principalTable: "Customers",
                         principalColumn: "CustomerId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Inventory",
+                columns: table => new
+                {
+                    InventoryId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    InventoryMileage = table.Column<int>(type: "INTEGER", nullable: false),
+                    InventoryPrice = table.Column<int>(type: "INTEGER", nullable: false),
+                    CarId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ModelVariantId = table.Column<int>(type: "INTEGER", nullable: false),
+                    PaintId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Inventory", x => x.InventoryId);
+                    table.ForeignKey(
+                        name: "FK_Inventory_Cars_CarId",
+                        column: x => x.CarId,
+                        principalTable: "Cars",
+                        principalColumn: "CarId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Inventory_ModelVariants_ModelVariantId",
+                        column: x => x.ModelVariantId,
+                        principalTable: "ModelVariants",
+                        principalColumn: "ModelVariantId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Inventory_PaintColours_PaintId",
+                        column: x => x.PaintId,
+                        principalTable: "PaintColours",
+                        principalColumn: "PaintId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SavedConfigurations",
+                columns: table => new
+                {
+                    SavedConfigurationId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    PaintId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ModelVariantId = table.Column<int>(type: "INTEGER", nullable: false),
+                    CarId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SavedConfigurations", x => x.SavedConfigurationId);
+                    table.ForeignKey(
+                        name: "FK_SavedConfigurations_Cars_CarId",
+                        column: x => x.CarId,
+                        principalTable: "Cars",
+                        principalColumn: "CarId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_SavedConfigurations_ModelVariants_ModelVariantId",
+                        column: x => x.ModelVariantId,
+                        principalTable: "ModelVariants",
+                        principalColumn: "ModelVariantId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_SavedConfigurations_PaintColours_PaintId",
+                        column: x => x.PaintId,
+                        principalTable: "PaintColours",
+                        principalColumn: "PaintId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Orders",
+                columns: table => new
+                {
+                    OrderId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    CustomerId = table.Column<int>(type: "INTEGER", nullable: false),
+                    SavedConfigurationId = table.Column<int>(type: "INTEGER", nullable: false),
+                    InventoryId = table.Column<int>(type: "INTEGER", nullable: false),
+                    inventoryModelInventoryId = table.Column<int>(type: "INTEGER", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Orders", x => x.OrderId);
+                    table.ForeignKey(
+                        name: "FK_Orders_Customers_CustomerId",
+                        column: x => x.CustomerId,
+                        principalTable: "Customers",
+                        principalColumn: "CustomerId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Orders_Inventory_inventoryModelInventoryId",
+                        column: x => x.inventoryModelInventoryId,
+                        principalTable: "Inventory",
+                        principalColumn: "InventoryId");
+                    table.ForeignKey(
+                        name: "FK_Orders_SavedConfigurations_SavedConfigurationId",
+                        column: x => x.SavedConfigurationId,
+                        principalTable: "SavedConfigurations",
+                        principalColumn: "SavedConfigurationId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Finances",
+                columns: table => new
+                {
+                    FinanceId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    FinancePrice = table.Column<double>(type: "REAL", nullable: false),
+                    FinanceInterestRate = table.Column<double>(type: "REAL", nullable: false),
+                    FinanceMonths = table.Column<int>(type: "INTEGER", nullable: false),
+                    FinanceInitialPayment = table.Column<double>(type: "REAL", nullable: false),
+                    OrderId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Finances", x => x.FinanceId);
+                    table.ForeignKey(
+                        name: "FK_Finances_Orders_OrderId",
+                        column: x => x.OrderId,
+                        principalTable: "Orders",
+                        principalColumn: "OrderId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -280,6 +391,35 @@ namespace GlobalFinance.Server.Migrations
                     { 45, 15, "Mythos Black", 0 }
                 });
 
+            migrationBuilder.InsertData(
+                table: "Inventory",
+                columns: new[] { "InventoryId", "CarId", "InventoryMileage", "InventoryPrice", "ModelVariantId", "PaintId" },
+                values: new object[,]
+                {
+                    { 1, 1, 12000, 12000, 1, 1 },
+                    { 2, 1, 12000, 12000, 1, 2 }
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Finances_OrderId",
+                table: "Finances",
+                column: "OrderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Inventory_CarId",
+                table: "Inventory",
+                column: "CarId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Inventory_ModelVariantId",
+                table: "Inventory",
+                column: "ModelVariantId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Inventory_PaintId",
+                table: "Inventory",
+                column: "PaintId");
+
             migrationBuilder.CreateIndex(
                 name: "IX_ModelVariants_CarId",
                 table: "ModelVariants",
@@ -291,9 +431,39 @@ namespace GlobalFinance.Server.Migrations
                 column: "CarId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Orders_CustomerId",
+                table: "Orders",
+                column: "CustomerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Orders_inventoryModelInventoryId",
+                table: "Orders",
+                column: "inventoryModelInventoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Orders_SavedConfigurationId",
+                table: "Orders",
+                column: "SavedConfigurationId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PaintColours_CarId",
                 table: "PaintColours",
                 column: "CarId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SavedConfigurations_CarId",
+                table: "SavedConfigurations",
+                column: "CarId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SavedConfigurations_ModelVariantId",
+                table: "SavedConfigurations",
+                column: "ModelVariantId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SavedConfigurations_PaintId",
+                table: "SavedConfigurations",
+                column: "PaintId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_CustomerId",
@@ -305,25 +475,34 @@ namespace GlobalFinance.Server.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ModelVariants");
+                name: "Finances");
 
             migrationBuilder.DropTable(
                 name: "Offers");
 
             migrationBuilder.DropTable(
+                name: "Users");
+
+            migrationBuilder.DropTable(
                 name: "Orders");
+
+            migrationBuilder.DropTable(
+                name: "Customers");
+
+            migrationBuilder.DropTable(
+                name: "Inventory");
+
+            migrationBuilder.DropTable(
+                name: "SavedConfigurations");
+
+            migrationBuilder.DropTable(
+                name: "ModelVariants");
 
             migrationBuilder.DropTable(
                 name: "PaintColours");
 
             migrationBuilder.DropTable(
-                name: "Users");
-
-            migrationBuilder.DropTable(
                 name: "Cars");
-
-            migrationBuilder.DropTable(
-                name: "Customers");
         }
     }
 }

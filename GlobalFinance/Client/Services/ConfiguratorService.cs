@@ -10,6 +10,7 @@ namespace GlobalFinance.Client.Services
         private readonly HttpClient httpClient;
 
         public ConfigurationModel Configuration { get; set; } = new ConfigurationModel();
+        public SavedConfigurationModel SavedConfiguration { get; set; } = new SavedConfigurationModel();
 
         public ConfiguratorService(HttpClient httpClient)
         {

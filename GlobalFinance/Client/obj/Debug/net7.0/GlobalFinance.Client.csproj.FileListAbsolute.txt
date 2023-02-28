@@ -1696,3 +1696,17 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Pages/Authentication/RegisterCustomer.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Components/InventoryOptionComponent.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Pages/InventoryPage.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Debug/net7.0/wwwroot/_framework/GoogleMapsComponents.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Debug/net7.0/wwwroot/_framework/Newtonsoft.Json.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Debug/net7.0/wwwroot/_framework/OneOf.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Debug/net7.0/wwwroot/_framework/Newtonsoft.Json.dll.gz
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Debug/net7.0/wwwroot/_framework/GoogleMapsComponents.dll.gz
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Debug/net7.0/wwwroot/_framework/OneOf.dll.gz
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Debug/net7.0/GoogleMapsComponents.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Debug/net7.0/OneOf.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/build-gz/l9JTG28p.gz
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/build-gz/hAOKgmkV.gz
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/build-gz/oV9aeqIq.gz
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Pages/CarOverview.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Pages/DealershipsPage.razor.rz.scp.css

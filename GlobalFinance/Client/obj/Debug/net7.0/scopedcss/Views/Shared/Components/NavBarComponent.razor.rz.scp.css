@@ -4,7 +4,11 @@
 
 .top-nav[b-ma7pnd7n50] {
     white-space: nowrap;
-    
+    box-shadow: 0px 10px 10px lightgrey;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
 }
 
 .top-nav-home[b-ma7pnd7n50] {

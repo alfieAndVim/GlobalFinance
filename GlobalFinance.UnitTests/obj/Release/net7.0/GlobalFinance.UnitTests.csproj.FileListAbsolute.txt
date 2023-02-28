@@ -653,3 +653,5 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/obj/Release/net7.0/GlobalFinance.UnitTests.pdb
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/obj/Release/net7.0/GlobalFinance.UnitTests.genruntimeconfig.cache
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/obj/Release/net7.0/ref/GlobalFinance.UnitTests.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/GoogleMapsComponents.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/OneOf.dll

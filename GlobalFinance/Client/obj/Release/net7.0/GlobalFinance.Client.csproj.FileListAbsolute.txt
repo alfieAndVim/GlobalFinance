@@ -850,6 +850,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/GlobalFinance.Client.pdb
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/GlobalFinance.Shared.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/GlobalFinance.Shared.pdb
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/GoogleMapsComponents.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/icudt_CJK.dat
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/icudt_EFIGS.dat
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/icudt_no_CJK.dat
@@ -884,6 +885,8 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.Win32.Registry.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/mscorlib.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/netstandard.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Newtonsoft.Json.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/OneOf.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.AppContext.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Buffers.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Collections.Concurrent.dll
@@ -1127,6 +1130,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Security.Principal.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Xml.XmlDocument.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.IO.FileSystem.dll.gz
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Newtonsoft.Json.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Private.CoreLib.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Xml.XPath.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/dotnet.timezones.blat.gz
@@ -1156,6 +1160,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.IO.Compression.Brotli.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Metadata.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Xml.dll.gz
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/GoogleMapsComponents.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.Extensions.DependencyInjection.Abstractions.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Reflection.TypeExtensions.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/mscorlib.dll.gz
@@ -1177,6 +1182,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Net.Mail.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.Extensions.Logging.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Runtime.Serialization.dll.gz
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/OneOf.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Xml.ReaderWriter.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Globalization.Calendars.dll.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Net.Security.dll.gz
@@ -1255,6 +1261,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/GlobalFinance.Client.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/GlobalFinance.Client.pdb
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Blazored.LocalStorage.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/GoogleMapsComponents.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Microsoft.AspNetCore.Authorization.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Microsoft.AspNetCore.Components.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Microsoft.AspNetCore.Components.Authorization.dll
@@ -1278,6 +1285,8 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Microsoft.Extensions.Primitives.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Microsoft.JSInterop.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Microsoft.JSInterop.WebAssembly.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Newtonsoft.Json.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/OneOf.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/System.IO.Pipelines.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Microsoft.CSharp.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/Microsoft.VisualBasic.Core.dll
@@ -1463,6 +1472,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/GlobalFinance.Client.csproj.CoreCompileInputs.cache
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/GlobalFinance.Client.MvcApplicationPartsAssemblyInfo.cache
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/safGaCZd.gz
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/l9JTG28p.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/NEx88kUL.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/WlppiFez.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/q8mp7voh.gz
@@ -1486,6 +1496,8 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/yYBMi0eS.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/LU3vG2Y2.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/m3OWGJ6D.gz
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/hAOKgmkV.gz
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/oV9aeqIq.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/t4vAET8L.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/0qzFQ1J7.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/Pjnap+XW.gz
@@ -1684,6 +1696,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Pages/Authentication/RegisterCustomer.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Pages/CarOverview.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Pages/CarsPage.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Pages/DealershipsPage.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Pages/HomePage.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Pages/InventoryPage.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Shared/Components/Buttons/GenericNavButtonComponent.razor.rz.scp.css

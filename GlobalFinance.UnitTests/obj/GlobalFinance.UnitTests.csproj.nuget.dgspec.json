@@ -123,6 +123,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "BlazorGoogleMaps": {
+              "target": "Package",
+              "version": "[2.5.5, )"
+            },
             "Blazored.LocalStorage": {
               "target": "Package",
               "version": "[4.3.0, )"
@@ -215,6 +219,10 @@
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
+            },
+            "BlazorGoogleMaps": {
+              "target": "Package",
+              "version": "[2.5.5, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.Server": {
               "target": "Package",

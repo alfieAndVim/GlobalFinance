@@ -8,6 +8,7 @@
   "resources": {
     "assembly": {
       "Blazored.LocalStorage.dll": "sha256-eXVgTw72kEn74FZgDQbLtvAmXbiZDSj5gzUnxVmwowQ=",
+      "GoogleMapsComponents.dll": "sha256-CE0RYlD8QhzefIRT43EmLDl++IUEuiK4QqoeewbTEGU=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-z4GZC8zBP0+3qTsoIBdCEOvwWaWDTpt8U1vr1aLEkI4=",
       "Microsoft.AspNetCore.Components.dll": "sha256-2+8AH28qnJdxAcSZ0HYdiGuZzHwXNI1gFtZz71zMhDc=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-s8GRS+pSGrHjRTvM2gxPqnJCH0gWau+eVkUxlNkRUmk=",
@@ -31,6 +32,8 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-q4ruoDSCjV\/QJY9ZkzV6uxvEvZUVrDbyUjU3SSh5SlE=",
       "Microsoft.JSInterop.dll": "sha256-q17WovokqNgFuXZO8JzEh+dShJEutXJL12V9hSr+Q6s=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-LS1TECEw0D6FskWRcaDt51suj930x2zRQySVGe2mJ3o=",
+      "Newtonsoft.Json.dll": "sha256-cs8pHUurDt0IqbB8YXPh560au3q3J\/1wRL9jBddRVmE=",
+      "OneOf.dll": "sha256-zcxJroPP990HWRLw7I3G7RSMLr+ysM12uPaIifTYZA4=",
       "System.IO.Pipelines.dll": "sha256-P\/MqD0fCBd5bgTM16JC1QC\/Zz7s+CwViyzmDFkBG4\/c=",
       "Microsoft.CSharp.dll": "sha256-OXA75L9dgx9LXJxiaIDGLfp0\/Sql7gQVlaMuI285Oq4=",
       "Microsoft.VisualBasic.Core.dll": "sha256-BVcAygeM8zz1DG96XDgbqpCdgTQpnlmukUmHZH0y5Ng=",
@@ -200,15 +203,15 @@
       "mscorlib.dll": "sha256-kgowZLZGyceaJo4bHvVY1kmm1GJuawa5rPO1RCfNYWc=",
       "netstandard.dll": "sha256-2\/SuexPFW8hizUgbgPcchYHfG\/zmGzzMN6ESSyefPRQ=",
       "System.Private.CoreLib.dll": "sha256-mcywrbK0VZXiOvZ4dxU1ocaPZFplCRSIPQ\/wFikcrus=",
-      "GlobalFinance.Shared.dll": "sha256-hzfDEd1QoDwupPb9vLXyWjQgMM87xbgKo8TMaz5sQ2g=",
-      "GlobalFinance.Client.dll": "sha256-Fy8Dds0MkK9UKex6yNgc\/f6Blak\/pgKNbsp3l8GVr84="
+      "GlobalFinance.Shared.dll": "sha256-b\/2FCOkp0kNp7wbWakrLCn0yDLMnO4+QjGkV4EmKH74=",
+      "GlobalFinance.Client.dll": "sha256-j8ISFcMIPPRszXgeNuCB29KW8lYI7fjS1haoNJRxpNM="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "GlobalFinance.Shared.pdb": "sha256-83ps4o11p4hjIYL\/So9CnQD1fOpfBPYvaRQQ8weZm8c=",
-      "GlobalFinance.Client.pdb": "sha256-KXx\/TYe1TsbfXADycV5Ucu35Foz4BKPkSfX4q9qyX1s="
+      "GlobalFinance.Shared.pdb": "sha256-zn+QuhKXxdVwW5jZIxAljX7JXIRY3Tn\/T9a7n86WblQ=",
+      "GlobalFinance.Client.pdb": "sha256-fWxlHOZsNxdbQebibrS74T26YuXHR3GYOjPQjL2PXwE="
     },
     "runtime": {
       "dotnet.7.0.3.howa5zyvjo.js": "sha256-DxGvmbtUa6hGJpk3VyMEbkPZ653qWbQkh8X4ZVM9TWM=",
