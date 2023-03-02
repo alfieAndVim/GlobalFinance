@@ -4,18 +4,21 @@
 
 @inject IInventoryService InventoryService
 @inject ICarService CarService
+@inject IEnquiryService EnquiryService
+@inject IConfiguratorService ConfiguratorService
+@inject IFinanceService FinanceService
 
 <h3>Showing @_inventoryCount results</h3>
 
 <div class="car-grid">
     @if (_inventory is not null)
+    {
+        @foreach (int value in Enumerable.Range(0, _inventoryCount))
         {
-            @foreach (int value in Enumerable.Range(0, _inventoryCount))
-                    {
-                        
-                        <InventoryOptionComponent InventoryId="@_inventory.ElementAt(value).InventoryId" CarMakeName="@_cars.ElementAt(value).CarMakeName" CarModelName="@_cars.ElementAt(value).CarModelName" InventoryMileage="@_inventory.ElementAt(value).InventoryMileage" InventoryPrice="@_inventory.ElementAt(value).InventoryPrice" imgSrc="@GetCarImageSrc(_inventory.ElementAt(value).CarId)"></InventoryOptionComponent>
-                    }
-                }
+
+            <InventoryOptionComponent InventoryId="@_inventory.ElementAt(value).InventoryId" CarMakeName="@_cars.ElementAt(value).CarMakeName" CarModelName="@_cars.ElementAt(value).CarModelName" InventoryMileage="@_inventory.ElementAt(value).InventoryMileage" InventoryPrice="@_inventory.ElementAt(value).InventoryPrice" imgSrc="@GetCarImageSrc(_inventory.ElementAt(value).CarId)"></InventoryOptionComponent>
+        }
+    }
 </div>
 
 @code {
@@ -26,6 +29,12 @@
 
     protected override async Task OnInitializedAsync()
     {
+
+        EnquiryService.Enquiry = new EnquiryModel();
+        ConfiguratorService.SavedConfiguration = new SavedConfigurationModel();
+        InventoryService.InventoryCar = new InventoryModel();
+        FinanceService.Finance = new FinanceModel();
+
         await InventoryService.GetInventory();
         _inventory = InventoryService.Inventory;
         _inventory.ForEach(async I => _cars.Add(await GetCar(I.CarId)));
@@ -47,8 +56,9 @@
         throw new Exception("Car could not be found");
     }
 
-    private string GetCarImageSrc(int id) {
+    private string GetCarImageSrc(int id)
+    {
         return $"Images/Car-images/{id}.jpg";
     }
 
-    }
+}

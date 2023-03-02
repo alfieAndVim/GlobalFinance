@@ -20,6 +20,9 @@ namespace GlobalFinance.Shared.Models
 		[Required]
 		[DataType(DataType.PhoneNumber, ErrorMessage = "The contact number must be a valid phone number")]
 		public string ContactNumber { get; set; }
+		[Required]
+		[DataType(DataType.EmailAddress, ErrorMessage = "The email must be valid")]
+		public string ContactEmail { get; set; }
 	}
 }
 

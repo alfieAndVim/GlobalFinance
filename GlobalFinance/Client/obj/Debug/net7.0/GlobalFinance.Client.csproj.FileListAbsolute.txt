@@ -1710,3 +1710,4 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/build-gz/oV9aeqIq.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Pages/CarOverview.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Pages/DealershipsPage.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/Pages/CarFinance.razor.rz.scp.css

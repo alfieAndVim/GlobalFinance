@@ -7,16 +7,16 @@
 <div class="outer-div">
     <div class="header">
         @if (typeOverview == 0)
-            {
-                <h3>Inventory</h3>
-            }
-            else if (typeOverview == 1)
-            {
-    <h3>Your Configuration</h3>  
-            }
+        {
+            <h3>Inventory</h3>
+        }
+        else if (typeOverview == 1)
+        {
+            <h3>Your Configuration</h3>
+        }
     </div>
     <div class="image">
-        <img src="@CarImageSrc"/>
+        <img src="@CarImageSrc" />
     </div>
     <div class="information">
         <div class="car-name">
@@ -58,16 +58,24 @@
         <div class="finance">
             <h3>Finance</h3>
             <h2>£@CarFinancePrice</h2>
-            <button class="payment-selection-button">Explore</button>
+            <button class="payment-selection-button" id="@(userSelection == 0 ? "selected-button" : "unselected-button")" @onclick="(() => SetSelection(0))">@(userSelection == 0 ? "Selected" : "Select")</button>
         </div>
         <br />
         <div class="payment">
             <h3>Full Payment</h3>
             <h2>£@CarPrice</h2>
-            <button class="payment-selection-button" @onclick="ShowDealerships">Find Dealerships</button>
+            <button class="payment-selection-button" id="@(userSelection == 1 ? "selected-button" : "unselected-button")" @onclick="(() => SetSelection(1))">@(userSelection == 1 ? "Selected" : "Select")</button>
         </div>
     </div>
+    <br />
+    <div class="finance-actions">
+        <h3 id="monthly-payment">@(userSelection == 0 ? $"£{CarFinancePrice} p/m" : $"£{CarPrice}")</h3>
+        <button class="finance-button" id="cancel" @onclick="GoBack">Back</button>
+        <button class="finance-button" id="proceed" @onclick="Proceed">@(userSelection == 0 ? "Proceed" : "View Dealerships")</button>
+    </div>
+
 </div>
+
 
 
 @code {
@@ -93,6 +101,7 @@
     private double initialPayment;
     private int interestRate = 9;
 
+    private int userSelection = 0;
 
     protected override async Task OnParametersSetAsync()
     {
@@ -135,7 +144,7 @@
             CarFinancePrice = ConfiguratorService.GetFinanceAmount();
         }
         CarImageSrc = $"Images/Car-images/{Car.CarId}.jpg";
-        initialPayment = CarPrice * 0.1;
+        initialPayment = CarPrice * 0.2;
         CarFinancePrice = CarService.GetFinancePrice(Convert.ToDouble(CarPrice), totalMonths, initialPayment, interestRate);
     }
 
@@ -166,9 +175,48 @@
 
     private void ShowFinance()
     {
-        ConfiguratorService.SavedConfiguration = new SavedConfigurationModel { ModelVariantId = CarModelVariantId, PaintId = CarPaintId, CarId = Car.CarId};
-        NavigationManager.NavigateTo("/");
+        if (typeOverview == 0)
+        {
+            InventoryService.InventoryCar = new InventoryModel { ModelVariantId = CarModelVariantId, PaintId = CarPaintId, CarId = Car.CarId, InventoryMileage = CarMileage!.Value, InventoryPrice = CarPrice };
+            NavigationManager.NavigateTo("/finance/0");
+        }
+        else
+        {
+            ConfiguratorService.SavedConfiguration = new SavedConfigurationModel { ModelVariantId = CarModelVariantId, PaintId = CarPaintId, CarId = Car.CarId, ConfigurationPrice = CarPrice };
+            NavigationManager.NavigateTo("/finance/1");
+        }
+
+        Console.WriteLine(ConfiguratorService.SavedConfiguration.ModelVariantId);
+    }
+
+    private void SetSelection(int choice)
+    {
+        userSelection = choice;
+        StateHasChanged();
+    }
+
+    private void GoBack()
+    {
+        if (typeOverview == 0)
+        {
+            NavigationManager.NavigateTo("/inventory");
+        }
+        else
+        {
+            NavigationManager.NavigateTo("/cars");
+        }
+    }
+
+    private void Proceed()
+    {
+        if (userSelection == 0)
+        {
+            ShowFinance();
+        }
+        else
+        {
+            ShowDealerships();
+        }
     }
 
     }
-

@@ -14,6 +14,7 @@ namespace GlobalFinance.Client.Services
         }
 
         public List<InventoryModel> Inventory { get; set; } = new List<InventoryModel>();
+        public InventoryModel InventoryCar { get; set; } = new InventoryModel();
 
         public async Task GetInventory()
         {

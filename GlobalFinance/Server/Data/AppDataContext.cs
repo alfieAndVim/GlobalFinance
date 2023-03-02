@@ -28,7 +28,7 @@ namespace GlobalFinance.Server.Data
 
             modelBuilder.Entity<UserModel>();
             modelBuilder.Entity<CustomerModel>();
-            modelBuilder.Entity<OrderModel>();
+            modelBuilder.Entity<EnquiryModel>();
             modelBuilder.Entity<SavedConfigurationModel>();
             modelBuilder.Entity<FinanceModel>();
             modelBuilder.Entity<InventoryModel>().HasData(
@@ -44,7 +44,7 @@ namespace GlobalFinance.Server.Data
         public DbSet<PaintModel>? PaintColours { get; set; }
         public DbSet<UserModel>? Users { get; set; }
         public DbSet<CustomerModel>? Customers { get; set; }
-        public DbSet<OrderModel> Orders { get; set; }
+        public DbSet<EnquiryModel> Orders { get; set; }
         public DbSet<SavedConfigurationModel> SavedConfigurations { get; set; }
         public DbSet<FinanceModel> Finances { get; set; }
         public DbSet<InventoryModel> Inventory { get; set; }

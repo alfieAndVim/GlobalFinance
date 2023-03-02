@@ -16,9 +16,11 @@ namespace GlobalFinance.Shared.Models
 		[Required]
 		public double FinanceInitialPayment { get; set; }
 		[Required]
-		public int OrderId { get; set; }
+		public double FinanceTotalCost { get; set; }
+		[Required]
+		public int EnquiryId { get; set; }
 
-		public OrderModel? Order { get; set; }
+		public EnquiryModel? Enquiry { get; set; }
 
 	}
 }

@@ -186,6 +186,10 @@ namespace GlobalFinance.Server.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ContactEmail")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("ContactNumber")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -203,10 +207,42 @@ namespace GlobalFinance.Server.Migrations
                     b.ToTable("Customers");
                 });
 
+            modelBuilder.Entity("GlobalFinance.Shared.Models.EnquiryModel", b =>
+                {
+                    b.Property<int>("EnquiryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("InventoryId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SavedConfigurationId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("inventoryModelInventoryId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("EnquiryId");
+
+                    b.HasIndex("CustomerId");
+
+                    b.HasIndex("SavedConfigurationId");
+
+                    b.HasIndex("inventoryModelInventoryId");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("GlobalFinance.Shared.Models.FinanceModel", b =>
                 {
                     b.Property<int>("FinanceId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("EnquiryId")
                         .HasColumnType("INTEGER");
 
                     b.Property<double>("FinanceInitialPayment")
@@ -221,12 +257,9 @@ namespace GlobalFinance.Server.Migrations
                     b.Property<double>("FinancePrice")
                         .HasColumnType("REAL");
 
-                    b.Property<int>("OrderId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("FinanceId");
 
-                    b.HasIndex("OrderId");
+                    b.HasIndex("EnquiryId");
 
                     b.ToTable("Finances");
                 });
@@ -669,35 +702,6 @@ namespace GlobalFinance.Server.Migrations
                         });
                 });
 
-            modelBuilder.Entity("GlobalFinance.Shared.Models.OrderModel", b =>
-                {
-                    b.Property<int>("OrderId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("InventoryId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("SavedConfigurationId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("inventoryModelInventoryId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("OrderId");
-
-                    b.HasIndex("CustomerId");
-
-                    b.HasIndex("SavedConfigurationId");
-
-                    b.HasIndex("inventoryModelInventoryId");
-
-                    b.ToTable("Orders");
-                });
-
             modelBuilder.Entity("GlobalFinance.Shared.Models.PaintModel", b =>
                 {
                     b.Property<int>("PaintId")
@@ -1047,6 +1051,9 @@ namespace GlobalFinance.Server.Migrations
                     b.Property<int>("CarId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("ConfigurationPrice")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("ModelVariantId")
                         .HasColumnType("INTEGER");
 
@@ -1088,15 +1095,40 @@ namespace GlobalFinance.Server.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("GlobalFinance.Shared.Models.FinanceModel", b =>
+            modelBuilder.Entity("GlobalFinance.Shared.Models.EnquiryModel", b =>
                 {
-                    b.HasOne("GlobalFinance.Shared.Models.OrderModel", "Order")
+                    b.HasOne("GlobalFinance.Shared.Models.CustomerModel", "Customer")
                         .WithMany()
-                        .HasForeignKey("OrderId")
+                        .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Order");
+                    b.HasOne("GlobalFinance.Shared.Models.SavedConfigurationModel", "SavedConfiguration")
+                        .WithMany()
+                        .HasForeignKey("SavedConfigurationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GlobalFinance.Shared.Models.InventoryModel", "inventoryModel")
+                        .WithMany()
+                        .HasForeignKey("inventoryModelInventoryId");
+
+                    b.Navigation("Customer");
+
+                    b.Navigation("SavedConfiguration");
+
+                    b.Navigation("inventoryModel");
+                });
+
+            modelBuilder.Entity("GlobalFinance.Shared.Models.FinanceModel", b =>
+                {
+                    b.HasOne("GlobalFinance.Shared.Models.EnquiryModel", "Enquiry")
+                        .WithMany()
+                        .HasForeignKey("EnquiryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Enquiry");
                 });
 
             modelBuilder.Entity("GlobalFinance.Shared.Models.InventoryModel", b =>
@@ -1146,31 +1178,6 @@ namespace GlobalFinance.Server.Migrations
                         .IsRequired();
 
                     b.Navigation("Car");
-                });
-
-            modelBuilder.Entity("GlobalFinance.Shared.Models.OrderModel", b =>
-                {
-                    b.HasOne("GlobalFinance.Shared.Models.CustomerModel", "Customer")
-                        .WithMany()
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("GlobalFinance.Shared.Models.SavedConfigurationModel", "SavedConfiguration")
-                        .WithMany()
-                        .HasForeignKey("SavedConfigurationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("GlobalFinance.Shared.Models.InventoryModel", "inventoryModel")
-                        .WithMany()
-                        .HasForeignKey("inventoryModelInventoryId");
-
-                    b.Navigation("Customer");
-
-                    b.Navigation("SavedConfiguration");
-
-                    b.Navigation("inventoryModel");
                 });
 
             modelBuilder.Entity("GlobalFinance.Shared.Models.PaintModel", b =>

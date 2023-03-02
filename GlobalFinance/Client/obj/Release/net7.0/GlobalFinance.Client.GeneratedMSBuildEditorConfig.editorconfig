@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/Authentication/AuthenticationRedirect.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQXV0aGVudGljYXRpb24vQXV0aGVudGljYXRpb25SZWRpcmVjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/Authentication/LogOut.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQXV0aGVudGljYXRpb24vTG9nT3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,16 +32,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQXV0aFBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/CarFinance.razor]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQ2FyRmluYW5jZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/Configurator/ModelVariantConfig.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQ29uZmlndXJhdG9yL01vZGVsVmFyaWFudENvbmZpZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/Configurator/PaintColourConfig.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQ29uZmlndXJhdG9yL1BhaW50Q29sb3VyQ29uZmlnLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/CustomerDashboard/MainDashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQ3VzdG9tZXJEYXNoYm9hcmQvTWFpbkRhc2hib2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/OffersPage.razor]
@@ -51,6 +55,10 @@ build_metadata.AdditionalFiles.CssScope =
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/AuthorisedViews/SendEnquiry.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9yaXNlZFZpZXdzL1NlbmRFbnF1aXJ5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-hiys6m67nz
 
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Components/CarOptionComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcG9uZW50cy9DYXJPcHRpb25Db21wb25lbnQucmF6b3I=
@@ -80,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope = b-2x67hwbbf9
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQXV0aGVudGljYXRpb24vUmVnaXN0ZXJDdXN0b21lci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-asbmaaci4s
 
+[/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/CarFinance.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQ2FyRmluYW5jZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-mcae6d5vii
+
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Pages/CarOverview.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZXMvQ2FyT3ZlcnZpZXcucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ux5j8qwzzo
@@ -107,6 +119,10 @@ build_metadata.AdditionalFiles.CssScope = b-aagy7j7nvx
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Shared/Components/NavBarComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvTmF2QmFyQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-ma7pnd7n50
+
+[/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Shared/Components/ProgressBarComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvUHJvZ3Jlc3NCYXJDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-btlgvcinmt
 
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/Shared/Components/TitleComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvVGl0bGVDb21wb25lbnQucmF6b3I=

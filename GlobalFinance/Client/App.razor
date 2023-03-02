@@ -1,12 +1,16 @@
 ﻿@using GlobalFinance.Client.Views.Shared.Pages
 @using Microsoft.AspNetCore.Components.Authorization
+@using GlobalFinance.Client.Views.Pages.Authentication
+
+@inject NavigationManager NavigationManager
+
 <CascadingAuthenticationState>
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
 
             <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
                 <NotAuthorized>
-                    Sorry, You are not allowed to see this
+                  <AuthenticationRedirect></AuthenticationRedirect>
                 </NotAuthorized>
             </AuthorizeRouteView>
             <FocusOnNavigate RouteData="@routeData" Selector="h1" />

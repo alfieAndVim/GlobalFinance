@@ -8,6 +8,8 @@ namespace GlobalFinance.Shared.Models
 		[Required, Key]
 		public int SavedConfigurationId { get; set; }
 		[Required]
+		public int ConfigurationPrice { get; set; }
+		[Required]
 		public int PaintId { get; set; }
 		[Required]
 		public int ModelVariantId { get; set; }

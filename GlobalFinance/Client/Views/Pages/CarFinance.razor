@@ -1,6 +1,259 @@
-﻿<h3>Component1</h3>
+﻿@page "/finance/{typeOverview:int}"
+
+@inject IInventoryService InventoryService
+@inject IConfiguratorService ConfiguratorService
+@inject ICarService CarService
+@inject IEnquiryService EnquiryService
+@inject IFinanceService FinanceService
+@inject AuthenticationStateProvider AuthStateProvider
+@inject NavigationManager NavigationManager
+
+@using System.ComponentModel.DataAnnotations
+
+<div class="outer-div">
+    <div class="header">
+        <h3>Explore Finance</h3>
+    </div>
+    
+    <div class="information">
+        <div class="image">
+            <img src="@CarImageSrc" />
+        </div>
+        <div class="car-name">
+            <h2>@Car.CarMakeName</h2>
+            <h2>@Car.CarModelName</h2>
+        </div>
+        <div class="car-details">
+            <div class="car-sub-details">
+                <h5>Price:</h5>
+                <h6>£@CarPrice</h6>
+                <br />
+            </div>
+            <div class="car-sub-details">
+                <h5>Model Variant:</h5>
+                <h6>@CarModelVariant</h6>
+                <br />
+            </div>
+            <div class="car-sub-details">
+                <h5>Paint:</h5>
+                <h6>@CarPaint</h6>
+                <br />
+            </div>
+
+            @if (CarMileage != null)
+            {
+                <div class="car-sub-details">
+                    <h5>Mileage:</h5>
+                    <h6>@CarMileage</h6>
+                    <br />
+                </div>
+
+            }
+        </div>
+    </div>
+    <div class="finance">
+        <h2>Finance Breakdown</h2>
+        <div class="finance-breakdown">
+            <table>
+                <tr>
+                    <th>Duration</th>
+                    <th>@totalMonths</th>
+                </tr>
+                <tr>
+                    <th>@totalMonths Monthly Payments of</th>
+                    <th>£@CarFinancePrice</th>
+                </tr>
+                <tr>
+                    <th>Deposit</th>
+                    <th>£@initialPayment</th>
+                </tr>
+                <tr>
+                    <th>Representative APR</th>
+                    <th>@interestRate %</th>
+                </tr>
+                <tr>
+                    <th>Total Cost</th>
+                    <th>£@totalCost</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="finance-options">
+        <h2>Finance Options</h2>
+
+        <EditForm style="height=inherit;" min-height="inherit;" Model="financeOptions" OnValidSubmit="HandleFinanceOptions">
+            <DataAnnotationsValidator />
+            <div class="finance-options-form-section">
+                <div id="total-months">
+                    <label class="finance-options-form-label" for="Total Months">Period</label>
+                    <InputSelect @bind-Value="financeOptions.TotalMonths" class="finance-select">
+                        @foreach (var i in Enumerable.Range(24, 25))
+                        {
+                            <option value="@i">@i months</option>
+                        }
+                    </InputSelect>
+                </div>
+            </div>
+            <div class="finance-options-form-section">
+                <div id="deposit">
+                    <label class="finance-options-form-label" for="Deposit">Deposit</label>
+                    <InputNumber @bind-Value="financeOptions.Deposit"></InputNumber>
+                </div>
+            </div>
+            <div class="finance-options-form-section">
+                <div id="submission">
+                    <button type="submit" class="finance-options-button">Update Breakdown</button>
+                </div>
+            </div>
+        </EditForm>
+
+    </div>
+
+    <br />
+
+    <div class="finance-actions">
+        <h3 id="monthly-payment">£@CarFinancePrice p/m</h3>
+        <button class="finance-button" id="cancel" @onclick="GoBack">Back</button>
+        <button class="finance-button" id="proceed" @onclick="SendEnquiry">Proceed</button>
+    </div>
+</div>
+
 
 @code {
 
-}
+    [Parameter]
+    public int typeOverview { get; set; }
+
+    private SavedConfigurationModel Configuration = new SavedConfigurationModel();
+    private InventoryModel Inventory = new InventoryModel();
+    private CarModel Car = new CarModel();
+    private string CarImageSrc = string.Empty;
+    private int CarPrice;
+    private double CarFinancePrice;
+    private string CarModelVariant = string.Empty;
+    private int CarModelVariantId;
+    private string CarPaint = string.Empty;
+    private int CarPaintId;
+    private int? CarMileage;
+
+    private int totalMonths = 36;
+    private double initialPayment;
+    private int interestRate = 9;
+    private double totalCost;
+
+    private int id;
+
+
+    private class FinanceOptions {
+        public int TotalMonths { get; set; }
+        public double Deposit { get; set; }
+    }
+
+    private FinanceOptions financeOptions = new FinanceOptions();
+
+    protected override async Task OnParametersSetAsync()
+    {
+
+        if (typeOverview == 0)
+        {
+            Inventory = InventoryService.InventoryCar;
+
+            var carResult = await CarService.GetSingleCar(Inventory.CarId);
+            if (carResult != null)
+            {
+                Car = carResult;
+            }
+            CarPrice = Inventory.InventoryPrice;
+            CarModelVariant = await GetModel(Inventory.ModelVariantId);
+            CarModelVariantId = Inventory.ModelVariantId;
+            CarPaint = await GetPaint(Inventory.PaintId);
+            CarPaintId = Inventory.PaintId;
+            CarMileage = Inventory.InventoryMileage;
+
+            id = Inventory.InventoryId;
+        }
+        else if (typeOverview == 1)
+        {
+
+            Configuration = ConfiguratorService.SavedConfiguration;
+            if (Configuration.CarId != null)
+            {
+                var carResult = await CarService.GetSingleCar(Configuration.CarId);
+                if (carResult != null)
+                {
+                    Car = carResult;
+                }
+            }
+            CarPrice = Configuration.ConfigurationPrice;
+            CarModelVariant = await GetModel(Configuration.ModelVariantId);
+            CarModelVariantId = Configuration.ModelVariantId;
+            CarPaint = await GetPaint(Configuration.PaintId);
+            CarPaintId = Configuration.PaintId;
+            CarFinancePrice = ConfiguratorService.GetFinanceAmount();
+        }
+
+
+
+        CarImageSrc = $"Images/Car-images/{Car.CarId}.jpg";
+        initialPayment = CarPrice * 0.2;
+        CarFinancePrice = CarService.GetFinancePrice(Convert.ToDouble(CarPrice), totalMonths, initialPayment, interestRate);
+        totalCost = Math.Round(((CarFinancePrice * totalMonths) + initialPayment), 2);
+    }
+
+    private async Task<string> GetPaint(int id)
+    {
+        PaintModel paintResult = await CarService.GetPaint(id);
+        if (paintResult != null)
+        {
+            return paintResult.Name;
+        }
+        throw new Exception("Could not get paint");
+    }
+
+    private async Task<string> GetModel(int id)
+    {
+        ModelVariantModel modelResult = await CarService.GetModel(id);
+        if (modelResult != null)
+        {
+            return modelResult.Name;
+        }
+        throw new Exception("Could not get model");
+    }
+
+    private void HandleFinanceOptions() {
+        Console.WriteLine(financeOptions.TotalMonths);
+        Console.WriteLine(financeOptions.Deposit);
+
+        totalMonths = financeOptions.TotalMonths;
+        initialPayment = financeOptions.Deposit;
+        CarFinancePrice = CarService.GetFinancePrice(Convert.ToDouble(CarPrice), totalMonths, initialPayment, interestRate);
+        totalCost = Math.Round(((CarFinancePrice * totalMonths) + initialPayment), 2);
+
+        StateHasChanged();
+    }
+
+    private void GoBack() {
+        NavigationManager.NavigateTo($"/overview/{typeOverview}/{id}");
+    }
+
+    private async void SendEnquiry() {
+
+        FinanceService.Finance = new FinanceModel { FinanceInitialPayment = initialPayment, FinanceInterestRate = interestRate, FinanceMonths = totalMonths, FinancePrice = CarFinancePrice, FinanceTotalCost = totalCost};
+
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity is not null && user.Identity.IsAuthenticated)
+        {
+            NavigationManager.NavigateTo($"/send_enquiry");
+        }
+        else
+        {
+            NavigationManager.NavigateTo($"/customer_registration");
+        }
+
+
+    }
+
+    }
 
