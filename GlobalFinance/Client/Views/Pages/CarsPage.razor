@@ -3,6 +3,10 @@
 @using GlobalFinance.Client.Views.Components
 @using GlobalFinance.Shared.Models
 @inject ICarService CarService
+@inject IEnquiryService EnquiryService
+@inject IConfiguratorService ConfiguratorService
+@inject IInventoryService InventoryService
+@inject IFinanceService FinanceService
 <h3>Showing @_carsCount results</h3>
 
 <div class="car-grid">
@@ -23,6 +27,11 @@
     protected override async Task OnInitializedAsync(){
         await CarService.GetCars();
         _carsCount = CarService.Cars.Count();
+
+        EnquiryService.Enquiry = new EnquiryModel();
+        ConfiguratorService.SavedConfiguration = new SavedConfigurationModel();
+        InventoryService.InventoryCar = new InventoryModel();
+        FinanceService.Finance = new FinanceModel();
 
     }
 

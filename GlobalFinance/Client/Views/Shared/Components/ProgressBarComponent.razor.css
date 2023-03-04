@@ -1,0 +1,44 @@
+﻿.progress-outer {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.progress-information {
+    width: 100%;
+    display: inline-flex;
+}
+
+.progress-step {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+#step-1 {
+    margin-right: auto;
+}
+
+#step-2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#step-3 {
+    margin-left: auto
+}
+
+.progress-bar {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #ededed;
+    height: 24px;
+    border-radius: 20px;
+    margin-bottom: 5%;
+}
+
+.progress {
+    background-color: blue;
+    height: 100%;
+    border-radius: 20px;
+}

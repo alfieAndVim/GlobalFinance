@@ -26,10 +26,12 @@ namespace GlobalFinance.Server.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<CarModel>> Get(int id)
         {
+            
             var _car = await appDataContext.Cars.FirstOrDefaultAsync(c => c.CarId == id);
             if(_car is not null)
             {
                 return Ok(_car);
+                
             }
             return NotFound();
         }

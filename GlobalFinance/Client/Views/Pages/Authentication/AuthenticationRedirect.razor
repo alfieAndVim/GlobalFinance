@@ -1,0 +1,34 @@
+﻿@inject NavigationManager NavigationManager
+@inject IInventoryService InventoryService
+@inject IConfiguratorService ConfiguratorService
+
+@code {
+
+    public string NextRoute { get; set; } = string.Empty;
+
+    private InventoryModel inventory;
+    private SavedConfigurationModel savedConfiguration;
+
+    protected override void OnInitialized()
+    {
+
+        inventory = InventoryService.InventoryCar;
+        savedConfiguration = ConfiguratorService.SavedConfiguration;
+
+        if (inventory.ModelVariantId > 0)
+        {
+            NextRoute = "send_enquiry";
+        }
+
+        if (savedConfiguration.ModelVariantId > 0)
+        {
+            NextRoute = "send_enquiry";
+        }
+
+        NavigationManager.NavigateTo($"/register/{NextRoute}");
+        base.OnInitialized();
+
+
+    }
+    }
+

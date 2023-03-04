@@ -1,0 +1,224 @@
+﻿@page "/send_enquiry"
+@attribute [Authorize]
+
+@using GlobalFinance.Client.Views.Shared.Components
+
+@inject IInventoryService InventoryService
+@inject IConfiguratorService ConfiguratorService
+@inject ICustomerService CustomerService
+@inject IFinanceService FinanceService
+@inject ICarService CarService
+@inject IEnquiryService EnquiryService
+
+@inject AuthenticationStateProvider AuthStateProvider
+@inject IAuthService AuthService
+
+@inject NavigationManager NavigationManager 
+
+<div class="outer-div">
+    <div class="header">
+        <h3>Send Enquiry</h3>
+    </div>
+
+    <div class="information">
+        <div class="image">
+            <img src="@carImgSrc" />
+        </div>
+        <div class="car-name">
+            <h2>@carMake</h2>
+            <h2>@carModel</h2>
+        </div>
+        <div class="car-details">
+            <div class="car-sub-details">
+                <h5>Price:</h5>
+                <h6>£@carPrice</h6>
+                <br />
+            </div>
+            <div class="car-sub-details">
+                <h5>Model Variant:</h5>
+                <h6>@carModelVariant</h6>
+                <br />
+            </div>
+            <div class="car-sub-details">
+                <h5>Paint:</h5>
+                <h6>@carPaint</h6>
+                <br />
+            </div>
+
+            @if (carMileage != null)
+                {
+                <div class="car-sub-details">
+                    <h5>Mileage:</h5>
+                    <h6>@carMileage</h6>
+                    <br />
+                </div>
+
+                }
+        </div>
+    </div>
+    <div class="finance">
+        <h2>Finance Breakdown</h2>
+        <div class="finance-breakdown">
+            <table>
+                <tr>
+                    <th>Duration</th>
+                    <th>@Finance.FinanceMonths</th>
+                </tr>
+                <tr>
+                    <th>@Finance.FinanceMonths Monthly Payments of</th>
+                    <th>£@Finance.FinancePrice</th>
+                </tr>
+                <tr>
+                    <th>Deposit</th>
+                    <th>£@Finance.FinanceInitialPayment</th>
+                </tr>
+                <tr>
+                    <th>Representative APR</th>
+                    <th>@Finance.FinanceInterestRate %</th>
+                </tr>
+                <tr>
+                    <th>Total Cost</th>
+                    <th>£@Finance.FinanceTotalCost</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="personal-details">
+        <h2>Personal Details</h2>
+        <div class="personal-details-inner">
+
+            <div class="personal-details-name">
+                <h6 id="name">@Customer.FirstName</h6>
+                <h6 id="name">@Customer.LastName</h6>
+            </div>
+            <h6>@Customer.AddressFirstLine</h6>
+            <h6>@Customer.AddressSecondLine</h6>
+            <h6>@Customer.AddressThirdLine</h6>
+            <h6>@Customer.AddressPostcode</h6>
+            <h6>@Customer.ContactEmail</h6>
+            <h6>@Customer.ContactNumber</h6>
+        </div>
+    </div>
+
+    <div class="file-upload">
+        <h2>Add Documents</h2>
+        <FileUploadComponent></FileUploadComponent>
+    </div>
+
+    <br />
+
+    <div class="finance-actions">
+        <h3 id="monthly-payment">£@Finance.FinancePrice p/m</h3>
+        <button class="finance-button" id="cancel" @onclick="GoBack">Back</button>
+        <button class="finance-button" id="proceed" @onclick="FulfillEnquiry">Send Enquiry</button>
+    </div>
+
+
+</div>
+
+@code {
+
+    InventoryModel Inventory = new InventoryModel();
+    SavedConfigurationModel SavedConfiguration = new SavedConfigurationModel();
+    FinanceModel Finance = new FinanceModel();
+    CustomerModel Customer = new CustomerModel();
+
+    private string carModel = string.Empty;
+    private string carMake = string.Empty;
+    private int carModelVariantId;
+    private string carModelVariant = string.Empty;
+    private int carPaintId;
+    private string carPaint = string.Empty;
+    private int? carMileage;
+    private int carPrice;
+    private string carImgSrc = string.Empty;
+
+    private int typeOverview = 0;
+
+    
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var customerId = await AuthService.GetCustomerId(authState.User.Identity.Name);
+        Customer = await CustomerService.GetCustomer(Convert.ToInt32(customerId));
+
+
+        Inventory = InventoryService.InventoryCar;
+        SavedConfiguration = ConfiguratorService.SavedConfiguration;
+
+        if (Inventory.ModelVariantId > 0)
+        {
+            CarModel car = await CarService.GetSingleCar(Inventory.CarId);
+            carMake = car.CarMakeName;
+            carModel = car.CarModelName;
+
+            carModelVariantId = Inventory.ModelVariantId;
+            carPaintId = Inventory.PaintId;
+
+            carMileage = Inventory.InventoryMileage;
+            carPrice = Inventory.InventoryPrice;
+
+            carImgSrc = $"Images/Car-images/{car.CarId}.jpg";
+            typeOverview = 0;
+        }
+        else if (SavedConfiguration.ModelVariantId > 0)
+        {
+            CarModel car = await CarService.GetSingleCar(SavedConfiguration.CarId);
+            carMake = car.CarMakeName;
+            carModel = car.CarModelName;
+
+            carModelVariantId = SavedConfiguration.ModelVariantId;
+            carPaintId = SavedConfiguration.PaintId;
+
+            carPrice = SavedConfiguration.ConfigurationPrice;
+
+            carImgSrc = $"Images/Car-images/{car.CarId}.jpg";
+            typeOverview = 1;
+        }
+
+        carModelVariant = (await CarService.GetModel(carModelVariantId)).Name;
+        carPaint = (await CarService.GetPaint(carPaintId)).Name;
+
+        Finance = FinanceService.Finance;
+
+
+
+        Console.WriteLine("Authorisation has occured");
+        Console.WriteLine(CustomerService.customer.CustomerId);
+    }
+
+    
+
+    private void GoBack() {
+        NavigationManager.NavigateTo($"/finance/{typeOverview}");
+    }
+
+
+    private async void FulfillEnquiry() {
+
+        var enquiryId = 0;
+
+        if (typeOverview == 0)
+        {
+            var inventoryId = Inventory.InventoryId;
+            var customerId = Customer.CustomerId;
+            EnquiryModel enquiry = new EnquiryModel { CustomerId = customerId, InventoryId = inventoryId };
+            enquiryId = await EnquiryService.AddEnquiry(enquiry);
+        }
+        else if (typeOverview == 1)
+        {
+            Console.WriteLine("started");
+            var savedConfigurationId = await ConfiguratorService.AddConfiguration(SavedConfiguration);
+            var customerId = Customer.CustomerId;
+            Console.WriteLine(savedConfigurationId);
+            EnquiryModel enquiry = new EnquiryModel { CustomerId = customerId, SavedConfigurationId = savedConfigurationId };
+            enquiryId = await EnquiryService.AddEnquiry(enquiry);
+        }
+
+        Finance.EnquiryId = enquiryId;
+        var financeId = await FinanceService.AddFinance(Finance);
+    }
+    }
+

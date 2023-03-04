@@ -482,6 +482,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/refs/WindowsBase.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/BCrypt.Net-Next.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Blazored.LocalStorage.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/GoogleMapsComponents.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.AspNetCore.Authorization.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.AspNetCore.Components.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.AspNetCore.Components.Authorization.dll
@@ -517,6 +518,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/Newtonsoft.Json.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/NuGet.Frameworks.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/OneOf.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/SQLitePCLRaw.batteries_v2.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/SQLitePCLRaw.core.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/SQLitePCLRaw.provider.e_sqlite3.dll
@@ -653,5 +655,3 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/obj/Release/net7.0/GlobalFinance.UnitTests.pdb
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/obj/Release/net7.0/GlobalFinance.UnitTests.genruntimeconfig.cache
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/obj/Release/net7.0/ref/GlobalFinance.UnitTests.dll
-/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/GoogleMapsComponents.dll
-/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance.UnitTests/bin/Release/net7.0/OneOf.dll

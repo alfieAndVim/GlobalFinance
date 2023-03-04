@@ -54,6 +54,19 @@ namespace GlobalFinance.Client.Services
         {
             await localStorage.RemoveItemAsync("token");
         }
+
+        public async Task<string> GetCustomerId(string email)
+        {
+            var result = await httpClient.GetAsync($"auth/{email}");
+            if (!result.IsSuccessStatusCode)
+            {
+                throw new Exception("not good");
+            }
+            else
+            {
+                return await result.Content.ReadAsStringAsync();
+            }
+        }
     }
 }
 

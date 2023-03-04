@@ -402,6 +402,7 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/refs/WindowsBase.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/BCrypt.Net-Next.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Blazored.LocalStorage.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/GoogleMapsComponents.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Humanizer.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.AspNetCore.Authorization.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.AspNetCore.Components.dll
@@ -428,6 +429,8 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.IdentityModel.Tokens.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Microsoft.JSInterop.WebAssembly.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Mono.TextTemplating.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Newtonsoft.Json.dll
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/OneOf.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/SQLitePCLRaw.batteries_v2.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/SQLitePCLRaw.core.dll
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/SQLitePCLRaw.provider.e_sqlite3.dll
@@ -508,6 +511,3 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/obj/Release/net7.0/GlobalFinance.Server.pdb
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/obj/Release/net7.0/GlobalFinance.Server.genruntimeconfig.cache
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/obj/Release/net7.0/ref/GlobalFinance.Server.dll
-/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/GoogleMapsComponents.dll
-/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/Newtonsoft.Json.dll
-/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Server/bin/Release/net7.0/OneOf.dll

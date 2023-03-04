@@ -1,0 +1,22 @@
+﻿@page "/dashboard"
+
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider AuthStateProvider
+
+@code {
+
+    protected async override Task OnInitializedAsync()
+    {
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var isAdmin = authState.User.IsInRole("admin");
+        if (isAdmin)
+        {
+            NavigationManager.NavigateTo("/dashboard/admin");
+        }
+        else
+        {
+            NavigationManager.NavigateTo("/dashboard/client");
+        }
+    }
+    }
+

@@ -1,0 +1,36 @@
+﻿<div class="progress-outer">
+    <div class="progress-information">
+        <div class="progress-step" id="step-1">
+            <h3>1</h3>
+            <h5>Personal Information</h5>
+        </div>
+        <div class="progress-step" id="step-2">
+            <h3>2</h3>
+            <h5>Create an account</h5>
+        </div>
+        <div class="progress-step" id="step-3">
+            <h3>3</h3>
+            <h5>Confirmation</h5>
+        </div>
+
+    </div>
+    <div class="progress-bar">
+        <div class="progress" style="width: @progress"></div>
+    </div>
+</div>
+
+
+@code {
+        [Parameter]
+        public int Progress { get; set; }
+
+    private string progress = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        progress = $"{Progress}%";
+
+        base.OnInitialized();
+    }
+    }
+

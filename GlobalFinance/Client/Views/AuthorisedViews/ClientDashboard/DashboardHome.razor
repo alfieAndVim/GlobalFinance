@@ -1,0 +1,111 @@
+﻿@page "/dashboard/client";
+@inject IEnquiryService EnquiryService
+@inject IFinanceService FinanceService
+@inject ICarService CarService
+@inject IConfiguratorService ConfirguratorService
+@inject IInventoryService InventoryService
+@inject IAuthService AuthService
+@inject ICustomerService CustomerService
+@inject AuthenticationStateProvider AuthStateProvider
+@attribute [Authorize(Roles = "client")]
+
+<div class="heading">
+    <h2>Welcome @customer.FirstName</h2>
+    <h3>Finances</h3>
+</div>
+
+<br />
+
+<div class="enquiries-outer">
+    @foreach (DataOverview data in dataOverviews)
+    {
+        <div class="enquiry">
+            <div class="enquiry-image">
+                <img src="@data.CarImgSrc" />
+            </div>
+            <div class="enquiry-inner">
+                <div class="enquiry-information">
+                    <div class="enquiry-information-section">Make: @data.CarMakeName</div>
+                    
+                    <div class="enquiry-information-section">Model: @data.CarModelName</div>
+                    
+                    <div class="enquiry-information-section">Next Payment: £@data.CarFinancePrice</div>
+                    
+                    <div class="enquiry-information-section">Status: @data.CarFinanceStatus</div>
+                    
+                </div>
+                <div class="enquiry-actions">
+                    <button class="enquiry-button">Details</button>
+                </div>
+            </div>
+            
+        </div>
+
+        <br />
+    }
+</div>
+
+
+
+@code {
+
+    CustomerModel customer = new CustomerModel();
+    List<EnquiryModel> Enquiries = new List<EnquiryModel>();
+    List<FinanceModel> Finances = new List<FinanceModel>();
+
+
+
+    private class DataOverview {
+        public string CarMakeName { get; set; }
+        public string CarModelName { get; set; }
+        public double CarFinancePrice { get; set; }
+        public int CarFinanceMonths { get; set; }
+        public double CarFinanceInitialPayment { get; set; }
+        public string CarFinanceStatus { get; set; }
+        public string CarImgSrc { get; set; }
+
+    }
+
+    List<DataOverview> dataOverviews = new List<DataOverview>();
+
+    protected async override Task OnInitializedAsync()
+    {
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var customerId = await AuthService.GetCustomerId(authState.User.Identity.Name);
+        customer = await CustomerService.GetCustomer(Convert.ToInt32(customerId));
+
+
+        Enquiries = await EnquiryService.GetEnquiries(Convert.ToInt32(customerId));
+        foreach(EnquiryModel enquiry in Enquiries)
+        {
+            DataOverview data = new DataOverview();
+
+            var finance = await FinanceService.GetFinance(enquiry.EnquiryId);
+            data.CarFinancePrice = finance.FinancePrice;
+            data.CarFinanceMonths = finance.FinanceMonths;
+            data.CarFinanceInitialPayment = finance.FinanceInitialPayment;
+            data.CarFinanceStatus = finance.Approval;
+
+            CarModel car = new CarModel();
+
+            if (enquiry.InventoryId != null)
+            {
+                InventoryModel inventory = await InventoryService.GetSingleInventoryItem(enquiry.InventoryId.Value);
+                car = inventory.Car;
+            }
+            else if (enquiry.SavedConfigurationId != null)
+            {
+                SavedConfigurationModel savedConfiguration = await ConfirguratorService.GetConfiguration(enquiry.SavedConfigurationId.Value);
+                car = savedConfiguration.Car;
+            }
+
+            data.CarMakeName = car.CarMakeName;
+            data.CarModelName = car.CarModelName;
+            data.CarImgSrc = $"Images/Car-images/{car.CarId}.jpg";
+
+            dataOverviews.Add(data);
+        }
+
+    }
+    }
+

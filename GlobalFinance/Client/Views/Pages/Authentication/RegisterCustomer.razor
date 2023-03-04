@@ -2,7 +2,12 @@
 @inject ICustomerService CustomerService
 @inject NavigationManager NavigationManager
 
+@using GlobalFinance.Client.Views.Shared.Components
+
 <h3>Personal Details</h3>
+
+<ProgressBarComponent Progress="20"></ProgressBarComponent>
+
 
 <div class="customer-form">
     <EditForm style="height: inherit; min-height:inherit;" Model="customer" OnValidSubmit="HandleUserRegistration">
@@ -51,8 +56,14 @@
                 <ValidationMessage For="@(() => customer.ContactNumber)"/>
             </div>
 
+            <div class="customer-form-section" id="email">
+                <label class="customer-form-label" for="Email">Contact Email</label>
+                <InputText class="customer-form-input" @bind-Value="customer.ContactEmail"></InputText>
+                <ValidationMessage For="@(() => customer.ContactEmail)"/>
+            </div>
+
             <div class="customer-form-section">
-                <button type="submit" class="customer-form-button">Next</button>
+                <button type="submit" class="customer-form-button" @onclick="HandleUserRegistration">Next</button>
                 
             </div>
         </div>
@@ -67,6 +78,8 @@
 
     private async void HandleUserRegistration()
     {
+
+        Console.WriteLine(customer.ContactEmail);
         CustomerService.customer = customer;
         var result = await CustomerService.AddCustomer(customer);
         if(result == -1)
@@ -75,9 +88,9 @@
         } else
         {
             CustomerService.customer.CustomerId = result;
-            NavigationManager.NavigateTo("/register");
+            NavigationManager.NavigateTo("/send_enquiry");
         }
 
     }
-}
+    }
 

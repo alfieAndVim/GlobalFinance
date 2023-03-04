@@ -1,3 +1,305 @@
+/* /Views/AuthorisedViews/ClientDashboard/DashboardHome.razor.rz.scp.css */
+img[b-dw4m0tssqw] {
+    max-height: 80%;
+    max-width: 80%;
+    margin: 10px;
+}
+
+.heading[b-dw4m0tssqw] {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.enquiries-outer[b-dw4m0tssqw] {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.enquiry[b-dw4m0tssqw] {
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px lightgrey;
+    width: 100%;
+    min-width: 500px;
+    min-height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 20vh;
+    transition: box-shadow 0.5s;
+}
+
+.enquiry-image[b-dw4m0tssqw] {
+    display: relative;
+    left: 0%;
+    height: 100%;
+    width: 30%;
+}
+
+.enquiry-inner[b-dw4m0tssqw] {
+    display: inline-flex;
+    width: 60%;
+    background-color: #ededed;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.enquiry-information[b-dw4m0tssqw] {
+    align-self: center;
+    width: 50%;
+    text-align: center;
+}
+
+.enquiry-actions[b-dw4m0tssqw] {
+    display: flex;
+    width: 50%;
+    position: relative;
+    align-items: center;
+    
+}
+
+.enquiry-button[b-dw4m0tssqw] {
+    position: relative;
+    left: 50%;
+    border-radius: 20px;
+    color: white;
+    background-color: blue;
+    border: none;
+    width: 40%;
+    height: 25%;
+}
+
+.enquiry:hover[b-dw4m0tssqw] {
+    box-shadow: 0px 0px 20px lightgrey;
+}
+
+#price[b-dw4m0tssqw] {
+    font-weight: bold;
+}
+/* /Views/AuthorisedViews/SendEnquiry.razor.rz.scp.css */
+body[b-hiys6m67nz] {
+}
+
+img[b-hiys6m67nz] {
+    width: 100%;
+}
+
+table[b-hiys6m67nz] {
+    width: 80%;
+    margin: 0 auto;
+}
+
+th[b-hiys6m67nz], td[b-hiys6m67nz] {
+    text-align: left;
+}
+
+tr:nth-child(even)[b-hiys6m67nz] {
+    background-color: #ededed;
+}
+
+.outer-div[b-hiys6m67nz] {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 20rem 20rem 10rem;
+    grid-auto-rows: auto;
+    grid-gap: 20px 20px;
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 100px;
+}
+
+.header[b-hiys6m67nz] {
+    grid-area: 1 / 1 / 2 / 3;
+    text-align: center;
+}
+
+.image[b-hiys6m67nz] {
+    display: flex;
+    width: auto;
+    height: 300px;
+    max-height: 100%;
+    margin-top: 5%;
+    margin-left: 10px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.finance[b-hiys6m67nz] {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    min-width: 400px;
+    height: 100%;
+    box-shadow: 0px 0px 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.personal-details[b-hiys6m67nz] {
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    min-width: 400px;
+    height: 100%;
+    box-shadow: 0px 0px 20px;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.personal-details-inner[b-hiys6m67nz] {
+    text-align: left;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.personal-details-name[b-hiys6m67nz] {
+    display: inline-flex;
+    justify-content: left;
+    width: 100%;
+}
+
+#name[b-hiys6m67nz] {
+    padding-right: 5px;
+}
+
+.finance-actions[b-hiys6m67nz] {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    padding-bottom: 1%;
+    background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    box-shadow: 0px -10px 10px lightgrey;
+    display: inline-flex;
+}
+
+.finance-button[b-hiys6m67nz] {
+    width: 20%;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+#cancel[b-hiys6m67nz] {
+    color: black;
+    background-color: #ededed;
+}
+
+#proceed[b-hiys6m67nz] {
+    color: white;
+    background-color: blue;
+}
+
+#monthly-payment[b-hiys6m67nz] {
+    color: black;
+    width: 50%;
+    padding-left: 10%;
+}
+
+.information[b-hiys6m67nz] {
+    grid-area: 2 / 1 / 4 / 2;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    min-width: 400px;
+    height: 100%;
+    box-shadow: 0px 0px 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.car-details[b-hiys6m67nz] {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5%;
+    height: 20%;
+    background-color: #ededed;
+    border-radius: 20px;
+}
+
+.car-sub-details[b-hiys6m67nz] {
+    display: inline-block;
+    align-content: space-evenly;
+    height: 70%;
+    padding: 20px;
+}
+
+#total-months[b-hiys6m67nz] {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#deposit[b-hiys6m67nz] {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.file-upload[b-hiys6m67nz] {
+    grid-area: 4 / 1 / 5 / 3;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    min-width: 400px;
+    height: 100%;
+    box-shadow: 0px 0px 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .outer-div[b-hiys6m67nz] {
+        grid-template-rows: 10% 30rem 20rem 20rem 10rem;
+    }
+
+    .information[b-hiys6m67nz] {
+        grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .finance[b-hiys6m67nz] {
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    .personal-details[b-hiys6m67nz] {
+        grid-area: 4 / 1 / 5 / 3;
+    }
+
+    .file-upload[b-hiys6m67nz] {
+        grid-area: 5 / 1 / 6 / 3;
+    }
+
+    .image[b-hiys6m67nz] {
+        margin-top: 0px;
+    }
+
+    .car-details[b-hiys6m67nz] {
+        margin-top: 0px;
+        margin-bottom: 10%;
+        height: auto;
+    }
+
+    .car-name[b-hiys6m67nz] {
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
 /* /Views/Components/CarOptionComponent.razor.rz.scp.css */
 body[b-lqvpom6inh] {
 }
@@ -186,7 +488,7 @@ img[b-czez28hexb] {
 #option-action[b-czez28hexb] {
     color: white;
     margin: auto auto;
-    font-size: small;
+    font-size: large;
 }
 
 .option-button:hover[b-czez28hexb] {
@@ -517,15 +819,61 @@ img[b-vqt43ztrjf] {
     outline-width: 0;
 }
 /* /Views/Pages/Authentication/RegisterCustomer.razor.rz.scp.css */
+.progress-outer[b-asbmaaci4s] {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.progress-information[b-asbmaaci4s] {
+    width: 100%;
+    display: inline-flex;
+}
+
+.progress-step[b-asbmaaci4s] {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+#step-1[b-asbmaaci4s] {
+    margin-right: auto;
+}
+
+#step-2[b-asbmaaci4s] {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#step-3[b-asbmaaci4s] {
+    margin-left: auto
+}
+
+.progress-bar[b-asbmaaci4s] {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #ededed;
+    height: 24px;
+    border-radius: 20px;
+    margin-bottom: 5%;
+}
+
+.progress[b-asbmaaci4s] {
+    width: 55%;
+    background-color: blue;
+    height: 100%;
+    border-radius: 20px;
+}
+
 .customer-form[b-asbmaaci4s] {
     background-color: white;
     margin: 0 auto;
-    width: 30%;
+    width: 50%;
     min-width: 500px;
     text-align: center;
     color: white;
     border-radius: 20px;
-    height: 30vh;
+    height: 40vh;
     padding: 20px;
     min-height: 600px;
     box-shadow: 0px 0px 50px grey;
@@ -562,6 +910,7 @@ img[b-vqt43ztrjf] {
     display: block;
     width: 100%;
     height: 10%;
+    margin-bottom: 20px;
 }
 
 .customer-form-button[b-asbmaaci4s] {
@@ -606,6 +955,258 @@ img[b-vqt43ztrjf] {
     outline: none;
     outline-width: 0;
 }
+/* /Views/Pages/CarFinance.razor.rz.scp.css */
+body[b-mcae6d5vii] {
+}
+
+img[b-mcae6d5vii] {
+    width: 100%;
+}
+
+table[b-mcae6d5vii] {
+    width: 80%;
+    margin: 0 auto;
+}
+
+th[b-mcae6d5vii], td[b-mcae6d5vii] {
+    text-align: left;
+}
+
+select[b-mcae6d5vii], [b-mcae6d5vii] select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: 2px solid #ededed;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 40%;
+    margin-left: 10%;
+}
+
+label[b-mcae6d5vii], [b-mcae6d5vii] label {
+    padding-left: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+#total-months[b-mcae6d5vii]::after {
+    content: "⌄";
+    position: relative;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 20px;
+    background-color: blue;
+    padding: 2px;
+    padding-top: 0px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+option[b-mcae6d5vii], [b-mcae6d5vii] option {
+    background-color: white;
+}
+
+input[b-mcae6d5vii], [b-mcae6d5vii] input {
+    width: 40%;
+    margin-left: 5%;
+}
+
+tr:nth-child(even)[b-mcae6d5vii] {
+    background-color: #ededed;
+}
+
+.outer-div[b-mcae6d5vii] {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 20rem 20rem;
+    grid-auto-rows: auto;
+    grid-gap: 20px 20px;
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 100px;
+}
+
+.header[b-mcae6d5vii] {
+    grid-area: 1 / 1 / 2 / 3;
+    text-align: center;
+}
+
+.image[b-mcae6d5vii] {
+    display: flex;
+    width: auto;
+    height: 300px;
+    max-height: 100%;
+    margin-top: 5%;
+    margin-left: 10px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.finance[b-mcae6d5vii] {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    min-width: 400px;
+    height: 100%;
+    box-shadow: 0px 0px 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.finance-options[b-mcae6d5vii] {
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    min-width: 400px;
+    height: 100%;
+    box-shadow: 0px 0px 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.finance-options-form-section[b-mcae6d5vii] {
+    width: 90%;
+}
+
+.finance-options-form-label[b-mcae6d5vii] {
+    width: 90%;
+    text-align: left;
+}
+
+.finance-options-button[b-mcae6d5vii] {
+    color: black;
+    width: 40%;
+    background-color: #ededed;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+.finance-actions[b-mcae6d5vii] {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    padding-bottom: 1%;
+    background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    box-shadow: 0px -10px 10px lightgrey;
+    display: inline-flex;
+}
+
+.finance-button[b-mcae6d5vii] {
+    width: 20%;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+    margin: 0 auto;
+    
+}
+
+#cancel[b-mcae6d5vii] {
+    color: black;
+    background-color: #ededed;
+}
+
+#proceed[b-mcae6d5vii] {
+    color: white;
+    background-color: blue;
+}
+
+#monthly-payment[b-mcae6d5vii] {
+    color: black;
+    width: 50%;
+    padding-left: 10%;
+}
+
+.information[b-mcae6d5vii] {
+    grid-area: 2 / 1 / 4 / 2;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    min-width: 400px;
+    height: 100%;
+    box-shadow: 0px 0px 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.car-details[b-mcae6d5vii] {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5%;
+    height: 20%;
+    background-color: #ededed;
+    border-radius: 20px;
+}
+
+.car-sub-details[b-mcae6d5vii] {
+    display: inline-block;
+    align-content: space-evenly;
+    height: 70%;
+    padding: 20px;
+}
+
+#total-months[b-mcae6d5vii] {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#deposit[b-mcae6d5vii] {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .outer-div[b-mcae6d5vii] {
+        grid-template-rows: 10% 30rem 20rem 20rem;
+    }
+
+    .information[b-mcae6d5vii] {
+        grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .finance[b-mcae6d5vii] {
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    .finance-options[b-mcae6d5vii] {
+        grid-area: 4 / 1 / 5 / 3;
+    }
+
+    .image[b-mcae6d5vii] {
+        margin-top: 0px;
+    }
+
+    .car-details[b-mcae6d5vii] {
+        margin-top: 0px;
+        margin-bottom: 10%;
+        height: auto;
+
+    }
+
+    .car-name[b-mcae6d5vii] {
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
 /* /Views/Pages/CarOverview.razor.rz.scp.css */
 body[b-ux5j8qwzzo] {
 }
@@ -640,7 +1241,7 @@ body[b-ux5j8qwzzo] {
 }
 
 img[b-ux5j8qwzzo] {
-    height: 100%;
+    width: 100%;
 
 }
 
@@ -709,6 +1310,45 @@ img[b-ux5j8qwzzo] {
     text-align: center;
 }
 
+.finance-actions[b-ux5j8qwzzo] {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    padding-bottom: 1%;
+    background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    box-shadow: 0px -10px 10px lightgrey;
+    display: inline-flex;
+}
+
+.finance-button[b-ux5j8qwzzo] {
+    width: 20%;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+#cancel[b-ux5j8qwzzo] {
+    color: black;
+    background-color: #ededed;
+}
+
+#proceed[b-ux5j8qwzzo] {
+    color: white;
+    background-color: blue;
+}
+
+#monthly-payment[b-ux5j8qwzzo] {
+    color: black;
+    width: 50%;
+    padding-left: 10%;
+}
+
 .payment[b-ux5j8qwzzo] {
     background-color: #ededed;
     border-radius: 20px;
@@ -722,13 +1362,33 @@ img[b-ux5j8qwzzo] {
 }
 
 .payment-selection-button[b-ux5j8qwzzo] {
-    background-color: blue;
-    color: white;
+    transition: background-color 0.5s;
     border-radius: 20px;
     width: 30%;
     min-width: 200px;
     border: none;
     padding: 5px;
+    border: 2px solid blue;
+}
+
+.payment-selection-button:hover[b-ux5j8qwzzo] {
+    background-color: blue;
+}
+
+#selected-button[b-ux5j8qwzzo] {
+    color: white;
+    background-color: blue;
+}
+
+#unselected-button[b-ux5j8qwzzo] {
+    color: black;
+    background-color: white;
+    
+}
+
+#unselected-button:hover[b-ux5j8qwzzo] {
+    background-color: blue;
+    color: white;
 }
 /* /Views/Pages/CarsPage.razor.rz.scp.css */
 body[b-7ifbbbe3h0] {
@@ -891,6 +1551,51 @@ a:hover[b-aagy7j7nvx] {
     float: right;
 }
 
+/* /Views/Shared/Components/ProgressBarComponent.razor.rz.scp.css */
+.progress-outer[b-btlgvcinmt] {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.progress-information[b-btlgvcinmt] {
+    width: 100%;
+    display: inline-flex;
+}
+
+.progress-step[b-btlgvcinmt] {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+#step-1[b-btlgvcinmt] {
+    margin-right: auto;
+}
+
+#step-2[b-btlgvcinmt] {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#step-3[b-btlgvcinmt] {
+    margin-left: auto
+}
+
+.progress-bar[b-btlgvcinmt] {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #ededed;
+    height: 24px;
+    border-radius: 20px;
+    margin-bottom: 5%;
+}
+
+.progress[b-btlgvcinmt] {
+    background-color: blue;
+    height: 100%;
+    border-radius: 20px;
+}
 /* /Views/Shared/Components/TitleComponent.razor.rz.scp.css */
 
 

@@ -1,0 +1,93 @@
+﻿img {
+    max-height: 100%;
+    max-width: 80%;
+    margin: 10px;
+    object-fit: contain;
+}
+
+.heading {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.enquiries-outer {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.enquiry {
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px lightgrey;
+    width: 100%;
+    min-width: 500px;
+    min-height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 20vh;
+    transition: box-shadow 0.5s;
+}
+
+.enquiry-image {
+    display: flex;
+    position: relative;
+    left: 0%;
+    height: 100%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.enquiry-inner {
+    display: inline-flex;
+    width: 60%;
+    background-color: #ededed;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.enquiry-information {
+    align-self: center;
+    width: 50%;
+    height: 80%;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.enquiry-information-section {
+    width: 100%;
+}
+
+.enquiry-actions {
+    display: flex;
+    width: 50%;
+    position: relative;
+    align-items: center;
+    
+}
+
+.enquiry-button {
+    position: relative;
+    left: 50%;
+    border-radius: 20px;
+    color: white;
+    background-color: blue;
+    border: none;
+    width: 40%;
+    height: 25%;
+}
+
+.enquiry:hover {
+    box-shadow: 0px 0px 20px lightgrey;
+}
+
+#price {
+    font-weight: bold;
+}

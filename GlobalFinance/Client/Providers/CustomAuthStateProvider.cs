@@ -22,7 +22,6 @@ namespace GlobalFinance.Client.Providers
             if (!string.IsNullOrEmpty(token))
             {
                 identity = new ClaimsIdentity(ParseClaimsFromJwt(token), "jwt");
-
             }
 
             var user = new ClaimsPrincipal(identity);

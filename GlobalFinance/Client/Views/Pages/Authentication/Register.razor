@@ -1,10 +1,19 @@
-﻿@page "/register"
+﻿@page "/register/{Next}"
+@page "/register"
 @inject HttpClient Http
 @inject IAuthService AuthService
 @inject ICustomerService CustomerService
-@inject NavigationManager NavigationManager 
+@inject NavigationManager NavigationManager
+@using GlobalFinance.Client.Views.Shared.Components
 
 <h3>Register an account @existingCustomer.FirstName</h3>
+
+@if (Next == "send_enquiry")
+    {
+       <ProgressBarComponent Progress="55"></ProgressBarComponent>
+    }
+
+
 
 <div class="register-form">
     <EditForm style="height: inherit; min-height:inherit;" Model="registerUser" OnSubmit="HandleRegistration">
@@ -35,6 +44,7 @@
         </div>
 
     </EditForm>
+    <br />
     <button class="register-form-sub-button" @onclick="GoToLogin">Already have an account?</button>
 </div>
 
@@ -42,6 +52,8 @@
 
     [Parameter]
     public CustomerModel customer { get; set; }
+    [Parameter]
+    public string Next { get; set; }
 
     private class RegisterUser
     {
@@ -81,7 +93,12 @@
             if (result == 1)
             {
                 errorMessage = "User already exists";
-            } 
+            }
+            else
+            {
+                
+                NavigationManager.NavigateTo($"/login/{Next}");
+            }
 
         } else
         {
@@ -91,7 +108,7 @@
 
     private void GoToLogin()
     {
-        NavigationManager.NavigateTo("/login");
+        NavigationManager.NavigateTo($"/login/{Next}");
     }
-}
+    }
 

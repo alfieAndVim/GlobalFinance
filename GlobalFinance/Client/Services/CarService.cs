@@ -80,7 +80,7 @@ namespace GlobalFinance.Client.Services
         {
             var amountToPay = price - initialPayment;
             var monthlyPayment = amountToPay / totalMonths;
-            var monthlyPaymentWithInterest = monthlyPayment * (interestRate * 0.1);
+            var monthlyPaymentWithInterest = monthlyPayment * ((interestRate * 0.1) + 1);
             return Math.Round(monthlyPaymentWithInterest, 2);
         }
     }
