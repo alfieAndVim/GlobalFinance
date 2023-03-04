@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "078oHHcTvRMSzHkH86d56pH0fBM5BIzCYGZPSAgC6/M=",
+  "Hash": "7PnBUyfI6pXN2EykriGBh+U/DyHVGYR5WLq9d84IDeo=",
   "Source": "GlobalFinance.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -510,6 +510,57 @@
       "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.components.webassembly/7.0.0/lib/net7.0/Microsoft.AspNetCore.Components.WebAssembly.dll"
     },
     {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Http.Abstractions.dll",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.Abstractions.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.2.0/lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll"
+    },
+    {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Http.dll",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.http/2.2.2/lib/netstandard2.0/Microsoft.AspNetCore.Http.dll"
+    },
+    {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Http.Features.dll",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.Features.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.http.features/2.2.0/lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll"
+    },
+    {
       "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Metadata.dll",
       "SourceId": "GlobalFinance.Client",
       "SourceType": "Computed",
@@ -525,6 +576,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.metadata/7.0.2/lib/net7.0/Microsoft.AspNetCore.Metadata.dll"
+    },
+    {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.WebUtilities.dll",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/microsoft.aspnetcore.webutilities/2.2.0/lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll"
     },
     {
       "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.CSharp.dll",
@@ -748,6 +816,23 @@
       "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/microsoft.extensions.logging/7.0.0/lib/net7.0/Microsoft.Extensions.Logging.dll"
     },
     {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.Extensions.ObjectPool.dll",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.ObjectPool.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/microsoft.extensions.objectpool/2.2.0/lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll"
+    },
+    {
       "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.Extensions.Options.dll",
       "SourceId": "GlobalFinance.Client",
       "SourceType": "Computed",
@@ -814,6 +899,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/microsoft.jsinterop.webassembly/7.0.0/lib/net7.0/Microsoft.JSInterop.WebAssembly.dll"
+    },
+    {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.Net.Http.Headers.dll",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/microsoft.net.http.headers/2.2.0/lib/netstandard2.0/Microsoft.Net.Http.Headers.dll"
     },
     {
       "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.VisualBasic.Core.dll",
@@ -4930,6 +5032,23 @@
       "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Numerics.dll"
     },
     {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/fYZe7BNS.gz",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.ObjectPool.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.Extensions.ObjectPool.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.Extensions.ObjectPool.dll"
+    },
+    {
       "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/G+WV01A+.gz",
       "SourceId": "GlobalFinance.Client",
       "SourceType": "Computed",
@@ -5032,6 +5151,23 @@
       "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Diagnostics.TraceSource.dll"
     },
     {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/GN+IKCxQ.gz",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Http.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Http.Abstractions.dll"
+    },
+    {
       "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/guCEDizm.gz",
       "SourceId": "GlobalFinance.Client",
       "SourceType": "Computed",
@@ -5081,6 +5217,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.IO.FileSystem.dll"
+    },
+    {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/H5jJmzJa.gz",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.Net.Http.Headers.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.Net.Http.Headers.dll"
     },
     {
       "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/hAOKgmkV.gz",
@@ -5899,6 +6052,23 @@
       "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.Extensions.Options.dll"
     },
     {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/oDbiOp+x.gz",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Http.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Http.dll"
+    },
+    {
       "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/oGOQVfOW.gz",
       "SourceId": "GlobalFinance.Client",
       "SourceType": "Computed",
@@ -6443,6 +6613,23 @@
       "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Net.Requests.dll"
     },
     {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/sSr43m5p.gz",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.Features.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Http.Features.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Http.Features.dll"
+    },
+    {
       "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/t4vAET8L.gz",
       "SourceId": "GlobalFinance.Client",
       "SourceType": "Computed",
@@ -6696,6 +6883,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/System.Data.dll"
+    },
+    {
+      "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/VhZe+pDI.gz",
+      "SourceId": "GlobalFinance.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.WebUtilities.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Release/net7.0/wwwroot/_framework/Microsoft.AspNetCore.WebUtilities.dll"
     },
     {
       "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/build-gz/vue5xzBL.gz",

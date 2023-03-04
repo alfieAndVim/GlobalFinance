@@ -1,0 +1,41 @@
+﻿@using System.Net.Http.Headers
+@using System.IO
+@inject IFinanceDocumentService FinanceDocumentService
+
+<InputFile OnChange="LoadFiles" multiple></InputFile>
+
+@code {
+
+        private int maxAllowedFiles = 5;
+    private long maxFileSize = long.MaxValue;
+    private List<string> fileNames = new();
+
+
+    private async void LoadFiles(InputFileChangeEventArgs e)
+    {
+        List<FinanceDocumentDto> files = new List<FinanceDocumentDto>();
+
+        foreach (var f in e.GetMultipleFiles(maxAllowedFiles))
+        {
+            FinanceDocumentDto document = new FinanceDocumentDto();
+            MemoryStream ms = new MemoryStream();
+            await f.OpenReadStream(maxFileSize).CopyToAsync(ms);
+            var bytes = ms.ToArray();
+
+            document.Base64FileContent = Convert.ToBase64String(bytes);
+            document.FileName = f.Name;
+            document.ContentType = f.ContentType;
+            files.Add(document);
+
+            Console.WriteLine(document.FileName);
+        }
+
+
+        
+        
+    }
+
+
+    }
+}
+

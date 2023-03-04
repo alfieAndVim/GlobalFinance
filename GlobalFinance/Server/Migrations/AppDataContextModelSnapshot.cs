@@ -216,10 +216,10 @@ namespace GlobalFinance.Server.Migrations
                     b.Property<int>("CustomerId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("InventoryId")
+                    b.Property<int?>("InventoryId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("SavedConfigurationId")
+                    b.Property<int?>("SavedConfigurationId")
                         .HasColumnType("INTEGER");
 
                     b.Property<int?>("inventoryModelInventoryId")
@@ -236,11 +236,45 @@ namespace GlobalFinance.Server.Migrations
                     b.ToTable("Orders");
                 });
 
+            modelBuilder.Entity("GlobalFinance.Shared.Models.FinanceDocumentModel", b =>
+                {
+                    b.Property<int>("FileId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ContentType")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<byte[]>("FileContent")
+                        .HasColumnType("BLOB");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("FinanceId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("StoredFileName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("FileId");
+
+                    b.HasIndex("FinanceId");
+
+                    b.ToTable("FinanceDocuments");
+                });
+
             modelBuilder.Entity("GlobalFinance.Shared.Models.FinanceModel", b =>
                 {
                     b.Property<int>("FinanceId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Approval")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("EnquiryId")
                         .HasColumnType("INTEGER");
@@ -255,6 +289,9 @@ namespace GlobalFinance.Server.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<double>("FinancePrice")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("FinanceTotalCost")
                         .HasColumnType("REAL");
 
                     b.HasKey("FinanceId");
@@ -1088,6 +1125,10 @@ namespace GlobalFinance.Server.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.HasKey("UserId");
 
                     b.HasIndex("CustomerId");
@@ -1105,9 +1146,7 @@ namespace GlobalFinance.Server.Migrations
 
                     b.HasOne("GlobalFinance.Shared.Models.SavedConfigurationModel", "SavedConfiguration")
                         .WithMany()
-                        .HasForeignKey("SavedConfigurationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SavedConfigurationId");
 
                     b.HasOne("GlobalFinance.Shared.Models.InventoryModel", "inventoryModel")
                         .WithMany()
@@ -1118,6 +1157,17 @@ namespace GlobalFinance.Server.Migrations
                     b.Navigation("SavedConfiguration");
 
                     b.Navigation("inventoryModel");
+                });
+
+            modelBuilder.Entity("GlobalFinance.Shared.Models.FinanceDocumentModel", b =>
+                {
+                    b.HasOne("GlobalFinance.Shared.Models.FinanceModel", "Finance")
+                        .WithMany()
+                        .HasForeignKey("FinanceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Finance");
                 });
 
             modelBuilder.Entity("GlobalFinance.Shared.Models.FinanceModel", b =>

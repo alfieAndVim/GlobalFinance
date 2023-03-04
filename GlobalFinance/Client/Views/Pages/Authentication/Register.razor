@@ -1,4 +1,5 @@
 ﻿@page "/register/{Next}"
+@page "/register"
 @inject HttpClient Http
 @inject IAuthService AuthService
 @inject ICustomerService CustomerService
@@ -43,6 +44,7 @@
         </div>
 
     </EditForm>
+    <br />
     <button class="register-form-sub-button" @onclick="GoToLogin">Already have an account?</button>
 </div>
 

@@ -1,20 +1,17 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https">
-  <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+﻿<Properties StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Client/Views/Pages/CarFinance.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Server/Controllers/CustomerController.cs">
     <Files>
-      <File FileName="GlobalFinance/Client/Views/Pages/CarOverview.razor" Line="55" Column="15" />
-      <File FileName="GlobalFinance/Client/Views/Pages/CarOverview.razor.css" Line="91" Column="23" />
-      <File FileName="GlobalFinance/Client/Views/Pages/CarFinance.razor" Line="114" Column="61" />
-      <File FileName="GlobalFinance/Client/Views/Pages/CarFinance.razor.css" Line="117" Column="33" />
-      <File FileName="GlobalFinance/Client/Views/Pages/CarsPage.razor" Line="1" Column="1" />
-      <File FileName="GlobalFinance/Client/Views/Pages/CarsPage.razor.css" Line="1" Column="1" />
-      <File FileName="GlobalFinance/Client/Views/Components/Configurator/ConfiguratorDisplayComponent.razor.css" Line="146" Column="13" NotebookId="1" />
-      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/RegisterCustomer.razor" Line="66" Column="50" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor.css" Line="10" Column="20" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardHome.razor.css" Line="42" Column="19" />
+      <File FileName="GlobalFinance/Client/Views/Shared/Components/Buttons/GenericNavButtonComponent.razor.css" Line="3" Column="5" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor" Line="99" Column="46" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardHome.razor" Line="15" Column="147" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Services/CustomerService.cs" Line="44" Column="10" NotebookId="1" />
+      <File FileName="GlobalFinance/Server/Controllers/CustomerController.cs" Line="56" Column="37" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,9 +19,19 @@
           <Node name="GlobalFinance" expanded="True">
             <Node name="GlobalFinance.Client" expanded="True">
               <Node name="Properties" expanded="True" />
+              <Node name="Providers" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="ServicesInterfaces" expanded="True" />
               <Node name="Views" expanded="True">
+                <Node name="AuthorisedViews" expanded="True">
+                  <Node name="AdminDashboard" expanded="True">
+                    <Node name="AdminDashboardHome.razor" expanded="True" />
+                  </Node>
+                  <Node name="ClientDashboard" expanded="True">
+                    <Node name="DashboardHome.razor" expanded="True" />
+                  </Node>
+                  <Node name="SendEnquiry.razor" expanded="True" />
+                </Node>
                 <Node name="Components" expanded="True">
                   <Node name="Configurator" expanded="True">
                     <Node name="ConfiguratorDisplayComponent.razor" expanded="True" />
@@ -32,9 +39,15 @@
                   <Node name="CarOptionComponent.razor" expanded="True" />
                 </Node>
                 <Node name="Pages" expanded="True">
-                  <Node name="Authentication" expanded="True" />
+                  <Node name="Authentication" expanded="True">
+                    <Node name="Login.razor" expanded="True" />
+                    <Node name="Register.razor" expanded="True" />
+                    <Node name="RegisterCustomer.razor" expanded="True" />
+                  </Node>
                   <Node name="Configurator" expanded="True" />
-                  <Node name="CarFinance.razor" expanded="True" selected="True" />
+                  <Node name="CustomerDashboard" expanded="True" />
+                  <Node name="CarFinance.razor" expanded="True" />
+                  <Node name="CarOverview.razor" expanded="True" />
                   <Node name="CarsPage.razor" expanded="True" />
                   <Node name="HomePage.razor" expanded="True" />
                 </Node>
@@ -44,6 +57,7 @@
                       <Node name="GenericNavButtonComponent.razor" expanded="True" />
                     </Node>
                     <Node name="NavBarComponent.razor" expanded="True" />
+                    <Node name="ProgressBarComponent.razor" expanded="True" />
                   </Node>
                   <Node name="Pages" expanded="True">
                     <Node name="MainLayout.razor" expanded="True" />
@@ -56,7 +70,9 @@
               </Node>
             </Node>
             <Node name="GlobalFinance.Server" expanded="True">
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="CustomerController.cs" selected="True" />
+              </Node>
               <Node name="Data" expanded="True" />
             </Node>
             <Node name="GlobalFinance.Shared" expanded="True">
@@ -67,5 +83,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
 </Properties>

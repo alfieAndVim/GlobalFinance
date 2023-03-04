@@ -109,7 +109,7 @@
         if (typeOverview == 0)
         {
             Inventory = await InventoryService.GetSingleInventoryItem(id);
-            Console.WriteLine(Inventory.CarId);
+            Inventory.InventoryId = id;
 
             var carResult = await CarService.GetSingleCar(Inventory.CarId);
             if (carResult != null)
@@ -177,7 +177,7 @@
     {
         if (typeOverview == 0)
         {
-            InventoryService.InventoryCar = new InventoryModel { ModelVariantId = CarModelVariantId, PaintId = CarPaintId, CarId = Car.CarId, InventoryMileage = CarMileage!.Value, InventoryPrice = CarPrice };
+            InventoryService.InventoryCar = new InventoryModel { InventoryId = id, ModelVariantId = CarModelVariantId, PaintId = CarPaintId, CarId = Car.CarId, InventoryMileage = CarMileage!.Value, InventoryPrice = CarPrice };
             NavigationManager.NavigateTo("/finance/0");
         }
         else

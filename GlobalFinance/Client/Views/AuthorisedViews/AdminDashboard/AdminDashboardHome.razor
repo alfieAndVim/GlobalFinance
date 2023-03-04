@@ -1,0 +1,33 @@
+﻿@page "/dashboard/admin"
+@attribute [Authorize(Roles = "admin")]
+
+<div class="console-outer">
+    <br />
+    <div class="heading">
+        <h2>Admin Console</h2>
+    </div>
+    <br />
+    <div class="console-selection">
+        <button class="console-selection-button" id="@(selectedPage == 0 ? "selected-button" : "unselected-button")" @onclick="(() => ChangePage(0))">Customers</button>
+        <br />
+        <button class="console-selection-button" id="@(selectedPage == 1 ? "selected-button" : "unselected-button")" @onclick="(() => ChangePage(1))">Orders</button>
+        <br />
+        <button class="console-selection-button" id="@(selectedPage == 2 ? "selected-button" : "unselected-button")" @onclick="(() => ChangePage(2))">Admin</button>
+    </div>
+    <br />
+    <div class="console">
+
+    </div>
+</div>
+
+
+@code {
+    private int selectedPage = 0;
+
+    private void ChangePage(int page)
+    {
+        selectedPage = page;
+        StateHasChanged();
+    }
+    }
+

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http.Json;
 using GlobalFinance.Client.ServicesInterfaces;
 using GlobalFinance.Shared.Models;
 using Microsoft.Extensions.Configuration;
@@ -64,6 +65,33 @@ namespace GlobalFinance.Client.Services
             var _totalPrice = Configuration.Price.HasValue ? (double)Configuration.Price : 0.0;
             return Math.Round(((_totalPrice - initialPayment) / totalMonths) * (1 + (interestRate / 100)), 2);
 
+        }
+
+        public async Task<int> AddConfiguration(SavedConfigurationModel savedConfiguration)
+        {
+            var response = await httpClient.PostAsJsonAsync<SavedConfigurationModel>("configurator/post_configuration", savedConfiguration);
+            if (response != null)
+            {
+                return Convert.ToInt32(await response.Content.ReadAsStringAsync());
+            }
+            else
+            {
+                throw new Exception("could not save configuration");
+            }
+        }
+
+        public async Task<SavedConfigurationModel> GetConfiguration(int savedConfigurationId)
+        {
+            Console.WriteLine("success");
+            var response = await httpClient.GetFromJsonAsync<SavedConfigurationModel>($"configurator/{savedConfigurationId}");
+            if (response != null)
+            {
+                return response;
+            }
+            else
+            {
+                throw new Exception("Could not get configuration");
+            }
         }
     }
 }

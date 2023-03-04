@@ -24,7 +24,7 @@ namespace GlobalFinance.Server.Controllers
         [HttpGet("list")]
         public async Task<ActionResult<List<InventoryModel>>> List()
         {
-            var inventory = await appDataContext.Inventory.ToListAsync();
+            var inventory = await appDataContext.Inventory.Include(I => I.Car).ToListAsync();
             if (inventory != null)
             {
                 return Ok(inventory);
@@ -35,7 +35,7 @@ namespace GlobalFinance.Server.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<InventoryModel>> Get(int id)
         {
-            var inventoryItem = await appDataContext.Inventory.FirstOrDefaultAsync(I => I.InventoryId == 1);
+            var inventoryItem = await appDataContext.Inventory.Include(I => I.Car).FirstOrDefaultAsync(I => I.InventoryId == 1);
             if (inventoryItem != null)
             {
                 return Ok(inventoryItem);

@@ -29,6 +29,19 @@ namespace GlobalFinance.Client.Services
             }
 
         }
+
+        public async Task<CustomerModel> GetCustomer(int customerId)
+        {
+            var result = await httpClient.GetFromJsonAsync<CustomerModel>($"customer/{customerId}");
+            if (result != null)
+            {
+                return result;
+            }
+            else
+            {
+                throw new Exception("Could not find customer");
+            }
+        }
     }
 }
 

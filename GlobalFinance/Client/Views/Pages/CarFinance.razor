@@ -238,7 +238,7 @@
 
     private async void SendEnquiry() {
 
-        FinanceService.Finance = new FinanceModel { FinanceInitialPayment = initialPayment, FinanceInterestRate = interestRate, FinanceMonths = totalMonths, FinancePrice = CarFinancePrice, FinanceTotalCost = totalCost};
+        FinanceService.Finance = new FinanceModel { FinanceInitialPayment = initialPayment, FinanceInterestRate = interestRate, FinanceMonths = totalMonths, FinancePrice = CarFinancePrice, FinanceTotalCost = totalCost, Approval = "pending"};
 
         var authState = await AuthStateProvider.GetAuthenticationStateAsync();
         var user = authState.User;

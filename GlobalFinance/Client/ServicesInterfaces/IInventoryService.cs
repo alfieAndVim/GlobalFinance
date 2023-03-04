@@ -1,6 +1,6 @@
 ﻿using GlobalFinance.Shared.Models;
 
-namespace GlobalFinance.Client.ServicesInterfaces 
+namespace GlobalFinance.Client.Services
 {
     public interface IInventoryService
     {

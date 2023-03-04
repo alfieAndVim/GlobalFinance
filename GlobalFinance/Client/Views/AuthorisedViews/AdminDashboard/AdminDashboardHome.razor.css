@@ -1,0 +1,60 @@
+﻿html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+.console-outer {
+    
+    position: absolute;
+    top: 90px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin-bottom: 10px;
+}
+
+.heading {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.console-selection {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.console-selection-button {
+    border: none;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 20px;
+    margin: 10px 5px;
+    transition: background-color 0.5s;
+}
+
+#unselected-button:hover {
+    background: lightgrey;
+}
+
+#selected-button {
+    background: lightgrey;
+}
+
+#unselected-button {
+    background: none;
+}
+
+.console {
+    width: 95%;
+    height: 80%;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px lightgrey;
+}

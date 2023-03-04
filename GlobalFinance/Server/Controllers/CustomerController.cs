@@ -28,6 +28,34 @@ namespace GlobalFinance.Server.Controllers
             appDataContext.SaveChanges();
             return Ok(customer.CustomerId);
         }
+
+        [HttpGet("{customerId}")]
+        public async Task<ActionResult<CustomerModel>> GetInformation(int customerId)
+        {
+            var result = await appDataContext.Customers.FirstOrDefaultAsync(C => C.CustomerId == customerId);
+            if (result != null)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpGet("list")]
+        public async Task<ActionResult<List<CustomerModel>>> ListCustomers()
+        {
+            var result = await appDataContext.Customers.ToListAsync();
+            if (result != null)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
         
     }
 }
