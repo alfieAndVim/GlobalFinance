@@ -1,6 +1,77 @@
-﻿<h3>Component1</h3>
+﻿@inject ICustomerService CustomerService
+
+@using GlobalFinance.Client.Views.AuthorisedViews.AdminDashboard.EditForms
+
+<div class="heading">
+    <h3>Customers</h3>
+</div>
+
+<div class="customers" style="@(currentlyEditing ? "pointer-events: none;" : "pointer-events: auto;")">
+    <div class="scrollable-table">
+        <table>
+            <thead class="customers-header">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address First Line</th>
+                    <th>Address Second Line</th>
+                    <th>Address Third Line</th>
+                    <th>Address Postcode</th>
+                    <th>Contact Number</th>
+                    <th>Contact Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="customers-body">
+                @foreach (CustomerModel customer in customers)
+                {
+                    <tr>
+                        <td>@customer.FirstName</td>
+                        <td>@customer.LastName</td>
+                        <td>@customer.AddressFirstLine</td>
+                        <td>@customer.AddressSecondLine</td>
+                        <td>@customer.AddressThirdLine</td>
+                        <td>@customer.AddressPostcode</td>
+                        <td>@customer.ContactNumber</td>
+                        <td>@customer.ContactEmail</td>
+                        <td><button class="edit-button" onclick="@(() => SetEditing(customer))">Edit</button></td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+    
+</div>
+
+<div class="@($"edit-form {(currentlyEditing ? "visible" : "")}")">
+    <button @onclick="CloseEditing">Close</button>
+    <CustomerEditForm customer="customerEditing"></CustomerEditForm>
+</div>
+
 
 @code {
 
-}
+    List<CustomerModel> customers = new List<CustomerModel>();
+
+    private bool currentlyEditing = false;
+    private CustomerModel customerEditing = new CustomerModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        customers = await CustomerService.GetCustomers();
+    }
+
+    private void SetEditing(CustomerModel customer) {
+        customerEditing = customer;
+        currentlyEditing = true;
+        StateHasChanged();
+    }
+
+    private void CloseEditing() {
+        currentlyEditing = false;
+        StateHasChanged();
+    }
+    }
 

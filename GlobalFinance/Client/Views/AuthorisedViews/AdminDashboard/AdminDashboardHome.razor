@@ -10,13 +10,24 @@
     <div class="console-selection">
         <button class="console-selection-button" id="@(selectedPage == 0 ? "selected-button" : "unselected-button")" @onclick="(() => ChangePage(0))">Customers</button>
         <br />
-        <button class="console-selection-button" id="@(selectedPage == 1 ? "selected-button" : "unselected-button")" @onclick="(() => ChangePage(1))">Orders</button>
+        <button class="console-selection-button" id="@(selectedPage == 1 ? "selected-button" : "unselected-button")" @onclick="(() => ChangePage(1))">Enquiries</button>
         <br />
         <button class="console-selection-button" id="@(selectedPage == 2 ? "selected-button" : "unselected-button")" @onclick="(() => ChangePage(2))">Admin</button>
     </div>
     <br />
     <div class="console">
-
+        @if (selectedPage == 0)
+            {
+                <AdminDashboardCustomers></AdminDashboardCustomers>
+            }
+            else if (selectedPage == 1)
+            {
+                <AdminDashboardEnquiries></AdminDashboardEnquiries>
+            }
+            else
+            {
+                <AdminDashboardAdmin></AdminDashboardAdmin>
+            }
     </div>
 </div>
 

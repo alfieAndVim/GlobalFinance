@@ -1,0 +1,78 @@
+﻿body {
+}
+
+.heading {
+    padding: 20px;
+}
+
+.enquiries {
+    z-index: 0;
+    width: 100%;
+    height: 60%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.scrollable-table {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.edit-button {
+    background: none;
+    outline: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.edit-form {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: auto;
+    box-shadow: 0px 0px 10000px;
+    background: white;
+    border-radius: 20px;
+    width: 50%;
+    height: 60%;
+    min-height: 500px;
+    position: relative;
+    left: 50%;
+    margin-left: -25%;
+    bottom: 50%;
+    margin-top: -10%;
+    transition: opacity 0.3s ease-in-out, bottom 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+    .edit-form.visible {
+        pointer-events: all;
+        bottom: 48%;
+        opacity: 1;
+    }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 1600px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: blue;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}

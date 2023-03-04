@@ -1,37 +1,32 @@
-﻿@page "/customer_registration"
-@inject ICustomerService CustomerService
-@inject NavigationManager NavigationManager
+﻿@inject ICustomerService CustomerService
 
-@using GlobalFinance.Client.Views.Shared.Components
+<div class="heading">
+    <h3>Edit Customer</h3>
+</div>
 
-<h3>Personal Details</h3>
-
-<ProgressBarComponent Progress="20"></ProgressBarComponent>
-
-
-<div class="customer-form">
-    <EditForm style="height: inherit; min-height:inherit;" Model="customer" OnValidSubmit="HandleUserRegistration">
+<div class="customer-edit-form">
+    <EditForm style="height: inherit; min-height:inherit;" Model="customer" OnValidSubmit="HandleCustomerUpdate">
         <DataAnnotationsValidator />
         <div class="customer-form-inner">
             <div class="customer-form-section" id="name">
                 <div id="first-name">
                     <label class="customer-form-label" for="First Name">First Name</label>
                     <InputText class="customer-form-input" @bind-Value="customer.FirstName"></InputText>
-                    <ValidationMessage For="@(() => customer.FirstName)"/>
+                    <ValidationMessage For="@(() => customer.FirstName)" />
                 </div>
                 <div id="last-name">
                     <label class="customer-form-label" for="Last Name">Last Name</label>
                     <InputText class="customer-form-input" @bind-Value="customer.LastName"></InputText>
-                    <ValidationMessage For="@(() => customer.LastName)"/>
+                    <ValidationMessage For="@(() => customer.LastName)" />
                 </div>
-                
+
 
             </div>
 
             <div class="customer-form-section" id="address-first-line">
                 <label class="customer-form-label" for="Address First Line">Address Line 1</label>
                 <InputText class="customer-form-input" @bind-Value="customer.AddressFirstLine"></InputText>
-                <ValidationMessage For="@(() => customer.AddressFirstLine)"/>
+                <ValidationMessage For="@(() => customer.AddressFirstLine)" />
             </div>
 
             <div class="customer-form-section" id="address-second-line">
@@ -47,50 +42,38 @@
             <div class="customer-form-section" id="postcode">
                 <label class="customer-form-label" for="Postcode">Postcode</label>
                 <InputText class="customer-form-input" @bind-Value="customer.AddressPostcode"></InputText>
-                <ValidationMessage For="@(() => customer.AddressPostcode)"/>
+                <ValidationMessage For="@(() => customer.AddressPostcode)" />
             </div>
 
             <div class="customer-form-section" id="contact-number">
                 <label class="customer-form-label" for="Contact Number">Contact Number</label>
                 <InputText class="customer-form-input" @bind-Value="customer.ContactNumber"></InputText>
-                <ValidationMessage For="@(() => customer.ContactNumber)"/>
+                <ValidationMessage For="@(() => customer.ContactNumber)" />
             </div>
 
             <div class="customer-form-section" id="email">
                 <label class="customer-form-label" for="Email">Contact Email</label>
                 <InputText class="customer-form-input" @bind-Value="customer.ContactEmail"></InputText>
-                <ValidationMessage For="@(() => customer.ContactEmail)"/>
+                <ValidationMessage For="@(() => customer.ContactEmail)" />
             </div>
 
             <div class="customer-form-section">
-                <button type="submit" class="customer-form-button" @onclick="HandleUserRegistration">Next</button>
-                
+                <button type="submit" class="customer-form-button">Next</button>
+
             </div>
         </div>
-
     </EditForm>
 </div>
 
 
 @code {
+        [Parameter]
+        public CustomerModel customer { get; set; }
 
-    CustomerModel customer = new CustomerModel();
 
-    private async void HandleUserRegistration()
-    {
+        private void HandleCustomerUpdate() {
 
-        Console.WriteLine(customer.ContactEmail);
-        CustomerService.customer = customer;
-        int result = await CustomerService.AddCustomer(customer);
-        if(result == -1)
-        {
-            Console.WriteLine("There has been an error");
-        } else
-        {
-            CustomerService.customer.CustomerId = result;
-            NavigationManager.NavigateTo("/send_enquiry");
+
         }
-
-    }
     }
 

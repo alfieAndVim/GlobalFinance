@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GlobalFinance.Server.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20230303074513_Files")]
-    partial class Files
+    [Migration("20230304192423_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -225,16 +225,13 @@ namespace GlobalFinance.Server.Migrations
                     b.Property<int?>("SavedConfigurationId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("inventoryModelInventoryId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("EnquiryId");
 
                     b.HasIndex("CustomerId");
 
-                    b.HasIndex("SavedConfigurationId");
+                    b.HasIndex("InventoryId");
 
-                    b.HasIndex("inventoryModelInventoryId");
+                    b.HasIndex("SavedConfigurationId");
 
                     b.ToTable("Orders");
                 });
@@ -274,6 +271,10 @@ namespace GlobalFinance.Server.Migrations
                     b.Property<int>("FinanceId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Approval")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("EnquiryId")
                         .HasColumnType("INTEGER");
@@ -1124,6 +1125,10 @@ namespace GlobalFinance.Server.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.HasKey("UserId");
 
                     b.HasIndex("CustomerId");
@@ -1139,19 +1144,19 @@ namespace GlobalFinance.Server.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("GlobalFinance.Shared.Models.InventoryModel", "InventoryModel")
+                        .WithMany()
+                        .HasForeignKey("InventoryId");
+
                     b.HasOne("GlobalFinance.Shared.Models.SavedConfigurationModel", "SavedConfiguration")
                         .WithMany()
                         .HasForeignKey("SavedConfigurationId");
 
-                    b.HasOne("GlobalFinance.Shared.Models.InventoryModel", "inventoryModel")
-                        .WithMany()
-                        .HasForeignKey("inventoryModelInventoryId");
-
                     b.Navigation("Customer");
 
-                    b.Navigation("SavedConfiguration");
+                    b.Navigation("InventoryModel");
 
-                    b.Navigation("inventoryModel");
+                    b.Navigation("SavedConfiguration");
                 });
 
             modelBuilder.Entity("GlobalFinance.Shared.Models.FinanceDocumentModel", b =>

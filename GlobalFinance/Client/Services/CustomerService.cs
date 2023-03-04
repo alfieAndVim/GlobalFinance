@@ -42,6 +42,19 @@ namespace GlobalFinance.Client.Services
                 throw new Exception("Could not find customer");
             }
         }
-    }
-}
 
+        public async Task<List<CustomerModel>> GetCustomers()
+        {
+            var result = await httpClient.GetFromJsonAsync<List<CustomerModel>>("customer/list");
+            if (result != null)
+            {
+                return result;
+            }
+            else
+            {
+                throw new Exception("Could not get customers");
+            }
+        }
+    }
+
+}

@@ -1,16 +1,13 @@
 ﻿<Properties StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Server/Controllers/CustomerController.cs">
     <Files>
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor.css" Line="10" Column="20" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardHome.razor.css" Line="42" Column="19" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor.css" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardHome.razor.css" />
       <File FileName="GlobalFinance/Client/Views/Shared/Components/Buttons/GenericNavButtonComponent.razor.css" Line="3" Column="5" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor" Line="99" Column="46" NotebookId="1" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardHome.razor" Line="15" Column="147" NotebookId="1" />
-      <File FileName="GlobalFinance/Client/Services/CustomerService.cs" Line="44" Column="10" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardHome.razor" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Services/CustomerService.cs" NotebookId="1" />
       <File FileName="GlobalFinance/Server/Controllers/CustomerController.cs" Line="56" Column="37" NotebookId="1" />
     </Files>
     <Pads>
@@ -70,9 +67,7 @@
               </Node>
             </Node>
             <Node name="GlobalFinance.Server" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="CustomerController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
             </Node>
             <Node name="GlobalFinance.Shared" expanded="True">
@@ -83,7 +78,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MultiItemStartupConfigurations />
 </Properties>

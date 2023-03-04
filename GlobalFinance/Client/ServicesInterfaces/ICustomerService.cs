@@ -1,6 +1,6 @@
 ﻿using GlobalFinance.Shared.Models;
 
-namespace GlobalFinance.Client.Services
+namespace GlobalFinance.Client.ServicesInterfaces
 {
     public interface ICustomerService
     {
@@ -8,5 +8,6 @@ namespace GlobalFinance.Client.Services
 
         Task<int> AddCustomer(CustomerModel customer);
         Task<CustomerModel> GetCustomer(int customerId);
+        Task<List<CustomerModel>> GetCustomers();
     }
 }

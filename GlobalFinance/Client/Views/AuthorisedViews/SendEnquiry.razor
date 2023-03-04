@@ -102,7 +102,7 @@
 
     <div class="file-upload">
         <h2>Add Documents</h2>
-        <FileUploadComponent></FileUploadComponent>
+        <FileUploadComponent FilesChanged="FileHandler"></FileUploadComponent>
     </div>
 
     <br />
@@ -135,7 +135,7 @@
 
     private int typeOverview = 0;
 
-    
+    private List<FinanceDocumentDto> files = new List<FinanceDocumentDto>();
 
     protected override async Task OnInitializedAsync()
     {
@@ -189,36 +189,44 @@
         Console.WriteLine(CustomerService.customer.CustomerId);
     }
 
-    
+
 
     private void GoBack() {
         NavigationManager.NavigateTo($"/finance/{typeOverview}");
     }
 
+    void FileHandler(List<FinanceDocumentDto> Files) {
+        files = Files;
+    }
 
     private async void FulfillEnquiry() {
 
         var enquiryId = 0;
 
-        if (typeOverview == 0)
+        if (files.Count() > 0)
         {
-            var inventoryId = Inventory.InventoryId;
-            var customerId = Customer.CustomerId;
-            EnquiryModel enquiry = new EnquiryModel { CustomerId = customerId, InventoryId = inventoryId };
-            enquiryId = await EnquiryService.AddEnquiry(enquiry);
-        }
-        else if (typeOverview == 1)
-        {
-            Console.WriteLine("started");
-            var savedConfigurationId = await ConfiguratorService.AddConfiguration(SavedConfiguration);
-            var customerId = Customer.CustomerId;
-            Console.WriteLine(savedConfigurationId);
-            EnquiryModel enquiry = new EnquiryModel { CustomerId = customerId, SavedConfigurationId = savedConfigurationId };
-            enquiryId = await EnquiryService.AddEnquiry(enquiry);
+            if (typeOverview == 0)
+            {
+                var inventoryId = Inventory.InventoryId;
+                var customerId = Customer.CustomerId;
+                EnquiryModel enquiry = new EnquiryModel { CustomerId = customerId, InventoryId = inventoryId };
+                enquiryId = await EnquiryService.AddEnquiry(enquiry);
+            }
+            else if (typeOverview == 1)
+            {
+                Console.WriteLine("started");
+                var savedConfigurationId = await ConfiguratorService.AddConfiguration(SavedConfiguration);
+                var customerId = Customer.CustomerId;
+                Console.WriteLine(savedConfigurationId);
+                EnquiryModel enquiry = new EnquiryModel { CustomerId = customerId, SavedConfigurationId = savedConfigurationId };
+                enquiryId = await EnquiryService.AddEnquiry(enquiry);
+            }
+
+            Finance.EnquiryId = enquiryId;
+            var financeId = await FinanceService.AddFinance(Finance);
         }
 
-        Finance.EnquiryId = enquiryId;
-        var financeId = await FinanceService.AddFinance(Finance);
+
     }
     }
 

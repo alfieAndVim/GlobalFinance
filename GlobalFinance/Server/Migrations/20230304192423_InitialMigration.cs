@@ -119,6 +119,7 @@ namespace GlobalFinance.Server.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Email = table.Column<string>(type: "TEXT", nullable: false),
                     PasswordHash = table.Column<string>(type: "TEXT", nullable: false),
+                    Role = table.Column<string>(type: "TEXT", nullable: false),
                     CustomerId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
@@ -208,9 +209,8 @@ namespace GlobalFinance.Server.Migrations
                     EnquiryId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     CustomerId = table.Column<int>(type: "INTEGER", nullable: false),
-                    SavedConfigurationId = table.Column<int>(type: "INTEGER", nullable: false),
-                    InventoryId = table.Column<int>(type: "INTEGER", nullable: false),
-                    inventoryModelInventoryId = table.Column<int>(type: "INTEGER", nullable: true)
+                    SavedConfigurationId = table.Column<int>(type: "INTEGER", nullable: true),
+                    InventoryId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -222,16 +222,15 @@ namespace GlobalFinance.Server.Migrations
                         principalColumn: "CustomerId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Orders_Inventory_inventoryModelInventoryId",
-                        column: x => x.inventoryModelInventoryId,
+                        name: "FK_Orders_Inventory_InventoryId",
+                        column: x => x.InventoryId,
                         principalTable: "Inventory",
                         principalColumn: "InventoryId");
                     table.ForeignKey(
                         name: "FK_Orders_SavedConfigurations_SavedConfigurationId",
                         column: x => x.SavedConfigurationId,
                         principalTable: "SavedConfigurations",
-                        principalColumn: "SavedConfigurationId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "SavedConfigurationId");
                 });
 
             migrationBuilder.CreateTable(
@@ -244,16 +243,41 @@ namespace GlobalFinance.Server.Migrations
                     FinanceInterestRate = table.Column<double>(type: "REAL", nullable: false),
                     FinanceMonths = table.Column<int>(type: "INTEGER", nullable: false),
                     FinanceInitialPayment = table.Column<double>(type: "REAL", nullable: false),
-                    OrderId = table.Column<int>(type: "INTEGER", nullable: false)
+                    FinanceTotalCost = table.Column<double>(type: "REAL", nullable: false),
+                    Approval = table.Column<string>(type: "TEXT", nullable: false),
+                    EnquiryId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Finances", x => x.FinanceId);
                     table.ForeignKey(
-                        name: "FK_Finances_Orders_OrderId",
-                        column: x => x.OrderId,
+                        name: "FK_Finances_Orders_EnquiryId",
+                        column: x => x.EnquiryId,
                         principalTable: "Orders",
                         principalColumn: "EnquiryId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "FinanceDocuments",
+                columns: table => new
+                {
+                    FileId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    FileName = table.Column<string>(type: "TEXT", nullable: false),
+                    StoredFileName = table.Column<string>(type: "TEXT", nullable: true),
+                    FileContent = table.Column<byte[]>(type: "BLOB", nullable: true),
+                    ContentType = table.Column<string>(type: "TEXT", nullable: false),
+                    FinanceId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FinanceDocuments", x => x.FileId);
+                    table.ForeignKey(
+                        name: "FK_FinanceDocuments_Finances_FinanceId",
+                        column: x => x.FinanceId,
+                        principalTable: "Finances",
+                        principalColumn: "FinanceId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -403,9 +427,14 @@ namespace GlobalFinance.Server.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Finances_OrderId",
+                name: "IX_FinanceDocuments_FinanceId",
+                table: "FinanceDocuments",
+                column: "FinanceId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Finances_EnquiryId",
                 table: "Finances",
-                column: "OrderId");
+                column: "EnquiryId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Inventory_CarId",
@@ -438,9 +467,9 @@ namespace GlobalFinance.Server.Migrations
                 column: "CustomerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Orders_inventoryModelInventoryId",
+                name: "IX_Orders_InventoryId",
                 table: "Orders",
-                column: "inventoryModelInventoryId");
+                column: "InventoryId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_SavedConfigurationId",
@@ -477,13 +506,16 @@ namespace GlobalFinance.Server.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Finances");
+                name: "FinanceDocuments");
 
             migrationBuilder.DropTable(
                 name: "Offers");
 
             migrationBuilder.DropTable(
                 name: "Users");
+
+            migrationBuilder.DropTable(
+                name: "Finances");
 
             migrationBuilder.DropTable(
                 name: "Orders");

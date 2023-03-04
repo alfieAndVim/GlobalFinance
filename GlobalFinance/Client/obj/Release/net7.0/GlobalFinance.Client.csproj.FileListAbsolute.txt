@@ -1711,7 +1711,10 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/staticwebassets.pack.json
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/staticwebassets.build.json
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/staticwebassets.development.json
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/AdminDashboard/AdminDashboardCustomers.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/AdminDashboard/AdminDashboardHome.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/AdminDashboard/EditForms/CustomerEditForm.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/SendEnquiry.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/Components/CarOptionComponent.razor.rz.scp.css

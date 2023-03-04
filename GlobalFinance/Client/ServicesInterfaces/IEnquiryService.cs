@@ -7,6 +7,7 @@ namespace GlobalFinance.Client.ServicesInterfaces
         EnquiryModel Enquiry { get; set; }
 
         Task<int> AddEnquiry(EnquiryModel enquiry);
+        Task<List<EnquiryModel>> GetAllEnquiries();
         Task<List<EnquiryModel>> GetEnquiries(int customerId);
     }
 }

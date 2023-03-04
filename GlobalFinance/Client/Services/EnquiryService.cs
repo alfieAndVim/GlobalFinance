@@ -39,6 +39,20 @@ namespace GlobalFinance.Client.Services
                 throw new Exception("Could not get enquiries");
             }
         }
+
+        public async Task<List<EnquiryModel>> GetAllEnquiries()
+        {
+            var response = await httpClient.GetFromJsonAsync<List<EnquiryModel>>("enquiry/all");
+            if (response != null)
+            {
+                return response;
+            }
+            else
+            {
+                throw new Exception("Could not get enquiries");
+            }
+        }
     }
+
 }
 

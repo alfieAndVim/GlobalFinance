@@ -1,3 +1,161 @@
+/* /Views/AuthorisedViews/AdminDashboard/AdminDashboardCustomers.razor.rz.scp.css */
+body[b-1w2vv2nua2] {
+}
+
+.heading[b-1w2vv2nua2] {
+    padding: 20px;
+}
+
+.customers[b-1w2vv2nua2] {
+    z-index: 0;
+    width: 100%;
+    height: 60%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.scrollable-table[b-1w2vv2nua2] {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.edit-button[b-1w2vv2nua2] {
+    background: none;
+    outline: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.edit-form[b-1w2vv2nua2] {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: auto;
+    box-shadow: 0px 0px 10000px;
+    background: white;
+    border-radius: 20px;
+    width: 50%;
+    height: 60%;
+    min-height: 500px;
+    position: relative;
+    left: 50%;
+    margin-left: -25%;
+    bottom: 50%;
+    margin-top: -10%;
+    transition: opacity 0.3s ease-in-out, bottom 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.edit-form.visible[b-1w2vv2nua2] {
+    pointer-events: all;
+    bottom: 48%;
+    opacity: 1;
+}
+
+table[b-1w2vv2nua2] {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 1600px;
+}
+
+th[b-1w2vv2nua2], td[b-1w2vv2nua2] {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th[b-1w2vv2nua2] {
+    background-color: blue;
+    color: white;
+}
+
+tr:nth-child(even)[b-1w2vv2nua2] {
+    background-color: #f2f2f2;
+}
+
+tr:hover[b-1w2vv2nua2] {
+    background-color: #ddd;
+}
+/* /Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor.rz.scp.css */
+body[b-j2o4a5kse7] {
+}
+
+.heading[b-j2o4a5kse7] {
+    padding: 20px;
+}
+
+.enquiries[b-j2o4a5kse7] {
+    z-index: 0;
+    width: 100%;
+    height: 60%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.scrollable-table[b-j2o4a5kse7] {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.edit-button[b-j2o4a5kse7] {
+    background: none;
+    outline: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.edit-form[b-j2o4a5kse7] {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: auto;
+    box-shadow: 0px 0px 10000px;
+    background: white;
+    border-radius: 20px;
+    width: 50%;
+    height: 60%;
+    min-height: 500px;
+    position: relative;
+    left: 50%;
+    margin-left: -25%;
+    bottom: 50%;
+    margin-top: -10%;
+    transition: opacity 0.3s ease-in-out, bottom 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+    .edit-form.visible[b-j2o4a5kse7] {
+        pointer-events: all;
+        bottom: 48%;
+        opacity: 1;
+    }
+
+table[b-j2o4a5kse7] {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 1600px;
+}
+
+th[b-j2o4a5kse7], td[b-j2o4a5kse7] {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th[b-j2o4a5kse7] {
+    background-color: blue;
+    color: white;
+}
+
+tr:nth-child(even)[b-j2o4a5kse7] {
+    background-color: #f2f2f2;
+}
+
+tr:hover[b-j2o4a5kse7] {
+    background-color: #ddd;
+}
 /* /Views/AuthorisedViews/AdminDashboard/AdminDashboardHome.razor.rz.scp.css */
 html[b-p4keyf95fp], body[b-p4keyf95fp] {
     margin: 0px;
@@ -58,6 +216,89 @@ html[b-p4keyf95fp], body[b-p4keyf95fp] {
     margin: 0 auto;
     border-radius: 20px;
     box-shadow: 0px 0px 10px lightgrey;
+}
+/* /Views/AuthorisedViews/AdminDashboard/EditForms/CustomerEditForm.razor.rz.scp.css */
+body[b-xvj0vm9cl6] {
+}
+
+.customer-edit-form[b-xvj0vm9cl6] {
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.customer-form-inner[b-xvj0vm9cl6] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 30px;
+}
+
+.customer-form-label[b-xvj0vm9cl6] {
+    width: 100%;
+    color: black;
+    text-align: start;
+    padding-left: 20px;
+}
+
+[b-xvj0vm9cl6] .customer-form-input {
+    display: block;
+    width: 80%;
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    height: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.customer-form-section[b-xvj0vm9cl6] {
+    display: block;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 20px;
+}
+
+.customer-form-button[b-xvj0vm9cl6] {
+    color: white;
+    width: 30%;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+}
+
+.customer-form-sub-button[b-xvj0vm9cl6] {
+    position: absolute;
+    right: 40%;
+    background-color: white;
+    border: none;
+    text-decoration: underline;
+    color: black;
+}
+
+.customer-form-error-message[b-xvj0vm9cl6] {
+    width: 100%;
+    margin: 0 auto;
+    color: red;
+}
+
+#name[b-xvj0vm9cl6] {
+    display: inline-flex;
+}
+
+
+
+
+
+.customer-form-button:hover[b-xvj0vm9cl6] {
+    width: 35%;
+}
+
+[b-xvj0vm9cl6] *:focus {
+    outline: none;
+    outline-width: 0;
 }
 /* /Views/AuthorisedViews/ClientDashboard/DashboardHome.razor.rz.scp.css */
 img[b-dw4m0tssqw] {

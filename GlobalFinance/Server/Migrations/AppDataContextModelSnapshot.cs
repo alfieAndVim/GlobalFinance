@@ -222,16 +222,13 @@ namespace GlobalFinance.Server.Migrations
                     b.Property<int?>("SavedConfigurationId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("inventoryModelInventoryId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("EnquiryId");
 
                     b.HasIndex("CustomerId");
 
-                    b.HasIndex("SavedConfigurationId");
+                    b.HasIndex("InventoryId");
 
-                    b.HasIndex("inventoryModelInventoryId");
+                    b.HasIndex("SavedConfigurationId");
 
                     b.ToTable("Orders");
                 });
@@ -1144,19 +1141,19 @@ namespace GlobalFinance.Server.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("GlobalFinance.Shared.Models.InventoryModel", "InventoryModel")
+                        .WithMany()
+                        .HasForeignKey("InventoryId");
+
                     b.HasOne("GlobalFinance.Shared.Models.SavedConfigurationModel", "SavedConfiguration")
                         .WithMany()
                         .HasForeignKey("SavedConfigurationId");
 
-                    b.HasOne("GlobalFinance.Shared.Models.InventoryModel", "inventoryModel")
-                        .WithMany()
-                        .HasForeignKey("inventoryModelInventoryId");
-
                     b.Navigation("Customer");
 
-                    b.Navigation("SavedConfiguration");
+                    b.Navigation("InventoryModel");
 
-                    b.Navigation("inventoryModel");
+                    b.Navigation("SavedConfiguration");
                 });
 
             modelBuilder.Entity("GlobalFinance.Shared.Models.FinanceDocumentModel", b =>

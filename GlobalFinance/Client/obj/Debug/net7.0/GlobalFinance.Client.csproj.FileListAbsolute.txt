@@ -1738,3 +1738,6 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/build-gz/fYZe7BNS.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/build-gz/H5jJmzJa.gz
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/AuthorisedViews/AdminDashboard/AdminDashboardCustomers.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/AuthorisedViews/AdminDashboard/AdminDashboardHome.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Debug/net7.0/scopedcss/Views/AuthorisedViews/AdminDashboard/EditForms/CustomerEditForm.razor.rz.scp.css
