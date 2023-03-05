@@ -67,6 +67,7 @@ namespace GlobalFinance.Server.Controllers
                 FinanceDocumentDto transferableFile = new FinanceDocumentDto();
 
                 transferableFile.FileName = file.StoredFileName;
+                transferableFile.UntrustedFileName = file.FileName;
                 transferableFile.Base64FileContent = Convert.ToBase64String(file.FileContent);
                 transferableFile.ContentType = file.ContentType;
                 transferableFile.FinanceId = file.FinanceId;

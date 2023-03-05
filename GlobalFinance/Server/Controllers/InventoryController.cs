@@ -24,7 +24,7 @@ namespace GlobalFinance.Server.Controllers
         [HttpGet("list")]
         public async Task<ActionResult<List<InventoryModel>>> List()
         {
-            var inventory = await appDataContext.Inventory.Include(I => I.Car).ToListAsync();
+            var inventory = await appDataContext.Inventory.Include(I => I.Car).Include(I => I.Paint).Include(I => I.ModelVariant).ToListAsync();
             if (inventory != null)
             {
                 return Ok(inventory);

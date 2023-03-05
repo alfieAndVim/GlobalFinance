@@ -1,0 +1,75 @@
+﻿@inject IInventoryService InventoryService
+
+@using GlobalFinance.Client.Views.AuthorisedViews.AdminDashboard.EditForms
+
+<div class="heading">
+    <h3>Inventory</h3>
+</div>
+
+<div class="inventory" style="@(currentlyEditing ? "pointer-events: none;" : "pointer-events: auto;")">
+    <div class="scrollable-table">
+        <table>
+            <thead class="customers-header">
+                <tr>
+                    <th>Car Make</th>
+                    <th>Car Model</th>
+                    <th>Price</th>
+                    <th>Paint Colour</th>
+                    <th>Model Variant</th>
+                    <th>Mileage</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="customers-body">
+                @foreach (InventoryModel inventoryItem in Inventory)
+                {
+                    <tr>
+                        <td>@inventoryItem.Car.CarMakeName</td>
+                        <td>@inventoryItem.Car.CarModelName</td>
+                        <td>@inventoryItem.InventoryPrice</td>
+                        <td>@inventoryItem.Paint.Name</td>
+                        <td>@inventoryItem.ModelVariant.Name</td>
+                        <td>@inventoryItem.InventoryMileage</td>
+                        <td><button class="edit-button" onclick="@(() => SetEditing(inventoryItem))">Edit</button></td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<div class="@($"edit-form {(currentlyEditing ? "visible" : "")}")">
+    <button @onclick="CloseEditing">Close</button>
+    <InventoryEditForm Inventory="inventoryEditing"></InventoryEditForm>
+</div>
+
+
+@code {
+    List<InventoryModel> Inventory = new List<InventoryModel>();
+    private bool currentlyEditing = false;
+    private InventoryModel inventoryEditing = new InventoryModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        await InventoryService.GetInventory();
+        Inventory = InventoryService.Inventory;
+
+    }
+
+    private void SetEditing(InventoryModel inventoryItem)
+    {
+        inventoryEditing = inventoryItem;
+        currentlyEditing = true;
+        StateHasChanged();
+    }
+
+    private void CloseEditing()
+    {
+        currentlyEditing = false;
+        StateHasChanged();
+    }
+    }
+

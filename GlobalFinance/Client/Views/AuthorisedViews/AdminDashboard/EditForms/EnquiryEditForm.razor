@@ -1,0 +1,43 @@
+﻿@inject IFinanceService FinanceService
+
+<div class="heading">
+    <h3>Edit Enquiry</h3>
+</div>
+
+<div class="enquiry-edit-form">
+    <div class="enquiry-approval">
+        <button @onclick="@(() => HandleEnquiryApprovalUpdate(isApproved: false))">Decline</button>
+        <button @onclick="@(() => HandleEnquiryApprovalUpdate(isApproved: true))">Approve</button>
+    </div>
+
+    <div class="enquiry-termination">
+        <button @onclick="HandleEnquiryTermination">Terminate</button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public FinanceModel Finance { get; set; }
+
+    private async void HandleEnquiryApprovalUpdate(bool isApproved) {
+
+        if (isApproved)
+        {
+            Finance.Approval = "approved";
+            await FinanceService.UpdateFinance(Finance);
+        }
+        else
+        {
+            Finance.Approval = "denied";
+            await FinanceService.UpdateFinance(Finance);
+        }
+
+
+    }
+
+    private async void HandleEnquiryTermination()
+    {
+        await FinanceService.RemoveFinance(Finance);
+    }
+    }
+

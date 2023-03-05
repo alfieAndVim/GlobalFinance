@@ -1714,6 +1714,8 @@
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/AdminDashboard/AdminDashboardCustomers.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/AdminDashboard/AdminDashboardHome.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/AdminDashboard/AdminDashboardInventory.razor.rz.scp.css
+/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/AdminDashboard/AdminDashboardNewCars.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/AdminDashboard/EditForms/CustomerEditForm.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor.rz.scp.css
 /Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/obj/Release/net7.0/scopedcss/Views/AuthorisedViews/EnquiryConfirmationPage.razor.rz.scp.css

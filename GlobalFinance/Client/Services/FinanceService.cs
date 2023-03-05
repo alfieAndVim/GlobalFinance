@@ -40,6 +40,32 @@ namespace GlobalFinance.Client.Services
                 throw new Exception("Could not get finances");
             }
         }
+
+        public async Task<int> UpdateFinance(FinanceModel finance)
+        {
+            var response = await httpClient.PostAsJsonAsync("finance/update", finance);
+            if (response.IsSuccessStatusCode)
+            {
+                return 0;
+            }
+            else
+            {
+                throw new Exception("Could not remove finance");
+            }
+        }
+
+        public async Task<int> RemoveFinance(FinanceModel finance)
+        {
+            var response = await httpClient.PostAsJsonAsync("finance/remove", finance);
+            if (response.IsSuccessStatusCode)
+            {
+                return 0;
+            }
+            else
+            {
+                throw new Exception("Could not remove finance");
+            }
+        }
     }
 }
 

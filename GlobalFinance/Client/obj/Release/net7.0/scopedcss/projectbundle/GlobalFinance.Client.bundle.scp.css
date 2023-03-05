@@ -121,12 +121,37 @@ body[b-j2o4a5kse7] {
     left: 50%;
     margin-left: -25%;
     bottom: 50%;
-    margin-top: -10%;
+    margin-top: -15%;
     transition: opacity 0.3s ease-in-out, bottom 0.1s ease-in-out;
     pointer-events: none;
 }
 
     .edit-form.visible[b-j2o4a5kse7] {
+        pointer-events: all;
+        bottom: 48%;
+        opacity: 1;
+    }
+
+.file-form[b-j2o4a5kse7] {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: auto;
+    box-shadow: 0px 0px 10000px;
+    background: white;
+    border-radius: 20px;
+    width: 50%;
+    height: 60%;
+    min-height: 500px;
+    position: relative;
+    left: 50%;
+    margin-left: -25%;
+    bottom: 50%;
+    margin-top: -30%;
+    transition: opacity 0.3s ease-in-out, bottom 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+    .file-form.visible[b-j2o4a5kse7] {
         pointer-events: all;
         bottom: 48%;
         opacity: 1;
@@ -216,6 +241,164 @@ html[b-p4keyf95fp], body[b-p4keyf95fp] {
     margin: 0 auto;
     border-radius: 20px;
     box-shadow: 0px 0px 10px lightgrey;
+}
+/* /Views/AuthorisedViews/AdminDashboard/AdminDashboardInventory.razor.rz.scp.css */
+body[b-q8u90yq40b] {
+}
+
+.heading[b-q8u90yq40b] {
+    padding: 20px;
+}
+
+.inventory[b-q8u90yq40b] {
+    z-index: 0;
+    width: 100%;
+    height: 60%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.scrollable-table[b-q8u90yq40b] {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.edit-button[b-q8u90yq40b] {
+    background: none;
+    outline: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.edit-form[b-q8u90yq40b] {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: auto;
+    box-shadow: 0px 0px 10000px;
+    background: white;
+    border-radius: 20px;
+    width: 50%;
+    height: 60%;
+    min-height: 500px;
+    position: relative;
+    left: 50%;
+    margin-left: -25%;
+    bottom: 50%;
+    margin-top: -10%;
+    transition: opacity 0.3s ease-in-out, bottom 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+    .edit-form.visible[b-q8u90yq40b] {
+        pointer-events: all;
+        bottom: 48%;
+        opacity: 1;
+    }
+
+table[b-q8u90yq40b] {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 1600px;
+}
+
+th[b-q8u90yq40b], td[b-q8u90yq40b] {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th[b-q8u90yq40b] {
+    background-color: blue;
+    color: white;
+}
+
+tr:nth-child(even)[b-q8u90yq40b] {
+    background-color: #f2f2f2;
+}
+
+tr:hover[b-q8u90yq40b] {
+    background-color: #ddd;
+}
+/* /Views/AuthorisedViews/AdminDashboard/AdminDashboardNewCars.razor.rz.scp.css */
+body[b-nv0l9xe89n] {
+}
+
+.heading[b-nv0l9xe89n] {
+    padding: 20px;
+}
+
+.cars[b-nv0l9xe89n] {
+    z-index: 0;
+    width: 100%;
+    height: 60%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.scrollable-table[b-nv0l9xe89n] {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.edit-button[b-nv0l9xe89n] {
+    background: none;
+    outline: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.edit-form[b-nv0l9xe89n] {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: auto;
+    box-shadow: 0px 0px 10000px;
+    background: white;
+    border-radius: 20px;
+    width: 50%;
+    height: 60%;
+    min-height: 500px;
+    position: relative;
+    left: 50%;
+    margin-left: -25%;
+    bottom: 50%;
+    margin-top: -10%;
+    transition: opacity 0.3s ease-in-out, bottom 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+    .edit-form.visible[b-nv0l9xe89n] {
+        pointer-events: all;
+        bottom: 48%;
+        opacity: 1;
+    }
+
+table[b-nv0l9xe89n] {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 1600px;
+}
+
+th[b-nv0l9xe89n], td[b-nv0l9xe89n] {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th[b-nv0l9xe89n] {
+    background-color: blue;
+    color: white;
+}
+
+tr:nth-child(even)[b-nv0l9xe89n] {
+    background-color: #f2f2f2;
+}
+
+tr:hover[b-nv0l9xe89n] {
+    background-color: #ddd;
 }
 /* /Views/AuthorisedViews/AdminDashboard/EditForms/CustomerEditForm.razor.rz.scp.css */
 body[b-xvj0vm9cl6] {

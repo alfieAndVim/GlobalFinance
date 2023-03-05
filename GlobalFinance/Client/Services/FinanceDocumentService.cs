@@ -37,7 +37,8 @@ namespace GlobalFinance.Client.Services
                 {
                     FinanceDocumentModel returningFile = new FinanceDocumentModel();
                     returningFile.ContentType = file.ContentType;
-                    returningFile.FileName = file.FileName;
+                    returningFile.FileName = file.UntrustedFileName;
+                    returningFile.StoredFileName = file.FileName;
                     returningFile.FileContent = Convert.FromBase64String(file.Base64FileContent);
                     returningFile.FinanceId = file.FinanceId;
 

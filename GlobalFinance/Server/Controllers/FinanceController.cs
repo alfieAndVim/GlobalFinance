@@ -40,6 +40,25 @@ namespace GlobalFinance.Server.Controllers
                 return NotFound();
             }
         }
+
+        [HttpPost("update")]
+        public ActionResult UpdateFinance(FinanceModel finance)
+        {
+            appDataContext.Finances.Update(finance);
+            appDataContext.SaveChanges();
+            return Ok();
+        }
+
+        [HttpPost("remove")]
+        public async Task<ActionResult> RemoveFinance(FinanceModel finance)
+        {
+            List<FinanceDocumentModel> financeDocuments = await appDataContext.FinanceDocuments.Where(D => D.FinanceId == finance.FinanceId).ToListAsync();
+            financeDocuments.ForEach(F => appDataContext.FinanceDocuments.Remove(F));
+            appDataContext.Finances.Remove(finance);
+            appDataContext.Orders.Remove(finance.Enquiry);
+            appDataContext.SaveChanges();
+            return Ok();
+        }
     }
 }
 

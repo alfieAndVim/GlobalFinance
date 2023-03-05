@@ -8,5 +8,7 @@ namespace GlobalFinance.Client.ServicesInterfaces
 
         Task<int> AddFinance(FinanceModel finance);
         Task<FinanceModel> GetFinance(int enquiryId);
+        Task<int> RemoveFinance(FinanceModel finance);
+        Task<int> UpdateFinance(FinanceModel finance);
     }
 }

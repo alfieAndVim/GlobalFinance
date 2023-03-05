@@ -1,0 +1,66 @@
+﻿
+@inject IInventoryService InventoryService
+@inject ICarService CarService
+
+<div class="heading">
+    <h3>Edit Inventory</h3>
+</div>
+
+<div class="inventory-edit-form">
+    <EditForm Model="Inventory">
+        <DataAnnotationsValidator />
+        <div class="inventory-form-inner">
+            <div class="inventory-form-section" id="model-variant">
+                <InputSelect @bind-Value="Inventory.ModelVariant">
+                    @foreach (ModelVariantModel model in modelVariants)
+                        {
+                            <option value="@model">@model.Name</option>
+                        }
+                </InputSelect>
+            </div>
+            <div class="inventory-form-section" id="mileage">
+
+            </div>
+            <div class="inventory-form-section" id="price">
+
+            </div>
+            <div class="inventory-form-section" id="colour">
+                <InputSelect @bind-Value="Inventory.Paint">
+                    @foreach (PaintModel paint in paints)
+                    {
+                        <option value="@paint">@paint.Name</option>
+                    }
+                </InputSelect>
+            </div>
+        </div>
+
+    </EditForm>
+</div>
+
+@code {
+        [Parameter]
+        public InventoryModel Inventory { get; set; }
+
+        private List<ModelVariantModel> modelVariants = new List<ModelVariantModel>();
+        private List<PaintModel> paints = new List<PaintModel>();
+
+        protected override async Task OnParametersSetAsync()
+        {
+            if (Inventory != null)
+            {
+                await CarService.GetModels(Inventory.CarId);
+                await CarService.GetPaints(Inventory.CarId);
+
+                modelVariants = CarService.ModelVariants;
+                paints = CarService.Paints;
+
+                Console.WriteLine(Inventory.InventoryPrice);
+            }
+        }
+
+    private async void HandleInventoryUpdate() {
+
+
+    }
+    }
+
