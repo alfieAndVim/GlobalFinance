@@ -179,6 +179,11 @@ tr:nth-child(even) {
     text-align: center;
 }
 
+.file-error-message {
+    padding: 10px;
+    color: red;
+}
+
 @media screen and (max-width: 1200px) {
 
     .outer-div {

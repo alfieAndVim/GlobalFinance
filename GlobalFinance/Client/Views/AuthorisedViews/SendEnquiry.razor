@@ -9,6 +9,7 @@
 @inject IFinanceService FinanceService
 @inject ICarService CarService
 @inject IEnquiryService EnquiryService
+@inject IFinanceDocumentService FinanceDocService
 
 @inject AuthenticationStateProvider AuthStateProvider
 @inject IAuthService AuthService
@@ -103,6 +104,9 @@
     <div class="file-upload">
         <h2>Add Documents</h2>
         <FileUploadComponent FilesChanged="FileHandler"></FileUploadComponent>
+        <div class="file-error-message">
+            @financeDocumentErrorMessage
+        </div>
     </div>
 
     <br />
@@ -136,6 +140,7 @@
     private int typeOverview = 0;
 
     private List<FinanceDocumentDto> files = new List<FinanceDocumentDto>();
+    private string financeDocumentErrorMessage = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
@@ -197,6 +202,10 @@
 
     void FileHandler(List<FinanceDocumentDto> Files) {
         files = Files;
+        if (files.Count() > 0)
+        {
+            financeDocumentErrorMessage = string.Empty;
+        }
     }
 
     private async void FulfillEnquiry() {
@@ -224,7 +233,26 @@
 
             Finance.EnquiryId = enquiryId;
             var financeId = await FinanceService.AddFinance(Finance);
+            Console.WriteLine(financeId);
+
+
+
+
+            foreach (FinanceDocumentDto file in files)
+            {
+                file.FinanceId = financeId;
+                
+            }
+            
+            await FinanceDocService.UploadDocuments(files);
+
+            NavigationManager.NavigateTo("/enquiry_confirmation");
         }
+        else
+        {
+            financeDocumentErrorMessage = "Please add at least one attachment";
+        }
+
 
 
     }

@@ -9,5 +9,6 @@ namespace GlobalFinance.Client.ServicesInterfaces
         Task<int> AddCustomer(CustomerModel customer);
         Task<CustomerModel> GetCustomer(int customerId);
         Task<List<CustomerModel>> GetCustomers();
+        Task<int> UpdateCustomer(CustomerModel customer);
     }
 }

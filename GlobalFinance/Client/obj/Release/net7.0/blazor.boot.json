@@ -210,14 +210,14 @@
       "netstandard.dll": "sha256-2\/SuexPFW8hizUgbgPcchYHfG\/zmGzzMN6ESSyefPRQ=",
       "System.Private.CoreLib.dll": "sha256-mcywrbK0VZXiOvZ4dxU1ocaPZFplCRSIPQ\/wFikcrus=",
       "GlobalFinance.Shared.dll": "sha256-eJ\/9E0+\/FKZeupX3PNyEI6nyu8hq2t3viJdqbe\/fu+I=",
-      "GlobalFinance.Client.dll": "sha256-E5vhyHHCqK+8gHWGIszGh88D7URjNKJZPf9dldCAciM="
+      "GlobalFinance.Client.dll": "sha256-VZM9wPJdbUeiu1Moyo7Vfba7qqL1gl5EhZ0rfCqklGc="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "GlobalFinance.Shared.pdb": "sha256-J2hA0AvSoLMN5fiFvkakc+Wm8blWGvsmMafw46XwD3s=",
-      "GlobalFinance.Client.pdb": "sha256-4KF9obBcsMMOwcXbWMrwxygyK\/XWmyuwXq8cTjiq5Ho="
+      "GlobalFinance.Client.pdb": "sha256-gfNQqyA4uPPtIEs6fc4frqSmBPjbwScUkn266hx+nR0="
     },
     "runtime": {
       "dotnet.7.0.3.howa5zyvjo.js": "sha256-DxGvmbtUa6hGJpk3VyMEbkPZ653qWbQkh8X4ZVM9TWM=",

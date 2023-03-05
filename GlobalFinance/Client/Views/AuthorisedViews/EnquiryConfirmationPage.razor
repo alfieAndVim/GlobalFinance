@@ -1,0 +1,27 @@
+﻿@page "/enquiry_confirmation"
+@inject NavigationManager NavigationManager
+
+<br />
+<div class="heading">
+    <h3>Thank you for your enquiry</h3>
+    <h4>You can now view your enquiry status in your dashboard</h4>
+</div>
+<br />
+<div class="confirmation-selection">
+    <button class="confirmation-selection-dashboard" @onclick="OnDashboardSelect">Dashboard</button>
+    <button class="confirmation-selection-home" @onclick="OnHomeSelect">Home</button>
+</div>
+
+@code {
+
+
+       private void OnDashboardSelect() {
+        NavigationManager.NavigateTo("/dashboard");
+    }
+
+
+    private void OnHomeSelect() {
+        NavigationManager.NavigateTo("/");
+        }
+    }
+
