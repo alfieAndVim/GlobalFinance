@@ -121,7 +121,7 @@ body[b-j2o4a5kse7] {
     left: 50%;
     margin-left: -25%;
     bottom: 50%;
-    margin-top: -15%;
+    margin-top: -25%;
     transition: opacity 0.3s ease-in-out, bottom 0.1s ease-in-out;
     pointer-events: none;
 }
@@ -146,16 +146,16 @@ body[b-j2o4a5kse7] {
     left: 50%;
     margin-left: -25%;
     bottom: 50%;
-    margin-top: -30%;
+    margin-top: -40%;
     transition: opacity 0.3s ease-in-out, bottom 0.1s ease-in-out;
     pointer-events: none;
 }
 
-    .file-form.visible[b-j2o4a5kse7] {
-        pointer-events: all;
-        bottom: 48%;
-        opacity: 1;
-    }
+.file-form.visible[b-j2o4a5kse7] {
+    pointer-events: all;
+    bottom: 48%;
+    opacity: 1;
+}
 
 table[b-j2o4a5kse7] {
     border-collapse: collapse;
@@ -482,6 +482,50 @@ body[b-xvj0vm9cl6] {
 [b-xvj0vm9cl6] *:focus {
     outline: none;
     outline-width: 0;
+}
+/* /Views/AuthorisedViews/AdminDashboard/EditForms/EnquiryEditForm.razor.rz.scp.css */
+body[b-fre85xpq84] {
+}
+
+.heading[b-fre85xpq84] {
+    padding: 20px;
+}
+
+.enquiry-edit-form[b-fre85xpq84] {
+    height: 80%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.enquiry-approval[b-fre85xpq84] {
+    margin: 20px;
+}
+
+.enquiry-termination[b-fre85xpq84] {
+    margin: 20px;
+}
+
+.enquiry-button[b-fre85xpq84] {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#approve[b-fre85xpq84] {
+    background: blue;
+    color: white;
+}
+
+#deny[b-fre85xpq84] {
+    background: red;
+    color: white;
+}
+
+#terminate[b-fre85xpq84] {
+    background: red;
+    color: white;
 }
 /* /Views/AuthorisedViews/ClientDashboard/DashboardHome.razor.rz.scp.css */
 img[b-dw4m0tssqw] {

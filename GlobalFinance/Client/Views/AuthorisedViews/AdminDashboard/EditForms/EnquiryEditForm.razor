@@ -6,12 +6,12 @@
 
 <div class="enquiry-edit-form">
     <div class="enquiry-approval">
-        <button @onclick="@(() => HandleEnquiryApprovalUpdate(isApproved: false))">Decline</button>
-        <button @onclick="@(() => HandleEnquiryApprovalUpdate(isApproved: true))">Approve</button>
+        <button class="enquiry-button" id="deny" @onclick="@(() => HandleEnquiryApprovalUpdate(isApproved: false))">Decline</button>
+        <button class="enquiry-button" id="approve" @onclick="@(() => HandleEnquiryApprovalUpdate(isApproved: true))">Approve</button>
     </div>
 
     <div class="enquiry-termination">
-        <button @onclick="HandleEnquiryTermination">Terminate</button>
+        <button class="enquiry-button" id="terminate" @onclick="HandleEnquiryTermination">Terminate</button>
     </div>
 </div>
 

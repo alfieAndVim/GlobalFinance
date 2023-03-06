@@ -7,7 +7,7 @@
 namespace GlobalFinance.Server.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class NewInventory : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -423,7 +423,7 @@ namespace GlobalFinance.Server.Migrations
                 values: new object[,]
                 {
                     { 1, 1, 12000, 12000, 1, 1 },
-                    { 2, 1, 12000, 12000, 1, 2 }
+                    { 2, 2, 12000, 12000, 1, 2 }
                 });
 
             migrationBuilder.CreateIndex(

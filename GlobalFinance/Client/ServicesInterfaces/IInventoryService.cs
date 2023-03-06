@@ -1,6 +1,6 @@
 ﻿using GlobalFinance.Shared.Models;
 
-namespace GlobalFinance.Client.Services
+namespace GlobalFinance.Client.ServicesInterfaces
 {
     public interface IInventoryService
     {
@@ -9,5 +9,6 @@ namespace GlobalFinance.Client.Services
 
         Task GetInventory();
         Task<InventoryModel> GetSingleInventoryItem(int id);
+        Task UpdateInventoryItem(InventoryModel inventory);
     }
 }

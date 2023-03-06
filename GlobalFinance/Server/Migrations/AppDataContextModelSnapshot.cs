@@ -342,7 +342,7 @@ namespace GlobalFinance.Server.Migrations
                         new
                         {
                             InventoryId = 2,
-                            CarId = 1,
+                            CarId = 2,
                             InventoryMileage = 12000,
                             InventoryPrice = 12000,
                             ModelVariantId = 1,

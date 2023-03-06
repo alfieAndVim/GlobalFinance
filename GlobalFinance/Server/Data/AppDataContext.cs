@@ -37,7 +37,7 @@ namespace GlobalFinance.Server.Data
             modelBuilder.Entity<InventoryModel>().HasData(
 
                 new InventoryModel { InventoryId = 1, InventoryPrice = 12000, InventoryMileage = 12000, CarId = 1, PaintId = 1, ModelVariantId = 1 },
-                new InventoryModel { InventoryId = 2, InventoryPrice = 12000, InventoryMileage = 12000, CarId = 1, PaintId = 2, ModelVariantId = 1 }
+                new InventoryModel { InventoryId = 2, InventoryPrice = 12000, InventoryMileage = 12000, CarId = 2, PaintId = 2, ModelVariantId = 1 }
                 );
         }
 

@@ -1,16 +1,21 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Server/Data/AppDataContext.cs">
     <Files>
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/SendEnquiry.razor" Line="142" Column="77" />
-      <File FileName="GlobalFinance/Server/Controllers/FinanceDocumentController.cs" Line="78" Column="34" />
-      <File FileName="GlobalFinance/Shared/Models/FinanceDocumentDto.cs" Line="1" Column="1" />
-      <File FileName="GlobalFinance/Client/Services/FinanceDocumentService.cs" Line="6" Column="29" />
-      <File FileName="GlobalFinance/Client/Services/IFinanceDocumentService.cs" Line="1" Column="1" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor" Line="40" Column="51" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor.css" Line="11" Column="15" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor" Line="55" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor.css" Line="78" Column="2" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/EnquiryEditForm.razor.css" Line="26" Column="16" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/EnquiryEditForm.razor" Line="10" Column="51" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/CustomerEditForm.razor.css" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/CustomerEditForm.razor" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/InventoryEditForm.razor" Line="28" Column="60" />
+      <File FileName="GlobalFinance/Server/Controllers/InventoryController.cs" Line="53" Column="46" />
+      <File FileName="GlobalFinance/Client/Services/InventoryService.cs" Line="19" Column="41" />
+      <File FileName="GlobalFinance/Client/Services/IInventoryService.cs" Line="3" Column="50" />
+      <File FileName="GlobalFinance/Client/Services/CustomerService.cs" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Server/Data/AppDataContext.cs" Line="40" Column="114" />
+      <File FileName="GlobalFinance/Server/Program.cs" Line="26" Column="44" />
+      <File FileName="GlobalFinance/Shared/Models/InventoryModel.cs" Line="22" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,10 +31,13 @@
                   <Node name="AdminDashboard" expanded="True">
                     <Node name="EditForms" expanded="True">
                       <Node name="CustomerEditForm.razor" expanded="True" />
+                      <Node name="EnquiryEditForm.razor" expanded="True" />
                     </Node>
                     <Node name="AdminDashboardCustomers.razor" expanded="True" />
                     <Node name="AdminDashboardEnquiries.razor" expanded="True" />
                     <Node name="AdminDashboardHome.razor" expanded="True" />
+                    <Node name="AdminDashboardInventory.razor" expanded="True" />
+                    <Node name="AdminDashboardNewCars.razor" expanded="True" />
                   </Node>
                   <Node name="ClientDashboard" expanded="True">
                     <Node name="DashboardHome.razor" expanded="True" />
@@ -86,8 +94,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

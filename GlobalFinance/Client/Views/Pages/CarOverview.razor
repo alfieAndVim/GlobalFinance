@@ -112,6 +112,7 @@
             Inventory.InventoryId = id;
 
             var carResult = await CarService.GetSingleCar(Inventory.CarId);
+            
             if (carResult != null)
             {
                 Car = carResult;

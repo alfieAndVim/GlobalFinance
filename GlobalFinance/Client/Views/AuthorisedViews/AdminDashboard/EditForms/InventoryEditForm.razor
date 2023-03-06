@@ -7,30 +7,33 @@
 </div>
 
 <div class="inventory-edit-form">
-    <EditForm Model="Inventory">
+    <EditForm Model="Inventory" OnValidSubmit="HandleInventoryUpdate">
         <DataAnnotationsValidator />
         <div class="inventory-form-inner">
             <div class="inventory-form-section" id="model-variant">
-                <InputSelect @bind-Value="Inventory.ModelVariant">
+                <InputSelect @bind-Value="Inventory.ModelVariantId">
                     @foreach (ModelVariantModel model in modelVariants)
                         {
-                            <option value="@model">@model.Name</option>
+                            <option value="@model.ModelVariantId">@model.Name</option>
                         }
                 </InputSelect>
             </div>
             <div class="inventory-form-section" id="mileage">
-
+                <InputNumber @bind-Value="Inventory.InventoryMileage"></InputNumber>
             </div>
             <div class="inventory-form-section" id="price">
-
+                <InputNumber @bind-Value="Inventory.InventoryPrice"></InputNumber>
             </div>
             <div class="inventory-form-section" id="colour">
-                <InputSelect @bind-Value="Inventory.Paint">
+                <InputSelect @bind-Value="Inventory.PaintId">
                     @foreach (PaintModel paint in paints)
                     {
-                        <option value="@paint">@paint.Name</option>
+                        <option value="@paint.PaintId">@paint.Name</option>
                     }
                 </InputSelect>
+            </div>
+            <div class="inventory-form-section" id="submit">
+                <button type="submit">Update</button>
             </div>
         </div>
 
@@ -60,7 +63,7 @@
 
     private async void HandleInventoryUpdate() {
 
-
+        await InventoryService.UpdateInventoryItem(Inventory);
     }
     }
 

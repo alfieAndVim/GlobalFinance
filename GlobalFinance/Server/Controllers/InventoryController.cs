@@ -35,7 +35,7 @@ namespace GlobalFinance.Server.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<InventoryModel>> Get(int id)
         {
-            var inventoryItem = await appDataContext.Inventory.Include(I => I.Car).FirstOrDefaultAsync(I => I.InventoryId == 1);
+            var inventoryItem = await appDataContext.Inventory.Include(I => I.Car).FirstOrDefaultAsync(I => I.InventoryId == id);
             if (inventoryItem != null)
             {
                 return Ok(inventoryItem);
@@ -45,6 +45,14 @@ namespace GlobalFinance.Server.Controllers
                 return NotFound();
             }
             
+        }
+
+        [HttpPost("update")]
+        public async Task<ActionResult> Update(InventoryModel inventory)
+        {
+            appDataContext.Update(inventory);
+            appDataContext.SaveChanges();
+            return Ok();
         }
     }
 }

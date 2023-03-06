@@ -34,6 +34,14 @@ namespace GlobalFinance.Client.Services
             }
             throw new Exception("Inventory item could not be found");
         }
+
+        public async Task UpdateInventoryItem(InventoryModel inventory)
+        {
+            Console.WriteLine(inventory.PaintId);
+            Console.WriteLine(inventory.ModelVariantId);
+            Console.WriteLine(inventory.InventoryMileage);
+            await httpClient.PostAsJsonAsync<InventoryModel>("inventory/update", inventory);
+        }
     }
 }
 

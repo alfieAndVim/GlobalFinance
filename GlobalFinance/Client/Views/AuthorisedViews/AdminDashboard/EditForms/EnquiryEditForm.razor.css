@@ -1,0 +1,43 @@
+﻿body {
+}
+
+.heading {
+    padding: 20px;
+}
+
+.enquiry-edit-form {
+    height: 80%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.enquiry-approval {
+    margin: 20px;
+}
+
+.enquiry-termination {
+    margin: 20px;
+}
+
+.enquiry-button {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#approve {
+    background: blue;
+    color: white;
+}
+
+#deny {
+    background: red;
+    color: white;
+}
+
+#terminate {
+    background: red;
+    color: white;
+}

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GlobalFinance.Server.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20230304192423_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20230306170726_NewInventory")]
+    partial class NewInventory
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -345,7 +345,7 @@ namespace GlobalFinance.Server.Migrations
                         new
                         {
                             InventoryId = 2,
-                            CarId = 1,
+                            CarId = 2,
                             InventoryMileage = 12000,
                             InventoryPrice = 12000,
                             ModelVariantId = 1,

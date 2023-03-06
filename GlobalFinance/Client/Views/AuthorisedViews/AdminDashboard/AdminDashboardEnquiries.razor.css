@@ -41,7 +41,7 @@
     left: 50%;
     margin-left: -25%;
     bottom: 50%;
-    margin-top: -15%;
+    margin-top: -25%;
     transition: opacity 0.3s ease-in-out, bottom 0.1s ease-in-out;
     pointer-events: none;
 }
@@ -66,16 +66,16 @@
     left: 50%;
     margin-left: -25%;
     bottom: 50%;
-    margin-top: -30%;
+    margin-top: -40%;
     transition: opacity 0.3s ease-in-out, bottom 0.1s ease-in-out;
     pointer-events: none;
 }
 
-    .file-form.visible {
-        pointer-events: all;
-        bottom: 48%;
-        opacity: 1;
-    }
+.file-form.visible {
+    pointer-events: all;
+    bottom: 48%;
+    opacity: 1;
+}
 
 table {
     border-collapse: collapse;
