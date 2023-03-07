@@ -42,6 +42,7 @@
 
 <div class="@($"edit-form {(currentlyEditing ? "visible" : "")}")">
     <button @onclick="CloseEditing">Close</button>
+    <NewCarEditForm Car="carEditing"></NewCarEditForm>
 </div>
 
 

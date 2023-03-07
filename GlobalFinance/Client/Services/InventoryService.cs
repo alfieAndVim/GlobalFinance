@@ -37,11 +37,26 @@ namespace GlobalFinance.Client.Services
 
         public async Task UpdateInventoryItem(InventoryModel inventory)
         {
-            Console.WriteLine(inventory.PaintId);
-            Console.WriteLine(inventory.ModelVariantId);
-            Console.WriteLine(inventory.InventoryMileage);
-            await httpClient.PostAsJsonAsync<InventoryModel>("inventory/update", inventory);
+            var response = await httpClient.PostAsJsonAsync<InventoryModel>("inventory/update", inventory);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Could not update inventory");
+            }
         }
+
+        public async Task AddInventoryItem(InventoryModel inventory)
+        {
+            Console.WriteLine($"{inventory.Customisation.CarId} car id");
+            Console.WriteLine($"{inventory.Customisation.ModelVariantId} model variant");
+            Console.WriteLine($"{inventory.Customisation.PaintId} paint id");
+            var response = await httpClient.PostAsJsonAsync("inventory/add", inventory);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Could not add inventory");
+            }
+        }
+
+
     }
 }
 

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GlobalFinance.Server.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20230306170726_NewInventory")]
-    partial class NewInventory
+    [Migration("20230306212139_AddInventory")]
+    partial class AddInventory
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -210,6 +210,48 @@ namespace GlobalFinance.Server.Migrations
                     b.ToTable("Customers");
                 });
 
+            modelBuilder.Entity("GlobalFinance.Shared.Models.CustomisationModel", b =>
+                {
+                    b.Property<int>("CustomisationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ModelVariantId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PaintId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("CustomisationId");
+
+                    b.HasIndex("CarId");
+
+                    b.HasIndex("ModelVariantId");
+
+                    b.HasIndex("PaintId");
+
+                    b.ToTable("Customisations");
+
+                    b.HasData(
+                        new
+                        {
+                            CustomisationId = 1,
+                            CarId = 1,
+                            ModelVariantId = 1,
+                            PaintId = 1
+                        },
+                        new
+                        {
+                            CustomisationId = 2,
+                            CarId = 2,
+                            ModelVariantId = 1,
+                            PaintId = 1
+                        });
+                });
+
             modelBuilder.Entity("GlobalFinance.Shared.Models.EnquiryModel", b =>
                 {
                     b.Property<int>("EnquiryId")
@@ -307,7 +349,7 @@ namespace GlobalFinance.Server.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CarId")
+                    b.Property<int>("CustomisationId")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("InventoryMileage")
@@ -316,19 +358,9 @@ namespace GlobalFinance.Server.Migrations
                     b.Property<int>("InventoryPrice")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("ModelVariantId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("PaintId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("InventoryId");
 
-                    b.HasIndex("CarId");
-
-                    b.HasIndex("ModelVariantId");
-
-                    b.HasIndex("PaintId");
+                    b.HasIndex("CustomisationId");
 
                     b.ToTable("Inventory");
 
@@ -336,20 +368,16 @@ namespace GlobalFinance.Server.Migrations
                         new
                         {
                             InventoryId = 1,
-                            CarId = 1,
+                            CustomisationId = 1,
                             InventoryMileage = 12000,
-                            InventoryPrice = 12000,
-                            ModelVariantId = 1,
-                            PaintId = 1
+                            InventoryPrice = 12000
                         },
                         new
                         {
                             InventoryId = 2,
-                            CarId = 2,
+                            CustomisationId = 2,
                             InventoryMileage = 12000,
-                            InventoryPrice = 12000,
-                            ModelVariantId = 1,
-                            PaintId = 2
+                            InventoryPrice = 12000
                         });
                 });
 
@@ -1085,25 +1113,15 @@ namespace GlobalFinance.Server.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CarId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("ConfigurationPrice")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("ModelVariantId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("PaintId")
+                    b.Property<int>("CustomisationId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("SavedConfigurationId");
 
-                    b.HasIndex("CarId");
-
-                    b.HasIndex("ModelVariantId");
-
-                    b.HasIndex("PaintId");
+                    b.HasIndex("CustomisationId");
 
                     b.ToTable("SavedConfigurations");
                 });
@@ -1134,6 +1152,33 @@ namespace GlobalFinance.Server.Migrations
                     b.HasIndex("CustomerId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("GlobalFinance.Shared.Models.CustomisationModel", b =>
+                {
+                    b.HasOne("GlobalFinance.Shared.Models.CarModel", "Car")
+                        .WithMany()
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GlobalFinance.Shared.Models.ModelVariantModel", "ModelVariant")
+                        .WithMany()
+                        .HasForeignKey("ModelVariantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GlobalFinance.Shared.Models.PaintModel", "Paint")
+                        .WithMany()
+                        .HasForeignKey("PaintId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Car");
+
+                    b.Navigation("ModelVariant");
+
+                    b.Navigation("Paint");
                 });
 
             modelBuilder.Entity("GlobalFinance.Shared.Models.EnquiryModel", b =>
@@ -1183,29 +1228,13 @@ namespace GlobalFinance.Server.Migrations
 
             modelBuilder.Entity("GlobalFinance.Shared.Models.InventoryModel", b =>
                 {
-                    b.HasOne("GlobalFinance.Shared.Models.CarModel", "Car")
+                    b.HasOne("GlobalFinance.Shared.Models.CustomisationModel", "Customisation")
                         .WithMany()
-                        .HasForeignKey("CarId")
+                        .HasForeignKey("CustomisationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("GlobalFinance.Shared.Models.ModelVariantModel", "ModelVariant")
-                        .WithMany()
-                        .HasForeignKey("ModelVariantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("GlobalFinance.Shared.Models.PaintModel", "Paint")
-                        .WithMany()
-                        .HasForeignKey("PaintId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Car");
-
-                    b.Navigation("ModelVariant");
-
-                    b.Navigation("Paint");
+                    b.Navigation("Customisation");
                 });
 
             modelBuilder.Entity("GlobalFinance.Shared.Models.ModelVariantModel", b =>
@@ -1243,29 +1272,13 @@ namespace GlobalFinance.Server.Migrations
 
             modelBuilder.Entity("GlobalFinance.Shared.Models.SavedConfigurationModel", b =>
                 {
-                    b.HasOne("GlobalFinance.Shared.Models.CarModel", "Car")
+                    b.HasOne("GlobalFinance.Shared.Models.CustomisationModel", "Customisation")
                         .WithMany()
-                        .HasForeignKey("CarId")
+                        .HasForeignKey("CustomisationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("GlobalFinance.Shared.Models.ModelVariantModel", "ModelVariant")
-                        .WithMany()
-                        .HasForeignKey("ModelVariantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("GlobalFinance.Shared.Models.PaintModel", "Paint")
-                        .WithMany()
-                        .HasForeignKey("PaintId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Car");
-
-                    b.Navigation("ModelVariant");
-
-                    b.Navigation("Paint");
+                    b.Navigation("Customisation");
                 });
 
             modelBuilder.Entity("GlobalFinance.Shared.Models.UserModel", b =>

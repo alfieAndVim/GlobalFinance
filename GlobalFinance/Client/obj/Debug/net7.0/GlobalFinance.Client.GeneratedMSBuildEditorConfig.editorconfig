@@ -28,8 +28,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9yaXNlZFZpZXdzL0FkbWluRGFzaGJvYXJkL0VkaXRGb3Jtcy9GaWxlVmlld0Zvcm0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/InventoryAddForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9yaXNlZFZpZXdzL0FkbWluRGFzaGJvYXJkL0VkaXRGb3Jtcy9JbnZlbnRvcnlBZGRGb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/InventoryEditForm.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9yaXNlZFZpZXdzL0FkbWluRGFzaGJvYXJkL0VkaXRGb3Jtcy9JbnZlbnRvcnlFZGl0Rm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/NewCarEditForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9yaXNlZFZpZXdzL0FkbWluRGFzaGJvYXJkL0VkaXRGb3Jtcy9OZXdDYXJFZGl0Rm9ybS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/Views/AuthorisedViews/DashboardRedirect.razor]

@@ -51,8 +51,18 @@ namespace GlobalFinance.Server.Controllers
             //inventoryEnquiries.ForEach(I => response.Add(I));
 
             var response = await appDataContext.Orders
-                .Include(O => O.SavedConfiguration).ThenInclude(S => S.Car)
-                .Include(O => O.InventoryModel).ThenInclude(I => I.Car)
+                .Include(O => O.SavedConfiguration).ThenInclude(S => S.Customisation)
+                    .ThenInclude(C => C.Car)
+                .Include(O => O.SavedConfiguration).ThenInclude(S => S.Customisation)
+                    .ThenInclude(C => C.ModelVariant)
+                .Include(O => O.SavedConfiguration).ThenInclude(S => S.Customisation)
+                    .ThenInclude(C => C.Paint)
+                .Include(O => O.InventoryModel).ThenInclude(I => I.Customisation)
+                    .ThenInclude(C => C.Car)
+                .Include(O => O.InventoryModel).ThenInclude(I => I.Customisation)
+                    .ThenInclude(C => C.ModelVariant)
+                .Include(O => O.InventoryModel).ThenInclude(I => I.Customisation)
+                    .ThenInclude(C => C.Paint)
                 .Include(O => O.Customer)
                 .ToListAsync(); 
 

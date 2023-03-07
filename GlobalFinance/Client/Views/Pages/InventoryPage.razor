@@ -16,7 +16,7 @@
         @foreach (int value in Enumerable.Range(0, _inventoryCount))
         {
 
-            <InventoryOptionComponent InventoryId="@_inventory.ElementAt(value).InventoryId" CarMakeName="@_cars.ElementAt(value).CarMakeName" CarModelName="@_cars.ElementAt(value).CarModelName" InventoryMileage="@_inventory.ElementAt(value).InventoryMileage" InventoryPrice="@_inventory.ElementAt(value).InventoryPrice" imgSrc="@GetCarImageSrc(_inventory.ElementAt(value).CarId)"></InventoryOptionComponent>
+            <InventoryOptionComponent InventoryId="@_inventory.ElementAt(value).InventoryId" CarMakeName="@_cars.ElementAt(value).CarMakeName" CarModelName="@_cars.ElementAt(value).CarModelName" InventoryMileage="@_inventory.ElementAt(value).InventoryMileage" InventoryPrice="@_inventory.ElementAt(value).InventoryPrice" imgSrc="@GetCarImageSrc(_inventory.ElementAt(value).Customisation.CarId)"></InventoryOptionComponent>
         }
     }
 </div>
@@ -37,12 +37,12 @@
 
         await InventoryService.GetInventory();
         _inventory = InventoryService.Inventory;
-        _inventory.ForEach(async I => _cars.Add(await GetCar(I.CarId)));
+        _inventory.ForEach(async I => _cars.Add(await GetCar(I.Customisation.CarId)));
         _inventoryCount = _inventory.Count();
 
         foreach (var i in _inventory)
         {
-            _cars.Add(await GetCar(i.CarId));
+            _cars.Add(await GetCar(i.Customisation.CarId));
         }
     }
 

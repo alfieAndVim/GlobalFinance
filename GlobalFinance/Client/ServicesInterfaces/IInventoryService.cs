@@ -7,6 +7,7 @@ namespace GlobalFinance.Client.ServicesInterfaces
         List<InventoryModel> Inventory { get; set; }
         InventoryModel InventoryCar { get; set; }
 
+        Task AddInventoryItem(InventoryModel inventory);
         Task GetInventory();
         Task<InventoryModel> GetSingleInventoryItem(int id);
         Task UpdateInventoryItem(InventoryModel inventory);

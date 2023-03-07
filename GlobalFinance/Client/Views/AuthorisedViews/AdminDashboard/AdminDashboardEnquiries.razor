@@ -100,11 +100,11 @@
 
             if (enquiry.InventoryId != null)
             {
-                car = enquiry.InventoryModel.Car;
+                car = enquiry.InventoryModel.Customisation.Car;
             }
             else if (enquiry.SavedConfiguration != null)
             {
-                car = enquiry.SavedConfiguration.Car;
+                car = enquiry.SavedConfiguration.Customisation.Car;
             }
 
             finance = await FinanceService.GetFinance(enquiry.EnquiryId);

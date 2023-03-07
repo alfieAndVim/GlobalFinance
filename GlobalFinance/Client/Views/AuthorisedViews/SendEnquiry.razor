@@ -5,6 +5,7 @@
 
 @inject IInventoryService InventoryService
 @inject IConfiguratorService ConfiguratorService
+@inject ICustomisationService CustomisationService
 @inject ICustomerService CustomerService
 @inject IFinanceService FinanceService
 @inject ICarService CarService
@@ -144,23 +145,25 @@
 
     protected override async Task OnInitializedAsync()
     {
-
+        
         var authState = await AuthStateProvider.GetAuthenticationStateAsync();
         var customerId = await AuthService.GetCustomerId(authState.User.Identity.Name);
         Customer = await CustomerService.GetCustomer(Convert.ToInt32(customerId));
 
-
+        Console.WriteLine("stated");
         Inventory = InventoryService.InventoryCar;
+
         SavedConfiguration = ConfiguratorService.SavedConfiguration;
 
-        if (Inventory.ModelVariantId > 0)
+        if (Inventory.Customisation != null)
         {
-            CarModel car = await CarService.GetSingleCar(Inventory.CarId);
+            var InventoryCustomisation = Inventory.Customisation;
+            CarModel car = InventoryCustomisation.Car;
             carMake = car.CarMakeName;
             carModel = car.CarModelName;
 
-            carModelVariantId = Inventory.ModelVariantId;
-            carPaintId = Inventory.PaintId;
+            carModelVariantId = InventoryCustomisation.ModelVariantId;
+            carPaintId = InventoryCustomisation.PaintId;
 
             carMileage = Inventory.InventoryMileage;
             carPrice = Inventory.InventoryPrice;
@@ -168,14 +171,15 @@
             carImgSrc = $"Images/Car-images/{car.CarId}.jpg";
             typeOverview = 0;
         }
-        else if (SavedConfiguration.ModelVariantId > 0)
+        else if (SavedConfiguration.Customisation != null)
         {
-            CarModel car = await CarService.GetSingleCar(SavedConfiguration.CarId);
+            var ConfigurationCustomisation = SavedConfiguration.Customisation;
+            CarModel car = ConfigurationCustomisation.Car;
             carMake = car.CarMakeName;
             carModel = car.CarModelName;
 
-            carModelVariantId = SavedConfiguration.ModelVariantId;
-            carPaintId = SavedConfiguration.PaintId;
+            carModelVariantId = ConfigurationCustomisation.ModelVariantId;
+            carPaintId = ConfigurationCustomisation.PaintId;
 
             carPrice = SavedConfiguration.ConfigurationPrice;
 
@@ -224,9 +228,11 @@
             else if (typeOverview == 1)
             {
                 Console.WriteLine("started");
+                var customisationId = await CustomisationService.AddCustomisation(SavedConfiguration.Customisation);
+                SavedConfiguration.CustomisationId = customisationId;
                 var savedConfigurationId = await ConfiguratorService.AddConfiguration(SavedConfiguration);
                 var customerId = Customer.CustomerId;
-                Console.WriteLine(savedConfigurationId);
+
                 EnquiryModel enquiry = new EnquiryModel { CustomerId = customerId, SavedConfigurationId = savedConfigurationId };
                 enquiryId = await EnquiryService.AddEnquiry(enquiry);
             }
@@ -241,9 +247,9 @@
             foreach (FinanceDocumentDto file in files)
             {
                 file.FinanceId = financeId;
-                
+
             }
-            
+
             await FinanceDocService.UploadDocuments(files);
 
             NavigationManager.NavigateTo("/enquiry_confirmation");

@@ -6,16 +6,18 @@
     <h3>Edit Inventory</h3>
 </div>
 
+@if (Inventory.Customisation != null)
+    {
 <div class="inventory-edit-form">
     <EditForm Model="Inventory" OnValidSubmit="HandleInventoryUpdate">
         <DataAnnotationsValidator />
         <div class="inventory-form-inner">
             <div class="inventory-form-section" id="model-variant">
-                <InputSelect @bind-Value="Inventory.ModelVariantId">
+                <InputSelect @bind-Value="Inventory.Customisation.ModelVariantId">
                     @foreach (ModelVariantModel model in modelVariants)
-                        {
-                            <option value="@model.ModelVariantId">@model.Name</option>
-                        }
+                    {
+                        <option value="@model.ModelVariantId">@model.Name</option>
+                    }
                 </InputSelect>
             </div>
             <div class="inventory-form-section" id="mileage">
@@ -25,7 +27,7 @@
                 <InputNumber @bind-Value="Inventory.InventoryPrice"></InputNumber>
             </div>
             <div class="inventory-form-section" id="colour">
-                <InputSelect @bind-Value="Inventory.PaintId">
+                <InputSelect @bind-Value="Inventory.Customisation.PaintId">
                     @foreach (PaintModel paint in paints)
                     {
                         <option value="@paint.PaintId">@paint.Name</option>
@@ -39,6 +41,9 @@
 
     </EditForm>
 </div>
+    }
+
+
 
 @code {
         [Parameter]
@@ -49,10 +54,10 @@
 
         protected override async Task OnParametersSetAsync()
         {
-            if (Inventory != null)
+            if (Inventory.Customisation != null)
             {
-                await CarService.GetModels(Inventory.CarId);
-                await CarService.GetPaints(Inventory.CarId);
+                await CarService.GetModels(Inventory.Customisation.CarId);
+                await CarService.GetPaints(Inventory.Customisation.CarId);
 
                 modelVariants = CarService.ModelVariants;
                 paints = CarService.Paints;

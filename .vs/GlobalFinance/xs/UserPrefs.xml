@@ -1,21 +1,45 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https">
+  <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Server/Data/AppDataContext.cs">
     <Files>
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor" Line="55" Column="1" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor.css" Line="78" Column="2" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/EnquiryEditForm.razor.css" Line="26" Column="16" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/EnquiryEditForm.razor" Line="10" Column="51" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/CustomerEditForm.razor.css" Line="1" Column="1" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/CustomerEditForm.razor" Line="1" Column="1" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/InventoryEditForm.razor" Line="28" Column="60" />
-      <File FileName="GlobalFinance/Server/Controllers/InventoryController.cs" Line="53" Column="46" />
-      <File FileName="GlobalFinance/Client/Services/InventoryService.cs" Line="19" Column="41" />
-      <File FileName="GlobalFinance/Client/Services/IInventoryService.cs" Line="3" Column="50" />
-      <File FileName="GlobalFinance/Client/Services/CustomerService.cs" Line="1" Column="1" />
-      <File FileName="GlobalFinance/Server/Data/AppDataContext.cs" Line="40" Column="114" />
-      <File FileName="GlobalFinance/Server/Program.cs" Line="26" Column="44" />
-      <File FileName="GlobalFinance/Shared/Models/InventoryModel.cs" Line="22" Column="35" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor" Line="118" Column="61" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor.css" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/EnquiryEditForm.razor.css" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/EnquiryEditForm.razor" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/CustomerEditForm.razor.css" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/CustomerEditForm.razor" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/InventoryEditForm.razor" Line="14" Column="53" />
+      <File FileName="GlobalFinance/Server/Controllers/InventoryController.cs" Line="44" Column="46" />
+      <File FileName="GlobalFinance/Client/Services/InventoryService.cs" Line="39" Column="10" />
+      <File FileName="GlobalFinance/Server/Data/AppDataContext.cs" Line="9" Column="6" />
+      <File FileName="GlobalFinance/Server/Program.cs" Line="35" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/Pages/InventoryPage.razor" Line="19" Column="388" />
+      <File FileName="GlobalFinance/Client/Views/Components/InventoryOptionComponent.razor" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/Pages/CarOverview.razor" Line="125" Column="57" />
+      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/RegisterCustomer.razor" Line="74" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/SendEnquiry.razor" Line="231" Column="70" />
+      <File FileName="GlobalFinance/Client/Program.cs" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Shared/Models/CustomisationMode.cs" Line="24" Column="1" />
+      <File FileName="GlobalFinance/Shared/Models/SavedConfigurationModel.cs" Line="12" Column="39" />
+      <File FileName="GlobalFinance/Shared/Models/InventoryModel.cs" Line="19" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/Pages/CarFinance.razor" Line="189" Column="10" />
+      <File FileName="GlobalFinance/Server/Controllers/CustomisationController.cs" Line="29" Column="10" />
+      <File FileName="GlobalFinance/Client/Services/CustomisationService.cs" Line="7" Column="28" />
+      <File FileName="GlobalFinance/Client/Services/ICustomisationService.cs" Line="3" Column="50" />
+      <File FileName="GlobalFinance/Server/Controllers/EnquiryController.cs" Line="66" Column="42" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardInventory.razor.css" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardInventory.razor" Line="32" Column="29" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardNewCars.razor" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor" Line="109" Column="6" />
+      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/AuthenticationRedirect.razor" Line="23" Column="32" />
+      <File FileName="GlobalFinance/Server/Controllers/ConfiguratorController.cs" Line="22" Column="9" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Services/CustomerService.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -84,7 +108,9 @@
             </Node>
             <Node name="GlobalFinance.Server" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="AppDataContext.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="GlobalFinance.Shared" expanded="True">
               <Node name="Models" expanded="True" />
@@ -94,10 +120,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

@@ -1,0 +1,45 @@
+﻿
+@inject IInventoryService InventoryService
+@inject ICarService CarService
+
+<div class="heading">
+    <h3>Edit Inventory</h3>
+</div>
+
+<div class="car-edit-form">
+    <EditForm Model="Car" OnValidSubmit="HandleCarUpdate">
+        <DataAnnotationsValidator />
+        <div class="car-form-inner">
+            <div class="car-form-section" id="car-make">
+                <InputText @bind-Value="Car.CarMakeName"></InputText>
+            </div>
+            <div class="car-form-section" id="car-model">
+                <InputText @bind-Value="Car.CarModelName"></InputText>
+            </div>
+            <div class="car-form-section" id="finance-price">
+                <InputNumber @bind-Value="Car.CarStartingPrice"></InputNumber>
+            </div>
+            <div class="car-form-section" id="outright-price">
+                <InputNumber @bind-Value="Car.CarOutrightStartingPrice"></InputNumber>
+            </div>
+            <div class="inventory-form-section" id="submit">
+                <button type="submit">Update</button>
+            </div>
+        </div>
+
+    </EditForm>
+</div>
+
+
+
+@code {
+    [Parameter]
+    public CarModel Car { get; set; }
+
+    private async void HandleCarUpdate()
+    {
+
+        await CarService.Update(Car);
+    }
+}
+

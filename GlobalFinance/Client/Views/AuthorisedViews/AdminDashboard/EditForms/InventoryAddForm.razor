@@ -1,0 +1,109 @@
+﻿
+@inject IInventoryService InventoryService
+@inject ICarService CarService
+
+<div class="heading">
+    <h3>Edit Inventory</h3>
+</div>
+
+@if (Inventory.Customisation != null)
+{
+    <div class="inventory-edit-form">
+        <EditForm Model="Inventory" OnValidSubmit="HandleInventoryAdd">
+            <DataAnnotationsValidator />
+            <div class="inventory-form-inner">
+
+                <div class="inventory-form-section" id="make-model">
+                    <label for="Make Model">Make Model</label>
+                    <InputSelect ValueChanged="@((int value) => SelectedCar(value))" Value="@carId" ValueExpression="@(() => carId)">
+                        @foreach (CarModel car in cars)
+                        {
+                            <option value="@car.CarId">@car.CarMakeName @car.CarModelName</option>
+                        }
+                    </InputSelect>
+                </div>
+                <div class="inventory-form-section" id="model-variant">
+                    <label for="Model Variant">Model Variant</label>
+                    <InputSelect @bind-Value="modelVariantId">
+                        @foreach (ModelVariantModel model in modelVariants)
+                        {
+                            <option value="@model.ModelVariantId">@model.Name</option>
+                        }
+                    </InputSelect>
+                </div>
+                <div class="inventory-form-section" id="mileage">
+                    <label for="Inventory Mileage">Mileage</label>
+                    <InputNumber @bind-Value="mileage"></InputNumber>
+                </div>
+                <div class="inventory-form-section" id="price">
+                    <label for="Inventory Price">Price</label>
+                    <InputNumber @bind-Value="price"></InputNumber>
+                </div>
+                <div class="inventory-form-section" id="colour">
+                    <label for="Inventory Paint">Paint</label>
+                    <InputSelect @bind-Value="paintId">
+                        @foreach (PaintModel paint in paints)
+                        {
+                            <option value="@paint.PaintId">@paint.Name</option>
+                        }
+                    </InputSelect>
+                </div>
+                <div class="inventory-form-section" id="submit">
+                    <button type="submit">Update</button>
+                </div>
+            </div>
+
+        </EditForm>
+    </div>
+}
+
+
+
+@code {
+
+    public InventoryModel Inventory { get; set; }
+
+        private List<CarModel> cars = new List<CarModel>();
+        private List<ModelVariantModel> modelVariants = new List<ModelVariantModel>();
+        private List<PaintModel> paints = new List<PaintModel>();
+
+        private CarModel selectedCar = new CarModel();
+
+
+        public int carId { get; set; }
+        public int modelVariantId { get; set; }
+        public int mileage { get; set; }
+        public int paintId { get; set; }
+        public int price { get; set; }
+
+        protected override async Task OnInitializedAsync()
+        {
+            Inventory = new InventoryModel();
+            Inventory.Customisation = new CustomisationModel();
+
+            await CarService.GetCars();
+            cars = CarService.Cars;
+        }
+
+        private async void SelectedCar(int CarId)
+        {
+            carId = CarId;
+            await CarService.GetModels(CarId);
+            await CarService.GetPaints(CarId);
+            modelVariants = CarService.ModelVariants;
+            paints = CarService.Paints;
+            StateHasChanged();
+
+        }
+
+        private async void HandleInventoryAdd()
+        {
+            Inventory.Customisation.CarId = carId;
+            Inventory.InventoryMileage = mileage;
+            Inventory.Customisation.ModelVariantId = modelVariantId;
+            Inventory.InventoryPrice = price;
+            Inventory.Customisation.PaintId = paintId;
+            await InventoryService.AddInventoryItem(Inventory);
+        }
+    }
+

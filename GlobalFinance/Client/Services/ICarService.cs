@@ -1,6 +1,6 @@
 ﻿using GlobalFinance.Shared.Models;
 
-namespace GlobalFinance.Client.ServicesInterfaces
+namespace GlobalFinance.Client.Services
 {
     public interface ICarService
     {
@@ -15,5 +15,6 @@ namespace GlobalFinance.Client.ServicesInterfaces
         Task<PaintModel> GetPaint(int id);
         Task GetPaints(int id);
         Task<CarModel> GetSingleCar(int id);
+        Task Update(CarModel car);
     }
 }

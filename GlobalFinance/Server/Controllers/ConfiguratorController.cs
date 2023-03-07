@@ -30,7 +30,14 @@ namespace GlobalFinance.Server.Controllers
         [HttpGet("{savedConfigurationId}")]
         public async Task<ActionResult<SavedConfigurationModel>> GetConfiguration(int savedConfigurationId)
         {
-            var response = await appDataContext.SavedConfigurations.Include(S => S.Car).FirstOrDefaultAsync(S => S.SavedConfigurationId == savedConfigurationId);
+            var response = await appDataContext.SavedConfigurations
+                .Include(S => S.Customisation)
+                    .ThenInclude(C => C.Car)
+                .Include(S => S.Customisation)
+                    .ThenInclude(C => C.ModelVariant)
+                .Include(S => S.Customisation)
+                    .ThenInclude(C => C.Paint)
+                .FirstOrDefaultAsync(S => S.SavedConfigurationId == savedConfigurationId);
             if (response != null)
             {
                 return Ok(response);

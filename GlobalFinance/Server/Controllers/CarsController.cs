@@ -63,6 +63,14 @@ namespace GlobalFinance.Server.Controllers
             var _paint = await appDataContext.PaintColours.FirstOrDefaultAsync(p => p.PaintId == id);
             return Ok(_paint);
         }
+
+        [HttpPost("update")]
+        public async Task<ActionResult> Update(CarModel car)
+        {
+            appDataContext.Update(car);
+            appDataContext.SaveChanges();
+            return Ok();
+        }
         
 
     }

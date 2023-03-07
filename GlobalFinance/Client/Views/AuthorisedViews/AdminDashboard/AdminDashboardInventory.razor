@@ -4,6 +4,7 @@
 
 <div class="heading">
     <h3>Inventory</h3>
+    <button @onclick="SetAdding" class="inventory-add-button">+</button>
 </div>
 
 <div class="inventory" style="@(currentlyEditing ? "pointer-events: none;" : "pointer-events: auto;")">
@@ -24,11 +25,11 @@
                 @foreach (InventoryModel inventoryItem in Inventory)
                 {
                     <tr>
-                        <td>@inventoryItem.Car.CarMakeName</td>
-                        <td>@inventoryItem.Car.CarModelName</td>
+                        <td>@inventoryItem.Customisation.Car.CarMakeName</td>
+                        <td>@inventoryItem.Customisation.Car.CarModelName</td>
                         <td>@inventoryItem.InventoryPrice</td>
-                        <td>@inventoryItem.Paint.Name</td>
-                        <td>@inventoryItem.ModelVariant.Name</td>
+                        <td>@inventoryItem.Customisation.Paint.Name</td>
+                        <td>@inventoryItem.Customisation.ModelVariant.Name</td>
                         <td>@inventoryItem.InventoryMileage</td>
                         <td><button class="edit-button" onclick="@(() => SetEditing(inventoryItem))">Edit</button></td>
                     </tr>
@@ -45,31 +46,52 @@
     <InventoryEditForm Inventory="inventoryEditing"></InventoryEditForm>
 </div>
 
+<div class="@($"edit-form {(currentlyAdding ? "visible" : "")}")">
+    <button @onclick="CloseAdding">Close</button>
+    <InventoryAddForm></InventoryAddForm>
+</div>
+
 
 @code {
-    List<InventoryModel> Inventory = new List<InventoryModel>();
+            List<InventoryModel> Inventory = new List<InventoryModel>();
     private bool currentlyEditing = false;
-    private InventoryModel inventoryEditing = new InventoryModel();
+        private bool currentlyAdding = false;
+        private InventoryModel inventoryEditing = new InventoryModel();
 
-    protected override async Task OnInitializedAsync()
+        protected override async Task OnInitializedAsync()
+        {
+
+            await InventoryService.GetInventory();
+            Inventory = InventoryService.Inventory;
+            Console.WriteLine(Inventory.ElementAt(0).Customisation.CarId);
+
+        }
+
+        private void SetAdding()
+        {
+            currentlyAdding = true;
+            StateHasChanged();
+        }
+
+        private void CloseAdding()
     {
-
-        await InventoryService.GetInventory();
-        Inventory = InventoryService.Inventory;
-
-    }
-
-    private void SetEditing(InventoryModel inventoryItem)
-    {
-        inventoryEditing = inventoryItem;
-        currentlyEditing = true;
+        currentlyAdding = false;
         StateHasChanged();
+
     }
 
-    private void CloseEditing()
-    {
-        currentlyEditing = false;
-        StateHasChanged();
-    }
+
+        private void SetEditing(InventoryModel inventoryItem)
+        {
+            inventoryEditing = inventoryItem;
+            currentlyEditing = true;
+            StateHasChanged();
+        }
+
+        private void CloseEditing()
+        {
+            currentlyEditing = false;
+            StateHasChanged();
+        }
     }
 

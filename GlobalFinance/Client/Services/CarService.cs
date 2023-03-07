@@ -76,6 +76,15 @@ namespace GlobalFinance.Client.Services
             throw new Exception("Could not find paint");
         }
 
+        public async Task Update(CarModel car)
+        {
+            var response = await httpClient.PostAsJsonAsync("cars/update", car);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Could not update car");
+            }
+        }
+
         public double GetFinancePrice(double price, int totalMonths, double initialPayment, int interestRate)
         {
             var amountToPay = price - initialPayment;
@@ -83,5 +92,7 @@ namespace GlobalFinance.Client.Services
             var monthlyPaymentWithInterest = monthlyPayment * ((interestRate * 0.1) + 1);
             return Math.Round(monthlyPaymentWithInterest, 2);
         }
+
+
     }
 }
