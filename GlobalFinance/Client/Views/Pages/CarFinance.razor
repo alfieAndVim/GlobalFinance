@@ -180,6 +180,10 @@
 
             var ConfigurationCustomisation = Configuration.Customisation;
             var CarResult = ConfigurationCustomisation.Car;
+            if (CarResult != null)
+            {
+                Car = CarResult;
+            }
             CarPrice = Configuration.ConfigurationPrice;
             CarModelVariant = await GetModel(ConfigurationCustomisation.ModelVariantId);
             CarModelVariantId = ConfigurationCustomisation.ModelVariantId;
@@ -231,7 +235,7 @@
     private void GoBack() {
         NavigationManager.NavigateTo($"/overview/{typeOverview}/{id}");
 
-        
+
     }
 
     private async void SendEnquiry() {

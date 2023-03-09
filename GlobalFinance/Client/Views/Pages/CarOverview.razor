@@ -111,6 +111,7 @@
             Inventory = await InventoryService.GetSingleInventoryItem(id);
 
             Inventory.InventoryId = id;
+            
 
             var carResult = Inventory.Customisation.Car;
             var InventoryCustomisation = Inventory.Customisation;

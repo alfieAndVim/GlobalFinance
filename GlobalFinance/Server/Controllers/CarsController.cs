@@ -16,10 +16,13 @@ namespace GlobalFinance.Server.Controllers
             this.appDataContext = appDataContext;
         }
 
+        //Defines an Http Get method in the controller with the route name "list"
         [HttpGet("list")]
         public async Task<ActionResult<List<CarModel>>> List()
         {
-            var _cars = await appDataContext.Cars.ToListAsync();
+            //Connects to a database context to provide a list of cars asynchronously
+            var _cars = await appDataContext.Cars!.ToListAsync();
+            //Returns an action result of type Ok with the list of cars
             return Ok(_cars);
         }
 
