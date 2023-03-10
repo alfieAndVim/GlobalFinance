@@ -1,0 +1,28 @@
+﻿@inject IJSRuntime JS
+
+<h3>Component1</h3>
+
+@foreach (FinanceDocumentModel file in Documents)
+    {
+        <button @onclick="@(() => DownloadFileFromStream(file: file))">@file.StoredFileName</button>
+    }
+
+@code {
+    [Parameter]
+    public List<FinanceDocumentModel> Documents { get; set; }
+
+    private Stream GetFileStream(FinanceDocumentModel file)
+    {
+        var fileStream = new MemoryStream(file.FileContent);
+        return fileStream;
+    }
+
+    private async Task DownloadFileFromStream(FinanceDocumentModel file)
+    {
+        var fileStream = GetFileStream(file);
+        var fileName = file.FileName;
+        using var streamRef = new DotNetStreamReference(stream: fileStream);
+        await JS.InvokeVoidAsync("downloadFileFromStream", fileName, streamRef);
+    }
+    }
+

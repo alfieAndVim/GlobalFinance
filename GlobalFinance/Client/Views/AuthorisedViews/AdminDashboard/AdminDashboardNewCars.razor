@@ -1,0 +1,97 @@
+﻿@inject ICarService CarService
+
+@using GlobalFinance.Client.Views.AuthorisedViews.AdminDashboard.EditForms
+
+<div class="heading">
+    <h3>New Cars</h3>
+</div>
+
+<div class="cars" style="@(currentlyEditing ? "pointer-events: none;" : "pointer-events: auto;")">
+    <div class="scrollable-table">
+        <table>
+            <thead class="customers-header">
+                <tr>
+                    <th>Car Make</th>
+                    <th>Car Model</th>
+                    <th>Finance Price</th>
+                    <th>Starting Price</th>
+                    <th>Model Variants</th>
+                    <th>Paint Colours</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="customers-body">
+                @foreach (Data car in data)
+                {
+                    <tr>
+                        <td>@car.Car.CarMakeName</td>
+                        <td>@car.Car.CarModelName</td>
+                        <td>@car.Car.CarStartingPrice</td>
+                        <td>@car.Car.CarOutrightStartingPrice</td>
+                        <td>@car.ModelVariants.Count()</td>
+                        <td>@car.Paints.Count()</td>
+                        <td><button class="edit-button" onclick="@(() => SetEditing(car.Car))">Edit</button></td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<div class="@($"edit-form {(currentlyEditing ? "visible" : "")}")">
+    <button @onclick="CloseEditing">Close</button>
+    <NewCarEditForm Car="carEditing"></NewCarEditForm>
+</div>
+
+
+@code {
+    List<CarModel> cars = new List<CarModel>();
+    List<Data> data = new List<Data>();
+
+    private bool currentlyEditing = false;
+    private CarModel carEditing = new CarModel();
+
+    private class Data {
+
+        public CarModel Car { get; set; }
+        public List<PaintModel> Paints { get; set; }
+        public List<ModelVariantModel> ModelVariants { get; set; }
+
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CarService.GetCars();
+        cars = CarService.Cars;
+
+        foreach (CarModel car in cars)
+        {
+            Data singleData = new Data();
+            singleData.Car = car;
+
+            await CarService.GetPaints(car.CarId);
+            await CarService.GetModels(car.CarId);
+
+            singleData.ModelVariants = CarService.ModelVariants;
+            singleData.Paints = CarService.Paints;
+
+            data.Add(singleData);
+        }
+    }
+
+    private void SetEditing(CarModel car)
+    {
+        carEditing = car;
+        currentlyEditing = true;
+        StateHasChanged();
+    }
+
+    private void CloseEditing()
+    {
+        currentlyEditing = false;
+        StateHasChanged();
+    }
+    }
+

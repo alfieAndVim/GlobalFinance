@@ -1,0 +1,79 @@
+﻿@inject ICustomerService CustomerService
+
+<div class="heading">
+    <h3>Edit Customer</h3>
+</div>
+
+<div class="customer-edit-form">
+    <EditForm style="height: inherit; min-height:inherit;" Model="customer" OnValidSubmit="HandleCustomerUpdate">
+        <DataAnnotationsValidator />
+        <div class="customer-form-inner">
+            <div class="customer-form-section" id="name">
+                <div id="first-name">
+                    <label class="customer-form-label" for="First Name">First Name</label>
+                    <InputText class="customer-form-input" @bind-Value="customer.FirstName"></InputText>
+                    <ValidationMessage For="@(() => customer.FirstName)" />
+                </div>
+                <div id="last-name">
+                    <label class="customer-form-label" for="Last Name">Last Name</label>
+                    <InputText class="customer-form-input" @bind-Value="customer.LastName"></InputText>
+                    <ValidationMessage For="@(() => customer.LastName)" />
+                </div>
+
+
+            </div>
+
+            <div class="customer-form-section" id="address-first-line">
+                <label class="customer-form-label" for="Address First Line">Address Line 1</label>
+                <InputText class="customer-form-input" @bind-Value="customer.AddressFirstLine"></InputText>
+                <ValidationMessage For="@(() => customer.AddressFirstLine)" />
+            </div>
+
+            <div class="customer-form-section" id="address-second-line">
+                <label class="customer-form-label" for="Address Second Line">Address Line 2</label>
+                <InputText class="customer-form-input" @bind-Value="customer.AddressSecondLine"></InputText>
+            </div>
+
+            <div class="customer-form-section" id-="address-third-line">
+                <label class="customer-form-label" for="Address Third Line">Address Line 3</label>
+                <InputText class="customer-form-input" @bind-Value="customer.AddressThirdLine"></InputText>
+            </div>
+
+            <div class="customer-form-section" id="postcode">
+                <label class="customer-form-label" for="Postcode">Postcode</label>
+                <InputText class="customer-form-input" @bind-Value="customer.AddressPostcode"></InputText>
+                <ValidationMessage For="@(() => customer.AddressPostcode)" />
+            </div>
+
+            <div class="customer-form-section" id="contact-number">
+                <label class="customer-form-label" for="Contact Number">Contact Number</label>
+                <InputText class="customer-form-input" @bind-Value="customer.ContactNumber"></InputText>
+                <ValidationMessage For="@(() => customer.ContactNumber)" />
+            </div>
+
+            <div class="customer-form-section" id="email">
+                <label class="customer-form-label" for="Email">Contact Email</label>
+                <InputText class="customer-form-input" @bind-Value="customer.ContactEmail"></InputText>
+                <ValidationMessage For="@(() => customer.ContactEmail)" />
+            </div>
+
+            <div class="customer-form-section">
+                <button type="submit" class="customer-form-button">Update</button>
+
+            </div>
+        </div>
+    </EditForm>
+</div>
+
+
+@code {
+    [Parameter]
+    public CustomerModel customer { get; set; }
+
+
+    private async void HandleCustomerUpdate() {
+
+        await CustomerService.UpdateCustomer(customer);
+    }
+    }
+

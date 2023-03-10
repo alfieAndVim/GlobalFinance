@@ -9,16 +9,11 @@ namespace GlobalFinance.Shared.Models
 		public int SavedConfigurationId { get; set; }
 		[Required]
 		public int ConfigurationPrice { get; set; }
-		[Required]
-		public int PaintId { get; set; }
-		[Required]
-		public int ModelVariantId { get; set; }
-		[Required]
-		public int CarId { get; set; }
+		[Required, ForeignKey("Customisation")]
+		public int CustomisationId { get; set; }
 
-		public PaintModel? Paint { get; set; }
-		public ModelVariantModel? ModelVariant { get; set; }
-		public CarModel? Car { get; set; }
+		public CustomisationModel? Customisation { get; set; }
+
 
 	}
 }

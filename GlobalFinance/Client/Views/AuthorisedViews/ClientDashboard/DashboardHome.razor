@@ -91,12 +91,12 @@
             if (enquiry.InventoryId != null)
             {
                 InventoryModel inventory = await InventoryService.GetSingleInventoryItem(enquiry.InventoryId.Value);
-                car = inventory.Car;
+                car = inventory.Customisation.Car;
             }
             else if (enquiry.SavedConfigurationId != null)
             {
                 SavedConfigurationModel savedConfiguration = await ConfirguratorService.GetConfiguration(enquiry.SavedConfigurationId.Value);
-                car = savedConfiguration.Car;
+                car = savedConfiguration.Customisation.Car;
             }
 
             data.CarMakeName = car.CarMakeName;

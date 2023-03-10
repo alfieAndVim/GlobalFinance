@@ -1,17 +1,48 @@
-﻿<Properties StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https" GitUserInfo="UsingGIT">
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https">
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Server/Controllers/CustomerController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Server/Data/AppDataContext.cs">
     <Files>
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor.css" Line="10" Column="20" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardHome.razor.css" Line="42" Column="19" />
-      <File FileName="GlobalFinance/Client/Views/Shared/Components/Buttons/GenericNavButtonComponent.razor.css" Line="3" Column="5" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor" Line="99" Column="46" NotebookId="1" />
-      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardHome.razor" Line="15" Column="147" NotebookId="1" />
-      <File FileName="GlobalFinance/Client/Services/CustomerService.cs" Line="44" Column="10" NotebookId="1" />
-      <File FileName="GlobalFinance/Server/Controllers/CustomerController.cs" Line="56" Column="37" NotebookId="1" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardEnquiries.razor.css" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/EnquiryEditForm.razor.css" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/EnquiryEditForm.razor" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/CustomerEditForm.razor.css" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/CustomerEditForm.razor" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/InventoryEditForm.razor" />
+      <File FileName="GlobalFinance/Server/Controllers/InventoryController.cs" Line="84" Column="42" />
+      <File FileName="GlobalFinance/Client/Services/InventoryService.cs" />
+      <File FileName="GlobalFinance/Server/Data/AppDataContext.cs" Line="9" Column="6" />
+      <File FileName="GlobalFinance/Server/Program.cs" />
+      <File FileName="GlobalFinance/Client/Views/Pages/InventoryPage.razor" />
+      <File FileName="GlobalFinance/Client/Views/Components/InventoryOptionComponent.razor" />
+      <File FileName="GlobalFinance/Client/Views/Pages/CarOverview.razor" />
+      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/RegisterCustomer.razor" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/SendEnquiry.razor" />
+      <File FileName="GlobalFinance/Client/Program.cs" />
+      <File FileName="GlobalFinance/Shared/Models/SavedConfigurationModel.cs" />
+      <File FileName="GlobalFinance/Shared/Models/InventoryModel.cs" />
+      <File FileName="GlobalFinance/Client/Views/Pages/CarFinance.razor" />
+      <File FileName="GlobalFinance/Server/Controllers/CustomisationController.cs" />
+      <File FileName="GlobalFinance/Client/Services/CustomisationService.cs" />
+      <File FileName="GlobalFinance/Server/Controllers/EnquiryController.cs" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardInventory.razor.css" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardInventory.razor" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardNewCars.razor" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor" />
+      <File FileName="GlobalFinance/Client/Views/Pages/Authentication/AuthenticationRedirect.razor" />
+      <File FileName="GlobalFinance/Server/Controllers/CustomerController.cs" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Shared/Models/CustomisationModel.cs" />
+      <File FileName="GlobalFinance/Server/Controllers/CarsController.cs" Line="70" Column="40" />
+      <File FileName="GlobalFinance/Client/Services/CarService.cs" Line="63" Column="32" />
+      <File FileName="GlobalFinance/Client/Services/ICarService.cs" Line="20" Column="2" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/NewCarEditForm.razor" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/InventoryAddForm.razor" />
+      <File FileName="GlobalFinance/Server/Controllers/AuthController.cs" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Shared/Models/UserDto.cs" Line="12" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardAdmin.razor" Line="1" Column="1" />
+      <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardCustomers.razor" Line="63" Column="42" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,11 +56,20 @@
               <Node name="Views" expanded="True">
                 <Node name="AuthorisedViews" expanded="True">
                   <Node name="AdminDashboard" expanded="True">
+                    <Node name="EditForms" expanded="True">
+                      <Node name="CustomerEditForm.razor" expanded="True" />
+                      <Node name="EnquiryEditForm.razor" expanded="True" />
+                    </Node>
+                    <Node name="AdminDashboardCustomers.razor" expanded="True" />
+                    <Node name="AdminDashboardEnquiries.razor" expanded="True" />
                     <Node name="AdminDashboardHome.razor" expanded="True" />
+                    <Node name="AdminDashboardInventory.razor" expanded="True" />
+                    <Node name="AdminDashboardNewCars.razor" expanded="True" />
                   </Node>
                   <Node name="ClientDashboard" expanded="True">
                     <Node name="DashboardHome.razor" expanded="True" />
                   </Node>
+                  <Node name="EnquiryConfirmationPage.razor" expanded="True" />
                   <Node name="SendEnquiry.razor" expanded="True" />
                 </Node>
                 <Node name="Components" expanded="True">
@@ -70,10 +110,10 @@
               </Node>
             </Node>
             <Node name="GlobalFinance.Server" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="CustomerController.cs" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="AppDataContext.cs" selected="True" />
               </Node>
-              <Node name="Data" expanded="True" />
             </Node>
             <Node name="GlobalFinance.Shared" expanded="True">
               <Node name="Models" expanded="True" />
@@ -83,7 +123,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

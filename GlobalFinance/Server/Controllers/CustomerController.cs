@@ -56,6 +56,14 @@ namespace GlobalFinance.Server.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpPost("update")]
+        public ActionResult<int> UpdateInformation(CustomerModel customer)
+        {
+            appDataContext.Customers.Update(customer);
+            appDataContext.SaveChanges();
+            return Ok(customer.CustomerId);
+        }
         
     }
 }

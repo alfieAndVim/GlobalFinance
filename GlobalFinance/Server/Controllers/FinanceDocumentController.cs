@@ -5,7 +5,7 @@ using System.Net;
 using System.Threading.Tasks;
 using GlobalFinance.Server.Data;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace GlobalFinance.Server.Controllers
 {
@@ -44,7 +44,7 @@ namespace GlobalFinance.Server.Controllers
                 databaseDocument.StoredFileName = trustedFileNameForFileStorage;
                 databaseDocument.ContentType = f.ContentType;
                 databaseDocument.FileContent = Convert.FromBase64String(f.Base64FileContent);
-                databaseDocument.FinanceId = 1;
+                databaseDocument.FinanceId = f.FinanceId;
 
                 appDataContext.Add(databaseDocument);
                 appDataContext.SaveChanges();
@@ -52,6 +52,34 @@ namespace GlobalFinance.Server.Controllers
 
             return Ok(uploadedFiles);
 
+        }
+
+        [HttpGet("{finance_id}")]
+        public async Task<ActionResult<List<FinanceDocumentDto>>> GetFiles(int finance_id)
+        {
+            List<FinanceDocumentDto> files = new List<FinanceDocumentDto>();
+            List<FinanceDocumentModel> storedFiles = new List<FinanceDocumentModel>();
+
+            var response = await appDataContext.FinanceDocuments.Where(F => F.FinanceId == finance_id).ToListAsync();
+
+            foreach (FinanceDocumentModel file in response)
+            {
+                FinanceDocumentDto transferableFile = new FinanceDocumentDto();
+
+                transferableFile.FileName = file.StoredFileName;
+                transferableFile.UntrustedFileName = file.FileName;
+                transferableFile.Base64FileContent = Convert.ToBase64String(file.FileContent);
+                transferableFile.ContentType = file.ContentType;
+                transferableFile.FinanceId = file.FinanceId;
+                files.Add(transferableFile);
+            }
+
+            if (files != null)
+            {
+                return Ok(files);
+            } else {
+                return BadRequest();
+            }
         }
     }
 }

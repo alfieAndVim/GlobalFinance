@@ -63,7 +63,7 @@
             </div>
 
             <div class="customer-form-section">
-                <button type="submit" class="customer-form-button" @onclick="HandleUserRegistration">Next</button>
+                <button type="submit" class="customer-form-button">Next</button>
                 
             </div>
         </div>
@@ -81,7 +81,7 @@
 
         Console.WriteLine(customer.ContactEmail);
         CustomerService.customer = customer;
-        var result = await CustomerService.AddCustomer(customer);
+        int result = await CustomerService.AddCustomer(customer);
         if(result == -1)
         {
             Console.WriteLine("There has been an error");

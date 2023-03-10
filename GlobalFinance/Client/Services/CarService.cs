@@ -18,15 +18,20 @@ namespace GlobalFinance.Client.Services
         public List<ModelVariantModel> ModelVariants { get; set; } = new List<ModelVariantModel>();
         public List<PaintModel> Paints { get; set; } = new List<PaintModel>();
 
+        //Method to perform a HTTP request to the Car Controller
         public async Task GetCars()
         {
+            //Gets result through the httpClient module as a list of CarModel
             var result = await httpClient.GetFromJsonAsync<List<CarModel>>("cars/list");
             if (result != null)
             {
+                //Return the list if the result was not null
                 Cars = result;
             }
 
         }
+
+
 
         public async Task<CarModel> GetSingleCar(int id)
         {
@@ -76,6 +81,15 @@ namespace GlobalFinance.Client.Services
             throw new Exception("Could not find paint");
         }
 
+        public async Task Update(CarModel car)
+        {
+            var response = await httpClient.PostAsJsonAsync("cars/update", car);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Could not update car");
+            }
+        }
+
         public double GetFinancePrice(double price, int totalMonths, double initialPayment, int interestRate)
         {
             var amountToPay = price - initialPayment;
@@ -83,5 +97,7 @@ namespace GlobalFinance.Client.Services
             var monthlyPaymentWithInterest = monthlyPayment * ((interestRate * 0.1) + 1);
             return Math.Round(monthlyPaymentWithInterest, 2);
         }
+
+
     }
 }

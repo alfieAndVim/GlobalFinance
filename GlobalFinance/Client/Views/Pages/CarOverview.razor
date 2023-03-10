@@ -109,18 +109,22 @@
         if (typeOverview == 0)
         {
             Inventory = await InventoryService.GetSingleInventoryItem(id);
-            Inventory.InventoryId = id;
 
-            var carResult = await CarService.GetSingleCar(Inventory.CarId);
+            Inventory.InventoryId = id;
+            
+
+            var carResult = Inventory.Customisation.Car;
+            var InventoryCustomisation = Inventory.Customisation;
+
             if (carResult != null)
             {
                 Car = carResult;
             }
             CarPrice = Inventory.InventoryPrice;
-            CarModelVariant = await GetModel(Inventory.ModelVariantId);
-            CarModelVariantId = Inventory.ModelVariantId;
-            CarPaint = await GetPaint(Inventory.PaintId);
-            CarPaintId = Inventory.PaintId;
+            CarModelVariant = await GetModel(Inventory.Customisation.ModelVariantId);
+            CarModelVariantId = InventoryCustomisation.ModelVariantId;
+            CarPaint = await GetPaint(Inventory.Customisation.PaintId);
+            CarPaintId = InventoryCustomisation.PaintId;
 
             CarMileage = Inventory.InventoryMileage;
         }
@@ -177,16 +181,15 @@
     {
         if (typeOverview == 0)
         {
-            InventoryService.InventoryCar = new InventoryModel { InventoryId = id, ModelVariantId = CarModelVariantId, PaintId = CarPaintId, CarId = Car.CarId, InventoryMileage = CarMileage!.Value, InventoryPrice = CarPrice };
+            InventoryService.InventoryCar = new InventoryModel { InventoryId = id, Customisation = new CustomisationModel { CarId = Car.CarId, ModelVariantId = CarModelVariantId, PaintId = CarPaintId, Car = Car}, InventoryMileage = CarMileage!.Value, InventoryPrice = CarPrice };
             NavigationManager.NavigateTo("/finance/0");
         }
         else
         {
-            ConfiguratorService.SavedConfiguration = new SavedConfigurationModel { ModelVariantId = CarModelVariantId, PaintId = CarPaintId, CarId = Car.CarId, ConfigurationPrice = CarPrice };
+            ConfiguratorService.SavedConfiguration = new SavedConfigurationModel { Customisation = new CustomisationModel { CarId = Car.CarId, ModelVariantId = CarModelVariantId, PaintId = CarPaintId, Car = Car}, ConfigurationPrice = CarPrice };
             NavigationManager.NavigateTo("/finance/1");
         }
 
-        Console.WriteLine(ConfiguratorService.SavedConfiguration.ModelVariantId);
     }
 
     private void SetSelection(int choice)

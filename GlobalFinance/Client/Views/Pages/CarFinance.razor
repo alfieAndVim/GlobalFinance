@@ -158,16 +158,17 @@
         {
             Inventory = InventoryService.InventoryCar;
 
-            var carResult = await CarService.GetSingleCar(Inventory.CarId);
+            var InventoryCustomisation = Inventory.Customisation;
+            var carResult = InventoryCustomisation.Car;
             if (carResult != null)
             {
                 Car = carResult;
             }
             CarPrice = Inventory.InventoryPrice;
-            CarModelVariant = await GetModel(Inventory.ModelVariantId);
-            CarModelVariantId = Inventory.ModelVariantId;
-            CarPaint = await GetPaint(Inventory.PaintId);
-            CarPaintId = Inventory.PaintId;
+            CarModelVariant = await GetModel(Inventory.Customisation.ModelVariantId);
+            CarModelVariantId = InventoryCustomisation.ModelVariantId;
+            CarPaint = await GetPaint(Inventory.Customisation.PaintId);
+            CarPaintId = InventoryCustomisation.PaintId;
             CarMileage = Inventory.InventoryMileage;
 
             id = Inventory.InventoryId;
@@ -176,19 +177,18 @@
         {
 
             Configuration = ConfiguratorService.SavedConfiguration;
-            if (Configuration.CarId != null)
+
+            var ConfigurationCustomisation = Configuration.Customisation;
+            var CarResult = ConfigurationCustomisation.Car;
+            if (CarResult != null)
             {
-                var carResult = await CarService.GetSingleCar(Configuration.CarId);
-                if (carResult != null)
-                {
-                    Car = carResult;
-                }
+                Car = CarResult;
             }
             CarPrice = Configuration.ConfigurationPrice;
-            CarModelVariant = await GetModel(Configuration.ModelVariantId);
-            CarModelVariantId = Configuration.ModelVariantId;
-            CarPaint = await GetPaint(Configuration.PaintId);
-            CarPaintId = Configuration.PaintId;
+            CarModelVariant = await GetModel(ConfigurationCustomisation.ModelVariantId);
+            CarModelVariantId = ConfigurationCustomisation.ModelVariantId;
+            CarPaint = await GetPaint(ConfigurationCustomisation.PaintId);
+            CarPaintId = ConfigurationCustomisation.PaintId;
             CarFinancePrice = ConfiguratorService.GetFinanceAmount();
         }
 
@@ -234,6 +234,8 @@
 
     private void GoBack() {
         NavigationManager.NavigateTo($"/overview/{typeOverview}/{id}");
+
+
     }
 
     private async void SendEnquiry() {

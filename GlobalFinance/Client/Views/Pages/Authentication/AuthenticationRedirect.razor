@@ -15,12 +15,12 @@
         inventory = InventoryService.InventoryCar;
         savedConfiguration = ConfiguratorService.SavedConfiguration;
 
-        if (inventory.ModelVariantId > 0)
+        if (inventory.Customisation != null)
         {
             NextRoute = "send_enquiry";
         }
 
-        if (savedConfiguration.ModelVariantId > 0)
+        if (savedConfiguration.Customisation != null)
         {
             NextRoute = "send_enquiry";
         }

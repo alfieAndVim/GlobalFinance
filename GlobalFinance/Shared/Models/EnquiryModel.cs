@@ -10,12 +10,14 @@ namespace GlobalFinance.Shared.Models
 		[Required]
 		public int CustomerId { get; set; }
 
+		[ForeignKey("SavedConfiguration")]
 		public int? SavedConfigurationId { get; set; } = null!;
+		[ForeignKey("InventoryModel")]
 		public int? InventoryId { get; set; } = null!;
 
 		public CustomerModel? Customer { get; set; }
 		public SavedConfigurationModel? SavedConfiguration { get; set; }
-		public InventoryModel? inventoryModel { get; set; }
+		public InventoryModel? InventoryModel { get; set; }
 	}
 }
 

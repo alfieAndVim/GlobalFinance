@@ -10,13 +10,36 @@
     <div class="console-selection">
         <button class="console-selection-button" id="@(selectedPage == 0 ? "selected-button" : "unselected-button")" @onclick="(() => ChangePage(0))">Customers</button>
         <br />
-        <button class="console-selection-button" id="@(selectedPage == 1 ? "selected-button" : "unselected-button")" @onclick="(() => ChangePage(1))">Orders</button>
+        <button class="console-selection-button" id="@(selectedPage == 1 ? "selected-button" : "unselected-button")" @onclick="(() => ChangePage(1))">Enquiries</button>
         <br />
         <button class="console-selection-button" id="@(selectedPage == 2 ? "selected-button" : "unselected-button")" @onclick="(() => ChangePage(2))">Admin</button>
+        <br />
+        <button class="console-selection-button" id="@(selectedPage == 3 ? "selected-button" : "unselected-button")" @onclick="(() => ChangePage(3))">Inventory</button>
+        <br />
+        <button class="console-selection-button" id="@(selectedPage == 4 ? "selected-button" : "unselected-button")" @onclick="(() => ChangePage(4))">New Cars</button>
     </div>
     <br />
     <div class="console">
-
+        @if (selectedPage == 0)
+            {
+                <AdminDashboardCustomers></AdminDashboardCustomers>
+            }
+            else if (selectedPage == 1)
+            {
+                <AdminDashboardEnquiries></AdminDashboardEnquiries>
+            }
+            else if (selectedPage == 2)
+            {
+                <AdminDashboardAdmin></AdminDashboardAdmin>
+            }
+            else if (selectedPage == 3)
+            {
+                <AdminDashboardInventory></AdminDashboardInventory>
+            }
+            else if (selectedPage == 4)
+            {
+                <AdminDashboardNewCars></AdminDashboardNewCars>
+            }
     </div>
 </div>
 

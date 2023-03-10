@@ -34,6 +34,29 @@ namespace GlobalFinance.Client.Services
             }
             throw new Exception("Inventory item could not be found");
         }
+
+        public async Task UpdateInventoryItem(InventoryModel inventory)
+        {
+            var response = await httpClient.PostAsJsonAsync<InventoryModel>("inventory/update", inventory);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Could not update inventory");
+            }
+        }
+
+        public async Task AddInventoryItem(InventoryModel inventory)
+        {
+            Console.WriteLine($"{inventory.Customisation.CarId} car id");
+            Console.WriteLine($"{inventory.Customisation.ModelVariantId} model variant");
+            Console.WriteLine($"{inventory.Customisation.PaintId} paint id");
+            var response = await httpClient.PostAsJsonAsync("inventory/add", inventory);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Could not add inventory");
+            }
+        }
+
+
     }
 }
 

@@ -1,6 +1,155 @@
-﻿<h3>Component1</h3>
+﻿@inject IEnquiryService EnquiryService
+@inject IFinanceService FinanceService
+@inject IFinanceDocumentService FinanceDocumentService
+
+@using GlobalFinance.Client.Views.AuthorisedViews.AdminDashboard.EditForms
+
+<div class="heading">
+    <h3>Enquiries</h3>
+</div>
+
+<div class="enquiries" style="@(currentlyEditing ? "pointer-events: none;" : "pointer-events: auto;")">
+    <div class="scrollable-table">
+        <table>
+            <thead class="customers-header">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Car Make</th>
+                    <th>Car Model</th>
+                    <th>Initial Payment</th>
+                    <th>Period</th>
+                    <th>Finance Amount</th>
+                    <th>Approval</th>
+                    <th>Files</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="customers-body">
+                @foreach (Data enquiry in data)
+                    {
+                    <tr>
+                        <td>@enquiry.FirstName</td>
+                        <td>@enquiry.LastName</td>
+                        <td>@enquiry.CarMakeName</td>
+                        <td>@enquiry.CarModelName</td>
+                        <td>@enquiry.FinanceInitialPayment</td>
+                        <td>@enquiry.FinanceMonths</td>
+                        <td>@enquiry.FinancePayment</td>
+                        <td>@enquiry.FinanceApproved</td>
+                        <td><button class="edit-button" onclick="@(() => ShowFiles(enquiry.Files))">@enquiry.FilesAttached</button></td>
+                        <td><button class="edit-button" onclick="@(() => SetEditing(enquiry.Finance))">Edit</button></td>
+                    </tr>
+                    }
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<div class="@($"edit-form {(currentlyEditing ? "visible" : "")}")">
+    <button @onclick="CloseEditing">x</button>
+    <EnquiryEditForm Finance="financeEditing"></EnquiryEditForm>
+</div>
+
+<div class="@($"file-form {(viewingFiles ? "visible" : "")}")">
+    <button @onclick="CloseFiles">Close</button>
+    <FileViewForm Documents="documentsEditing"></FileViewForm>
+</div>
+
 
 @code {
 
-}
+    List<EnquiryModel> enquiries = new List<EnquiryModel>();
+    List<Data> data = new List<Data>();
 
+    private bool currentlyEditing = false;
+    private bool viewingFiles = false;
+    private FinanceModel financeEditing = new FinanceModel();
+    private List<FinanceDocumentModel> documentsEditing = new List<FinanceDocumentModel>();
+
+    private class Data {
+
+        public FinanceModel Finance { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string CarMakeName { get; set; }
+        public string CarModelName { get; set; }
+        public double FinanceInitialPayment { get; set; }
+        public int FinanceMonths { get; set; }
+        public double FinancePayment { get; set; }
+        public string FinanceApproved { get; set; }
+        public int FilesAttached { get; set; }
+        public List<FinanceDocumentModel> Files { get; set; }
+
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        enquiries = await EnquiryService.GetAllEnquiries();
+        foreach (EnquiryModel enquiry in enquiries) {
+
+            Data singleData = new Data();
+
+            CarModel car = new CarModel();
+            FinanceModel finance = new FinanceModel();
+            List<FinanceDocumentModel> financeDocuments = new List<FinanceDocumentModel>();
+            Console.WriteLine("starting success");
+
+            if (enquiry.InventoryId != null)
+            {
+                car = enquiry.InventoryModel.Customisation.Car;
+            }
+            else if (enquiry.SavedConfiguration != null)
+            {
+                car = enquiry.SavedConfiguration.Customisation.Car;
+            }
+
+            finance = await FinanceService.GetFinance(enquiry.EnquiryId);
+            finance.Enquiry = enquiry;
+            financeDocuments = await FinanceDocumentService.DownloadDocuments(finance.FinanceId);
+
+            singleData.Finance = finance;
+            singleData.CarMakeName = car.CarMakeName;
+            singleData.CarModelName = car.CarModelName;
+            singleData.FirstName = enquiry.Customer.FirstName;
+            singleData.LastName = enquiry.Customer.LastName;
+
+            singleData.FinanceInitialPayment = finance.FinanceInitialPayment;
+            singleData.FinanceMonths = finance.FinanceMonths;
+            singleData.FinancePayment = finance.FinancePrice;
+            singleData.FinanceApproved = finance.Approval;
+
+            singleData.FilesAttached = financeDocuments.Count();
+            singleData.Files = financeDocuments;
+
+            data.Add(singleData);
+        }
+    }
+
+    private void SetEditing(FinanceModel finance)
+    {
+        financeEditing = finance;
+        currentlyEditing = true;
+        StateHasChanged();
+    }
+
+    private void CloseEditing()
+    {
+        currentlyEditing = false;
+        StateHasChanged();
+    }
+
+    private void ShowFiles(List<FinanceDocumentModel> documents){
+        documentsEditing = documents;
+        viewingFiles = true;
+        StateHasChanged();
+    }
+
+    private void CloseFiles() {
+        viewingFiles = false;
+        StateHasChanged();
+    }
+    }

@@ -1,0 +1,82 @@
+﻿body {
+}
+
+.customer-edit-form {
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.customer-form-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 30px;
+}
+
+.customer-form-label {
+    width: 100%;
+    color: black;
+    text-align: start;
+    padding-left: 20px;
+}
+
+::deep .customer-form-input {
+    display: block;
+    width: 80%;
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    height: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.customer-form-section {
+    display: block;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 20px;
+}
+
+.customer-form-button {
+    color: white;
+    width: 30%;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    transition: width 0.5s;
+    margin-top: 20px;
+}
+
+.customer-form-sub-button {
+    position: absolute;
+    right: 40%;
+    background-color: white;
+    border: none;
+    text-decoration: underline;
+    color: black;
+}
+
+.customer-form-error-message {
+    width: 100%;
+    margin: 0 auto;
+    color: red;
+}
+
+#name {
+    display: inline-flex;
+}
+
+
+
+
+
+.customer-form-button:hover {
+    width: 35%;
+}
+
+::deep *:focus {
+    outline: none;
+    outline-width: 0;
+}

@@ -40,6 +40,41 @@ namespace GlobalFinance.Server.Controllers
                 return NotFound();
             }
         }
+
+        [HttpGet("all")]
+        public async Task<ActionResult<List<EnquiryModel>>> GetAllEnquiries()
+        {
+            //var response = new List<EnquiryModel>();
+            //List<EnquiryModel> savedConfigurationEnquiries = await appDataContext.Orders.Where(E => E.SavedConfigurationId != null).Include(E => E.SavedConfiguration).Include(E => E.Customer).Include(E => E.SavedConfiguration.Car).ToListAsync();
+            //List<EnquiryModel> inventoryEnquiries = await appDataContext.Orders.Where(E => E.InventoryId != null).Include(E => E.inventoryModel).Include(E => E.Customer).Include(E => E.inventoryModel.Car).ToListAsync();
+            //savedConfigurationEnquiries.ForEach(S => response.Add(S));
+            //inventoryEnquiries.ForEach(I => response.Add(I));
+
+            var response = await appDataContext.Orders
+                .Include(O => O.SavedConfiguration).ThenInclude(S => S.Customisation)
+                    .ThenInclude(C => C.Car)
+                .Include(O => O.SavedConfiguration).ThenInclude(S => S.Customisation)
+                    .ThenInclude(C => C.ModelVariant)
+                .Include(O => O.SavedConfiguration).ThenInclude(S => S.Customisation)
+                    .ThenInclude(C => C.Paint)
+                .Include(O => O.InventoryModel).ThenInclude(I => I.Customisation)
+                    .ThenInclude(C => C.Car)
+                .Include(O => O.InventoryModel).ThenInclude(I => I.Customisation)
+                    .ThenInclude(C => C.ModelVariant)
+                .Include(O => O.InventoryModel).ThenInclude(I => I.Customisation)
+                    .ThenInclude(C => C.Paint)
+                .Include(O => O.Customer)
+                .ToListAsync(); 
+
+            if (response != null)
+            {
+                return Ok(response);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
     }
 }
 

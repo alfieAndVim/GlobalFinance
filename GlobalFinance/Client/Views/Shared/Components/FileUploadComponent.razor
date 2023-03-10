@@ -6,7 +6,12 @@
 
 @code {
 
-        private int maxAllowedFiles = 5;
+    [Parameter]
+    public List<FinanceDocumentDto> Files { get; set; }
+    [Parameter]
+    public EventCallback<List<FinanceDocumentDto>> FilesChanged { get; set; }
+
+    private int maxAllowedFiles = 5;
     private long maxFileSize = long.MaxValue;
     private List<string> fileNames = new();
 
@@ -31,8 +36,8 @@
         }
 
 
-        
-        
+        FilesChanged.InvokeAsync(files);
+
     }
 
 
