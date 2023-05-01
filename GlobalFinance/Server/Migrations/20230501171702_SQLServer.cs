@@ -7,7 +7,7 @@
 namespace GlobalFinance.Server.Migrations
 {
     /// <inheritdoc />
-    public partial class AddInventory : Migration
+    public partial class SQLServer : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,12 +16,12 @@ namespace GlobalFinance.Server.Migrations
                 name: "Cars",
                 columns: table => new
                 {
-                    CarId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    CarMakeName = table.Column<string>(type: "TEXT", nullable: false),
-                    CarModelName = table.Column<string>(type: "TEXT", nullable: false),
-                    CarStartingPrice = table.Column<int>(type: "INTEGER", nullable: false),
-                    CarOutrightStartingPrice = table.Column<int>(type: "INTEGER", nullable: false)
+                    CarId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CarMakeName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CarModelName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CarStartingPrice = table.Column<int>(type: "int", nullable: false),
+                    CarOutrightStartingPrice = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -32,16 +32,16 @@ namespace GlobalFinance.Server.Migrations
                 name: "Customers",
                 columns: table => new
                 {
-                    CustomerId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    FirstName = table.Column<string>(type: "TEXT", nullable: false),
-                    LastName = table.Column<string>(type: "TEXT", nullable: false),
-                    AddressFirstLine = table.Column<string>(type: "TEXT", nullable: false),
-                    AddressSecondLine = table.Column<string>(type: "TEXT", nullable: false),
-                    AddressThirdLine = table.Column<string>(type: "TEXT", nullable: false),
-                    AddressPostcode = table.Column<string>(type: "TEXT", nullable: false),
-                    ContactNumber = table.Column<string>(type: "TEXT", nullable: false),
-                    ContactEmail = table.Column<string>(type: "TEXT", nullable: false)
+                    CustomerId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AddressFirstLine = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AddressSecondLine = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AddressThirdLine = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AddressPostcode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ContactNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ContactEmail = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -52,11 +52,11 @@ namespace GlobalFinance.Server.Migrations
                 name: "ModelVariants",
                 columns: table => new
                 {
-                    ModelVariantId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
-                    PriceIncrease = table.Column<int>(type: "INTEGER", nullable: false),
-                    CarId = table.Column<int>(type: "INTEGER", nullable: false)
+                    ModelVariantId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PriceIncrease = table.Column<int>(type: "int", nullable: false),
+                    CarId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -73,11 +73,11 @@ namespace GlobalFinance.Server.Migrations
                 name: "Offers",
                 columns: table => new
                 {
-                    OfferId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    OfferPrice = table.Column<int>(type: "INTEGER", nullable: false),
-                    OfferExpiry = table.Column<string>(type: "TEXT", nullable: false),
-                    CarId = table.Column<int>(type: "INTEGER", nullable: false)
+                    OfferId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OfferPrice = table.Column<int>(type: "int", nullable: false),
+                    OfferExpiry = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CarId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -94,11 +94,11 @@ namespace GlobalFinance.Server.Migrations
                 name: "PaintColours",
                 columns: table => new
                 {
-                    PaintId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
-                    PriceIncrease = table.Column<int>(type: "INTEGER", nullable: false),
-                    CarId = table.Column<int>(type: "INTEGER", nullable: false)
+                    PaintId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PriceIncrease = table.Column<int>(type: "int", nullable: false),
+                    CarId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -115,12 +115,12 @@ namespace GlobalFinance.Server.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Email = table.Column<string>(type: "TEXT", nullable: false),
-                    PasswordHash = table.Column<string>(type: "TEXT", nullable: false),
-                    Role = table.Column<string>(type: "TEXT", nullable: false),
-                    CustomerId = table.Column<int>(type: "INTEGER", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CustomerId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -137,11 +137,11 @@ namespace GlobalFinance.Server.Migrations
                 name: "Customisations",
                 columns: table => new
                 {
-                    CustomisationId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    CarId = table.Column<int>(type: "INTEGER", nullable: false),
-                    ModelVariantId = table.Column<int>(type: "INTEGER", nullable: false),
-                    PaintId = table.Column<int>(type: "INTEGER", nullable: false)
+                    CustomisationId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CarId = table.Column<int>(type: "int", nullable: false),
+                    ModelVariantId = table.Column<int>(type: "int", nullable: false),
+                    PaintId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -156,25 +156,23 @@ namespace GlobalFinance.Server.Migrations
                         name: "FK_Customisations_ModelVariants_ModelVariantId",
                         column: x => x.ModelVariantId,
                         principalTable: "ModelVariants",
-                        principalColumn: "ModelVariantId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ModelVariantId");
                     table.ForeignKey(
                         name: "FK_Customisations_PaintColours_PaintId",
                         column: x => x.PaintId,
                         principalTable: "PaintColours",
-                        principalColumn: "PaintId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "PaintId");
                 });
 
             migrationBuilder.CreateTable(
                 name: "Inventory",
                 columns: table => new
                 {
-                    InventoryId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    InventoryMileage = table.Column<int>(type: "INTEGER", nullable: false),
-                    InventoryPrice = table.Column<int>(type: "INTEGER", nullable: false),
-                    CustomisationId = table.Column<int>(type: "INTEGER", nullable: false)
+                    InventoryId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    InventoryMileage = table.Column<int>(type: "int", nullable: false),
+                    InventoryPrice = table.Column<int>(type: "int", nullable: false),
+                    CustomisationId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -191,10 +189,10 @@ namespace GlobalFinance.Server.Migrations
                 name: "SavedConfigurations",
                 columns: table => new
                 {
-                    SavedConfigurationId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    ConfigurationPrice = table.Column<int>(type: "INTEGER", nullable: false),
-                    CustomisationId = table.Column<int>(type: "INTEGER", nullable: false)
+                    SavedConfigurationId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ConfigurationPrice = table.Column<int>(type: "int", nullable: false),
+                    CustomisationId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -211,11 +209,11 @@ namespace GlobalFinance.Server.Migrations
                 name: "Orders",
                 columns: table => new
                 {
-                    EnquiryId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    CustomerId = table.Column<int>(type: "INTEGER", nullable: false),
-                    SavedConfigurationId = table.Column<int>(type: "INTEGER", nullable: true),
-                    InventoryId = table.Column<int>(type: "INTEGER", nullable: true)
+                    EnquiryId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CustomerId = table.Column<int>(type: "int", nullable: false),
+                    SavedConfigurationId = table.Column<int>(type: "int", nullable: true),
+                    InventoryId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -242,15 +240,15 @@ namespace GlobalFinance.Server.Migrations
                 name: "Finances",
                 columns: table => new
                 {
-                    FinanceId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    FinancePrice = table.Column<double>(type: "REAL", nullable: false),
-                    FinanceInterestRate = table.Column<double>(type: "REAL", nullable: false),
-                    FinanceMonths = table.Column<int>(type: "INTEGER", nullable: false),
-                    FinanceInitialPayment = table.Column<double>(type: "REAL", nullable: false),
-                    FinanceTotalCost = table.Column<double>(type: "REAL", nullable: false),
-                    Approval = table.Column<string>(type: "TEXT", nullable: false),
-                    EnquiryId = table.Column<int>(type: "INTEGER", nullable: false)
+                    FinanceId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FinancePrice = table.Column<double>(type: "float", nullable: false),
+                    FinanceInterestRate = table.Column<double>(type: "float", nullable: false),
+                    FinanceMonths = table.Column<int>(type: "int", nullable: false),
+                    FinanceInitialPayment = table.Column<double>(type: "float", nullable: false),
+                    FinanceTotalCost = table.Column<double>(type: "float", nullable: false),
+                    Approval = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EnquiryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -267,13 +265,13 @@ namespace GlobalFinance.Server.Migrations
                 name: "FinanceDocuments",
                 columns: table => new
                 {
-                    FileId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    FileName = table.Column<string>(type: "TEXT", nullable: false),
-                    StoredFileName = table.Column<string>(type: "TEXT", nullable: true),
-                    FileContent = table.Column<byte[]>(type: "BLOB", nullable: true),
-                    ContentType = table.Column<string>(type: "TEXT", nullable: false),
-                    FinanceId = table.Column<int>(type: "INTEGER", nullable: false)
+                    FileId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FileName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StoredFileName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FileContent = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    ContentType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FinanceId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

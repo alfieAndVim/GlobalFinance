@@ -34,15 +34,26 @@ namespace GlobalFinance.Server.Data
             modelBuilder.Entity<SavedConfigurationModel>();
             modelBuilder.Entity<FinanceModel>();
             modelBuilder.Entity<FinanceDocumentModel>();
-            modelBuilder.Entity<CustomisationModel>().HasData(
-                new CustomisationModel { CustomisationId = 1, ModelVariantId = 1, PaintId = 1, CarId = 1},
-                new CustomisationModel { CustomisationId = 2, ModelVariantId = 1, PaintId = 1, CarId = 2}
+            modelBuilder.Entity<CustomisationModel>()
+                .HasData(
+                new CustomisationModel { CustomisationId = 1, ModelVariantId = 1, PaintId = 1, CarId = 1 },
+                new CustomisationModel { CustomisationId = 2, ModelVariantId = 1, PaintId = 1, CarId = 2 }
                 );
             modelBuilder.Entity<InventoryModel>().HasData(
 
                 new InventoryModel { InventoryId = 1, InventoryPrice = 12000, InventoryMileage = 12000, CustomisationId = 1 },
                 new InventoryModel { InventoryId = 2, InventoryPrice = 12000, InventoryMileage = 12000, CustomisationId = 2 }
                 );
+
+            modelBuilder.Entity<CustomisationModel>()
+                .HasOne(C => C.ModelVariant)
+                .WithMany()
+                .OnDelete(DeleteBehavior.ClientNoAction);
+
+            modelBuilder.Entity<CustomisationModel>()
+                .HasOne(C => C.Paint)
+                .WithMany()
+                .OnDelete(DeleteBehavior.ClientNoAction);
         }
 
         public DbSet<CarModel>? Cars { get; set; }

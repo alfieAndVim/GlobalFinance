@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TjJac6wAr1vA42fvNtdda2FdaJ7LVf9PzwgNI3Txu1o=",
+  "Hash": "s7Ej3eob5FnvaM7W9SllielUoRqVxd/1m22YLeJJK0Y=",
   "Source": "GlobalFinance.Server",
   "BasePath": "_content/GlobalFinance.Server",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "GlobalFinance.Client",
       "GetPublishAssetsTargets": "ComputeFilesToPublish;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "BuildProjectReferences=false;ResolveAssemblyReferencesFindRelatedSatellites=true;_PublishingBlazorWasmProject=true;Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "BuildProjectReferences=false;ResolveAssemblyReferencesFindRelatedSatellites=true;_PublishingBlazorWasmProject=true",
       "AdditionalPublishPropertiesToRemove": "NoBuild;RuntimeIdentifier;WebPublishProfileFile;TargetFramework",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
     }
   ],
@@ -29,10 +29,10 @@
   ],
   "Assets": [
     {
-      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/background.png",
+      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/background.png",
       "SourceId": "BlazorGoogleMaps",
       "SourceType": "Package",
-      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/",
+      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/",
       "BasePath": "_content/BlazorGoogleMaps",
       "RelativePath": "background.png",
       "AssetKind": "All",
@@ -43,13 +43,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/background.png"
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/background.png"
     },
     {
-      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/js/objectManager.js",
+      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/js/objectManager.js",
       "SourceId": "BlazorGoogleMaps",
       "SourceType": "Package",
-      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/",
+      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/",
       "BasePath": "_content/BlazorGoogleMaps",
       "RelativePath": "js/objectManager.js",
       "AssetKind": "All",
@@ -60,13 +60,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/js/objectManager.js"
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/js/objectManager.js"
     },
     {
-      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/m1.png",
+      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/m1.png",
       "SourceId": "BlazorGoogleMaps",
       "SourceType": "Package",
-      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/",
+      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/",
       "BasePath": "_content/BlazorGoogleMaps",
       "RelativePath": "m1.png",
       "AssetKind": "All",
@@ -77,13 +77,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/m1.png"
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/m1.png"
     },
     {
-      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/m2.png",
+      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/m2.png",
       "SourceId": "BlazorGoogleMaps",
       "SourceType": "Package",
-      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/",
+      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/",
       "BasePath": "_content/BlazorGoogleMaps",
       "RelativePath": "m2.png",
       "AssetKind": "All",
@@ -94,13 +94,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/m2.png"
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/m2.png"
     },
     {
-      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/m3.png",
+      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/m3.png",
       "SourceId": "BlazorGoogleMaps",
       "SourceType": "Package",
-      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/",
+      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/",
       "BasePath": "_content/BlazorGoogleMaps",
       "RelativePath": "m3.png",
       "AssetKind": "All",
@@ -111,13 +111,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/m3.png"
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/m3.png"
     },
     {
-      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/m4.png",
+      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/m4.png",
       "SourceId": "BlazorGoogleMaps",
       "SourceType": "Package",
-      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/",
+      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/",
       "BasePath": "_content/BlazorGoogleMaps",
       "RelativePath": "m4.png",
       "AssetKind": "All",
@@ -128,13 +128,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/m4.png"
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/m4.png"
     },
     {
-      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/m5.png",
+      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/m5.png",
       "SourceId": "BlazorGoogleMaps",
       "SourceType": "Package",
-      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/",
+      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/",
       "BasePath": "_content/BlazorGoogleMaps",
       "RelativePath": "m5.png",
       "AssetKind": "All",
@@ -145,13 +145,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/m5.png"
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/m5.png"
     },
     {
-      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/styles.css",
+      "Identity": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/styles.css",
       "SourceId": "BlazorGoogleMaps",
       "SourceType": "Package",
-      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/",
+      "ContentRoot": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/",
       "BasePath": "_content/BlazorGoogleMaps",
       "RelativePath": "styles.css",
       "AssetKind": "All",
@@ -162,7 +162,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/2.5.5/staticwebassets/styles.css"
+      "OriginalItemSpec": "/Users/alfiedew/.nuget/packages/blazorgooglemaps/3.0.5/staticwebassets/styles.css"
     },
     {
       "Identity": "/Users/alfiedew/GlobalFinance/GlobalFinance/GlobalFinance/Client/bin/Debug/net7.0/wwwroot/_framework/blazor.boot.json",

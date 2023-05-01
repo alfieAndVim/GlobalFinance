@@ -209,14 +209,14 @@
       "mscorlib.dll": "sha256-kgowZLZGyceaJo4bHvVY1kmm1GJuawa5rPO1RCfNYWc=",
       "netstandard.dll": "sha256-2\/SuexPFW8hizUgbgPcchYHfG\/zmGzzMN6ESSyefPRQ=",
       "System.Private.CoreLib.dll": "sha256-mcywrbK0VZXiOvZ4dxU1ocaPZFplCRSIPQ\/wFikcrus=",
-      "GlobalFinance.Shared.dll": "sha256-EOo3AHr7X3WVD2tIDb2vgyg+RNWK4dWTZsm4MbSF8EU=",
+      "GlobalFinance.Shared.dll": "sha256-F2lRmovrRh5vuYa4vMWa226Uq0Ea6ESmHaDOgCfOoZ4=",
       "GlobalFinance.Client.dll": "sha256-DVfBbeJaRILPS\/6fjQMk1Rhk6eXY+nRJT3667msQmrw="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "GlobalFinance.Shared.pdb": "sha256-RIm7TsW1jq\/Xqyt0Iecox4pWD98M\/G+gVtNMk79Yi08=",
+      "GlobalFinance.Shared.pdb": "sha256-RugDDyU5IV5nxM25YGVZLg\/RKWFTr+EXwtIvN4AvPks=",
       "GlobalFinance.Client.pdb": "sha256-kzNYwz71I2KtYjKlXpdZaXFZSqzEV6JTVCBH\/9LOhxE="
     },
     "runtime": {
