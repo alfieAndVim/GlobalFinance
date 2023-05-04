@@ -10,8 +10,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+IConfigurationRoot configuration = new ConfigurationBuilder()
+    .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+    .AddJsonFile("appsettings.json")
+    .Build();
+
 builder.Services.AddDbContext<AppDataContext>(options => {
-    options.UseSqlite("Filename=appdata.db");
+    //options.UseSqlite("Filename=appdata.db");
+    options.UseSqlServer(configuration.GetConnectionString("AzureSQLDatabase"));
     
 
     });
