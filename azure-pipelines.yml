@@ -31,7 +31,12 @@ stages:
       displayName: Build Server
       inputs:
         command: 'build'
-        arguments: '--configuration $(buildConfiguration) /p:DeployOnBuild=true /p:WebPublishMethod=package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)'
+        arguments: '/p:DeployOnBuild=true /p:WebPublishMethod=package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(Build.ArtifactStagingDirectory)'
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'publish'
+        publishWebProjects: true
+        arguments: '--configuration $(buildConfiguration)'
       
     - task: DotNetCoreCLI@2
       displayName: Publish Project
