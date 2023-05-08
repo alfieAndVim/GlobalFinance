@@ -1,9 +1,5 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{42AE7CC1-C1BE-4699-B4CA-9BC66FF6DEFB}|https">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Server/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GlobalFinance/Server/appsettings.json">
     <Files>
       <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardCustomers.razor" />
       <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/AdminDashboardCustomers.razor.css" />
@@ -11,7 +7,7 @@
       <File FileName="GlobalFinance/Shared/Models/InventoryModel.cs" />
       <File FileName="GlobalFinance/Server/Controllers/AuthController.cs" />
       <File FileName="GlobalFinance/Shared/Models/CarModel.cs" />
-      <File FileName="GlobalFinance/Server/Controllers/CarsController.cs" Line="76" Column="10" />
+      <File FileName="GlobalFinance/Server/Controllers/CarsController.cs" />
       <File FileName="GlobalFinance/Client/Services/CarService.cs" />
       <File FileName="GlobalFinance/Client/Services/ICarService.cs" />
       <File FileName="GlobalFinance/Client/wwwroot/index.html" />
@@ -31,8 +27,13 @@
       <File FileName="GlobalFinance/Client/Views/AuthorisedViews/ClientDashboard/DashboardHome.razor.css" />
       <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/InventoryAddForm.razor" />
       <File FileName="GlobalFinance/Client/Views/AuthorisedViews/AdminDashboard/EditForms/NewCarEditForm.razor" />
-      <File FileName="GlobalFinance/Server/Program.cs" Line="21" Column="47" />
-      <File FileName="GlobalFinance/Server/appsettings.json" Line="6" Column="22" />
+      <File FileName="GlobalFinance/Server/Program.cs" />
+      <File FileName="GlobalFinance/Server/appsettings.json" Line="17" Column="1" />
+      <File FileName="GlobalFinance/Server/Data/AppDataContext.cs" Line="48" Column="54" />
+      <File FileName="GlobalFinance/Server/Controllers/CustomisationController.cs" />
+      <File FileName="GlobalFinance/Shared/Models/CustomisationModel.cs" />
+      <File FileName="GlobalFinance/Shared/Models/UserModel.cs" />
+      <File FileName="GlobalFinance/Shared/Models/UserDto.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -90,6 +91,7 @@
             <Node name="GlobalFinance.Server" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
             </Node>
             <Node name="GlobalFinance.Shared" expanded="True">
               <Node name="Models" expanded="True" />
@@ -99,7 +101,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.GlobalFinance.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
