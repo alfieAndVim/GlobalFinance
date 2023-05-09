@@ -58,11 +58,12 @@ stages:
         arguments: 'migrations script --output $(Build.SourcesDirectory)/SQL/dotnetupdate.sql --idempotent --project $(Build.SourcesDirectory)/GlobalFinance/Server --context AppDataContext'
 
     - task: DotNetCoreCLI@2
-      displayName: Publish Project
+      displayName: Publish Server
       inputs:
         command: 'publish'
-        publishWebProjects: true
-        arguments: '--configuration $(buildConfiguration)'
+        publishWebProjects: false
+        projects: '**/GlobalFinance/Server/GlobalFinance.Server.csproj'
+        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
     - task: PublishBuildArtifacts@1
       inputs:
