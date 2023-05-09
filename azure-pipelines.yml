@@ -65,8 +65,9 @@ stages:
       displayName: Build DotNet EF Commands
       inputs:
         command: 'custom'
-        custom: 'tool dotnet ef '
-        arguments: 'migrations script --output $(Build.SourcesDirectory)/SQL/dotnetupdate.sql --idempotent --project $(Build.SourcesDirectory)/GlobalFinance/Server/Data --context AppDataContext'
+        custom: 'ef '
+        arguments: 'database update'
+        #arguments: 'migrations script --output $(Build.SourcesDirectory)/SQL/dotnetupdate.sql --idempotent --project $(Build.SourcesDirectory)/GlobalFinance/Server/Data --context AppDataContext'
 
 
 - stage: Publish
