@@ -15,14 +15,15 @@ variables:
   buildConfiguration: 'Release'
   vmImageName: 'ubuntu-latest'
 
-stages:
+stages:  
+       
 
-- stage: EFCoreInit
-  displayName: EF Core Init
+- stage: Build
+  displayName: Build stage
 
   jobs:
-  - job: EFCoreInit
-    displayName: EF Core Init
+  - job: Build
+    displayName: Build
 
     pool:
       vmImage: $(vmImageName)
@@ -42,19 +43,7 @@ stages:
         command: 'custom'
         custom: 'tool '
         arguments: 'install --global dotnet-ef'
-       
 
-- stage: Build
-  displayName: Build stage
-
-  jobs:
-  - job: Build
-    displayName: Build
-
-    pool:
-      vmImage: $(vmImageName)
-
-    steps:
     - task: DotNetCoreCLI@2
       displayName: Build Server
       inputs:
