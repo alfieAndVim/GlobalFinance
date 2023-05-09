@@ -17,7 +17,7 @@ variables:
 
 stages:
 
-- stage: EF Core Init
+- stage: EFCoreInit
   displayName: EF Core Init
 
   jobs:
