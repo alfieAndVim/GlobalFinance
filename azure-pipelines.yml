@@ -49,3 +49,8 @@ stages:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'drop'
         publishLocation: 'Container'
+    
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'custom'
+        custom: 'dotnet ef database update'
