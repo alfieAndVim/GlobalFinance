@@ -55,7 +55,7 @@ stages:
       inputs:
         command: 'custom'
         custom: 'ef '
-        arguments: 'migrations script --output $(Build.SourcesDirectory)/SQL/dotnetupdate.sql --idempotent --project $(Build.SourcesDirectory)/GlobalFinance/Server/Data --context AppDataContext'
+        arguments: 'migrations script --output $(Build.SourcesDirectory)/SQL/dotnetupdate.sql --idempotent --project $(Build.SourcesDirectory)/GlobalFinance/Server --context AppDataContext'
 
 
 - stage: Publish
