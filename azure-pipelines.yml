@@ -60,22 +60,58 @@ stages:
       inputs:
         command: 'build'
         arguments: '--configuration $(buildConfiguration)'
-    - task: DotNetCoreCLI@2
-      displayName: Publish Project
-      inputs:
-        command: 'publish'
-        publishWebProjects: true
-        arguments: '--configuration $(buildConfiguration)'
 
-    - task: CopyFiles@2
+    - task: DotNetCoreCLI@2
+      displayName: Build DotNet EF Commands
       inputs:
-        Contents: '**'
-        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+        command: 'custom'
+        custom: 'ef '
+        arguments: 'migrations script --output $(Build.SourcesDirectory)/SQL/dotnetupdate.sql --idempotent --project $(Build.SourcesDirectory)/GlobalFinance/Server/Data --context AppDataContext'
+
+
+- stage: Publish
+  displayName: Publish
+
+  jobs:
+    - job: Publish
+      displayName: Publish
+
+      pool:
+        vmImageName: $(vmImageName)
+
+      steps:
+
+      - task: DotNetCoreCLI@2
+        displayName: Publish Project
+        inputs:
+          command: 'publish'
+          publishWebProjects: true
+          arguments: '--configuration $(buildConfiguration)'
+
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: '$(Build.SourcesDirectory)/SQL/dotnetupdate.sql'
+          ArtifactName: 'SQLScripts'
+          publishLocation: 'Container'
+
+
+- stage: Copy
+  displayName: Copy Build Artifacts
+
+  jobs:
+    - job: Copy
+      displayName: Copy Build Artifacts
+      
+      steps:
+        - task: CopyFiles@2
+          inputs:
+            Contents: '**'
+            TargetFolder: '$(Build.ArtifactStagingDirectory)'
         
-    - task: PublishBuildArtifacts@1
-      inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        ArtifactName: 'drop'
-        publishLocation: 'Container'
+        - task: PublishBuildArtifacts@1
+          inputs:
+            PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+            ArtifactName: 'drop'
+            publishLocation: 'Container'
     
     
