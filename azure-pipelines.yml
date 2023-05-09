@@ -16,6 +16,34 @@ variables:
   vmImageName: 'ubuntu-latest'
 
 stages:
+
+- stage: EF Core Init
+  displayName: EF Core Init
+
+  jobs:
+  - job: EFCoreInit
+    displayName: EF Core Init
+
+    pool:
+      vmImage: $(vmImageName)
+
+    steps:
+
+    - task: DotNetCoreCLI@2
+      displayName: New Manifest For Tool
+      inputs:
+        command: 'custom'
+        custom: 'new '
+        arguments: 'tool-manifest'
+      
+    - task: DotNetCoreCLI@2
+      displayName: Install EF Tool
+      inputs:
+        command: 'custom'
+        custom: 'tool '
+        arguments: 'install dotnet-ef'
+       
+
 - stage: Build
   displayName: Build stage
 
@@ -50,7 +78,4 @@ stages:
         ArtifactName: 'drop'
         publishLocation: 'Container'
     
-    - task: DotNetCoreCLI@2
-      inputs:
-        command: 'custom'
-        custom: 'dotnet ef database update'
+    
