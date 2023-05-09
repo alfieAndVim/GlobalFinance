@@ -57,50 +57,30 @@ stages:
         custom: 'ef '
         arguments: 'migrations script --output $(Build.SourcesDirectory)/SQL/dotnetupdate.sql --idempotent --project $(Build.SourcesDirectory)/GlobalFinance/Server --context AppDataContext'
 
+    - task: DotNetCoreCLI@2
+      displayName: Publish Project
+      inputs:
+        command: 'publish'
+        publishWebProjects: true
+        arguments: '--configuration $(buildConfiguration)'
 
-- stage: Publish
-  displayName: Publish
-
-  jobs:
-    - job: Publish
-      displayName: Publish
-
-      pool:
-        vmImageName: $(vmImageName)
-
-      steps:
-
-      - task: DotNetCoreCLI@2
-        displayName: Publish Project
-        inputs:
-          command: 'publish'
-          publishWebProjects: true
-          arguments: '--configuration $(buildConfiguration)'
-
-      - task: PublishBuildArtifacts@1
-        inputs:
-          PathtoPublish: '$(Build.SourcesDirectory)/SQL/dotnetupdate.sql'
-          ArtifactName: 'SQLScripts'
-          publishLocation: 'Container'
-
-
-- stage: Copy
-  displayName: Copy Build Artifacts
-
-  jobs:
-    - job: Copy
-      displayName: Copy Build Artifacts
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.SourcesDirectory)/SQL/dotnetupdate.sql'
+        ArtifactName: 'SQLScripts'
+        publishLocation: 'Container'
       
-      steps:
-        - task: CopyFiles@2
-          inputs:
-            Contents: '**'
-            TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    - task: CopyFiles@2
+      inputs:
+        Contents: '**'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
         
-        - task: PublishBuildArtifacts@1
-          inputs:
-            PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-            ArtifactName: 'drop'
-            publishLocation: 'Container'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
+
+        
     
     
