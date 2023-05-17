@@ -44,12 +44,24 @@ stages:
         custom: 'tool '
         arguments: 'install --global dotnet-ef'
 
+    - task: SonarQubePrepare@5
+      inputs:
+        SonarQube: 'SonarQube_Tesing'
+        scannerMode: 'MSBuild'
+        projectKey: 'Global-Finance'
+
     - task: DotNetCoreCLI@2
       displayName: Build Server
       inputs:
         command: 'build'
         arguments: '--configuration $(buildConfiguration)'
 
+    - task: SonarQubeAnalyze@5
+
+    - task: SonarQubePublish@5
+      inputs:
+        pollingTimeoutSec: '300'
+        
     - task: DotNetCoreCLI@2
       displayName: Build DotNet EF Commands
       inputs:
